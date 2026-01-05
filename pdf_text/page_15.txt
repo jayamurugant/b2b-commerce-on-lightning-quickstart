@@ -1,0 +1,61 @@
+Salesforce Release Notes                                   How and When Do Features Become Available?
+
+
+
+                                                      Enabled for       Requires        Contact
+                                      Enabled for    administrators   administrator   Salesforce to
+              Feature                    users        /developers        setup           enable
+
+ New Commerce LWR Store                                   Yes
+ Components
+
+ Commerce Search
+
+ Identify Products at Risk of Being                       Yes
+ Unsearchable
+
+ Product Catalogs Include More                                                             Yes
+ Searchable and Filterable Fields
+
+ Commerce Subscriptions
+
+ Sell Subscription Product                                Yes
+ Bundles in Your Commerce Store
+
+ Enable Buyers to View                                                                     Yes
+ Subscription History
+
+ Commerce Additional Features
+
+ Sell Configurable Products in                            Yes
+ Your B2B Store
+
+ Determine Product Visibility                             Yes
+ Dynamically by Using
+ Qualification Rules
+
+     Omnichannel Inventory
+
+ Prevent Inventory Suppression                            Yes
+ with Safety Stock Caps
+
+ Salesforce Order Management
+
+ Agentforce for Salesforce Order
+ Management
+
+ Resolve Fulfillment Issues                                                                Yes
+ Proactively with Agentforce
+ (Pilot)
+
+ Monitor AI-Generated Insights            Yes
+ and Fulfillment Data in a Single
+ Dashboard
+
+ Control the Order of Payment                                                              Yes
+ Capture
+
+
+
+                                                    11
+

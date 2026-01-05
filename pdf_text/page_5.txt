@@ -1,0 +1,49 @@
+Salesforce Release Notes
+
+
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Spring ’26 release helps companies to accelerate their journey to becoming an Agentic Enterprise by
+combining human expertise and AI agents — giving every team the insights, automation, and tools they
+need to deliver better customer experiences with confidence.
+
+
+What's New This Release
+
+• Admin Release Countdown Blog. Important dates you’ll want to mark on your calendar for Spring '26.
+• Spring '26 Pre-release Signup. Sign up for a pre-release org to get early access to the new features.
+
+Release Readiness Essentials
+
+• Release Readiness Trailblazers. Access resources and experts for all things release readiness. To help us
+    track and respond to your feedback, use a hashtag that indicates the release, such as
+    #Spring26Feedback.
+•   Trust Status Maintenance Site. See sandbox and other release dates and times. To see your
+    maintenance dates, select Instances and your instance.
+•   Sandbox Refresh Calculator, Preview Video, and Preview Instructions. Plan if and when to refresh your
+    sandboxes. Learn how to navigate the sandbox preview process. Get early access to new features in
+    your sandbox.
+•   Certification Release Maintenance Schedule. Keep your certification updated in Trailhead.
+•   Prepare for Salesforce Releases. Use Trailhead to create your release strategy.
+
+
+Release Notes Tips
+
+• Use the table of contents to browse through release notes by product. You can also search and filter to
+    zero in on the news that matters the most.
+•   Your browser’s settings determine the language that you see. To change the website language, scroll to
+    the bottom of this page and use the language switcher in the website footer.
+•   Salesforce Known Issues are listed separately.
+
+
+
+
+                                                     1
+

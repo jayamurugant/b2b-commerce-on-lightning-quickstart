@@ -1,0 +1,61 @@
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Use OAuth Security with Your          Yes
+ Microsoft Azure SQL Database
+ Connection
+
+ Improve Snapshot Data Recipe          Yes
+ Performance with Optimized
+ Upsert and Delete Actions
+ (Generally Available)
+
+ Tableau                               Yes
+
+ Marketing Cloud Intelligence          Yes
+
+ Accessibility Enhancements in         Yes
+ Analytics
+
+
+Commerce
+
+Commerce enhancements include features for B2B Commerce, Omnichannel Inventory, and Salesforce
+Order Management.
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+    Salesforce B2B Commerce
+
+ Salesforce B2B Commerce               Yes
+ Features Released Monthly
+
+ Agentforce for B2B Commerce
+
+ Add Multi-Language Support to                         Yes
+ B2B Guided Shopping Agent
+ Interactions
+
+ Commerce Cart, Checkout, and
+ Shipping
+
+ Let Buyers Request a Quote from                       Yes
+ Their Cart
+
+ Extend B2B Store Pricing Rules                        Yes
+ with Custom Context Definitions
+
+ Commerce Components
+
+
+
+                                                 10
+

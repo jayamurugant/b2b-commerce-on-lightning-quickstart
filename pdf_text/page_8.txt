@@ -1,0 +1,39 @@
+Salesforce Release Notes
+
+
+  Learn about the latest features and updates to grow your pipeline and increase the efficiency of your
+  sales teams. Sales Cloud is now Agentforce Sales. You may see references to Sales Cloud in our
+  application and documentation.
+  Salesforce CMS
+  Previously known as Sidebar Extensions, Extensions in CMS have an improved development workflow.
+  Build extensions to add more productivity tools to your CMS content workflow, such as third-party
+  generative AI tools or tone and grammar editors. When you work with external content providers, you
+  can now choose which providers are available to your workspace and where to save files from these
+  systems.
+  Salesforce Flow
+  Compose intelligent workflows with Flow Builder and Flow Orchestration. Integrate across any system
+  with Flow Integration.
+  Salesforce for Slack Integrations
+  Use Slack and Salesforce together to connect with customers, track progress, collaborate seamlessly,
+  and deliver team success from anywhere.
+  Security, Identity, and Privacy
+  Redirections end for legacy host names, including instanced host names in API calls. Connected app
+  creation is disabled by default for all Salesforce orgs. Salesforce Backup & Recover is now a native app.
+  And, Privacy Requests fulfill your customers' Right to Be Forgotten requests.
+  Service
+  Service Cloud is now Agentforce Service. You may see references to Service Cloud in our application
+  and documentation. Learn about the latest features from Service to supercharge productivity across
+  your organization. Service features are released as often as monthly, so check here for the latest
+  information.
+  Other Salesforce Products and Services
+  Get the latest information on these new features.
+  Legal Documentation
+  We made seasonal updates to Salesforce Legal Documents.
+  Previous Release Notes
+  Find information about previously announced features in the release note archive.
+
+
+
+
+                                                      4
+

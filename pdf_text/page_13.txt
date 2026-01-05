@@ -1,0 +1,61 @@
+Salesforce Release Notes                                    How and When Do Features Become Available?
+
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+ Embed Custom Lightning Web                                                                 Yes
+ Components in Dashboards for
+ Interactive Data Views (Beta)
+
+      Data 360 Reports and
+          Dashboards
+
+ Expand Reporting Capabilities          Yes
+ with More Row-Level Formulas
+
+          CRM Analytics
+
+ Analytics Experience and
+ Visualizations
+
+ Analyze Data Offline with CSV          Yes
+ and Excel Exports of Data 360
+ Objects
+
+ Download CRM Analytics                 Yes
+ Dashboard Images
+
+ Manage CRM Analytics Assets            Yes
+ with New Bulk Actions
+
+ Speed Up Queries and Improve           Yes
+ Data Handling with Data 360
+ SQL (Beta)
+
+ Repeat Groupings in Compare            Yes
+ Tables with Repeat Row Values
+
+ Gain Full Control over Number          Yes
+ Widget Tooltips
+
+ Explore Pivot Tables with Expand       Yes
+ and Collapse
+
+ Keep Widget Action Menus               Yes
+ Visible
+
+ Data Integration
+
+ Use CRM Analytics Datasets in          Yes
+ Data Cloud (Generally Available)
+
+ Securely Connect Your Private          Yes
+ Redshift Data to CRM Analytics
+
+
+
+                                                  9
+

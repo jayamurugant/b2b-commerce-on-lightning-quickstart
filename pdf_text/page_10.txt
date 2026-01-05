@@ -1,0 +1,59 @@
+Salesforce Release Notes                                      How and When Do Features Become Available?
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Some features affect all users immediately after the release goes live. Consider communicating these
+changes to your users beforehand so that they’re prepared. Other features require direct action by an
+administrator before users can benefit from the new functionality.
+
+
+Salesforce Overall
+
+Learn about new features and enhancements that affect your Salesforce experience overall.
+
+
+                                                         Enabled for       Requires          Contact
+                                      Enabled for       administrators   administrator    Salesforce to
+              Feature                    users           /developers        setup            enable
+
+     General Enhancements
+
+ Prepare for Shorter Certificate                             Yes
+ Lifespans
+
+ Get Ready for IPv6                                          Yes
+
+ Elevate Your Salesforce Go                                                   Yes
+ Experience with Smarter Filters
+ and Enhanced Search
+
+ Capture Employee Details for                                Yes
+ Unified Employee License
+ Holders
+
+ Styling Change to Highlighted            Yes
+ and Selected Content
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Page
+ Headers and Modal Windows
+ When Zoom Is Greater Than
+ 200% (Release Update)
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Cards,
+ Docked Containers, Menu Lists,
+ and Panels (Release Update)
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Date Pickers,
+
+
+
+                                                    6
+

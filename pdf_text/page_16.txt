@@ -1,0 +1,61 @@
+Salesforce Release Notes                                     How and When Do Features Become Available?
+
+
+
+                                                       Enabled for        Requires          Contact
+                                      Enabled for     administrators    administrator     Salesforce to
+              Feature                    users         /developers         setup             enable
+
+ Manage Locations While                                     Yes
+ Configuring Shipping Methods
+
+
+Customization
+
+Complete Setup tasks more efficiently with the help of an AI assistant with Setup with Agentforce (beta).
+Import and export translation files more easily with enhancements to the Translation Workbench.
+
+
+                                                       Enabled for        Requires          Contact
+                                      Enabled for     administrators    administrator     Salesforce to
+              Feature                    users         /developers         setup             enable
+
+      Setup with Agentforce
+
+ Streamline Administrative Tasks                                             Yes
+ with Setup with Agentforce
+ (Beta)
+
+           Globalization
+
+ Export and Import Translated                               Yes
+ Files with Ease
+
+ Speed Up Custom Label                                      Yes
+ Updates in Translation
+ Workbench
+
+ Use Updated State Codes for                                Yes
+ Picklists
+
+ Review Updated Label                                       Yes
+ Translations
+
+ Enable ICU Locale Formats                                  Yes
+ (Release Update)
+
+            List Views
+
+ List View Edit Limits Are                                  Yes
+ Communicated More Clearly
+
+ Use Updated Empty Value                  Yes
+ Placement in List View Sorting
+
+          AppExchange
+
+
+
+
+                                                    12
+

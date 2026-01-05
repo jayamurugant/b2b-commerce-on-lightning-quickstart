@@ -1,0 +1,60 @@
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires         Contact
+                                    Enabled for    administrators   administrator    Salesforce to
+              Feature                  users        /developers        setup            enable
+
+ Configure New Trialforce Login                          Yes
+ Pages Before Summer ’26
+
+           General Setup
+
+ Submit Records for Approval by                                           Yes
+ Using the Request Approval
+ Component
+
+ Update Apex Code and Flows                                               Yes
+ for Changed Sharing
+ Recalculation Behavior (Release
+ Update)
+
+
+Development
+
+Whether you’re using Lightning components, Visualforce, Apex, or Salesforce APIs with your favorite
+programming language, these enhancements help you develop amazing applications, integrations, and
+packages for resale to other organizations.
+
+
+                                                    Enabled for       Requires         Contact
+                                    Enabled for    administrators   administrator    Salesforce to
+              Feature                  users        /developers        setup            enable
+
+     Lightning Components
+
+ LWC API Version 66.0
+
+ Use Complex Template                                    Yes
+ Expressions in Your Lightning
+ Web Components (Beta)
+
+ Display Consistent Empty State                          Yes
+ Illustrations With Theme
+ Support (Beta)
+
+ Get Complete Type Definitions                           Yes
+ for Lightning Base Components
+
+ Improve Type Safety with the                            Yes
+ LWC TypeScript Converter MCP
+ Tool (Beta)
+
+ Update Your Custom                                                       Yes
+ Components for Use in Setup
+
+
+
+                                                  13
+

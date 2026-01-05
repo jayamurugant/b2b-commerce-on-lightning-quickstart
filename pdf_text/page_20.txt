@@ -1,0 +1,62 @@
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+               Feature                 users        /developers        setup           enable
+
+ Faster by Enabling Debug Logs
+
+   Development Environments
+
+ Data Mask (Beta)
+
+ Access Information About                               Yes
+ Specific Data Mask Job (Beta)
+
+ Automate the Running of Data                           Yes
+ Mask Processes with Job
+ Scheduler (Beta)
+
+ Other Improvements to                                  Yes
+ Salesforce Data Mask (Beta)
+
+ Monitor Sandbox Copy                                   Yes
+ Progress in Greater Detail with
+ an Updated UI
+
+  Platform Development Tools
+
+ Agentforce DX
+
+ Build Enterprise-Ready Agents                          Yes
+ with Agentforce DX and Agent
+ Script (Beta)
+
+ Salesforce DX MCP Server                               Yes
+
+ Salesforce CLI
+
+ Keep Up with the Latest                                Yes
+ Salesforce CLI Enhancements
+
+ Salesforce Extensions for Visual                       Yes
+ Studio Code
+
+ Agentforce Vibes IDE                                   Yes
+
+ Agentforce Vibes Extension                             Yes
+
+ Scalability
+
+ Plan and Peak Load Test with                                                            Yes
+ Scale Test
+
+ Deploy Scalable Apps with Scale                                                         Yes
+ Center
+
+
+
+                                                  16
+

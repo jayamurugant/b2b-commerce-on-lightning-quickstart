@@ -1,0 +1,60 @@
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ with Agentforce (Beta)
+
+ Check For Errors From the                              Yes
+ Disconnected DOM Node
+ Rehydration Fix
+
+ Manage Page Errors with Error                                           Yes
+ Console
+
+ Do More with Lightning Out 2.0                         Yes
+ Improvements
+
+    Lightning Design System
+
+ Salesforce Lightning Design            Yes
+ System Component Blueprints
+ Updates
+
+ Use Dark Mode in More                  Yes
+ Editions (Beta)
+
+            Visualforce
+
+ Escape the Label Attribute of                          Yes
+ <apex:inputField> Elements to
+ Prevent Cross-Site Scripting in
+ Visualforce Pages (Release
+ Update)
+
+               Apex
+
+ Deploy Apex Components                                 Yes
+ Faster by Running Only
+ Relevant Tests (Beta)
+
+ Use Apex Cursors for Expanded                          Yes
+ SOQL Query Result Support
+ (Generally Available)
+
+ Extract Picklist Values Based on                       Yes
+ Record Type
+
+ Expose Apex REST and                                   Yes
+ AuraEnabled Controller
+ Methods as Agent Actions
+ (Generally Available)
+
+
+
+
+                                                  14
+

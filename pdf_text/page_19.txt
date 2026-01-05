@@ -1,0 +1,61 @@
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                     Enabled for       Requires        Contact
+                                     Enabled for    administrators   administrator   Salesforce to
+              Feature                   users        /developers        setup           enable
+
+ Use Visualforce PDF Rendering                                            Yes
+ Service with Apex Blob.toPdf()
+ (Release Update)
+
+ Review Apex Code for Changed                                             Yes
+ Sharing Recalculation Behavior
+
+ Filter Test Discovery API Results                       Yes
+ by Test Category
+
+ Specify the Number of Async                             Yes
+ Jobs to Delete
+
+                API
+
+ Expose Custom SOQL in REST                                               Yes
+ API Calls Using Named Query
+ API (General Availability)
+
+ Update Instanced URLs in API                                             Yes
+ Traffic (Release Update)
+
+ EventBusSubscriber Object’s                             Yes
+ Position and Tip Fields Are
+ Being Deprecated
+
+ Sending Session IDs in                                  Yes
+ Outbound Messages Is Being
+ Removed
+
+ Metadata Deployments and                                Yes
+ Retrievals Have New Limits
+
+ Data 360 SOQL Query Results                             Yes
+ Are Limited to 12-MB at a Time
+
+ SOAP API login() Call in SOAP                                            Yes
+ API Versions 31.0 Through 64.0
+ Is Being Retired (Release
+ Update)
+
+            Packaging
+
+ Recommend a Package Version                             Yes
+ to Your Subscribers
+
+ Troubleshoot Subscriber Issues                          Yes
+
+
+
+
+                                                   15
+

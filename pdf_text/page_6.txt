@@ -1,0 +1,52 @@
+Salesforce Release Notes
+
+
+
+     Note Until the new release is available to you, links from release notes to Salesforce Help,
+     implementation guides, developer guides, and other documentation don’t work. And sometimes
+     the links point to material from the previous release. Some of our documentation has preview
+     versions available several weeks before the release. To access a preview version on Salesforce
+     Developers, select Preview from the Documentation Version dropdown list.
+
+
+  Release Notes for Features Released Monthly
+  For some products, Salesforce releases features and enhancements more frequently than three times
+  per year.
+  Release Note Changes
+  Read about what changes were made after the release notes were published. Changes are separated
+  by product and with the most recent changes first. The dates indicate the week that changes to the
+  release note were made. Review the individual release note availability details.
+  How and When Do Features Become Available?
+  Some features affect all users immediately after the release goes live. Consider communicating these
+  changes to your users beforehand so that they’re prepared. Other features require direct action by an
+  administrator before users can benefit from the new functionality.
+  Salesforce Overall
+  Learn about new features and enhancements that affect your Salesforce experience overall.
+  Release Updates
+  Salesforce periodically provides release updates that improve the performance, logic, security, and
+  usability of our products. The Release Updates page provides a list of updates that can be necessary
+  for your organization to enable. Some release updates affect existing customizations.
+  Agentforce Platform
+  Supercharge your workforce efficiency with predictive and generative AI.
+  Analytics
+  Analytics enhancements include new and updated features for Tableau Next, Lightning reports and
+  dashboards, Data 360 reports and dashboards, CRM Analytics, Intelligent apps, and Tableau.
+  Commerce
+  Commerce enhancements include features for B2B Commerce, Omnichannel Inventory, and
+  Salesforce Order Management.
+  Customization
+  Complete Setup tasks more efficiently with the help of an AI assistant with Setup with Agentforce
+  (beta). Import and export translation files more easily with enhancements to the Translation
+  Workbench.
+  Development
+  Whether you’re using Lightning components, Visualforce, Apex, or Salesforce APIs with your favorite
+  programming language, these enhancements help you develop amazing applications, integrations,
+  and packages for resale to other organizations.
+  Experience Cloud
+  Make your Aura and LWR site pages more discoverable to AI-powered search engines and improve the
+  precision of AI-generated answers with generative engine optimization. Create richer HTML content for
+
+
+
+                                                   2
+

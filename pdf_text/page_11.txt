@@ -1,0 +1,60 @@
+Salesforce Release Notes                                     How and When Do Features Become Available?
+
+
+
+                                                        Enabled for       Requires        Contact
+                                     Enabled for       administrators   administrator   Salesforce to
+              Feature                   users           /developers        setup           enable
+
+ Popovers, Bottom Utility Bars,
+ Record Headers (Release
+ Update)
+
+     Salesforce Foundations
+
+ Automate Your Outreach with a                                               Yes
+ Lighter, Faster Email Builder
+ App
+
+ Gain Deeper, More Intuitive                                                 Yes
+ Insights from Your Marketing
+ Data with Tableau in the
+ Marketing App
+
+    Salesforce Data Pipelines
+
+ Securely Connect Your Private            Yes
+ Redshift Data to CRM Analytics
+
+ Use OAuth Security with Your             Yes
+ Microsoft Azure SQL Database
+ Connection
+
+ Improve Snapshot Data Recipe             Yes
+ Performance with Optimized
+ Upsert and Delete Actions
+ (Generally Available)
+
+    Trust Site Enhancements
+
+ Personalized Trust Is Now                Yes
+ Salesforce My Trust Center
+ (Beta)
+
+
+Agentforce & Einstein
+
+Supercharge your workforce efficiency with predictive and generative AI.
+
+
+                                                        Enabled for       Requires        Contact
+                                     Enabled for       administrators   administrator   Salesforce to
+              Feature                   users           /developers        setup           enable
+
+ Agentforce Platform Features
+ Released by Month
+
+
+
+                                                   7
+

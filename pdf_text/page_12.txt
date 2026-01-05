@@ -1,0 +1,60 @@
+Salesforce Release Notes                                    How and When Do Features Become Available?
+
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+            Agentforce
+
+ Migrate Your Agents’                                                       Yes
+ Connected Apps to the External
+ Client App Framework
+
+ New and Changed Standard                                                   Yes
+ Agent Topics and Actions
+
+      Einstein Development
+
+ Accelerate Custom Lightning                               Yes
+ Type Creation for Agentforce
+ with the Lightning Types MCP
+ Tool (Developer Preview)
+
+
+Analytics
+
+Analytics enhancements include new and updated features for Tableau Next, Lightning reports and
+dashboards, Data 360 reports and dashboards, CRM Analytics, Intelligent apps, and Tableau.
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+           Tableau Next
+
+ Tableau Next Features Released         Yes
+ by Month
+
+ Tableau Next Highlights                Yes
+
+    Reports and Dashboards
+
+ Use Existing Report Settings           Yes
+ When Adding Tables to
+ Dashboards (Generally
+ Available)
+
+ Ensure Compliance with                                                     Yes
+ Custom Disclaimers on
+ Exported Reports
+
+ Share Reports and Dashboards           Yes
+ Folders Using Usernames
+
+
+
+                                                  8
+

@@ -1,0 +1,54 @@
+Salesforce Release Notes                                                            Monthly Release Notes
+
+
+
+
+Release Notes for Features Released Monthly
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+For some products, Salesforce releases features and enhancements more frequently than three times per
+year.
+
+• Agentforce Platform Features Released by Month
+• B2B Commerce
+• Data 360
+• Salesforce Personalization
+• Service
+Monthly release notes aren’t the same as changes to previously published release notes as noted in
+Release Notes Changes.
+
+
+
+Release Note Changes
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Read about what changes were made after the release notes were published. Changes are separated by
+product and with the most recent changes first. The dates indicate the week that changes to the release
+note were made. Review the individual release note availability details.
+
+The Salesforce Spring ’26 Release Notes were first published the week of December 15, 2025.
+
+
+
+How and When Do Features Become Available?
+
+This release is in preview
+
+
+
+                                                    5
+
