@@ -1,0 +1,1636 @@
+Salesforce Release Notes                                   How and When Do Features Become Available?
+
+
+
+                                                      Enabled for       Requires        Contact
+                                      Enabled for    administrators   administrator   Salesforce to
+              Feature                    users        /developers        setup           enable
+
+ Threads
+
+ Inbound Limit for Service Agent                                           Yes
+ Emails is Extended
+
+ Email Composer is Modernized                                              Yes
+ with New Button Colors
+
+ Messaging
+
+ Accept Clearer Terms and                                 Yes
+ Conditions in Enhanced Chat
+
+ Save Money by Hiding the Real-                                            Yes
+ Time Translations Preview Bar
+
+ Protect Service Reps’ Privacy in                                          Yes
+ Business-Initiated Outbound
+ Messaging
+
+ Educate Service Reps About Chat                                           Yes
+ Exit Behavior
+
+ Take Ownership of your Data                                               Yes
+ Residency on Unified WhatsApp
+
+ Increase Familiarity and Rapport                                          Yes
+ in WhatsApp with Read Receipts
+ and Typing Indicators
+
+ Review De-Duplication Activity                                            Yes
+ for Unified WhatsApp
+
+ Bring Your Own Channel
+
+ Voice
+
+ Scale Your VoiceCall Object with                         Yes
+ More Custom Fields
+
+ Manage Contact Center Groups                             Yes
+ and Queues in Bulk
+
+ Add Flexibility to Unified Routing                                        Yes
+ Transfers by Routing Calls to a
+ Flow
+
+ Route Voicemails and Desk                Yes
+
+
+
+                                                    77
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Phone Calls with Unified Routing
+
+ Minimize Abandoned Calls with                                           Yes
+ Queued Callbacks for Omni-
+ Channel Unified Routing
+
+ Use Voicemail Drop for                                                  Yes
+ Outbound Calls (Beta)
+
+ Link Voice Calls to Their Source       Yes
+ Records Automatically
+
+ Get Actionable Error Messages          Yes
+ for Failed Outbound Calls
+
+ Get the Latest Enhancements for                        Yes
+ Your Amazon Connect Contact
+ Center
+
+ Update Your United States AWS          Yes
+ Billing Address for Accurate
+ Emergency Calling Fees
+
+ Chat
+
+ Legacy Chat Is Being Retired           Yes
+
+  Customer Signals Intelligence
+
+ Activate Customer Insights                                              Yes
+ Faster
+
+ Uncover Real-Time Insights                                              Yes
+ During Customer Interactions
+
+ Customize Out-of-the-Box AI                                             Yes
+ Insights Prompts
+
+ Process Large Data Volumes             Yes
+
+        Einstein for Service
+
+ Get Role-Based Case Overviews                                           Yes
+ with Enhanced Summaries
+
+ Work Summaries for Case                                                 Yes
+ (Beta) Is Being Retired
+
+ Track AI Performance with                                               Yes
+
+
+
+                                                  78
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Service AI Adoption & Analytics
+
+     Einstein Service Replies
+
+ Decrease Response Time for                                             Yes
+ Global Service Representatives
+ with Translate Service Replies
+
+  Entitlements and Milestones
+
+ Improve SLA Reporting by              Yes
+ Using Rule-based Milestone
+ Pause
+
+ Keep Departments Aligned on           Yes
+ SLA Commitments with
+ Bidirectional Milestone
+ Visibility
+
+ Optimize SLA Compliance by            Yes
+ Using Agentforce SLA Summary
+
+     Feedback Management
+
+ Enhance Survey Readability            Yes
+ with Revamped Matrix
+ Questions View
+
+ Save Partial Survey Responses         Yes
+ for up to 999 days
+
+ Save Partial Survey Responses         Yes
+ from Guest Users
+
+ Customize Your Surveys with           Yes
+ Custom CSS
+
+            HR Service
+
+ Improve Employee Experience           Yes
+ with New Unified Employee
+ License for HR Service
+
+ Strengthen Employee Trust             Yes
+ with Confidential Case
+ Reporting
+
+            Knowledge
+
+
+
+                                                 79
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Organize Articles and Improve                                           Yes
+ Navigation with Knowledge
+ Maps (Generally Available)
+
+ Get More Done in the Lightning         Yes
+ Article Editor
+
+ Unified Knowledge Is Being                                              Yes
+ Retired
+
+ Identify and Address Gaps in                                            Yes
+ Your Knowledge Base with Self
+ Learning Knowledge (Generally
+ Available)
+
+           Self-Service
+
+ Build Proactive Service                                Yes
+ Scenarios with the New
+ Detection and Segmentation UI
+
+ Guide Your Users Through                               Yes
+ Interactive Troubleshooting for
+ Proactive Scenarios
+
+ Give Your Users Personalized                           Yes
+ Self-Service with a Unified
+ Customer Profile
+
+ Help Experience Cloud Site                             Yes
+ Users Track Their History with a
+ Personalized Activity Timeline
+
+ Guide Experience Cloud Site                            Yes
+ Users with a Proactive Pending
+ Task Banner
+
+ Bill AI Self-Service Usage More                        Yes
+ Accurately with Session-Based
+ Tracking
+
+ Improve Dynamic Q&A                                    Yes
+ Performance with Persisted
+ Questions and Answers for
+ Authenticated Users
+
+
+
+
+                                                  80
+Salesforce Release Notes                                                                  Salesforce Overall
+
+
+
+                                                       Enabled for         Requires          Contact
+                                      Enabled for     administrators     administrator     Salesforce to
+              Feature                    users         /developers          setup             enable
+
+ Monitor Proactive Service                                                    Yes
+ Campaign Performance
+
+         Service Adoption
+
+ Service Setup and Service                Yes
+ Setup Assistant Retiring in New
+ Orgs
+
+              Routing
+
+ Monitor Your Hybrid Service              Yes
+ Team with Command Center
+ for Service
+
+ Route Voice Conversations to             Yes
+ External Bots
+
+
+
+
+Salesforce Overall
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Learn about new features and enhancements that affect your Salesforce experience overall.
+
+  General Enhancements
+  Spring ’26 gives you more reasons to love Lightning Experience.
+  Salesforce Foundations
+  Use the new Email Builder Lite to quickly create and send batch emails to your Sales contacts and
+  leads. Tableau dashboards have been added to the Marketing App.
+  Salesforce Data Pipelines
+  Securely access your Amazon Redshift data by using a virtual private connection. Take advantage of
+  OAuth functionality in your Microsoft Azure SQL Database connection.
+  Trust Site Enhancements
+  The Trust site is the single place to see the status of Salesforce services and products, upcoming
+  availability impacting activities, and availability-related communications.
+
+
+
+
+                                                    81
+Salesforce Release Notes                                                                    Salesforce Overall
+
+
+
+General Enhancements
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Spring ’26 gives you more reasons to love Lightning Experience.
+
+  Prepare for Shorter Certificate Lifespans
+  If you use features that rely on certificates, prepare to update the related certificates more frequently.
+  An upcoming industry-wide change decreases the maximum allowed Transport Layer Security (TLS)
+  certificate lifespan over the next 3 years. Also, Salesforce plans to stop public certificate rotation
+  announcements.
+  Get Ready for IPv6
+  To help mitigate the IP address scarcity of IPv4, Salesforce is working behind the scenes to support
+  IPv6. If you use an IP allowlist to restrict network traffic or you restrict access to Salesforce via IP
+  address, consider implementing a preferred alternative. Otherwise, prepare to update your allowlists
+  to include IPv6 addresses.
+  Elevate Your Salesforce Go Experience with Smarter Filters and Enhanced Search
+  Tailor your Salesforce Go home page to focus on the features that matter most to you by rearranging
+  or removing specific sections. When you filter your view by cloud, add a subvertical filter to see which
+  feature sets and features apply to specific verticals within the cloud. Also, use enhanced search to spot
+  the differences between features and feature sets with the same names.
+  Capture Employee Details for Unified Employee License Holders
+  Designate employees who have the Unified Employee license as employee users and capture more
+  details for your reports, such as employee status and number.
+  Styling Change to Highlighted and Selected Content
+  To meet the Web Content Accessibility Guideline (WCAG) 1.4.11 standard for non-text accessibility, we
+  changed the styling of highlighted and selected content throughout the Lightning UI. Previously, we
+  applied our own styling to show when content was highlighted or selected, but have determined that
+  the styling didn’t meet this WCAG standard. Now when you highlight or select content, the Lightning
+  UI uses the styling applied by the user agent, which is your browser or device. The user agent
+  determines the color contrast ratio.
+  Enable Accessibility Enhancements for Page Headers and Modal Windows When Zoom Is Greater
+  Than 200% (Release Update)
+  To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+  Lightning Experience to adapt the behavior of page headers and modal windows when viewed at high
+  magnification. This is the beginning of our effort to comply with WCAG 2.2 Resize and Reflow
+  guidelines. Expect accessibility enhancements to other UI elements in future release updates.
+  Enable Accessibility Enhancements for Cards, Docked Containers, Menu Lists, and Panels (Release
+
+
+                                                     82
+Salesforce Release Notes                                                                       Salesforce Overall
+
+
+  Update)
+  To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+  Lightning Experience to adapt the behavior of cards, docked containers, menu lists, and panels when
+  viewed at high magnification. This release update is dependent on the Enable Accessibility
+  Enhancements for Page Headers and Modal Windows When Zoom Is Greater Than 200% release
+  update. Make sure to enable that update first.
+  Enable Accessibility Enhancements for Date Pickers, Popovers, Bottom Utility Bars, Record Headers
+  (Release Update)
+  To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+  Lightning Experience to adapt the behavior of date pickers, popovers, bottom utility bars, and record
+  headers when viewed at high magnification. This release update is dependent on the Enable
+  Accessibility Enhancements for Page Headers and Modal Windows When Zoom Is Greater Than 200%
+  release update. Make sure to enable that update first.
+
+
+Prepare for Shorter Certificate Lifespans
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you use features that rely on certificates, prepare to update the related certificates more frequently. An
+upcoming industry-wide change decreases the maximum allowed Transport Layer Security (TLS)
+certificate lifespan over the next 3 years. Also, Salesforce plans to stop public certificate rotation
+announcements.
+
+Where: This change applies to Lightning Experience, Salesforce Classic, and the Salesforce mobile app in
+all editions. As we reach each milestone, the lifespans apply to all new certificates that a public
+Certificate Authority (CA) signs, regardless of whether you, Salesforce, or a third party purchases the
+certificate. Existing certificates keep their expiration dates, and self-signed certificates aren't subject to
+the new lifespans.
+
+When: In August 2025, the Certification Authority Browser Forum (CA/Browser Forum) announced a
+phased approach to shorten the lifespan for new TLS certificates. That lifespan decreases from 398 days
+to 200 days on March 15, 2026, to 100 days on March 15, 2027, and to 47 days on March 15, 2029.
+
+As certificates rotate more frequently, Salesforce plans to stop the existing announcements for certificate
+changes for first-party (1P) production orgs through the Certificate Changes Trailblazer Community
+group. There's no specific target date for the end of those announcements. Salesforce plans to announce
+that date at least 90 days in advance.
+
+Why: Salesforce complies with the guidance of the CA/Browser Forum, the organization that sets most
+Web Public Key Infrastructure (WebPKI) rules. Their TLS Server Baseline Requirements change regularly.
+
+
+
+                                                       83
+Salesforce Release Notes                                                                    Salesforce Overall
+
+
+Those requirements are outside of Salesforce control, and certificate vendors are bound by the same
+rules.
+
+How: Review your certificate use and plan to rotate the certificates that you own more frequently and
+stop using certificate pinning.
+
+To receive notifications about upcoming certificate expirations for certificates that are stored in your org,
+assign the Expired Certificate Notification permission to specific admins. To automate the creation and
+update of self-signed and Certificate Authority-signed certificates in Salesforce, use the Certificate
+Metadata API type.
+
+See Also
+  Salesforce Help: Certificates in Salesforce (can be outdated or unavailable during release preview)
+  Salesforce Help: Set Expired Certificate Notification Permission (can be outdated or unavailable during
+  release preview)
+  Metadata API Developer Guide: Certificate
+
+
+Get Ready for IPv6
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help mitigate the IP address scarcity of IPv4, Salesforce is working behind the scenes to support IPv6.
+If you use an IP allowlist to restrict network traffic or you restrict access to Salesforce via IP address,
+consider implementing a preferred alternative. Otherwise, prepare to update your allowlists to include
+IPv6 addresses.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in all editions.
+
+When: Today, IPv6 is supported only for the Salesforce Content Delivery Network (CDN) for Experience
+Cloud sites. With full IPv6 support, users and integrations can connect to Salesforce via an IPv6 address.
+We’re announcing this upcoming change to give you time to update your allowlists.
+
+There’s no specific target date for full IPv6 support. Salesforce plans to roll out IPv6 support in stages,
+starting with Salesforce Government Cloud orgs. Salesforce plans to provide the IPv6 addresses to allow
+for Government Cloud orgs by December 31, 2025. Government Cloud customers, check the IP
+Addresses to Allow for Government Cloud Plus Knowledge Article for that information in early 2026.
+
+Check future release notes for the specific timing for each stage. For other stages, Salesforce plans to
+provide the IPv6 addresses to allow at least 2 months before IPv6 is fully supported in the affected orgs.
+
+Why: IP address restrictions can exist both in and outside Salesforce.
+
+
+
+                                                     84
+Salesforce Release Notes                                                                     Salesforce Overall
+
+
+In Salesforce, an IP address allowlist range can include either IPv4 or IPv6 addresses but not both types.
+When Salesforce supports IPv6 for your org, IPv4 allowlists remain active, and users can only log in via an
+IPv6 address that their profile allows. To make sure that your users can continue to access Salesforce
+after this change, for each profile with a login IP range, add one or more login IP ranges with those users’
+IPv6 addresses.
+
+Outside Salesforce, your company can restrict network traffic. An example is an allowlist that determines
+which IP addresses your users can access or which IP addresses can access your network. If those
+allowlists don’t include Salesforce IPv6 addresses when Salesforce supports IPv6, users can experience
+disruption, and integrations can fail.
+
+How: If you use IP allowlists, consider a preferred alternative, such as domain allowlists or Service Name
+Indication (SNI).
+
+If you continue to restrict access to Salesforce by IP address, update your allowlists in Salesforce. There’s
+no correlation between an IPv6 address and an IPv4 address. To determine your users’ IPv6 addresses,
+work with your network team.
+
+If you continue to restrict network traffic via IP address, plan to update those allowlists to include
+Salesforce IPv6 addresses when those addresses are available.
+
+See Also
+  Salesforce Help: Set Trusted IP Ranges for Your Organization (can be outdated or unavailable during
+  release preview)
+  Salesforce Help: Restrict Login IP Addresses in Profiles (can be outdated or unavailable during release
+  preview)
+
+
+Elevate Your Salesforce Go Experience with Smarter Filters and Enhanced
+Search
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Tailor your Salesforce Go home page to focus on the features that matter most to you by rearranging or
+removing specific sections. When you filter your view by cloud, add a subvertical filter to see which
+feature sets and features apply to specific verticals within the cloud. Also, use enhanced search to spot
+the differences between features and feature sets with the same names.
+
+Where: This change applies to Lightning Experience in Pro Suite, Professional, Enterprise, Performance,
+Unlimited, and Developer editions, and in Agentforce 1 Sales Edition.
+
+Who: To view Salesforce Go, you must have the View Setup and Configuration user permission. To turn
+
+
+                                                     85
+Salesforce Release Notes                                                                 Salesforce Overall
+
+
+on features in Salesforce Go, you must have the Customize Application user permission.
+
+How: From the gear menu, select Salesforce Go.
+
+
+
+
+Customize your home page by moving or removing sections. Use the cloud and subvertical filters to view
+related feature sets and features.
+
+See Also
+  Salesforce Help: Discover and Set Up Features with Salesforce Go (can be outdated or unavailable
+  during release preview)
+
+
+Capture Employee Details for Unified Employee License Holders
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Designate employees who have the Unified Employee license as employee users and capture more
+details for your reports, such as employee status and number.
+
+Where: This change applies to Enterprise, Performance, and Unlimited editions.
+
+How: To designate a user as an employee user, first create a Person Account for this user and associate
+the account to the user’s Employee2 record. Then, on the person’s User page, click Enable Employee
+User and fill out the necessary details.
+
+
+
+
+                                                    86
+Salesforce Release Notes                                                                 Salesforce Overall
+
+
+
+
+After you designate someone as an employee user, the button changes to View Employee User, and you
+can view the user’s Employee2 record page.
+
+
+Styling Change to Highlighted and Selected Content
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To meet the Web Content Accessibility Guideline (WCAG) 1.4.11 standard for non-text accessibility, we
+changed the styling of highlighted and selected content throughout the Lightning UI. Previously, we
+applied our own styling to show when content was highlighted or selected, but have determined that the
+styling didn’t meet this WCAG standard. Now when you highlight or select content, the Lightning UI uses
+the styling applied by the user agent, which is your browser or device. The user agent determines the
+color contrast ratio.
+
+Where: This change applies to Lightning Experience.
+
+Why: Meeting accessibility standards helps your UI support all of your users.
+
+
+Enable Accessibility Enhancements for Page Headers and Modal Windows
+When Zoom Is Greater Than 200% (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable Lightning
+Experience to adapt the behavior of page headers and modal windows when viewed at high
+
+
+                                                    87
+Salesforce Release Notes                                                                 Salesforce Overall
+
+
+magnification. This is the beginning of our effort to comply with WCAG 2.2 Resize and Reflow guidelines.
+Expect accessibility enhancements to other UI elements in future release updates.
+
+Where: This change applies to Lightning Experience in all editions.
+
+When: Salesforce enforces this update in Summer ’26. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the Maintenance tab.
+
+Why: With this update, content is visible for users who view Salesforce via a browser at 200%
+magnification or greater.
+
+Without this update, you can have trouble seeing the content on a page when you zoom in over 200%.
+The page headers can block content as you scroll. In modal windows, buttons and other content can
+display outside the viewport, requiring horizontal scrolling, which can make modal windows unusable.
+
+These changes help you support users who want to zoom 300% to 400%. The page header scrolls with
+the page and doesn’t block the content. In modal windows, buttons and content display within the
+viewport and the window is fully functional.
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Enable Accessibility Enhancements for Page Headers and Modal Windows
+When Zoom Is Greater Than 200%, follow the testing and activation steps.
+
+
+Enable Accessibility Enhancements for Cards, Docked Containers, Menu
+Lists, and Panels (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable Lightning
+Experience to adapt the behavior of cards, docked containers, menu lists, and panels when viewed at
+high magnification. This release update is dependent on the Enable Accessibility Enhancements for Page
+Headers and Modal Windows When Zoom Is Greater Than 200% release update. Make sure to enable
+that update first.
+
+Where: This change applies to Lightning Experience in all editions.
+
+When: Salesforce enforces this update in Winter ’27. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the Maintenance tab.
+
+Why: With this update, content displays correctly in cards, docked containers, menu lists, and panels for
+users who view Salesforce via a browser at 200% magnification or greater.
+
+
+
+                                                    88
+Salesforce Release Notes                                                                    Salesforce Overall
+
+
+Without this update, these parts of the Salesforce UI aren’t compliant with WCAG 2.2 guidelines for
+Resize and Reflow. Content potentially displays only partially.
+
+These changes help you support users with visual impairments.
+
+• Cards, docked containers, menu lists, and panels are accessible and usable at 1280px page width and
+    400% magnification.
+•   The header content in these UI elements isn’t clipped. Instead, it wraps to the next line.
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Enable Accessibility Enhancements for Cards, Docked Containers, Menu
+Lists, and Panels, follow the testing and activation steps.
+
+
+Enable Accessibility Enhancements for Date Pickers, Popovers, Bottom
+Utility Bars, Record Headers (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable Lightning
+Experience to adapt the behavior of date pickers, popovers, bottom utility bars, and record headers
+when viewed at high magnification. This release update is dependent on the Enable Accessibility
+Enhancements for Page Headers and Modal Windows When Zoom Is Greater Than 200% release
+update. Make sure to enable that update first.
+
+Where: This change applies to Lightning Experience in all editions.
+
+When: Salesforce enforces this update in Summer ’26. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the Maintenance tab.
+
+Why: With this update, content displays correctly in date pickers, popovers, bottom utility bars, and
+record headers for users who view Salesforce via a browser at 200% magnification or greater.
+
+Without this update, these parts of the Salesforce UI aren’t compliant with WCAG 2.2 guidelines for
+Resize and Reflow. Content potentially displays only partially.
+
+These changes help you support users with visual impairments.
+
+• Date pickers, popovers, and page headers are accessible and usable at 1280px page width and 400%
+    magnification.
+• Bottom utility bars truncate button labels to fit within the height of the utility bar.
+• The full text of a truncated button label appears in a tooltip if you hover a mouse over a button or
+
+                                                      89
+Salesforce Release Notes                                                                 Salesforce Overall
+
+
+  place keyboard focus on it.
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Enable Accessibility Enhancements for Date Pickers, Popovers, Bottom Utility
+Bars, Record Headers, follow the testing and activation steps.
+
+
+Salesforce Foundations
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use the new Email Builder Lite to quickly create and send batch emails to your Sales contacts and leads.
+Tableau dashboards have been added to the Marketing App.
+
+  Automate Your Outreach with a Lighter, Faster Email Builder App
+  Now it's easier than ever to connect with your customers. The new Email Builder Lite lets you quickly
+  create and send batch emails to your Sales contacts and leads. Choose from a library of ready-made
+  layouts, or build your own with our new component-based authoring experience. All emails you create
+  are automatically saved to your CMS Content Workspace for easy access and reuse. It's all accessible
+  right from your Sales list views, so you can automate your outreach via an intuitive interface, without
+  having to open another tab.
+  Gain Deeper, More Intuitive Insights from Your Marketing Data with Tableau in the Marketing App
+  The marketing dashboards in Salesforce Foundations have just gotten an upgrade, courtesy of Tableau!
+  Once configured, you'll find these new visualizations under the Performance Tab, helping you see
+  what's working and optimize your marketing strategy faster than ever.
+
+
+Automate Your Outreach with a Lighter, Faster Email Builder App
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Now it's easier than ever to connect with your customers. The new Email Builder Lite lets you quickly
+create and send batch emails to your Sales contacts and leads. Choose from a library of ready-made
+layouts, or build your own with our new component-based authoring experience. All emails you create
+are automatically saved to your CMS Content Workspace for easy access and reuse. It's all accessible right
+
+
+
+                                                    90
+Salesforce Release Notes                                                                   Salesforce Overall
+
+
+from your Sales list views, so you can automate your outreach via an intuitive interface, without having to
+open another tab.
+
+Where: This change applies to supported editions for Salesforce Foundations.
+
+How: To be accessible, Email Builder Lite requires admin enablement. From Setup, in the Quick Find box,
+enter and select Salesforce Foundations. Under Foundations Apps and Features, enable Email Builder
+Lite for Sales.
+
+
+Gain Deeper, More Intuitive Insights from Your Marketing Data with Tableau
+in the Marketing App
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The marketing dashboards in Salesforce Foundations have just gotten an upgrade, courtesy of Tableau!
+Once configured, you'll find these new visualizations under the Performance Tab, helping you see what's
+working and optimize your marketing strategy faster than ever.
+
+Where: This change applies to supported editions for Salesforce Foundations.
+
+When: This feature became available for implementation starting in early December.
+
+How: To unlock these new dashboards, activate Marketing Performance from the Foundations setup
+page. For any of our new users: this is a required setup step to use marketing features. For all our existing
+users: go to the Foundations setup page and activate Marketing Performance to see the new dashboards.
+Legacy dashboards will remain active until you do.
+
+
+Salesforce Data Pipelines
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Securely access your Amazon Redshift data by using a virtual private connection. Take advantage of
+OAuth functionality in your Microsoft Azure SQL Database connection.
+
+
+
+
+                                                     91
+Salesforce Release Notes                                                                   Salesforce Overall
+
+
+  Securely Connect Your Private Redshift Data to CRM Analytics
+  Integrate data from your private Amazon Redshift data warehouse into Salesforce Data Pipelines. Use
+  a virtual private connection (VPC) to make sure that all data transfer happens over an internal
+  network, bypassing the public internet for enhanced security and compliance.
+  Use OAuth Security with Your Microsoft Azure SQL Database Connection
+  Increase data security by connecting to Microsoft Azure SQL Database using OAuth 2.0 authentication.
+  You can now provide Azure authentication values directly, eliminating the need for a separate external
+  authentication provider setup.
+  Improve Snapshot Data Recipe Performance with Optimized Upsert and Delete Actions (Generally
+  Available)
+  Decrease processing time with quicker data recipe runs. Instead of processing all rows in the snapshot
+  data, the optimized upsert and delete actions run incrementally on subsets of the snapshot data,
+  resulting in faster runs. This feature is now generally available.
+
+
+Securely Connect Your Private Redshift Data to CRM Analytics
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Integrate data from your private Amazon Redshift data warehouse into Salesforce Data Pipelines. Use a
+virtual private connection (VPC) to make sure that all data transfer happens over an internal network,
+bypassing the public internet for enhanced security and compliance.
+
+Where: This change applies to Salesforce Data Pipelines in Lightning Experience and Salesforce Classic.
+Salesforce Date Pipelines is available for an extra cost in Enterprise, Performance, and Unlimited editions.
+Salesforce Private Connect is required.
+
+How: From Setup, in the Quick Find box, enter Private, and select Private Connect. Create an
+outbound connection, and then on the Named Credentials page, create external and named credentials.
+In Data Manager, on the Private tab, create a connection for the Redshift Private Connector.
+
+See Also
+  Salesforce Help: Amazon Redshift Private Connection (can be outdated or unavailable during release
+  preview)
+
+
+Use OAuth Security with Your Microsoft Azure SQL Database Connection
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+
+                                                    92
+Salesforce Release Notes                                                                   Salesforce Overall
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Increase data security by connecting to Microsoft Azure SQL Database using OAuth 2.0 authentication.
+You can now provide Azure authentication values directly, eliminating the need for a separate external
+authentication provider setup.
+
+Where: This change applies to Salesforce Data Pipelines in Lightning Experience and Salesforce Classic.
+Salesforce Data Pipelines is available for an extra cost in Enterprise, Performance, and Unlimited editions.
+
+How: In Azure, configure your connected app, SQL server, and database for OAuth authentication. In
+Salesforce, add the client ID, client secret, and Azure tenant values to your Microsoft Azure SQL Database
+connection.
+
+See Also
+  Salesforce Help: Microsoft Azure SQL Database Connection (can be outdated or unavailable during
+  release preview)
+
+
+Improve Snapshot Data Recipe Performance with Optimized Upsert and
+Delete Actions (Generally Available)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Decrease processing time with quicker data recipe runs. Instead of processing all rows in the snapshot
+data, the optimized upsert and delete actions run incrementally on subsets of the snapshot data,
+resulting in faster runs. This feature is now generally available.
+
+Where: This change applies to Salesforce Data Pipelines in Lightning Experience and Salesforce Classic.
+Salesforce Data Pipelines is available for an extra cost in Enterprise, Performance, and Unlimited editions.
+
+How: Re-create your recipes to take advantage of this optimization. The snapshot data must contain a
+primary key field. In the output node, select Existing Dataset and then select either the Upsert or the
+Delete operation to use the optimized features.
+
+See Also
+  Salesforce Help: Output Node: Write Recipe Results to a Dataset or External System (can be outdated
+  or unavailable during release preview)
+
+
+
+
+                                                    93
+Salesforce Release Notes                                                                  Salesforce Overall
+
+
+
+Trust Site Enhancements
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Trust site is the single place to see the status of Salesforce services and products, upcoming
+availability impacting activities, and availability-related communications.
+
+  Personalized Trust Is Now Salesforce My Trust Center (Beta)
+  Salesforce My Trust Center (beta) provides authenticated access to service health information tailored
+  to your specific Salesforce products and services. Based on customer feedback, the renamed
+  Salesforce My Trust Center (beta) has been improved. Subscribe to notifications, access 1 year of
+  extended incident and maintenance history with enhanced navigation, and view details on org
+  location and MyDomain information. Also, the public Status site now supports Heroku and Spiff.
+
+
+Personalized Trust Is Now Salesforce My Trust Center (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Salesforce My Trust Center (beta) provides authenticated access to service health information tailored to
+your specific Salesforce products and services. Based on customer feedback, the renamed Salesforce My
+Trust Center (beta) has been improved. Subscribe to notifications, access 1 year of extended incident
+and maintenance history with enhanced navigation, and view details on org location and MyDomain
+information. Also, the public Status site now supports Heroku and Spiff.
+
+Where: These changes apply to my.trust.salesforce.com and Status.salesforce.com.
+
+
+     Note Salesforce My Trust Center (beta) is a pilot or beta service that is subject to the Beta Services
+     Terms at Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer,
+     and applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the
+     Customer's sole discretion.
+
+
+Why: New capabilities in Salesforce My Trust Center (beta) include:
+
+• Subscriptions: Subscribe to notifications for events on your tenants through a new tab.
+
+                                                    94
+Salesforce Release Notes                                                                   Release Updates
+
+
+• Extended history: View 1 year of incident and maintenance history, plus the next 90 days of upcoming
+    maintenance. Navigate all data with search, filtering, and pagination tools.
+• Enhanced tenant details: See org location and MyDomain information for Sales, Service, and
+    Industries on tenant detail pages.
+•   Accessibility: Complies with WCAG 2.2 standards.
+•   Documentation: Access Salesforce My Trust Center (beta) documentation on the Help site.
+
+The public Status site now supports Heroku and Spiff.
+
+How: To access Salesforce My Trust Center (beta), go to Trust.salesforce.com, click Log In, and then click
+Log in to Trust. Or go to Status.salesforce.com, click Learn More, and then log in with your Trailblazer
+account credentials.
+
+We value your feedback. Share your thoughts by using this feedback form or by reaching out to your
+account team.
+
+
+
+Release Updates
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Salesforce periodically provides release updates that improve the performance, logic, security, and
+usability of our products. The Release Updates page provides a list of updates that can be necessary for
+your organization to enable. Some release updates affect existing customizations.
+
+Every time a release update is created, it gets scheduled to be enforced in a future release. We announce
+each update and its schedule here as soon as that schedule is known, but occasionally, updates are
+postponed or canceled. If that happens, we let you know in the section that describes that specific
+release update.
+
+Often, release updates provide a Test Run option so you can enable an update and examine any changes
+to your org, including changes to customizations, before that update’s Complete Steps By date. You can
+view attachments in the Salesforce mobile app, but you can’t edit them.
+
+To view release updates, from Setup, in the Quick Find box, enter Release Updates, and select Release
+Updates.
+
+
+Enforced with This Release
+
+These updates are scheduled to be enforced this release.
+
+
+
+                                                      95
+Salesforce Release Notes                                                                  Release Updates
+
+
+Escape the Label Attribute of <apex:inputField> Elements to Prevent Cross-Site Scripting in
+Visualforce Pages (Release Update)
+        To prevent malicious code from executing in cross-site scripting (XSS) attacks on your Visualforce
+        pages, this release update escapes the label attribute of your <apex:inputField> tags. First
+        available in Spring ’23, this update is enforced in Spring ’26.
+
+
+Update References to Legacy Host Names (Release Update)
+       Prevent disruption for your customers and end users when the temporary redirection of legacy
+       (non-enhanced) Salesforce host names ends. With this release update, those redirections end in
+       all orgs. First available in Spring ’25, this update is enforced in Spring ’26.
+
+
+Scheduled to Be Enforced in Summer ’26
+
+These updates are scheduled to be enforced in Summer ’26. The list can include new, previously
+announced, and previously postponed release updates.
+
+Enable Accessibility Enhancements for Date Pickers, Popovers, Bottom Utility Bars, Record Headers
+(Release Update)
+       To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+       Lightning Experience to adapt the behavior of date pickers, popovers, bottom utility bars, and
+       record headers when viewed at high magnification. This release update is dependent on the
+       Enable Accessibility Enhancements for Page Headers and Modal Windows When Zoom Is
+       Greater Than 200% release update.
+
+
+Enable Accessibility Enhancements for Page Headers and Modal Windows When Zoom Is Greater
+Than 200% (Release Update)
+       To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+       Lightning Experience to adapt the behavior of page headers and modal windows when viewed at
+       high magnification. This is the beginning of our effort to comply with WCAG 2.2 Resize and
+       Reflow guidelines.
+
+
+Migrate to a Multiple-Configuration SAML Framework (Release Update)
+       If you see this release update, your Salesforce instance is using our original single-configuration
+       SAML framework, which supports single sign-on (SSO) with only one identity provider. We’re
+       giving you a final reminder that with the Summer ’26 release, we’re no longer supporting the
+       single-configuration SAML framework. To make sure that your SSO configurations don’t break,
+       migrate to our newer multiple-configuration SAML framework, which supports SSO with multiple
+       identity providers instead of just one. If you don't migrate, your SAML single sign-on
+       configurations will stop working when this release update is enforced in Summer ’26.
+
+
+Salesforce-Managed X (Formerly Twitter) Authentication Provider Retirement (Release Update)
+        The Salesforce-managed app for the X (formerly Twitter) authentication provider is being retired.
+        This update breaks any single sign-on (SSO) configurations that use the Salesforce-managed X
+
+
+
+
+                                                     96
+Salesforce Release Notes                                                                 Release Updates
+
+
+        app. To avoid disruptions, create a custom X app and update your SSO configurations.
+
+
+Update Instanced URLs in API Traffic (Release Update)
+       To prevent disruption when Salesforce ends support for API traffic that uses an incorrect
+       instanced URL, make sure that API traffic to your org uses the org’s My Domain login URL. First
+       available in Summer ’25, this release update was scheduled to be enforced in Spring ’26, but we
+       postponed the enforcement to Summer ’26.
+
+
+Use Visualforce PDF Rendering Service with Apex Blob.toPdf() (Release Update)
+       With this update enabled, the Apex Blob.toPdf() method for PDF rendering uses the same
+        rendering service as Visualforce. The Visualforce PDF rendering service offers improvements such
+        as additional fonts and multibyte character support. This change makes PDF rendering more
+        consistent on the Salesforce Platform.
+
+
+Scheduled to Be Enforced in Winter ’27
+
+These updates are scheduled to be enforced in Winter ’27. The list can include new, previously
+announced, and previously postponed release updates.
+
+Adopt Authorized Email Domains (Release Update)
+       If you previously worked with Salesforce Customer Support to disable email change verifications,
+       set up authorized email domains instead. Salesforce is retiring the existing exemption process for
+       disabling this feature, and authorized email domains provide the same benefit.
+
+
+Enable Accessibility Enhancements for Cards, Docked Containers, Menu Lists, and Panels (Release
+Update)
+       To help meet Web Content Accessibility Guidelines (WCAG) 2.2 for Resize and Reflow, enable
+       Lightning Experience to adapt the behavior of cards, docked containers, menu lists, and panels
+       when viewed at high magnification. This release update is dependent on the Enable Accessibility
+       Enhancements for Page Headers and Modal Windows When Zoom Is Greater Than 200%
+       release update.
+
+
+Scheduled to Be Enforced in Spring ’27
+
+These updates are scheduled to be enforced in Spring ’27. The list can include new, previously
+announced, and previously postponed release updates.
+
+Salesforce to Salesforce Is Being Retired (Release Update)
+        Salesforce to Salesforce is being retired in Spring ’27. Salesforce has more powerful and
+        integrated solutions that align with modern business needs. To prevent disruption when
+        Salesforce ends support for the Salesforce to Salesforce product, make sure that you migrate
+        your integrations to one of these recommended solutions: Partner Cloud, Data Cloud One,
+        MuleSoft Anypoint, or MuleSoft for Flow.
+
+
+
+                                                   97
+Salesforce Release Notes                                                               Agentforce Platform
+
+
+Update Apex Code and Flows for Changed Sharing Recalculation Behavior (Release Update)
+       To optimize performance after large-scale updates to groups or roles, Salesforce now performs
+       some sharing recalculations asynchronously. If Apex code and flows require that share records be
+       updated immediately, the code and flows can break when this release update is enforced.
+       Update Apex classes, tests, and flows that update group membership or roles if they rely on
+       synchronous sharing recalculation. This update is available starting in Spring ’26.
+
+
+Scheduled to Be Enforced in Summer ’27
+
+These updates are scheduled to be enforced in Summer ’27. The list can include new, previously
+announced, and previously postponed release updates.
+
+SOAP API login() Call in SOAP API Versions 31.0 Through 64.0 Is Being Retired (Release Update)
+      In Summer ‘27, the SOAP API login() call in SOAP API versions 31.0 through 64.0 will no longer
+        be supported and no longer be available.
+
+
+
+
+Agentforce Platform
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Supercharge your workforce efficiency with predictive and generative AI.
+
+Rights of ALBERT EINSTEIN are used with permission of The Hebrew University of Jerusalem /
+CMGWorldwide.
+
+  Agentforce Platform Features Released by Month
+  Build smart solutions for your business cases with generative AI, predictive AI, and everything in
+  between. Learn about functionality, security, and performance improvements to AI at Salesforce.
+  Agentforce platform changes are released as often as monthly, so check back again soon for the latest
+  and greatest.
+  Agentforce
+  Bring the power of assistive and autonomous AI to your business with Agentforce.
+  Einstein Development
+  Develop custom solutions with our suite of generative AI tools, including the Models API, Agentforce,
+  Prompt Builder, and Einstein Studio.
+
+
+
+
+                                                    98
+Salesforce Release Notes                                                               Agentforce Platform
+
+
+
+Agentforce Platform Features Released by Month
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Build smart solutions for your business cases with generative AI, predictive AI, and everything in
+between. Learn about functionality, security, and performance improvements to AI at Salesforce.
+Agentforce platform changes are released as often as monthly, so check back again soon for the latest
+and greatest.
+
+
+ Feature                            Release Note                        Available
+
+                                               January ’26
+
+ Agentforce Platform                Migrate Your Agents’ Connected      Early January 2026
+                                    Apps to the External Client App
+                                    Framework
+
+ Einstein Bots                      Article Answers for Einstein Bots   February 28, 2026
+                                    Is Being Retired
+
+                                             December ’25
+
+ Agentforce Development             Accelerate Custom Lightning         Week of February 9, 2026
+                                    Type Creation for Agentforce
+                                    with the Lightning Types MCP
+                                    Tool (Developer Preview)
+
+
+
+Agentforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Bring the power of assistive and autonomous AI to your business with Agentforce.
+
+  Migrate Your Agents’ Connected Apps to the External Client App Framework
+  With the Spring '26 release, you can no longer create connected apps. For the best customer
+
+
+
+                                                    99
+Salesforce Release Notes                                                               Agentforce Platform
+
+
+  experience, migrate your connected apps to external client apps. External client apps provide
+  enhanced security, streamlined packaging, and a more robust framework for your apps. Existing
+  connected apps and connected apps for Slack in the legacy Agentforce Builder aren’t impacted.
+  New and Changed Standard Agent Topics and Actions
+  Quickly add powerful functionality to an agent with new and changed standard agent actions and
+  topics.
+
+
+Migrate Your Agents’ Connected Apps to the External Client App Framework
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+With the Spring '26 release, you can no longer create connected apps. For the best customer experience,
+migrate your connected apps to external client apps. External client apps provide enhanced security,
+streamlined packaging, and a more robust framework for your apps. Existing connected apps and
+connected apps for Slack in the legacy Agentforce Builder aren’t impacted.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+When: This change is available in early January 2026.
+
+How: To create an external client app from a connected app, open the connected app in App Manager
+and then click Migrate to External Client App. In Agentforce Builder (beta), connect the external client
+app to your agent using the Messaging connection. After you create an external client app from a
+connected app, the connected app is read-only in App Manager.
+
+Existing connected apps and external client apps with these OAuth scopes appear in the External Apps
+list in the Messaging connection.
+
+• Access chatbot services (chatbot_api)
+• Access the Salesforce API Platform (sfap_api)
+• Manage user data via APIs (api)
+See Also
+  Creation of New Connected Apps Is Disabled by Default
+  Salesforce Help: Create an External Client App from a Connected App
+
+
+New and Changed Standard Agent Topics and Actions
+
+This release is in preview
+
+
+
+                                                   100
+Salesforce Release Notes                                                                 Agentforce Platform
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Quickly add powerful functionality to an agent with new and changed standard agent actions and topics.
+
+Availability of standard agent topics, actions, and related prompt templates or flows can vary by edition
+and license.
+
+
+January '26
+
+New Topic: ESG Data Collection
+      Engage with multiple stakeholders and collect environmental, social, and governance (ESG)
+         information.
+
+
+         This topic includes these new actions.
+     •   Get Vehicle Asset Emission Source Data: Answers questions related to the company's ESG data
+         by retrieving data from vehicle assets and returns a list of vehicleAssetEmssnSrcData objects.
+     •   Get Sustainability Stakeholder Data: Answers questions related to the stakeholders in the
+         company's ESG data by retrieving stakeholder data related to the stakeholder’s role for the
+         reference object associated with this stakeholder.
+     •   Manage Sustainability Task Group: Manages a sustainability task group by sending follow-up
+         emails to stakeholders with incomplete tasks in an existing sustainability task group.
+     •   Get Sustainability Task Group Data: Answers questions related to the task groups in the
+         company's ESG data.
+     •   Create Sustainability Task Group: Creates a sustainability task group by notifying sustainability
+         stakeholders about ESG data collection activities.
+
+
+New Topic: FinServ Package Wealth Advisor Client Meeting Preparation (Managed Package)
+      Help wealth advisors gather, review, and organize client details to prepare for a client meeting.
+
+         This topic includes these new actions.
+     •   FinServ Package Summarize Financial Details: The Summarize Financial Details action provides
+         wealth advisors with a real-time summary of a household and person account’s financial profile
+         within Salesforce Financial Services Cloud.
+     •   FinServ Package Summarize Financial Goals: The Summarize Financial Goals action finds and
+         retrieves financial goals records based on user input. This action provides a real-time summary of
+         a household and person account’s financial goals within Salesforce Financial Services Cloud.
+     •   FinServ Package Summarize Portfolio Performance: Provide wealth advisors with real-time
+         summary of an account’s financial profile within Salesforce Financial Services Cloud.
+
+
+
+
+                                                    101
+Salesforce Release Notes                                                                 Agentforce Platform
+
+
+New Topic: FinServ Package Wealth Advisor Client Post Meeting Follow Up (Managed Package)
+      Help wealth advisors manage post meeting tasks by creating financial goals, and life events.
+      Structure and organize meeting notes.
+
+
+         This topic includes these new actions.
+     •   FinServ Package Create Financial Goal: Collect the account ID, status, type, target value, target
+         date and name. Create a financial goal for the account.
+     •   FinServ Package Create Life Event: Collect the account ID, name, date and type. Create a life
+         event related to the account.
+     •   FinServ Package Extract Financial Goals: Extract financial goals from meeting notes. Identify
+         financial goals, types, statuses, target values, and target dates for wealth management advisors.
+     •   FinServ Package Extract Life Events: Extract life events from meeting notes. Identify life events,
+         types, and dates for wealth management advisors.
+     •   FinServ Package Structure Financial Advisor Meeting Notes: Structure and organize meeting
+         notes. Identify the key client details, needs, concerns, and next steps for a follow-up meeting.
+
+
+New Topic: Manage Gift Commitments (Beta)
+      Fulfill donor requests to modify, pause, resume, or close their existing gift commitments or
+      recurring donations.
+
+
+         This topic includes these new actions.
+     •   Agent Action: Close Gift Commitment: Close a gift commitment by updating the status of all
+         unpaid and failed transactions to Closed.
+     •   Agent Action: Manage Recurring Gift Commitment: Pause, resumes or update the amount on a
+         recurring gift commitment.
+
+
+New Action: Match Volunteers to Shifts
+      The Match Volunteers to Shifts action finds suitable volunteers to fill open shifts based on the
+      time, location, and qualification requirements. The output of this action can be compiled into a
+      list of potential volunteers to be contacted to sign up for the open shift.
+
+
+New Topic: Account Performance
+      Summarize an account's financial health, retrieve total revenue, analyze performance metrics,
+      and identify top-selling and bottom-selling products within a specified time period. Help users
+      quickly understand sales trends and financial metrics of an account.
+
+
+         This topic includes these new actions.
+     •   Get Retail Execution Account Performance Data: Calculates total revenue, minimum and
+         maximum order values, and identifies top N% and bottom N% selling products based on order
+         quantities.
+     •   Get Retail Execution Orders By Account: Gets order information, including order header details
+         and corresponding detailed order item data for each order of the account.
+
+
+
+
+                                                    102
+Salesforce Release Notes                                                               Agentforce Platform
+
+
+New Topic: Account Compliance
+      Analyze store compliance by using past visits, audits, and customer tasks to identify ongoing
+      retail execution issues and gaps. Help users track consistency and adherence to promotional,
+      shelf, and display standards.
+
+
+         This topic includes these new actions.
+     •   Get Retail Execution Visits By Account: Get completed visits for the account based on the
+         preconfigured visit types in Retail Execution.
+     •   Get Retail Execution Customer Tasks By Account: Get customer tasks that are ready or released
+         for an account optionally within a date range.
+
+
+New Topic: Last Visit Summary
+      Get a summary of the most recent store visit, including key activities, compliance outcomes,
+      overdue tasks, and associated order data. Help users streamline visit closure and follow-up
+         activities by providing a snapshot of the most recent account interaction.
+
+
+         This topic includes these new actions.
+     •   Get Retail Execution Customer Tasks By Account: Get customer tasks that are ready or released
+         for an account optionally within a date range.
+     •   Get Retail Execution Visits By Account: Get completed visits for the account based on the
+         preconfigured visit types in Retail Execution.
+     •   Get Retail Execution Orders By Visit: Get order information, including order header details and
+         corresponding detailed line-item (order item) data for each order of the visit.
+
+
+New Topic: Product Upsell
+      Summarize product recommendations, personalized sales pitches, and out-of-stock (OOS)
+      analysis based on account history and visit notes. Help users identify growth opportunities and
+      customize their product pitch while in the store.
+
+
+         This topic includes these new actions.
+     •   Get Retail Execution Visits By Account: Get completed visits for the account based on the
+         preconfigured visit types in Retail Execution.
+     •   Get Retail Execution Orders By Account: Gets order information, including order header details
+         and corresponding detailed order item data for each order of the account.
+
+
+
+Einstein Development
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+                                                    103
+Salesforce Release Notes                                                               Agentforce Platform
+
+
+Develop custom solutions with our suite of generative AI tools, including the Models API, Agentforce,
+Prompt Builder, and Einstein Studio.
+
+  Accelerate Custom Lightning Type Creation for Agentforce with the Lightning Types MCP Tool
+  (Developer Preview)
+  The Lightning Types Model Context Protocol (MCP) tool in the Salesforce DX MCP Server provides a
+  dynamic way to create and enhance your custom Lightning types. Salesforce DX MCP Server uses large
+  language models (LLMs) to generate the necessary LightningTypeBundle metadata files, including
+  schema.json, editor.json, and renderer.json. You use these custom Lightning types to generate the
+  custom Lightning Web Component (LWC) responses that you’re looking for. This feature supports
+  Agentforce Employee agents in Lightning Experience and Agentforce Service agents via Enhanced Chat
+  v2. You can also define structured outputs in Prompt Builder with these Lightning types.
+
+
+Accelerate Custom Lightning Type Creation for Agentforce with the Lightning
+Types MCP Tool (Developer Preview)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Lightning Types Model Context Protocol (MCP) tool in the Salesforce DX MCP Server provides a
+dynamic way to create and enhance your custom Lightning types. Salesforce DX MCP Server uses large
+language models (LLMs) to generate the necessary LightningTypeBundle metadata files, including
+schema.json, editor.json, and renderer.json. You use these custom Lightning types to generate the
+custom Lightning Web Component (LWC) responses that you’re looking for. This feature supports
+Agentforce Employee agents in Lightning Experience and Agentforce Service agents via Enhanced Chat
+v2. You can also define structured outputs in Prompt Builder with these Lightning types.
+
+Where: The Lightning Types MCP tool is available in the latest version of the Salesforce DX MCP Server
+(beta).
+
+
+     Note The Lightning Types MCP tool feature is available as a developer preview. Feature isn’t
+     generally available unless or until Salesforce announces its general availability in documentation or
+     in press releases or public statements. All commands, parameters, and other features are subject to
+     change or deprecation at any time, with or without notice. Don’t implement functionality developed
+     with these commands or tools.
+
+
+When: This feature is available starting the week of February 9, 2026.
+
+How: Access the Lightning Types MCP tool, which works with your integrated development environment
+(IDE), through Agentforce or other MCP clients of your choice. The Salesforce DX MCP Server is
+
+
+
+                                                   104
+Salesforce Release Notes                                                                             Analytics
+
+
+preconfigured in Agentforce Vibes Extension. To interact with the tool, turn on the server in Agentforce,
+which is a part of Agentforce Vibes Extension. After the server is running, interact with it by using natural
+language prompts to create, enhance, and get guidance on your custom Lightning types.
+
+See Also
+  Salesforce DX MCP Server and Tools (Beta)
+
+
+
+Analytics
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Analytics enhancements include new and updated features for Tableau Next, Lightning reports and
+dashboards, Data 360 reports and dashboards, CRM Analytics, Intelligent apps, and Tableau.
+
+  Tableau Next
+  Tableau Next integrates the #1 analytics platform with Agentforce context-aware AI and the Data
+  Cloud semantic layer that unifies business knowledge across your organization. Build and deliver
+  personalized, contextual, and actionable insights for every user, backed by Salesforce enterprise-grade
+  performance, security, and scalability.
+  Lightning Reports and Dashboards
+  Save time and reduce errors when adding tables to dashboards by retaining existing report settings.
+  Ensure policy and regulatory compliance with custom disclaimers on exported reports.
+  Data 360 Reports and Dashboards
+  Calculate deeper insights with more row-level formulas.
+  CRM Analytics
+  CRM Analytics enhancements include new and updated features for dashboards, lenses, analytics
+  apps, and data integration.
+  Tableau
+  Use Tableau to analyze, explore, and make decisions on your data with just a few clicks. Create
+  engaging visualizations and embed them in your Lightning pages to use them in your workflows.
+  Tableau has enterprise analytics platform solutions for deep data exploration.
+  Marketing Cloud Intelligence
+  With Marketing Cloud Intelligence, you connect, harmonize, visualize, and act on your marketing data
+  to optimize performance within campaigns, discover insights in real time, and then act on them.
+  Accessibility Enhancements in Analytics
+  Learn about small but important changes that make analytics more accessible.
+
+
+
+
+                                                     105
+Salesforce Release Notes                                                                          Analytics
+
+
+
+Tableau Next
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Tableau Next integrates the #1 analytics platform with Agentforce context-aware AI and the Data Cloud
+semantic layer that unifies business knowledge across your organization. Build and deliver personalized,
+contextual, and actionable insights for every user, backed by Salesforce enterprise-grade performance,
+security, and scalability.
+
+Tableau Next features and updates are released monthly. Check back in this section throughout Spring
+‘26 to learn about enhancements in the Tableau Next open data layer, semantics, visualizations,
+integrated actions, and analytics apps.
+
+  Tableau Next Features Released by Month
+  Tableau Next features and changes are released as often as monthly, so check back again soon for the
+  latest solutions.
+  Tableau Next Highlights
+  Don’t miss any Tableau Next features. Recap or dive deeper into the Winter ’26 features and learning
+  opportunities.
+
+
+Tableau Next Features Released by Month
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Tableau Next features and changes are released as often as monthly, so check back again soon for the
+latest solutions.
+
+See Also
+  Salesforce Release Notes: Winter ‘26 Tableau Next Features Released by Month
+  Salesforce Release Notes: Summer ‘25 Tableau Next Features Released by Month
+
+
+
+
+                                                   106
+

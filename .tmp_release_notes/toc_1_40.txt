@@ -1,0 +1,2124 @@
+Salesforce Release Notes
+
+
+
+
+                    Last Updated:2026.01.02
+© Copyright 2000–2026 salesforce.com, inc. All rights reserved. Salesforce is a registered trademark of salesforce.com, inc.,
+       as are other names and marks. Other marks appearing herein may be trademarks of their respective owners.
+CONTENTS
+
+Salesforce Spring ’26 Release Notes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Monthly Release Notes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Release Note Changes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+How and When Do Features Become Available? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+Salesforce Overall . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+Release Updates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
+Agentforce & Einstein . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
+Analytics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+Commerce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
+Customization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+Experience Cloud . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 238
+Field Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 259
+Hyperforce . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+Industries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 289
+Marketing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543
+MuleSoft . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 595
+Mobile . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 596
+Omnistudio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 603
+Partner Cloud . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611
+Revenue Management . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 613
+Sales . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 711
+Salesforce CMS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 760
+Salesforce Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 763
+Salesforce for Slack Integrations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 825
+Security, Identity, and Privacy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 826
+Service . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 859
+Other Salesforce Products and Services . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 928
+Legal Documentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 929
+Previous Release Notes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 929
+Salesforce Release Notes
+
+
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Spring ’26 release helps companies to accelerate their journey to becoming an Agentic Enterprise by
+combining human expertise and AI agents — giving every team the insights, automation, and tools they
+need to deliver better customer experiences with confidence.
+
+
+What's New This Release
+
+• Admin Release Countdown Blog. Important dates you’ll want to mark on your calendar for Spring '26.
+• Spring '26 Pre-release Signup. Sign up for a pre-release org to get early access to the new features.
+
+Release Readiness Essentials
+
+• Release Readiness Trailblazers. Access resources and experts for all things release readiness. To help us
+    track and respond to your feedback, use a hashtag that indicates the release, such as
+    #Spring26Feedback.
+•   Trust Status Maintenance Site. See sandbox and other release dates and times. To see your
+    maintenance dates, select Instances and your instance.
+•   Sandbox Refresh Calculator, Preview Video, and Preview Instructions. Plan if and when to refresh your
+    sandboxes. Learn how to navigate the sandbox preview process. Get early access to new features in
+    your sandbox.
+•   Certification Release Maintenance Schedule. Keep your certification updated in Trailhead.
+•   Prepare for Salesforce Releases. Use Trailhead to create your release strategy.
+
+
+Release Notes Tips
+
+• Use the table of contents to browse through release notes by product. You can also search and filter to
+    zero in on the news that matters the most.
+•   Your browser’s settings determine the language that you see. To change the website language, scroll to
+    the bottom of this page and use the language switcher in the website footer.
+•   Salesforce Known Issues are listed separately.
+
+
+
+
+                                                     1
+Salesforce Release Notes
+
+
+
+     Note Until the new release is available to you, links from release notes to Salesforce Help,
+     implementation guides, developer guides, and other documentation don’t work. And sometimes
+     the links point to material from the previous release. Some of our documentation has preview
+     versions available several weeks before the release. To access a preview version on Salesforce
+     Developers, select Preview from the Documentation Version dropdown list.
+
+
+  Release Notes for Features Released Monthly
+  For some products, Salesforce releases features and enhancements more frequently than three times
+  per year.
+  Release Note Changes
+  Read about what changes were made after the release notes were published. Changes are separated
+  by product and with the most recent changes first. The dates indicate the week that changes to the
+  release note were made. Review the individual release note availability details.
+  How and When Do Features Become Available?
+  Some features affect all users immediately after the release goes live. Consider communicating these
+  changes to your users beforehand so that they’re prepared. Other features require direct action by an
+  administrator before users can benefit from the new functionality.
+  Salesforce Overall
+  Learn about new features and enhancements that affect your Salesforce experience overall.
+  Release Updates
+  Salesforce periodically provides release updates that improve the performance, logic, security, and
+  usability of our products. The Release Updates page provides a list of updates that can be necessary
+  for your organization to enable. Some release updates affect existing customizations.
+  Agentforce Platform
+  Supercharge your workforce efficiency with predictive and generative AI.
+  Analytics
+  Analytics enhancements include new and updated features for Tableau Next, Lightning reports and
+  dashboards, Data 360 reports and dashboards, CRM Analytics, Intelligent apps, and Tableau.
+  Commerce
+  Commerce enhancements include features for B2B Commerce, Omnichannel Inventory, and
+  Salesforce Order Management.
+  Customization
+  Complete Setup tasks more efficiently with the help of an AI assistant with Setup with Agentforce
+  (beta). Import and export translation files more easily with enhancements to the Translation
+  Workbench.
+  Development
+  Whether you’re using Lightning components, Visualforce, Apex, or Salesforce APIs with your favorite
+  programming language, these enhancements help you develop amazing applications, integrations,
+  and packages for resale to other organizations.
+  Experience Cloud
+  Make your Aura and LWR site pages more discoverable to AI-powered search engines and improve the
+  precision of AI-generated answers with generative engine optimization. Create richer HTML content for
+
+
+
+                                                   2
+Salesforce Release Notes
+
+
+  Aura and LWR sites and enjoy greater design flexibility on LWR sites with expanded HTML allowlists
+  and more readily available standard LWR components. Updates to Salesforce files make it easier for
+  users to manage, delete, upload, and download files. The ability to create custom property types and
+  editors for Aura and LWR sites is now generally available.
+  Field Service
+  See what’s new in Agentforce Field Service, formerly Field Service, to help your team deliver on
+  performance and customer service.
+  Hyperforce
+  Products and features from Data 360, Marketing Cloud, Platform, MuleSoft, and Tableau Cloud are
+  now available in more Hyperforce regions. Hyperforce Assistant introduced a new way to find hard-
+  coded references. The Hyperforce public IP ranges now include addresses for inbound connections, in
+  addition to existing outbound addresses. Prepare for IPv6 if you use IP allowlists.
+  Industries
+  Learn about new features and enhancements across the Industries clouds.
+  Marketing
+  Personalize every moment of engagement across the customer lifecycle and drive growth for your
+  business with the latest features and enhancements from Salesforce Marketing apps.
+  MuleSoft
+  Use the MuleSoft Anypoint Platform suite of products to connect and integrate apps, systems, and
+  data across your enterprise. Streamline operations by building and automating processes with clicks
+  instead of code. You can design, develop, govern, and share APIs and integration apps and host them
+  in the cloud or on-premises.
+  Mobile
+  The Salesforce mobile app now uses single sign-on for faster logins and notifications that lets you work
+  on tasks. Create mobile and offline ready Lightning Web components with Mobile MCP tools.
+  Omnistudio
+  Validate your workflows built with Omniscripts and Flexcards end-to-end by using the UI Test
+  Automation Model (UTAM) framework. For a fast, scalable experience, add Omnscripts and Flexcards
+  to Lightning Web Runtime (LWR) Experience Cloud sites (pilot). Get immediate help with an
+  Omnistudio component or element with the Omnistudio Assistance AI Agent (pilot). With accessibility
+  improvements for Omniscripts and Flexcards, create inclusive workflows and solutions for customers
+  and users with disabilities. Filter empty records in Omnistudio Data Mapper Extract and Turbo Extract
+  components with the Is Null operator.
+  Partner Cloud
+  Start managing the full partner lifecycle in one place with tools built directly into Salesforce. Use
+  Partner Cloud to recruit, onboard, enable, and co-sell with partners while giving them secure access to
+  the data and workflows they need. Bring together key capabilities like deal registration, incentives,
+  training, and performance tracking so your team can scale indirect sales and improve partner
+  relationships. Partner Cloud helps you do more with the partners you already have—faster, and with
+  less manual work.
+  Revenue Management
+  Learn about new features and enhancements for Agentforce Revenue Management.
+  Sales
+
+
+                                                    3
+Salesforce Release Notes
+
+
+  Learn about the latest features and updates to grow your pipeline and increase the efficiency of your
+  sales teams. Sales Cloud is now Agentforce Sales. You may see references to Sales Cloud in our
+  application and documentation.
+  Salesforce CMS
+  Previously known as Sidebar Extensions, Extensions in CMS have an improved development workflow.
+  Build extensions to add more productivity tools to your CMS content workflow, such as third-party
+  generative AI tools or tone and grammar editors. When you work with external content providers, you
+  can now choose which providers are available to your workspace and where to save files from these
+  systems.
+  Salesforce Flow
+  Compose intelligent workflows with Flow Builder and Flow Orchestration. Integrate across any system
+  with Flow Integration.
+  Salesforce for Slack Integrations
+  Use Slack and Salesforce together to connect with customers, track progress, collaborate seamlessly,
+  and deliver team success from anywhere.
+  Security, Identity, and Privacy
+  Redirections end for legacy host names, including instanced host names in API calls. Connected app
+  creation is disabled by default for all Salesforce orgs. Salesforce Backup & Recover is now a native app.
+  And, Privacy Requests fulfill your customers' Right to Be Forgotten requests.
+  Service
+  Service Cloud is now Agentforce Service. You may see references to Service Cloud in our application
+  and documentation. Learn about the latest features from Service to supercharge productivity across
+  your organization. Service features are released as often as monthly, so check here for the latest
+  information.
+  Other Salesforce Products and Services
+  Get the latest information on these new features.
+  Legal Documentation
+  We made seasonal updates to Salesforce Legal Documents.
+  Previous Release Notes
+  Find information about previously announced features in the release note archive.
+
+
+
+
+                                                      4
+Salesforce Release Notes                                                            Monthly Release Notes
+
+
+
+
+Release Notes for Features Released Monthly
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+For some products, Salesforce releases features and enhancements more frequently than three times per
+year.
+
+• Agentforce Platform Features Released by Month
+• B2B Commerce
+• Data 360
+• Salesforce Personalization
+• Service
+Monthly release notes aren’t the same as changes to previously published release notes as noted in
+Release Notes Changes.
+
+
+
+Release Note Changes
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Read about what changes were made after the release notes were published. Changes are separated by
+product and with the most recent changes first. The dates indicate the week that changes to the release
+note were made. Review the individual release note availability details.
+
+The Salesforce Spring ’26 Release Notes were first published the week of December 15, 2025.
+
+
+
+How and When Do Features Become Available?
+
+This release is in preview
+
+
+
+                                                    5
+Salesforce Release Notes                                      How and When Do Features Become Available?
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Some features affect all users immediately after the release goes live. Consider communicating these
+changes to your users beforehand so that they’re prepared. Other features require direct action by an
+administrator before users can benefit from the new functionality.
+
+
+Salesforce Overall
+
+Learn about new features and enhancements that affect your Salesforce experience overall.
+
+
+                                                         Enabled for       Requires          Contact
+                                      Enabled for       administrators   administrator    Salesforce to
+              Feature                    users           /developers        setup            enable
+
+     General Enhancements
+
+ Prepare for Shorter Certificate                             Yes
+ Lifespans
+
+ Get Ready for IPv6                                          Yes
+
+ Elevate Your Salesforce Go                                                   Yes
+ Experience with Smarter Filters
+ and Enhanced Search
+
+ Capture Employee Details for                                Yes
+ Unified Employee License
+ Holders
+
+ Styling Change to Highlighted            Yes
+ and Selected Content
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Page
+ Headers and Modal Windows
+ When Zoom Is Greater Than
+ 200% (Release Update)
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Cards,
+ Docked Containers, Menu Lists,
+ and Panels (Release Update)
+
+ Enable Accessibility                                                         Yes
+ Enhancements for Date Pickers,
+
+
+
+                                                    6
+Salesforce Release Notes                                     How and When Do Features Become Available?
+
+
+
+                                                        Enabled for       Requires        Contact
+                                     Enabled for       administrators   administrator   Salesforce to
+              Feature                   users           /developers        setup           enable
+
+ Popovers, Bottom Utility Bars,
+ Record Headers (Release
+ Update)
+
+     Salesforce Foundations
+
+ Automate Your Outreach with a                                               Yes
+ Lighter, Faster Email Builder
+ App
+
+ Gain Deeper, More Intuitive                                                 Yes
+ Insights from Your Marketing
+ Data with Tableau in the
+ Marketing App
+
+    Salesforce Data Pipelines
+
+ Securely Connect Your Private            Yes
+ Redshift Data to CRM Analytics
+
+ Use OAuth Security with Your             Yes
+ Microsoft Azure SQL Database
+ Connection
+
+ Improve Snapshot Data Recipe             Yes
+ Performance with Optimized
+ Upsert and Delete Actions
+ (Generally Available)
+
+    Trust Site Enhancements
+
+ Personalized Trust Is Now                Yes
+ Salesforce My Trust Center
+ (Beta)
+
+
+Agentforce & Einstein
+
+Supercharge your workforce efficiency with predictive and generative AI.
+
+
+                                                        Enabled for       Requires        Contact
+                                     Enabled for       administrators   administrator   Salesforce to
+              Feature                   users           /developers        setup           enable
+
+ Agentforce Platform Features
+ Released by Month
+
+
+
+                                                   7
+Salesforce Release Notes                                    How and When Do Features Become Available?
+
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+            Agentforce
+
+ Migrate Your Agents’                                                       Yes
+ Connected Apps to the External
+ Client App Framework
+
+ New and Changed Standard                                                   Yes
+ Agent Topics and Actions
+
+      Einstein Development
+
+ Accelerate Custom Lightning                               Yes
+ Type Creation for Agentforce
+ with the Lightning Types MCP
+ Tool (Developer Preview)
+
+
+Analytics
+
+Analytics enhancements include new and updated features for Tableau Next, Lightning reports and
+dashboards, Data 360 reports and dashboards, CRM Analytics, Intelligent apps, and Tableau.
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+           Tableau Next
+
+ Tableau Next Features Released         Yes
+ by Month
+
+ Tableau Next Highlights                Yes
+
+    Reports and Dashboards
+
+ Use Existing Report Settings           Yes
+ When Adding Tables to
+ Dashboards (Generally
+ Available)
+
+ Ensure Compliance with                                                     Yes
+ Custom Disclaimers on
+ Exported Reports
+
+ Share Reports and Dashboards           Yes
+ Folders Using Usernames
+
+
+
+                                                  8
+Salesforce Release Notes                                    How and When Do Features Become Available?
+
+
+
+                                                       Enabled for       Requires        Contact
+                                    Enabled for       administrators   administrator   Salesforce to
+              Feature                  users           /developers        setup           enable
+
+ Embed Custom Lightning Web                                                                 Yes
+ Components in Dashboards for
+ Interactive Data Views (Beta)
+
+      Data 360 Reports and
+          Dashboards
+
+ Expand Reporting Capabilities          Yes
+ with More Row-Level Formulas
+
+          CRM Analytics
+
+ Analytics Experience and
+ Visualizations
+
+ Analyze Data Offline with CSV          Yes
+ and Excel Exports of Data 360
+ Objects
+
+ Download CRM Analytics                 Yes
+ Dashboard Images
+
+ Manage CRM Analytics Assets            Yes
+ with New Bulk Actions
+
+ Speed Up Queries and Improve           Yes
+ Data Handling with Data 360
+ SQL (Beta)
+
+ Repeat Groupings in Compare            Yes
+ Tables with Repeat Row Values
+
+ Gain Full Control over Number          Yes
+ Widget Tooltips
+
+ Explore Pivot Tables with Expand       Yes
+ and Collapse
+
+ Keep Widget Action Menus               Yes
+ Visible
+
+ Data Integration
+
+ Use CRM Analytics Datasets in          Yes
+ Data Cloud (Generally Available)
+
+ Securely Connect Your Private          Yes
+ Redshift Data to CRM Analytics
+
+
+
+                                                  9
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Use OAuth Security with Your          Yes
+ Microsoft Azure SQL Database
+ Connection
+
+ Improve Snapshot Data Recipe          Yes
+ Performance with Optimized
+ Upsert and Delete Actions
+ (Generally Available)
+
+ Tableau                               Yes
+
+ Marketing Cloud Intelligence          Yes
+
+ Accessibility Enhancements in         Yes
+ Analytics
+
+
+Commerce
+
+Commerce enhancements include features for B2B Commerce, Omnichannel Inventory, and Salesforce
+Order Management.
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+    Salesforce B2B Commerce
+
+ Salesforce B2B Commerce               Yes
+ Features Released Monthly
+
+ Agentforce for B2B Commerce
+
+ Add Multi-Language Support to                         Yes
+ B2B Guided Shopping Agent
+ Interactions
+
+ Commerce Cart, Checkout, and
+ Shipping
+
+ Let Buyers Request a Quote from                       Yes
+ Their Cart
+
+ Extend B2B Store Pricing Rules                        Yes
+ with Custom Context Definitions
+
+ Commerce Components
+
+
+
+                                                 10
+Salesforce Release Notes                                   How and When Do Features Become Available?
+
+
+
+                                                      Enabled for       Requires        Contact
+                                      Enabled for    administrators   administrator   Salesforce to
+              Feature                    users        /developers        setup           enable
+
+ New Commerce LWR Store                                   Yes
+ Components
+
+ Commerce Search
+
+ Identify Products at Risk of Being                       Yes
+ Unsearchable
+
+ Product Catalogs Include More                                                             Yes
+ Searchable and Filterable Fields
+
+ Commerce Subscriptions
+
+ Sell Subscription Product                                Yes
+ Bundles in Your Commerce Store
+
+ Enable Buyers to View                                                                     Yes
+ Subscription History
+
+ Commerce Additional Features
+
+ Sell Configurable Products in                            Yes
+ Your B2B Store
+
+ Determine Product Visibility                             Yes
+ Dynamically by Using
+ Qualification Rules
+
+     Omnichannel Inventory
+
+ Prevent Inventory Suppression                            Yes
+ with Safety Stock Caps
+
+ Salesforce Order Management
+
+ Agentforce for Salesforce Order
+ Management
+
+ Resolve Fulfillment Issues                                                                Yes
+ Proactively with Agentforce
+ (Pilot)
+
+ Monitor AI-Generated Insights            Yes
+ and Fulfillment Data in a Single
+ Dashboard
+
+ Control the Order of Payment                                                              Yes
+ Capture
+
+
+
+                                                    11
+Salesforce Release Notes                                     How and When Do Features Become Available?
+
+
+
+                                                       Enabled for        Requires          Contact
+                                      Enabled for     administrators    administrator     Salesforce to
+              Feature                    users         /developers         setup             enable
+
+ Manage Locations While                                     Yes
+ Configuring Shipping Methods
+
+
+Customization
+
+Complete Setup tasks more efficiently with the help of an AI assistant with Setup with Agentforce (beta).
+Import and export translation files more easily with enhancements to the Translation Workbench.
+
+
+                                                       Enabled for        Requires          Contact
+                                      Enabled for     administrators    administrator     Salesforce to
+              Feature                    users         /developers         setup             enable
+
+      Setup with Agentforce
+
+ Streamline Administrative Tasks                                             Yes
+ with Setup with Agentforce
+ (Beta)
+
+           Globalization
+
+ Export and Import Translated                               Yes
+ Files with Ease
+
+ Speed Up Custom Label                                      Yes
+ Updates in Translation
+ Workbench
+
+ Use Updated State Codes for                                Yes
+ Picklists
+
+ Review Updated Label                                       Yes
+ Translations
+
+ Enable ICU Locale Formats                                  Yes
+ (Release Update)
+
+            List Views
+
+ List View Edit Limits Are                                  Yes
+ Communicated More Clearly
+
+ Use Updated Empty Value                  Yes
+ Placement in List View Sorting
+
+          AppExchange
+
+
+
+
+                                                    12
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires         Contact
+                                    Enabled for    administrators   administrator    Salesforce to
+              Feature                  users        /developers        setup            enable
+
+ Configure New Trialforce Login                          Yes
+ Pages Before Summer ’26
+
+           General Setup
+
+ Submit Records for Approval by                                           Yes
+ Using the Request Approval
+ Component
+
+ Update Apex Code and Flows                                               Yes
+ for Changed Sharing
+ Recalculation Behavior (Release
+ Update)
+
+
+Development
+
+Whether you’re using Lightning components, Visualforce, Apex, or Salesforce APIs with your favorite
+programming language, these enhancements help you develop amazing applications, integrations, and
+packages for resale to other organizations.
+
+
+                                                    Enabled for       Requires         Contact
+                                    Enabled for    administrators   administrator    Salesforce to
+              Feature                  users        /developers        setup            enable
+
+     Lightning Components
+
+ LWC API Version 66.0
+
+ Use Complex Template                                    Yes
+ Expressions in Your Lightning
+ Web Components (Beta)
+
+ Display Consistent Empty State                          Yes
+ Illustrations With Theme
+ Support (Beta)
+
+ Get Complete Type Definitions                           Yes
+ for Lightning Base Components
+
+ Improve Type Safety with the                            Yes
+ LWC TypeScript Converter MCP
+ Tool (Beta)
+
+ Update Your Custom                                                       Yes
+ Components for Use in Setup
+
+
+
+                                                  13
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ with Agentforce (Beta)
+
+ Check For Errors From the                              Yes
+ Disconnected DOM Node
+ Rehydration Fix
+
+ Manage Page Errors with Error                                           Yes
+ Console
+
+ Do More with Lightning Out 2.0                         Yes
+ Improvements
+
+    Lightning Design System
+
+ Salesforce Lightning Design            Yes
+ System Component Blueprints
+ Updates
+
+ Use Dark Mode in More                  Yes
+ Editions (Beta)
+
+            Visualforce
+
+ Escape the Label Attribute of                          Yes
+ <apex:inputField> Elements to
+ Prevent Cross-Site Scripting in
+ Visualforce Pages (Release
+ Update)
+
+               Apex
+
+ Deploy Apex Components                                 Yes
+ Faster by Running Only
+ Relevant Tests (Beta)
+
+ Use Apex Cursors for Expanded                          Yes
+ SOQL Query Result Support
+ (Generally Available)
+
+ Extract Picklist Values Based on                       Yes
+ Record Type
+
+ Expose Apex REST and                                   Yes
+ AuraEnabled Controller
+ Methods as Agent Actions
+ (Generally Available)
+
+
+
+
+                                                  14
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                     Enabled for       Requires        Contact
+                                     Enabled for    administrators   administrator   Salesforce to
+              Feature                   users        /developers        setup           enable
+
+ Use Visualforce PDF Rendering                                            Yes
+ Service with Apex Blob.toPdf()
+ (Release Update)
+
+ Review Apex Code for Changed                                             Yes
+ Sharing Recalculation Behavior
+
+ Filter Test Discovery API Results                       Yes
+ by Test Category
+
+ Specify the Number of Async                             Yes
+ Jobs to Delete
+
+                API
+
+ Expose Custom SOQL in REST                                               Yes
+ API Calls Using Named Query
+ API (General Availability)
+
+ Update Instanced URLs in API                                             Yes
+ Traffic (Release Update)
+
+ EventBusSubscriber Object’s                             Yes
+ Position and Tip Fields Are
+ Being Deprecated
+
+ Sending Session IDs in                                  Yes
+ Outbound Messages Is Being
+ Removed
+
+ Metadata Deployments and                                Yes
+ Retrievals Have New Limits
+
+ Data 360 SOQL Query Results                             Yes
+ Are Limited to 12-MB at a Time
+
+ SOAP API login() Call in SOAP                                            Yes
+ API Versions 31.0 Through 64.0
+ Is Being Retired (Release
+ Update)
+
+            Packaging
+
+ Recommend a Package Version                             Yes
+ to Your Subscribers
+
+ Troubleshoot Subscriber Issues                          Yes
+
+
+
+
+                                                   15
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+               Feature                 users        /developers        setup           enable
+
+ Faster by Enabling Debug Logs
+
+   Development Environments
+
+ Data Mask (Beta)
+
+ Access Information About                               Yes
+ Specific Data Mask Job (Beta)
+
+ Automate the Running of Data                           Yes
+ Mask Processes with Job
+ Scheduler (Beta)
+
+ Other Improvements to                                  Yes
+ Salesforce Data Mask (Beta)
+
+ Monitor Sandbox Copy                                   Yes
+ Progress in Greater Detail with
+ an Updated UI
+
+  Platform Development Tools
+
+ Agentforce DX
+
+ Build Enterprise-Ready Agents                          Yes
+ with Agentforce DX and Agent
+ Script (Beta)
+
+ Salesforce DX MCP Server                               Yes
+
+ Salesforce CLI
+
+ Keep Up with the Latest                                Yes
+ Salesforce CLI Enhancements
+
+ Salesforce Extensions for Visual                       Yes
+ Studio Code
+
+ Agentforce Vibes IDE                                   Yes
+
+ Agentforce Vibes Extension                             Yes
+
+ Scalability
+
+ Plan and Peak Load Test with                                                            Yes
+ Scale Test
+
+ Deploy Scalable Apps with Scale                                                         Yes
+ Center
+
+
+
+                                                  16
+Salesforce Release Notes                                    How and When Do Features Become Available?
+
+
+
+                                                      Enabled for        Requires          Contact
+                                     Enabled for     administrators    administrator     Salesforce to
+              Feature                   users         /developers         setup             enable
+
+ Optimize Pages with Lightning                                               Yes
+ Experience Insights (Generally
+ Available)
+
+ Optimize Code with ApexGuru                                                                  Yes
+
+       Salesforce Functions
+
+ Salesforce Functions Is Being                                                                Yes
+ Retired
+
+      Change Data Capture
+
+ Change Data Capture Events                                Yes
+ No Longer Support Custom
+ Formula Fields
+
+         Platform Events
+
+ The Timeout of Outbound                                   Yes
+ Messages Is Reduced to 20
+ Seconds from 60 Seconds
+
+ Identify Outbound Messages in                             Yes
+ Queue with a Renamed
+ Heading
+
+
+Experience Cloud
+
+Make your Aura and LWR site pages more discoverable to AI-powered search engines and improve the
+precision of AI-generated answers with generative engine optimization. Create richer HTML content for
+Aura and LWR sites and enjoy greater design flexibility on LWR sites with expanded HTML allowlists and
+more readily available standard LWR components. Updates to Salesforce files make it easier for users to
+manage, delete, upload, and download files. The ability to create custom property types and editors for
+Aura and LWR sites is now generally available.
+
+
+                                                      Enabled for        Requires          Contact
+                                     Enabled for     administrators    administrator     Salesforce to
+              Feature                   users         /developers         setup             enable
+
+       Aura and LWR Sites
+
+ Make Site Pages More                                      Yes
+ Discoverable by AI
+
+
+
+
+                                                   17
+Salesforce Release Notes                               How and When Do Features Become Available?
+
+
+
+                                                  Enabled for       Requires        Contact
+                                  Enabled for    administrators   administrator   Salesforce to
+              Feature                users        /developers        setup           enable
+
+ Use Dynamic Redirect Rules in                        Yes
+ Aura Sites
+
+ Return Users to Their Previous                       Yes
+ Page After Session Timeout
+
+   Components in Experience
+          Builder
+
+ Design LWR Sites with More           Yes
+ Standard Component Options
+
+ Create Richer HTML Content           Yes
+ with More Supported Tags and
+ Attributes
+
+ Guide and Inform Experience                                           Yes
+ Cloud Users with Personalized
+ Task and Activity Components
+
+ Submit Records for Approval by                                        Yes
+ Using the Request Approval
+ Component
+
+     Developer Productivity
+
+ Create Custom Property Types         Yes
+ and Editors for Lightning Web
+ Components in Aura and LWR
+ Sites (Generally Available)
+
+ Connect API Performance Beta                         Yes
+ Setting Was Removed
+
+        Site Performance
+
+ Simplify Custom Domain                               Yes
+ Management with a Stable
+ Target Host Name
+
+ Visualforce Sites Display Only       Yes
+ the Specified Favicon
+
+ Salesforce Migrates Enhanced                         Yes
+ and Custom Domains Serving
+ Digital Experiences to
+ Cloudflare CDN
+
+
+
+                                                18
+Salesforce Release Notes                                     How and When Do Features Become Available?
+
+
+
+                                                       Enabled for        Requires           Contact
+                                      Enabled for     administrators    administrator      Salesforce to
+              Feature                    users         /developers         setup              enable
+
+ Finish Updating Your Legacy                                Yes
+ Force.com Site URLs
+
+         Salesforce Files
+
+ Protect Your Salesforce Org and                            Yes
+ Users by Scanning Files for
+ Malware (Beta)
+
+ Manage Files up to 10 GB in                                Yes
+ Salesforce Files
+
+ Allow More Users to Delete                                 Yes
+ Files
+
+ Other Changes
+
+
+Field Service
+
+See what’s new in Agentforce Field Service, formerly Field Service, to help your team deliver on
+performance and customer service.
+
+
+                                                       Enabled for        Requires           Contact
+                                      Enabled for     administrators    administrator      Salesforce to
+              Feature                    users         /developers         setup              enable
+
+   Agentforce for Field Service
+
+ Send Customers an Automated                                                  Yes
+ Email Confirming Their
+ Scheduling Agent Request
+
+ Streamline Pre-Work Brief with           Yes
+ Rich Text
+
+ Boost Pre-Work Brief Adoption            Yes
+ with Enhanced User Experience
+
+         Field Service Go
+
+ Simplify Field Service Feature                                               Yes
+ Discovery and Setup
+
+  Field Service Scheduling and
+          Optimization
+
+
+
+
+                                                    19
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Enhanced Scheduling and
+ Optimization
+
+ Optimize Large Datasets in One                                          Yes
+ Smooth Operation with Dynamic
+ Scaling (Generally Available)
+
+ Get More Optimal Scheduling                            Yes
+ with Updated Service Objective
+ Scoring Formulas
+
+ Access Optimization Request                                             Yes
+ Files on Your Own (Generally
+ Available)
+
+ Get More Transparency into                                              Yes
+ Service Operation Inefficiencies
+ with Rule Violation Analytics
+ (Beta)
+
+ Experience Faster Dispatching                                           Yes
+ with Enhanced Live Updates
+ (Generally Available)
+
+     Field Service Operations
+
+ Drive Predictive Operations                                             Yes
+ with Enhanced Scheduling and
+ Optimization Insights (Beta)
+
+     Field Service Customer
+           Engagement
+
+ Improve Sales Strategies with                                           Yes
+ Visual Remote Assistant (VRA)
+ Session Transcriptions
+
+ Enable Private Mobile App                                               Yes
+ Sharing in Visual Remote
+ Assistant (VRA) Sessions
+
+ Preview and Manage Images in           Yes
+ the Visual Remote Assistant
+ (VRA) Self-Service Request
+
+ Validate Visual Remote                 Yes
+
+
+
+
+                                                  20
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Assistant (VRA) Permissions
+ and User Access Easily from the
+ Configuration Panel
+
+       Field Service Mobile
+
+ Data Capture
+
+ Accelerate Data Entry and                             Yes
+ Improve Form Accuracy with the
+ Data Capture Lookup
+ Component
+
+ Enhance Productivity by                               Yes
+ Previewing Multiple Images in
+ Data Capture Forms
+
+ Boost Efficiency by Expanding                         Yes
+ Data Capture to Assets and
+ Custom Objects
+
+ Capture Data Even Faster with                         Yes
+ up to 80% Improvement in
+ Form Loading Times
+
+ Enhance Work Processes by                             Yes
+ Adding Data Capture Forms to
+ Mobile Timesheets and Service
+ Resources
+
+ Automate Hands-Free Data Entry                                         Yes
+ with Data Capture Voice to Form
+ (Generally Available)
+
+ Enhance the Field Service                                              Yes
+ Mobile App with Native GIS
+ Mapping
+
+ Enhance the Mobile User                                                Yes
+ Experience with a Configurable
+ Feed
+
+ Field Service Mobile App                              Yes
+ Support on Android 11 Is
+ Deprecated
+
+
+
+
+                                                 21
+Salesforce Release Notes                                   How and When Do Features Become Available?
+
+
+
+                                                     Enabled for        Requires         Contact
+                                     Enabled for    administrators    administrator    Salesforce to
+              Feature                   users        /developers         setup            enable
+
+ Control Bulk Status Change                                                Yes
+ Icon Visibility for Bundled
+ Service Appointments
+
+ Work More Efficiently with the          Yes
+ Revamped Work Order
+ Overview Page
+
+ View Clear Information on               Yes
+ Loading Stages During App
+ Startup
+
+ Optimize Your Mobile App                                 Yes
+ Performance with Updated
+ Technical Guidance
+
+
+Hyperforce
+
+Products and features from Data 360, Marketing Cloud, Platform, MuleSoft, and Tableau Cloud are now
+available in more Hyperforce regions. Hyperforce Assistant introduced a new way to find hard-coded
+references. The Hyperforce public IP ranges now include addresses for inbound connections, in addition
+to existing outbound addresses. Prepare for IPv6 if you use IP allowlists.
+
+
+                                                     Enabled for        Requires         Contact
+                                     Enabled for    administrators    administrator    Salesforce to
+              Feature                   users        /developers         setup            enable
+
+ Access Salesforce in More                                                 Yes
+ Regions with Hyperforce
+
+ Find Hard-Coded References                               Yes
+ Using the Updated Hyperforce
+ Assistant Process
+
+ Hyperforce Public IP Ranges                              Yes
+ Now Include Inbound
+ Addresses
+
+ Prepare for IPv6 in Hyperforce                           Yes
+ Public IPs
+
+
+
+
+                                                   22
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+Industries
+
+Learn about new features and enhancements across the Industries clouds.
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+      Accounting Subledger
+
+ Align Accounting Subledger                                               Yes
+ with Your Institution’s Data
+ Strategy
+
+       Asset Management
+
+ Enhance Proactive Customer                                               Yes
+ Service with Agentforce
+
+ Inventory Management
+ Enhancements
+
+ Improve Order Fulfillment
+ Accuracy with Inventory
+ Allocation
+
+ Streamline Inventory Counting
+ Across Locations
+
+ New and Changed Objects for                                              Yes
+ Inventory Management
+
+ Manage Asset Recall Inquiries                                            Yes
+ Using Prebuilt Service
+ Templates
+
+ Access Claims from Product                                               Yes
+ Service Campaign Items
+
+ Timesheet and Labor Cost
+ Optimization Enhancements
+
+ Agentforce for Timesheets and
+ Labor Cost Optimization
+
+ Associate Assets and Equipment                                           Yes
+ with Timesheets
+
+ Capture Details with                                                     Yes
+ Configurable Forms
+
+
+
+
+                                                  23
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Control Timesheet Entry Field                                           Yes
+ Visibility
+
+ Update Verified Timesheets                                              Yes
+
+ Upsell and Cross-Sell Products                                          Yes
+ for Service with Agentforce
+
+           Automotive
+
+ Agentforce for Automotive
+
+ Boost Sales Productivity with          Yes
+ Industries Sales Assistance
+
+ Efficiently Manage Coverages for       Yes
+ Proactive Customer Service
+
+ Automotive Finance
+
+ Defer a Customer's Payments in         Yes
+ a Single Flow
+
+ Optimizing Automotive Loan             Yes
+ Funding with Funding
+ Workbench
+
+ Execute Post-Contract Review           Yes
+ Tasks from Dealer Portals
+
+ Streamline Recall Inquiries with       Yes
+ a Prebuilt Service Process
+
+ Access Automotive Claims from          Yes
+ Product Service Campaign
+ Items
+
+ Accelerate Automotive Feature          Yes
+ Discovery and Setup
+
+ Associate Vehicles and Assets          Yes
+ to Fleets Faster
+
+ Enable Stage Management for            Yes
+ Key Automotive Objects
+
+ Expand Automotive Data                 Yes
+ Access and Mapping
+
+
+
+                                                  24
+Salesforce Release Notes                               How and When Do Features Become Available?
+
+
+
+                                                  Enabled for       Requires        Contact
+                                  Enabled for    administrators   administrator   Salesforce to
+              Feature                users        /developers        setup           enable
+
+ New and Changed Objects for                                           Yes
+ Agentforce Automotive
+
+ Channel Revenue Management
+
+ Strengthen Partner                                                    Yes
+ Collaboration with Stock
+ Rotation Incentives
+
+ Manage Incentive Budgets to                                           Yes
+ Drive Financial Accountability
+
+ Enhance Financial Reporting                                           Yes
+ with Subledger Integration
+
+ Simplify Feature Discovery and                                        Yes
+ Setup
+
+ New and Changed Objects for                                           Yes
+ Channel Revenue Management
+
+        Communications
+
+ Access More Industries
+ Components in Agentforce
+ Communications
+
+ Enterprise Sales Management
+
+ Associate Cloned Quotes with
+ New or Existing Opportunities
+
+ Retain Original Asset Pricing
+ During Modifications
+
+ Prevent Unnecessary Action
+ Status Updates During MACD
+ Operations
+
+ Accelerate Sub-Order Creation
+ with Scaled Batch Sizes
+
+ Confirm Deletion of Quote Line
+ Items in the Summary Tab
+
+ View Placeholders for Hidden
+ Attributes in Enterprise Sales
+ Quotes
+
+
+
+                                                25
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Process Large Enterprise Quotes
+ with Enhanced Stability
+
+ Revenue Cloud for
+ Communications on Salesforce
+ Platform
+
+ Communications Cloud Sales Is         Yes
+ Now Revenue Cloud for
+ Communications
+
+ Simplify Revenue Cloud for                                             Yes
+ Communications Feature
+ Configuration and Setup
+
+ Refine User Access with a New                                          Yes
+ Permission Set
+
+ Promotions in Revenue Cloud
+ for Communications
+
+        Consumer Goods
+
+ Agentforce for Consumer
+ Goods
+
+ Boost Sales and Efficiency with                                        Yes
+ AI-Driven Retail Execution
+ Insights
+
+ Get In-App Agent Assistance                                            Yes
+ with Agentforce (Generally
+ Available)
+
+ Retail Execution
+
+ Cancel Visits, Documents, and                                          Yes
+ Orders on the Mobile App
+
+ Experience Zero-Touch Voice-                                           Yes
+ Activated Capabilties in
+ Consumer Goods Cloud Mobile
+ App
+
+ Maintain Listing Classification       Yes
+ Data Integrity
+
+
+
+
+                                                 26
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ New and Changed Objects for                            Yes
+ Retail Execution
+
+ Sync Management
+
+ Diagnose Sync Performance              Yes
+ Easily with Named Query
+ Analyzer
+
+ Manage Orders and Cases                Yes
+ Offline in Consumer Goods
+ Cloud Mobile App
+
+ Visual Studio Code Based
+ Modeler
+
+ Customize Page Dimensions and          Yes
+ Styles in Print Layout
+
+ Other Improvements in Visual                           Yes
+ Studio Code Based Modeler
+
+ Trade Promotion Management
+
+ Get Accrual Data Directly in           Yes
+ Tactic Funds
+
+ Get Accurate Financials for Tier       Yes
+ Tactics and Growth Programs
+
+ Integrate Trade Promotion              Yes
+ Management Data with Data
+ 360 for Enhanced Insights
+
+ Customize the Trade Calendar           Yes
+ and Account Plan Views with
+ Smart UI Enhancements
+
+ Choose Which Promotion Fields          Yes
+ to Show in a Customer Business
+ Plan
+
+ New and Changed Objects in             Yes
+ Trade Promotion Management
+
+ Changed APIs in Trade                                  Yes
+ Promotion Management
+
+
+
+
+                                                  27
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Manage Consumer Goods                                 Yes
+ Cloud Features in One Place
+
+  Agentforce Energy & Utilities
+
+ Upload Customer Site Data in                                           Yes
+ Bulk
+
+ Generate Quotes for Customers                                          Yes
+ with Multiple Sites
+
+ Create Multisite Quotes Quickly                                        Yes
+
+ Manage Agentforce Energy &                                             Yes
+ Utilities Features in One Place
+
+     Financial Services Cloud
+
+ Agentforce for Financial
+ Services
+
+ Banking Service Customer
+ Assistance
+
+ Financial Advisor Assistance
+ Agent for FSC Managed Package
+
+ Accelerate Setup with                                 Yes
+ Salesforce Go
+
+ Advanced Document Validation
+
+ Simplify Validation for                               Yes
+ Document Checklists Items
+
+ Flexible Hierarchies
+
+ Map Complex Business                  Yes
+ Relationships to Assist in
+ Decision-Making
+
+ Complaint Management
+
+ Speed Up Complaint Resolution                         Yes
+
+ Digital Lending
+
+ Financial Intermediaries
+
+ Service Process Automation
+
+
+                                                 28
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Build Service Processes Faster                         Yes
+ with Prebuilt Templates in
+ Unified Catalog
+
+ Speed Up Resolutions for Service                                        Yes
+ Processes with Agentic Self-
+ Service
+
+ Transaction Dispute
+ Management
+
+ Expand Your Dispute Intake to          Yes
+ ACH Transactions
+
+ Increase Dispute Intake                Yes
+ Flexibility for Service
+ Representatives
+
+ Accelerate Mastercard Dispute                                           Yes
+ Stage Setup with a Prebuilt
+ Template
+
+ Use More Agentforce Financial
+ Services Objects with Data
+ Cloud
+
+ New Agentforce Financial                                                Yes
+ Services Jumpstart Bundles
+
+ New and Changed Agentforce                                              Yes
+ Financial Services Objects
+
+ New Connect REST API for
+ Flexible Hierarchies
+
+              Health
+
+ Simplify Health Cloud Feature                          Yes
+ Discovery and Setup
+
+ Agentforce for Health Cloud
+
+ Access Member Plans and                                                 Yes
+ Eligibility Data by Using Agent
+ Actions
+
+ Document AI for Health
+
+
+
+
+                                                  29
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ (formerly Intelligent Document
+ Processing) Enhancements
+
+ Add Agentforce to Payer Contact                                         Yes
+ Center Quickly
+
+ Manage Patient Updates Faster                                           Yes
+ with Agentforce for Provider
+ Contact Center
+
+ Resolve Claims Queries Faster by                                        Yes
+ Using Data 360 Zero-Copy
+ Claims Actions
+
+ Update athenahealth Patient                                             Yes
+ Records Directly from Health
+ Cloud
+
+ Data Cloud for Health Cloud
+
+ Easily Deploy Preconfigured            Yes
+ Healthcare Solutions Using Data
+ Kits
+
+ Disease Surveillance
+ Enhancements
+
+ Analyze Disease Trends and                             Yes
+ Critical Cases with Analytics
+ Dashboards
+
+ Home Health Enhancements
+
+ Simplify Coordination of Home                                           Yes
+ Healthcare Across Patient
+ Locations
+
+ Personalize Home Healthcare by                                          Yes
+ Using Custom Visit Instructions
+
+ Enhance Health Outcomes with                                            Yes
+ Offline Home Healthcare
+ Assessments
+
+ Calculate Budgets Precisely with                                        Yes
+ Benefit Frequency
+
+
+
+
+                                                  30
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Expedite Your Home Health                                              Yes
+ Setup
+
+ Integrated Care Management
+ Enhancements
+
+ Optimize Smart Patient Care                                            Yes
+ with Suggested Assessment
+ Responses
+
+ Boost Patient Engagement with                                          Yes
+ MCG Assessments for
+ Experience Cloud Sites
+
+ Prevent Data Loss by                                                   Yes
+ Automatically Saving
+ Assessments
+
+ Streamline Care Plan Updates          Yes
+ with the Enhanced Workflow
+
+ Improve Data Security with the        Yes
+ Enhanced Member Plans Data
+ Model
+
+ Utilization Management
+ Enhancements
+
+ Safeguard Data Integrity By                                            Yes
+ Resolving Duplicate Prior
+ Authorization Request Cases
+
+ Instantly Approve Non-Duplicate                                        Yes
+ Prior Authorization Requests
+
+ Health Cloud Voice of the
+ Customer Enhancements
+
+ New and Changed Objects in                            Yes
+ Health Cloud
+
+            Insurance
+
+ Use Digital Insurance Alongside                                        Yes
+ the Insurance Managed
+ Package or Insurance CRM
+
+
+
+
+                                                 31
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                     Enabled for       Requires        Contact
+                                     Enabled for    administrators   administrator   Salesforce to
+              Feature                   users        /developers        setup           enable
+
+ Accelerate Sales with Unified           Yes
+ Multi-Root Insurance Quoting
+
+ Manage Policy Lifecycle Better
+ with Enhanced Versioning
+
+ Agency Billing
+
+ Automate Agency Billing
+ Journals
+
+ Streamline Cash Flow with
+ Automated Payment Processing
+
+ Stay on Top of Overdue
+ Premiums with Collections
+
+ Schedule and Generate Invoices
+ for Insurance Policies
+
+ Generate Policy Transactions and
+ Breakdowns
+
+ Effortlessly Configure Billing
+ Settings for Insurance Policies
+
+ Enable Comparative Rating and                                            Yes
+ Multiple Plan Selection
+
+ Validate Complex                                                         Yes
+ Configurations with Constraint
+ Rules Engine
+
+ Simplify Quoting and Policy                             Yes
+ Configuration through Guided
+ Flows
+
+ Track Policy Limits with Flexible                                        Yes
+ Duration Types
+
+ Cap Payments at the Lowest                              Yes
+ Limit for Loss Claims
+
+ Revise Claim Coverage Payment                                            Yes
+ Details to Make Corrections
+
+ Issue Ex Gratia Payments for                                             Yes
+ Loss Claims
+
+
+
+                                                   32
+Salesforce Release Notes                                How and When Do Features Become Available?
+
+
+
+                                                   Enabled for       Requires        Contact
+                                   Enabled for    administrators   administrator   Salesforce to
+              Feature                 users        /developers        setup           enable
+
+ Copy Data Between Nodes in a                                           Yes
+ Pricing Procedure
+
+ New and Changed Objects in                            Yes
+ Insurance
+
+           Life Sciences
+
+ Account Management
+
+ Transform Life Sciences Data                          Yes
+ with Data 360
+
+ Improve User Engagement with                          Yes
+ Prioritized Accounts
+
+ View and Align Out-of-Territory                       Yes
+ Accounts on the Desktop Site
+
+ Engagement Planning
+
+ Make Quick, Ad Hoc                                    Yes
+ Adjustments to Your Activity
+ Plans
+
+ Achieve More Personalization                          Yes
+ with the Updated Activity
+ Measure Workflow
+
+ Engagement Execution
+
+ Shape Strategies by Using                             Yes
+ Collaborative Medical Insights
+
+ View Attendees with the Same
+ Address Attendees in the
+ Sidebar
+
+ Manage Visit Records in One
+ Place
+
+ Start Presentations and Track                                          Yes
+ Engagement from Visits on the
+ Desktop Site
+
+ Manage Visits from the Service
+ Console
+
+
+
+
+                                                 33
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Filter Admin Console Tiles Based
+ on User Permissions
+
+ Changes to Trigger Handlers
+
+ Intelligent Content
+
+ Share Presentations as Unique                                           Yes
+ Email Links
+
+ Use Smart Content Search to                                             Yes
+ Find Relevant Presentations
+
+ Data and Analytics
+
+ Plan Better Customer                                   Yes
+ Interactions from Anywhere
+
+ Mobile App
+
+ Drive Efficiency in the Mobile                                          Yes
+ App by Configuring Deep Links
+
+ Limited Pilot Features for Life                                                         Yes
+ Sciences
+
+ New and Changed Objects for                            Yes
+ Life Sciences
+
+          Manufacturing
+
+ Agentforce for Manufacturing
+
+ Accelerate Sales Tasks with                                             Yes
+ Industries Sales Concierge
+
+ Efficiently Manage Coverages for                                        Yes
+ Proactive Customer Service
+
+ Manufacturing for Sales
+
+ Sample Management
+
+ Sales Agreements                                                        Yes
+
+ Manufacturing for Services
+
+ Access Claims from Product             Yes
+ Service Campaign Items
+
+
+
+
+                                                  34
+Salesforce Release Notes                                  How and When Do Features Become Available?
+
+
+
+                                                     Enabled for       Requires        Contact
+                                     Enabled for    administrators   administrator   Salesforce to
+              Feature                   users        /developers        setup           enable
+
+ Associate Assets to Fleets Faster       Yes
+
+ Manage Appraisals on                                                     Yes
+ Experience Cloud Sites
+
+ Manage Asset Recall Inquiries           Yes
+ Using Prebuilt Service Templates
+
+ Simplify Inventory Counting                                              Yes
+ Across Parent and Child
+ Locations
+
+ Optimize Timesheet and Labor                                             Yes
+ Cost Management
+
+ Allocate Inventory Efficiently                                           Yes
+ Across Locations
+
+ Enhance Search Experience               Yes
+ with Criteria-Based Search and
+ Filter
+
+ Extend Stage Management to                                               Yes
+ Additional Manufacturing
+ Objects
+
+ Optimize Channel Operations                                              Yes
+ with Enhanced Channel
+ Revenue Management
+
+ Access Manufacturing Features           Yes
+ and Setup in One Place
+
+ New and Changed Objects for
+ Manufacturing
+
+              Media
+
+ Accelerate Discovery and Setup                                           Yes
+ of Media Cloud Features
+
+ Streamline Your Workflow with                                            Yes
+ Instant Processing and Real-
+ Time Updates
+
+ Boost Advertising Sales                                                  Yes
+ Management with Instant
+
+
+
+
+                                                   35
+Salesforce Release Notes                                 How and When Do Features Become Available?
+
+
+
+                                                    Enabled for       Requires        Contact
+                                    Enabled for    administrators   administrator   Salesforce to
+              Feature                  users        /developers        setup           enable
+
+ Inventory Insight and Granular
+ Campaign Control
+
+ Improve Ad Campaign                                                     Yes
+ Precision with Advanced
+ Targeting and MuleSoft Direct
+ Enhancements
+
+ Generate Larger Pitch Decks                                             Yes
+ with Salesforce Document
+ Generation
+
+ Generate Quotes for Customers                                           Yes
+ in Multiple Locations (Pilot)
+
+ New and Changed Objects in                             Yes
+ Media Cloud
+
+ New and Changed Connect                                Yes
+ REST APIs in Media Cloud
+
+             Net Zero
+
+ Agentforce for Net Zero
+
+ Use Agentforce to Engage with                                           Yes
+ Multiple Stakeholders to Collect
+ ESG Data: ESG Data Collection
+
+ Enable Agentforce Net Zero                                              Yes
+ Features Across All Dataspaces
+ in Data Cloud One
+
+ Simplify FERA Emissions                                                 Yes
+ Reporting for Scope 3 Category
+ 3 Compliance
+
+ Improve Emissions Reporting                                             Yes
+ for Leased Assets in Agentforce
+ Net Zero
+
+ Support All Quantitative                                                Yes
+ Metrics for CSRD Reporting
+
+ Generate Consolidated Reports                                           Yes
+ for Your Entire Organization
+
+
+
+
+                                                  36
+

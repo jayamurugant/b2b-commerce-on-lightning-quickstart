@@ -1,0 +1,1719 @@
+Salesforce Release Notes                                                                     Salesforce Flow
+
+
+the new Flow Logs tab in the Automation Lightning app.
+
+  See Where Actions Are Used in Agentforce Builder and Prompt Builder (Beta)
+  Find which Agentforce agents and prompt templates reference standard and custom invocable actions
+  by using the Action Hub tab in the Automation Lightning app. Previously, the Action Hub tab only
+  showed action usage across Flow Builder. Check the Usage tab to view specific agents and prompt
+  templates that reference an action before you make changes.
+  Set Up and Monitor Flow Logging in One Place
+  Gain visibility into flow performance with the new Flow Logs tab in the Automation Lightning app.
+  Data 360 stores flow run metrics and provides real-time flow performance insights. Use the Flow Logs
+  tab to set up Data 360, configure flow logging, and track performance for enabled flows.
+
+See Also
+  Release Notes: Compare Screen Flow Versions to Track Changes More Efficiently
+  Release Notes: View Flow Usage in the Automation Lightning App
+
+
+See Where Actions Are Used in Agentforce Builder and Prompt Builder
+(Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Find which Agentforce agents and prompt templates reference standard and custom invocable actions
+by using the Action Hub tab in the Automation Lightning app. Previously, the Action Hub tab only
+showed action usage across Flow Builder. Check the Usage tab to view specific agents and prompt
+templates that reference an action before you make changes.
+
+Where: This change applies to Lightning Experience in Essentials, Professional, Enterprise, Performance,
+Unlimited, and Developer editions.
+
+
+     Note The Action Hub is a pilot or beta service that is subject to the Beta Services Terms at
+     Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer, and
+     applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the Customer’s
+     sole discretion.
+
+
+How: From the Automation Lightning app, select the Action Hub tab. Click an action to view its detail
+page. The Usage tab displays the list view for Agentforce Builder and Prompt Builder, in addition to Flow
+Builder. Click the agent label or template name listed under the Agentforce Builder or Prompt Builder tab
+to open the referenced item directly in its builder interface.
+
+
+
+
+                                                    822
+Salesforce Release Notes                                                                   Salesforce Flow
+
+
+See Also
+  Salesforce Help: Automation App: Action Hub (Beta) (can be outdated or unavailable during release
+  preview)
+
+
+Set Up and Monitor Flow Logging in One Place
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Gain visibility into flow performance with the new Flow Logs tab in the Automation Lightning app. Data
+360 stores flow run metrics and provides real-time flow performance insights. Use the Flow Logs tab to
+set up Data 360, configure flow logging, and track performance for enabled flows.
+
+Where: This change applies to Lightning Experience in Essentials, Professional, Enterprise, Performance,
+Unlimited, and Developer editions.
+
+How: In the Automation Lightning app, select the Flow Logs tab. From this tab, set up Data 360 in your
+org, enable flow logging, and view all the flows that are currently logging data.
+
+
+
+
+See Also
+  Salesforce Help: Monitor Flow Performance with Flow Logs (can be outdated or unavailable during
+  release preview)
+
+
+
+
+                                                   823
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+
+Simplify Integration with MuleSoft for Flow: Integration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+MuleSoft for Flow: Integration is a no-code solution that connects your flows to external systems that use
+third-party connectors. Use these connectors as triggers or actions, creating seamless data and
+information exchange between systems.
+
+  Enhance Data Exchange with a Newly Added Third-Party Connector
+  Use the newly added Plaid third-party connector in flows for no-code connectivity. Use this third-party
+  connector to facilitate data and information exchange between different systems.
+
+
+Enhance Data Exchange with a Newly Added Third-Party Connector
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use the newly added Plaid third-party connector in flows for no-code connectivity. Use this third-party
+connector to facilitate data and information exchange between different systems.
+
+Where: This change applies to Salesforce Classic and Lightning Experience in Professional (with API
+access add-on), Performance, Enterprise, and Unlimited editions.
+
+Who: To create, view, edit, and delete connections, users need the Manage Integration Connections
+permission.
+
+Why: The Plaid third-party connector is generally available and is a new addition to our previously
+existing set of third-party connectors.
+
+See Also
+  Salesforce Help: Third-Party Connectors Reference (can be outdated or unavailable during release
+  preview)
+  Salesforce Help: Designing an External System Integration (can be outdated or unavailable during
+  release preview)
+  Salesforce Help: Create a Flow with a Third-Party Connector as an Action (can be outdated or
+
+
+
+                                                   824
+Salesforce Release Notes                                                    Salesforce for Slack Integrations
+
+
+  unavailable during release preview)
+  Salesforce Help: Create a Flow with a Third-Party Connector as a Trigger (can be outdated or
+  unavailable during release preview)
+
+
+Extract Data from Digital and Scanned Documents by Using
+MuleSoft for Flow: IDP (Generally Available)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use MuleSoft for Flow: IDP to transform unstructured and semistructured data into structured,
+actionable output, enabling automation of document-based workflows. Organizations get lots of
+unstructured and semistructured documents that have important business data. But getting and
+processing this information by hand is time-consuming and can introduce mistakes. With MuleSoft for
+Flow: IDP you define what data to extract through custom configurations. You set confidence thresholds
+for automatic processing, and route low-confidence results for human review to verify accuracy. Manage
+your document processing configurations on the Document Processing tab in the Automation app.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional (with API
+access add-on), Performance, Enterprise, and Unlimited editions. Document processing configurations
+can be edited or deleted only in the Automation app. Requires the MuleSoft for Flow: IDP add-on
+license, which is available in multiple offerings.
+
+How: Define the data fields and tables you want to extract from documents by creating a document
+processing configuration in the Automation Lightning app. Build the human review workflow by creating
+an orchestration that routes documents with low confidence scores to a screen flow for a user to
+manually review and continue the process. To process documents uploaded to Salesforce, in Flow
+Builder, add an Extract Data from Document action to a flow or an orchestration and select the
+Document ID and Document Processing Configuration to reference.
+
+
+
+Salesforce for Slack Integrations
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+                                                   825
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+Use Slack and Salesforce together to connect with customers, track progress, collaborate seamlessly, and
+deliver team success from anywhere.
+
+
+     Note For information about updates in previous releases, see Salesforce for Slack Integrations
+     Release Notes.
+
+
+
+
+Security, Identity, and Privacy
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Redirections end for legacy host names, including instanced host names in API calls. Connected app
+creation is disabled by default for all Salesforce orgs. Salesforce Backup & Recover is now a native app.
+And, Privacy Requests fulfill your customers' Right to Be Forgotten requests.
+
+  Backup & Recover
+  Salesforce Backup & Recover is now a native app. Manage backups and recover data directly in your
+  org with a refreshed user interface and automatic region detection.
+  Domains
+  Redirections end for legacy host names, including instanced host names in API calls. And if a third
+  party serves your custom domain, update the target host name.
+  Identity and Access Management
+  Connected app creation is disabled by default for all Salesforce orgs. The Salesforce-managed app for
+  the X (formerly Twitter) auth provider is being retired. Create a Canvas app with an external client app.
+  Migrate SAML-enabled connected apps to external client apps.
+  Health Check
+  Health Check now provides deeper insight by tracking seven new configurable security settings,
+  including MFA status, SAML enablement, and session management controls. Users can also configure
+  who receives notifications whenever your Salesforce security health check score changes.
+  Privacy Center
+  Explore Privacy Requests as a new way to fulfill Right to Be Forgotten (RTBF) requests from your
+  customers.
+  Salesforce Shield
+  Shield product enhancements make it easier for you to extend security policies to more of your data.
+  Database Encryption is generally available in all regions. Data Detect now scans 100 objects and
+  unlimited fields and Field Audit Trail storage limit increases from 60 to 200. Real-Time Event storage is
+  turned on by default. The Shield app now has setup assistants and simpler access requirements.
+
+
+
+
+                                                    826
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+  Security Center
+  Optimize your security posture with centralized alerting across all tenants and enhanced visibility into
+  Login Anomalies via dedicated dashboards. Gain deeper insights into permission assignments while
+  streamlining response times through consolidated investigations and automated remediation plans.
+  Other Security Changes
+  Quickly see the impact of each violation in the Trusted URL and Browser Policy Violations list.
+
+
+Backup & Recover
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Salesforce Backup & Recover is now a native app. Manage backups and recover data directly in your org
+with a refreshed user interface and automatic region detection.
+
+  Protect and Recover Your Data with the Backup & Recover App
+  Salesforce Backup & Recover is now a native Salesforce feature that helps you safeguard your
+  Salesforce data by automatically generating daily backups of your data. Use these backups to identify
+  and recover quickly from data loss or corruption. Rather than manage your backups externally, you can
+  enable and manage them directly in your org.
+
+See Also
+  Salesforce Help: Salesforce Backup & Recover App (can be outdated or unavailable during release
+  preview)
+
+
+Protect and Recover Your Data with the Backup & Recover App
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Salesforce Backup & Recover is now a native Salesforce feature that helps you safeguard your Salesforce
+data by automatically generating daily backups of your data. Use these backups to identify and recover
+quickly from data loss or corruption. Rather than manage your backups externally, you can enable and
+manage them directly in your org.
+
+Where: This change applies to Lightning Experience.
+
+
+                                                   827
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+When: This feature is available on a rolling basis starting in Spring ’26.
+
+Who: Backup & Recover is available for customers in GovCloud and the Japan region.
+
+How: To add the required licenses to your org, contact your Salesforce account executive.
+
+
+Domains
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Redirections end for legacy host names, including instanced host names in API calls. And if a third party
+serves your custom domain, update the target host name.
+
+  Update References to Legacy Host Names (Release Update)
+  Prevent disruption for your customers and end users when the temporary redirection of legacy (non-
+  enhanced) Salesforce host names ends. With this release update, those redirections end in all orgs.
+  First available in Spring ’25, this update is enforced in Spring ’26.
+  Replace Instanced URLs in API Traffic
+  To prevent disruption after infrastructure updates that change your instance name, replace instanced
+  URLs in API traffic with your org’s My Domain login URL. Support for instanced URLs in API traffic ends
+  in Summer ’26.
+  Switch to a Stable Target Host Name for Your Custom Domain
+  If a third-party service or content delivery network (CDN) serves your custom domain, simplify your
+  maintenance. Work with your third-party provider to change the target host name to your org’s My
+  Domain login URL.
+  A Warning Was Added for Potential Custom Domain Disruption
+  If your custom domain can experience disruption when you move to Salesforce Edge Network, you see
+  a warning on the My Domain Setup page.
+  Regional Edge Routing Label Was Changed
+  To help you select a routing method for Salesforce Edge Network, the label for the regional method
+  now includes your region name. The functionality and availability of this option are unchanged.
+
+
+Update References to Legacy Host Names (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+                                                     828
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Prevent disruption for your customers and end users when the temporary redirection of legacy (non-
+enhanced) Salesforce host names ends. With this release update, those redirections end in all orgs. First
+available in Spring ’25, this update is enforced in Spring ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in
+Group, Essentials, Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+When: Salesforce enforces this release update in Spring ’26. To get the major-release upgrade date for
+your instance, go to Trust Status, search for your My Domain name or instance, and then click the
+maintenance tab.
+
+
+     Note The task that disables legacy redirections is completed gradually after the major release.
+     Usually that task finishes within a few hours after you get the release, but it can take up to 24 hours.
+     To control the timing of when those redirections stop in your org, disable legacy host name
+     redirections from the My Domain page in Setup.
+
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Update References to Legacy Host Names, follow the testing and activation
+steps.
+
+See Also
+  Salesforce Help: Prepare for the End of Redirections for Non-Enhanced Domains (can be outdated or
+  unavailable during release preview)
+  Salesforce Help: Enhanced Domains Timeline (can be outdated or unavailable during release preview)
+  Release Updates
+
+
+Replace Instanced URLs in API Traffic
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To prevent disruption after infrastructure updates that change your instance name, replace instanced
+URLs in API traffic with your org’s My Domain login URL. Support for instanced URLs in API traffic ends in
+Summer ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in all editions except
+Database.com.
+
+
+
+
+                                                    829
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+See Also
+  Update Instanced URLs in API Traffic (Release Update)
+
+
+Switch to a Stable Target Host Name for Your Custom Domain
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If a third-party service or content delivery network (CDN) serves your custom domain, simplify your
+maintenance. Work with your third-party provider to change the target host name to your org’s My
+Domain login URL.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Enterprise, Performance,
+and Unlimited editions. This change applies only to custom domains with the domain configuration “Use
+a third-party service or CDN to serve the domain.”
+
+See Also
+  Simplify Custom Domain Management with a Stable Target Host Name
+
+
+A Warning Was Added for Potential Custom Domain Disruption
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If your custom domain can experience disruption when you move to Salesforce Edge Network, you see a
+warning on the My Domain Setup page.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Enterprise, Performance,
+and Unlimited editions.
+
+Why: A custom domain serves your site content on a domain that you own, such as
+https://www.example.com. When a third-party service or content delivery network (CDN) hosts a
+custom domain, the target host name for that domain changes when your org moves to Salesforce Edge
+Network. Until your third-party service or CDN updates that value, your custom domain stops working.
+
+To reduce the risk of outages during the move to Salesforce Edge Network, we added a warning on the
+
+
+
+                                                   830
+Salesforce Release Notes                                                             Security, Identity, and Privacy
+
+
+My Domain page when you edit the Routing and Policies section. If your org isn’t on Salesforce Edge
+Network and a third party serves at least one of the custom domains in the org, you see this warning.
+
+
+
+
+How: If you see this warning, coordinate with your third-party service or CDN to update the target host
+name for your custom domain as part of your move to Salesforce Edge Network.
+
+See Also
+  Salesforce Help: Considerations for Custom Domains That Use a Third-Party Service or CDN (can be
+  outdated or unavailable during release preview)
+  Salesforce Help: Salesforce Edge Network (can be outdated or unavailable during release preview)
+
+
+Regional Edge Routing Label Was Changed
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help you select a routing method for Salesforce Edge Network, the label for the regional method now
+includes your region name. The functionality and availability of this option are unchanged.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Group, Essentials,
+Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+Who: Regional routing for Salesforce Edge Network is available in orgs on a Hyperforce instance in Japan.
+
+How: From Setup, in the Quick Find box, enter My Domain, and then select My Domain. In the Routing
+and Policies section, click Edit. If regional routing is available for your org, the label for that routing
+method includes your region name.
+
+
+
+
+                                                       831
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+
+
+See Also
+  Salesforce Help: Route My Domain Through Salesforce Edge Network (can be outdated or unavailable
+  during release preview)
+
+
+Identity and Access Management
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Connected app creation is disabled by default for all Salesforce orgs. The Salesforce-managed app for the
+X (formerly Twitter) auth provider is being retired. Create a Canvas app with an external client app.
+Migrate SAML-enabled connected apps to external client apps.
+
+  Creation of New Connected Apps Is Disabled by Default
+  The ability to create new connected apps is disabled by default for all Salesforce orgs. This change
+  improves security by removing the risks associated with connected apps. This update does not affect
+  any existing connected apps, which will continue to function normally. Also, packaged, existing
+  connected apps that are deployed in a new org aren't affected. We recommend using external client
+  apps for all new integrations and migrating existing connected apps to external client apps.
+  Configure Canvas Plugin for External Client App
+  You can now create a Canvas app using the external client app framework, which is a more secure and
+  modern replacement for connected apps. Existing connected apps with Canvas integrations continue
+  to function normally, including those that are packaged and deployed. We recommend using external
+  client apps for all new Canvas integrations.
+  Track Attempts to Use Uninstalled Connected Apps
+  You can now track denied attempts to use connected apps that aren't installed in your org (uninstalled
+  apps for short). By tracking these denied attempts, you can identify both legitimate and suspicious
+  attempts to use uninstalled apps. You can decide whether to allow usage of the app or to block it
+  entirely.
+  New and Updated Security Alerts for OAuth Flows
+  To discourage users from connecting unfamiliar third-party apps to Salesforce, we added security
+
+
+
+                                                   832
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+  alerts for OAuth flows. These security alerts appear when a user connects a device to Salesforce via the
+  OAuth 2.0 device flow. We also updated the security alert on the page where users authorize access to
+  their data via OAuth 2.0 flows.
+  API-Only Users Are Blocked from Bridging into UI Sessions
+  To improve security, users with the API Only User permission can no longer bridge into UI sessions by
+  using the frontdoor URL generated by the /services/oauth2/singleaccess endpoint, also known
+  as UI Bridge API. This change can break integrations that unintentionally grant UI access to API-only
+  users.
+  Set Up Passwordless Login with Passkeys (Beta)
+  Give users a fast, easy, and phishing-resistant alternative to passwords. You can now enable
+  passwordless login with passkeys. With this feature, users can log in with a built-in authenticator (such
+  as Touch ID or Face ID) or a security key (such as a YubiKey or mobile device). Look forward to fewer
+  password resets, fewer login issues, and happier users.
+  Migrate SAML-Enabled Connected Apps to External Client Apps
+  Bring the improved usability and security of the external client apps framework to your SAML single
+  sign-on (SSO) configurations. With a few clicks, you can now transform SAML-enabled connected apps
+  into external client apps. After migration, you get an identical external app with all of your SAML
+  configurations, while your old connected app remains in read-only mode.
+  Migrate to a Multiple-Configuration SAML Framework (Release Update)
+  If you see this release update, your Salesforce instance is using our original single-configuration SAML
+  framework, which supports single sign-on (SSO) with only one identity provider. We’re giving you a
+  final reminder that with Summer ’26, we’re no longer supporting the single-configuration SAML
+  framework. To make sure that your SSO configurations don’t break, migrate to our newer multiple-
+  configuration SAML framework, which supports SSO with multiple identity providers instead of just
+  one. If you don’t migrate, your SAML SSO configurations will stop working when this release update is
+  enforced in Summer ’26.
+  Salesforce-Managed X (Formerly Twitter) Authentication Provider Retirement (Release Update)
+  The Salesforce-managed app for the X (formerly Twitter) authentication provider is being retired. This
+  update breaks any single sign-on (SSO) configurations that use the Salesforce-managed X app. To
+  avoid disruptions, create a custom X app and update your SSO configurations.
+  New LinkedIn Authentication Providers Use LinkedIn API v2
+  To stay up to date with the latest LinkedIn API version, new LinkedIn authentication providers now use
+  LinkedIn API v2. Configurations that you created before Spring ’26 still use LinkedIn API v1. Also, new
+  and existing authentication providers that use the Salesforce-managed LinkedIn app still use LinkedIn
+  API v1.
+  Triple DES for SAML Single Sign-On Stops Working in Summer ’26
+  In Summer ’26, SAML single sign-on (SSO) configurations that use the Triple Data Encryption Standard
+  (Triple DES) algorithm will stop working. This change applies to all SSO configurations that use the
+  Triple DES algorithm, whether you use Salesforce as an identity provider or as a service provider. To
+  improve security, use the Advanced Encryption Standard (AES) algorithms, AES 128 or AES 256,
+  instead.
+  Sandbox Users with Non-Unique Usernames Can't Be Unfrozen
+  You can't unfreeze a sandbox user if their username exists in another sandbox instance. This change
+
+
+
+                                                   833
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+  prevents duplicate usernames for active, unfrozen users. To unfreeze a user with a non-unique
+  username, update the username to a unique value.
+
+
+Creation of New Connected Apps Is Disabled by Default
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The ability to create new connected apps is disabled by default for all Salesforce orgs. This change
+improves security by removing the risks associated with connected apps. This update does not affect any
+existing connected apps, which will continue to function normally. Also, packaged, existing connected
+apps that are deployed in a new org aren't affected. We recommend using external client apps for all
+new integrations and migrating existing connected apps to external client apps.
+
+Where: This change applies to Lightning Experience, Salesforce Classic, and all versions of the mobile
+app in Essentials, Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+Why: This change addresses an ongoing security threat that takes advantage of connected apps. This
+change encourages the adoption of external client apps, which are a more secure, modern replacement
+for connected apps.
+
+How: With Spring '26, the ability to create connected apps is disabled. The Allow creation of connected
+apps preference in External Client App Settings is also removed. To enable creation of new connected
+apps, contact Salesforce Customer Support.
+
+See Also
+  Salesforce Help: External Client Apps (can be outdated or unavailable during release preview)
+  Salesforce Help: Comparison of Connected Apps and External Client Apps Features (can be outdated
+  or unavailable during release preview)
+  Salesforce Help: Connected App to External Client App Migration (can be outdated or unavailable
+  during release preview)
+  Salesforce Knowledge Article: New connected apps can no longer be created in Spring ‘26
+
+
+Configure Canvas Plugin for External Client App
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+
+
+
+                                                   834
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+available products and features.
+
+You can now create a Canvas app using the external client app framework, which is a more secure and
+modern replacement for connected apps. Existing connected apps with Canvas integrations continue to
+function normally, including those that are packaged and deployed. We recommend using external client
+apps for all new Canvas integrations.
+
+Where: This change applies to Lightning Experience in Professional, Enterprise, Performance, Unlimited,
+and Developer editions.
+
+Why: With an external client app, you get full metadata compliance and second-generation packaging
+(2GP) support, with package installation and creation performance that's substantially faster than
+connected apps. Your Canvas app must now be installed in an org before they can be used.
+
+How: You can create a Canvas app using the external client app framework in one of several ways from
+Setup.
+
+• Canvas App Previewer: Create a “hello world” Canvas app on Heroku using the Java or Ruby template,
+  while creating the corresponding external client app in Salesforce.
+• External Client App Manager: Create an external client app with OAuth settings and configure its
+  Canvas app settings.
+
+Additionally, you can deploy or retrieve the Canvas external client app from an org using an SFDX project.
+
+See Also
+  Creation of New Connected Apps Is Disabled by Default
+  Salesforce Help: Create an External Client App (can be outdated or unavailable during release preview)
+  Canvas Developer Guide: Quick Start (can be outdated or unavailable during release preview)
+
+
+Track Attempts to Use Uninstalled Connected Apps
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now track denied attempts to use connected apps that aren't installed in your org (uninstalled
+apps for short). By tracking these denied attempts, you can identify both legitimate and suspicious
+attempts to use uninstalled apps. You can decide whether to allow usage of the app or to block it
+entirely.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+
+
+
+                                                    835
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+Why: To prevent unauthorized access to your data, Salesforce automatically denies attempts to use
+uninstalled connected apps unless a user has the Approve Uninstalled Connected Apps user permission.
+This user permission is intended only for highly trusted users, like admins. As a result, non-admin users
+can be blocked from using uninstalled apps that have legitimate use cases. Now that you can track
+denied attempts, you can easily see when a user is stuck in this situation. To allow these users to access
+legitimate apps from trusted developers, install these apps.
+
+By tracking denied attempts, you can also see if a threat actor is trying to use connected apps to get
+access to your org. To tighten security, block suspicious apps. Blocking a connected app ends all sessions
+and prevents further usage, even for users with the Approve Uninstalled Connected Apps user
+permission.
+
+How: On the Connected Apps OAuth Usage page in Setup, review the Denied Attempts Due to Usage
+Restriction column. You can also review the date and time of the most recent denied attempt.
+
+
+
+
+See Also
+  Salesforce Help: Manage Current OAuth Connected App Sessions (can be outdated or unavailable
+  during release preview)
+
+
+New and Updated Security Alerts for OAuth Flows
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To discourage users from connecting unfamiliar third-party apps to Salesforce, we added security alerts
+for OAuth flows. These security alerts appear when a user connects a device to Salesforce via the OAuth
+2.0 device flow. We also updated the security alert on the page where users authorize access to their
+data via OAuth 2.0 flows.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+
+
+
+                                                    836
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+How: During the device flow, users are prompted to enter a code from the device or app that they're
+connecting. We added a security alert to the page where users enter their code (1), to the page that
+indicates a successful connection (2), and to the page that indicates a denied connection (3).
+
+
+
+
+We also updated the security alert on the page where users authorize an app to access their data via an
+OAuth flow.
+
+
+
+
+If your external client app or connected app doesn't have a logo, Salesforce uses this default logo for the
+graphics above the warnings:     . To brand these graphics, update the Logo Image URL in your app
+settings.
+
+
+API-Only Users Are Blocked from Bridging into UI Sessions
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+
+
+
+                                                    837
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To improve security, users with the API Only User permission can no longer bridge into UI sessions by
+using the frontdoor URL generated by the /services/oauth2/singleaccess endpoint, also known as
+UI Bridge API. This change can break integrations that unintentionally grant UI access to API-only users.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+How: If you call the /services/oauth2/singleaccess endpoint with an access token that was issued
+to an API-only user, the call fails with this error.
+
+
+ {
+ "error": "invalid_token",
+ "error_description": "this token is invalid, unknown, or malformed"
+ }
+
+
+To allow these users to bridge into UI sessions via frontdoor URLs, remove the API Only User permission.
+
+See Also
+  Salesforce Help: Generate a Frontdoor URL to Bridge into UI Sessions (can be outdated or unavailable
+  during release preview)
+
+
+Set Up Passwordless Login with Passkeys (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Give users a fast, easy, and phishing-resistant alternative to passwords. You can now enable passwordless
+login with passkeys. With this feature, users can log in with a built-in authenticator (such as Touch ID or
+Face ID) or a security key (such as a YubiKey or mobile device). Look forward to fewer password resets,
+fewer login issues, and happier users.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+
+     Note Passwordless login with passkeys is a pilot or beta service that is subject to the Beta Services
+     Terms at Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer,
+
+
+
+
+                                                       838
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+
+     and applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the
+     Customer's sole discretion.
+
+
+Who: This feature is available only for internal users, such as employees, who log in to your Salesforce
+org. It isn't available for Experience Cloud site users.
+
+Why: Passkeys are phishing-resistant, making them more secure than password-based authentication.
+They're also more convenient for users. Because passkeys inherently use multiple factors for
+authentication, they satisfy the Salesforce multi-factor authentication (MFA) requirement. So, if users log
+in with a passkey, they aren't prompted to provide a second factor for authentication, saving time and
+effort with each login.
+
+Passkeys are based on the Fast IDentity Online (FIDO) authentication standard. For more information on
+the benefits of passkeys, see the FIDO documentation.
+
+How: You can enable passwordless login with passkeys on the Identity Verification page in Setup.
+Passwordless login with passkeys is available only for users with a registered built-in authenticator or
+security key, and only for saved usernames. To log in, users click on their saved username and then use
+their built-in authenticator or security key.
+
+See Also
+  Salesforce Help: Passwordless Login with Passkeys (Beta) (can be outdated or unavailable during
+  release preview)
+  Salesforce Help: Enable Passwordless Login with Passkeys (Beta) (can be outdated or unavailable
+  during release preview)
+
+
+Migrate SAML-Enabled Connected Apps to External Client Apps
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Bring the improved usability and security of the external client apps framework to your SAML single sign-
+on (SSO) configurations. With a few clicks, you can now transform SAML-enabled connected apps into
+external client apps. After migration, you get an identical external app with all of your SAML
+configurations, while your old connected app remains in read-only mode.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+Why: External client apps are a more secure, modern replacement for connected apps. We recommend
+that you use external client apps instead of connected apps whenever possible. Previously, the external
+
+
+
+                                                    839
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+client apps migration tool supported only the OAuth plugin. Now, you can migrate apps that use the
+SAML plugin.
+
+How: In the App Manager, find your connected app and click Migrate to External Client App.
+
+
+Migrate to a Multiple-Configuration SAML Framework (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you see this release update, your Salesforce instance is using our original single-configuration SAML
+framework, which supports single sign-on (SSO) with only one identity provider. We’re giving you a final
+reminder that with Summer ’26, we’re no longer supporting the single-configuration SAML framework. To
+make sure that your SSO configurations don’t break, migrate to our newer multiple-configuration SAML
+framework, which supports SSO with multiple identity providers instead of just one. If you don’t migrate,
+your SAML SSO configurations will stop working when this release update is enforced in Summer ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in
+Enterprise, Unlimited, and Developer editions.
+
+
+     Note This release update is available only if you’re using the single-configuration SAML framework. If
+     you don’t see this release update, you’re already using the multiple-configuration framework, and
+     this release update doesn’t apply to your instance.
+
+
+When: This update is enforced for production instances in Summer ’26 and was enforced for sandboxes
+in Summer ’24. To get the major release upgrade date for your instance, go to Trust Status, search for
+your instance, and click the maintenance tab.
+
+This update was first made available in Spring ’24. It was scheduled to be enforced for all instances in
+Summer ’24, but we enforced it only for sandboxes in Summer ’24. We postponed the enforcement date
+for production instances to Spring ’26 and then postponed it again to Summer ’26.
+
+Why: We’re removing support for the single-configuration SAML SSO framework that you currently use.
+With this change, all SAML SSO configurations must use our newer multiple-configuration framework.
+With the multiple-configuration SAML framework, you can integrate your org or Experience Cloud site
+with multiple external identity providers.
+
+How: If you don’t migrate to the multiple-configuration SAML framework, your SAML SSO configuration
+will break when this update is enforced.
+
+When you follow the steps to migrate, your current SAML SSO configuration is preserved, but with some
+key changes:
+
+
+                                                   840
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+• Your Salesforce login URL changes. Make sure you have a plan to communicate this change to your
+    users.
+• SAML responses from your identity provider must include the audience attribute. Work with your
+    identity provider to update SAML responses as needed.
+•   Salesforce generates a new self-signed certificate and uses it to sign SAML requests.
+•   If Salesforce can’t parse a SAML response, it isn’t recorded in the login history.
+
+Before you migrate your configuration in production, make sure you understand these changes, update
+your configuration accordingly, and test all changes in a sandbox.
+
+To review this update, from Setup, in the Quick Find box, enter Release Updates, and then select
+Release Updates. For Migrate to a Multiple-Configuration SAML Framework, follow the testing and
+activation steps.
+
+See Also
+  Salesforce Help: SAML SSO with Salesforce as the Service Provider (can be outdated or unavailable
+  during release preview)
+
+
+Salesforce-Managed X (Formerly Twitter) Authentication Provider
+Retirement (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Salesforce-managed app for the X (formerly Twitter) authentication provider is being retired. This
+update breaks any single sign-on (SSO) configurations that use the Salesforce-managed X app. To avoid
+disruptions, create a custom X app and update your SSO configurations.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in
+Enterprise, Performance, Unlimited, and Developer editions.
+
+When: Salesforce enforces this update in Summer ’26. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the maintenance tab.
+
+Why: Some X authentication providers use an X app that Salesforce manages. With the Salesforce-
+managed X app, you can leave the consumer key and secret blank when you set up the authentication
+provider. In Spring ’24, Salesforce removed the ability to use the Salesforce-managed X app for new
+authentication providers, but continued to support it for existing authentication providers that were
+created before Spring ’24. Now, the Salesforce-managed X app is being fully retired. Instead, you must
+use a custom X app and specify its consumer key and secret in your authentication provider
+configuration. With a custom X app, you have more control over your SSO configuration.
+
+
+
+                                                     841
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+
+     Note This release update doesn’t affect authentication providers that are associated with the X Ads
+     for Marketing Intelligence (MI) Connector.
+
+
+How: If an X authentication provider uses the Salesforce-managed app, it stops working when this
+release update is enforced. Users can no longer use the authentication provider to log in via SSO.
+
+To review this update, from Setup, in the Quick Find box, enter Release Updates, and then select
+Release Updates. For Salesforce-Managed X (Formerly Twitter) Authentication Provider Retirement,
+follow the testing and activation steps.
+
+See Also
+  Salesforce Help: Configure an X (Formerly Twitter) Authentication Provider (can be outdated or
+  unavailable during release preview)
+  Knowledge Article: Prepare for the Salesforce-Managed X (Formerly Twitter) Authentication Provider
+  Retirement (can be outdated or unavailable during release preview)
+
+
+New LinkedIn Authentication Providers Use LinkedIn API v2
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To stay up to date with the latest LinkedIn API version, new LinkedIn authentication providers now use
+LinkedIn API v2. Configurations that you created before Spring ’26 still use LinkedIn API v1. Also, new
+and existing authentication providers that use the Salesforce-managed LinkedIn app still use LinkedIn
+API v1.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in
+Enterprise, Performance, Unlimited, and Developer editions.
+
+See Also
+  Salesforce Help: Configure a LinkedIn Authentication Provider (can be outdated or unavailable during
+  release preview)
+
+
+Triple DES for SAML Single Sign-On Stops Working in Summer ’26
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                   842
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+In Summer ’26, SAML single sign-on (SSO) configurations that use the Triple Data Encryption Standard
+(Triple DES) algorithm will stop working. This change applies to all SSO configurations that use the Triple
+DES algorithm, whether you use Salesforce as an identity provider or as a service provider. To improve
+security, use the Advanced Encryption Standard (AES) algorithms, AES 128 or AES 256, instead.
+
+Where: This change applies to Lightning Experience and Salesforce Classic (not available in all orgs) in all
+editions.
+
+When: Triple DES will stop working in Summer ’26. There’s no change to Triple DES support in Spring ’26,
+but we recommend that you update your SAML configurations as soon as possible.
+
+Why: The Triple DES algorithm uses a cryptographic key that’s too short to be secure. The AES 128 and
+AES 256 algorithms use longer keys that make these algorithms harder to attack. For more information
+about encryption algorithm security from the National Institute of Standards and Technology, go to
+https://csrc.nist.gov/pubs/sp/800/131/a/r3/ipd.
+
+How: Before Summer ’26, update your configurations to use the AES 128 or AES 256 algorithm. The
+steps to update your configuration are different depending on whether you use Salesforce as an identity
+provider or as a service provider.
+
+• If you use Salesforce as an identity provider, check your connected app SAML configuration. First, go to
+  your connected app Web App Settings and check the Block Encryption Algorithm setting. If Block
+  Encryption Algorithm is set to Triple DES, update your configuration to use a more secure algorithm.
+  On the service provider, update your settings to decrypt the new algorithm.
+
+
+
+
+• If you use Salesforce as a service provider, check with your identity provider to see what encryption
+  algorithm they use. If they use the Triple DES algorithm, work with your identity provider to use a more
+  secure algorithm and to generate a new decryption certificate. In Salesforce, update the Assertion
+  Decryption Certificate in your SAML Single Sign-On Settings.
+
+
+
+
+                                                    843
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+See Also
+  Salesforce Help: Configure SSO with Salesforce as a SAML Service Provider (can be outdated or
+  unavailable during release preview)
+  Salesforce Help: Salesforce as a SAML Identity Provider (can be outdated or unavailable during release
+  preview)
+
+
+Sandbox Users with Non-Unique Usernames Can't Be Unfrozen
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can't unfreeze a sandbox user if their username exists in another sandbox instance. This change
+prevents duplicate usernames for active, unfrozen users. To unfreeze a user with a non-unique username,
+update the username to a unique value.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in all editions. This change
+applies only to sandbox orgs.
+
+See Also
+  Salesforce Help: Freeze or Unfreeze User Accounts (can be outdated or unavailable during release
+  preview)
+  Salesforce Help: Usernames and Passwords (can be outdated or unavailable during release preview)
+
+
+Health Check
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Health Check now provides deeper insight by tracking seven new configurable security settings, including
+MFA status, SAML enablement, and session management controls. Users can also configure who receives
+notifications whenever your Salesforce security health check score changes.
+
+  New Configurable Settings Added to Health Check
+  Health Check now provides deeper insight by tracking seven new configurable security settings,
+  including MFA status, SAML enablement, and session management controls.
+  Stay Secure with Proactive Health Check Notifications
+
+
+                                                   844
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+  Configure who receives notifications whenever your Salesforce security health check score changes.
+  Notifications help admins stay informed and take action quickly.
+
+
+New Configurable Settings Added to Health Check
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Health Check now provides deeper insight by tracking seven new configurable security settings, including
+MFA status, SAML enablement, and session management controls.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+Who: This change applies to customers with the Security Center add-on subscription.
+
+Why: This change significantly improves visibility and control over an organization's security posture.
+
+How: From Setup, enter Health Check in the Quick Find box, then select Health Check.
+
+
+Stay Secure with Proactive Health Check Notifications
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Configure who receives notifications whenever your Salesforce security health check score changes.
+Notifications help admins stay informed and take action quickly.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+Who: This change applies to customers with the Security Center add-on subscription.
+
+Why: This change alerts users to recent changes in their security posture.
+
+How: From Setup, enter Health Check in the Quick Find box, then select Health Check. Enable the Notify
+all System Admins toggle to send notifications to anyone with a System Administrator profile.
+
+
+
+                                                    845
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+Alternatively, use the Recipients lookup field to add individual users or external email addresses.
+
+
+Privacy Center
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Explore Privacy Requests as a new way to fulfill Right to Be Forgotten (RTBF) requests from your
+customers.
+
+  Delete Records in Your Org and Data 360 with Privacy Requests
+  When fulfilling Right to Be Forgotten (RTBF) requests from your customers, you can now delete records
+  across your Salesforce org and Data 360 with a single, integrated solution. Use Privacy Requests to find
+  and selectively delete records for a data subject. Easily search for records using flexible criteria, see
+  record details and relationships, and make informed decisions about data deletion.
+
+
+Delete Records in Your Org and Data 360 with Privacy Requests
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+When fulfilling Right to Be Forgotten (RTBF) requests from your customers, you can now delete records
+across your Salesforce org and Data 360 with a single, integrated solution. Use Privacy Requests to find
+and selectively delete records for a data subject. Easily search for records using flexible criteria, see
+record details and relationships, and make informed decisions about data deletion.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+See Also
+  Salesforce Help: Delete Data with Privacy Requests (can be outdated or unavailable during release
+  preview)
+
+
+
+
+                                                    846
+Salesforce Release Notes                                                        Security, Identity, and Privacy
+
+
+
+Salesforce Shield
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Shield product enhancements make it easier for you to extend security policies to more of your data.
+Database Encryption is generally available in all regions. Data Detect now scans 100 objects and
+unlimited fields and Field Audit Trail storage limit increases from 60 to 200. Real-Time Event storage is
+turned on by default. The Shield app now has setup assistants and simpler access requirements.
+
+  Get Shield Setup Assistants and Usage Insights
+  The Shield app now includes Setup Assistants for Data Detect, Field Audit Trail, Event Monitoring, and
+  Platform Encryption. Maximize your Shield implementation by staying up to date on key setup tasks,
+  ranging from user access to feature activation. Monitor and maintain your setup with at-a-glance
+  insights, including usage metrics, data trends, and job statuses.
+  Simplify How Users Access the Shield App
+  If your users have the required permissions to access either Data Detect, Event Monitoring, or Platform
+  Encryption, then they can view the Shield app by default. Previously, the View Shield App Pages user
+  permission was required to view the app. Now, that permission is required only for users who lack
+  other Shield-related access privileges.
+  Event Monitoring
+  Strengthen your security posture with automatic data storage by default for Report, ListView, Login,
+  LoginAs, and Logout events, ensuring critical audit data is available from day one. Additionally, the
+  Operation field in ApiEvent now tracks delete activities, providing deeper insight into critical data
+  changes.
+  Data Detect
+  Data Detect scan scope and scale increase to handle 100 objects with unlimited fields. You can now
+  scan for custom keywords alongside structured sensitive data to improve regulatory compliance and
+  flag sensitive internal terminology. With the availability of a Standalone License for Data Detect, you
+  can understand your Personally Identifiable Information (PII) exposure. Or, run a scan without
+  needing to purchase the full Shield bundle.
+  Field Audit Trail
+  Field History Explorer enables users to download metadata and revert changes to tracked fields. The
+  increased limit of 200 tracked fields per object further supports broader auditing needs and stricter
+  compliance standards.
+  Shield Platform Encryption
+  Reduce friction in the encryption process with Database Encryption, now generally available in all
+  regions. Bring Your Own Key for Data 360 opens more root key management options.
+
+
+
+
+                                                    847
+Salesforce Release Notes                                                       Security, Identity, and Privacy
+
+
+
+Get Shield Setup Assistants and Usage Insights
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Shield app now includes Setup Assistants for Data Detect, Field Audit Trail, Event Monitoring, and
+Platform Encryption. Maximize your Shield implementation by staying up to date on key setup tasks,
+ranging from user access to feature activation. Monitor and maintain your setup with at-a-glance insights,
+including usage metrics, data trends, and job statuses.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer Editions. Access to the Shield app requires either the Salesforce Shield, Event Monitoring,
+Field Audit Trail, Data Detect, or Shield Platform Encryption add-on license.
+
+See Also
+  Salesforce Help: Salesforce Shield (can be outdated or unavailable during release preview)
+
+
+Simplify How Users Access the Shield App
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If your users have the required permissions to access either Data Detect, Event Monitoring, or Platform
+Encryption, then they can view the Shield app by default. Previously, the View Shield App Pages user
+permission was required to view the app. Now, that permission is required only for users who lack other
+Shield-related access privileges.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer Editions. Access to the Shield app requires either the Salesforce Shield, Event Monitoring,
+Field Audit Trail, Data Detect, or Shield Platform Encryption add-on license.
+
+See Also
+  Salesforce Help: Grant Access to Shield (can be outdated or unavailable during release preview)
+
+
+
+
+                                                   848
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+
+Event Monitoring
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Strengthen your security posture with automatic data storage by default for Report, ListView, Login,
+LoginAs, and Logout events, ensuring critical audit data is available from day one. Additionally, the
+Operation field in ApiEvent now tracks delete activities, providing deeper insight into critical data
+changes.
+
+  Automatic Storage for Select Real-Time Events
+  Data storage is now enabled by default for Report Event, ListView Event, Login Event, LoginAs Event
+  and Logout Event. This ensures that critical security and audit event data is captured automatically
+  from day one.
+  Delete Operation Tracking for ApiEvent
+  ApiEvent now tracks delete operations. The Operation field has been expanded to capture these
+  critical activities for improved security monitoring.
+
+
+Automatic Storage for Select Real-Time Events
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Data storage is now enabled by default for Report Event, ListView Event, Login Event, LoginAs Event and
+Logout Event. This ensures that critical security and audit event data is captured automatically from day
+one.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+Who: This change is available to users with the Salesforce Shield or Field Audit Trail license.
+
+Why: This change removes setup friction, guarantees event data is immediately available for
+investigations, and ensures your organization can meet crucial compliance and audit requirements
+without extra configuration.
+
+
+
+
+                                                     849
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+Delete Operation Tracking for ApiEvent
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+ApiEvent now tracks delete operations. The Operation field has been expanded to capture these critical
+activities for improved security monitoring.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+Who: This change is available to users with the Salesforce Shield or Field Audit Trail license.
+
+Why: This change enables users to protect sensitive data integrity and prevent unauthorized changes.
+
+
+Data Detect
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Data Detect scan scope and scale increase to handle 100 objects with unlimited fields. You can now scan
+for custom keywords alongside structured sensitive data to improve regulatory compliance and flag
+sensitive internal terminology. With the availability of a Standalone License for Data Detect, you can
+understand your Personally Identifiable Information (PII) exposure. Or, run a scan without needing to
+purchase the full Shield bundle.
+
+  Increase Data Detect Scan Scope and Scale
+  Now, you can create or edit a scan with 100 objects to include an unlimited number of fields and
+  historical records. This means performing comprehensive data integrity and compliance scans across a
+  broader dataset in a single operation.
+  Scan for Custom Keywords with Data Detect
+  Improve operational and regulatory compliance by identifying specific, sensitive exact words or
+  phrases within your data. You can now optionally scan for custom keywords alongside structured
+  sensitive data (custom patterns) when creating a Data Detect policy.
+  Purchase a Standalone License for Data Detect
+  You can now acquire Data Detect without purchasing the full Shield bundle. The system is configured
+
+
+
+                                                     850
+Salesforce Release Notes                                                          Security, Identity, and Privacy
+
+
+  to validate the presence of this new, dedicated license and provide access to all Data Detect
+  functionality.
+  Access and Run Data Detect Scans and Results with REST APIs
+  Use programmatic access with Salesforce Data Detect with two new REST APIs that can run and view
+  scan results. Retrieve (GET) returns the list of existing Data Detect policies with their details. Scan posts
+  the DataDetect policy scan for execution.
+
+
+Increase Data Detect Scan Scope and Scale
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Now, you can create or edit a scan with 100 objects to include an unlimited number of fields and
+historical records. This means performing comprehensive data integrity and compliance scans across a
+broader dataset in a single operation.
+
+Where: This change applies to Lightning Experience (not available in all orgs) in Enterprise, Unlimited,
+and Developer editions with the Salesforce Shield or Data Detect Licenses.
+
+
+Scan for Custom Keywords with Data Detect
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Improve operational and regulatory compliance by identifying specific, sensitive exact words or phrases
+within your data. You can now optionally scan for custom keywords alongside structured sensitive data
+(custom patterns) when creating a Data Detect policy.
+
+Where: This change applies to Lightning Experience (not available in all orgs) in Enterprise, Unlimited,
+and Developer editions with the Salesforce Shield or Data Detect Licenses.
+
+Why: Custom keywords help you proactively mitigate risk by quickly flagging sensitive internal
+terminology like project code names or internally flagged risk terms.
+
+
+
+
+                                                     851
+Salesforce Release Notes                                                           Security, Identity, and Privacy
+
+
+Purchase a Standalone License for Data Detect
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now acquire Data Detect without purchasing the full Shield bundle. The system is configured to
+validate the presence of this new, dedicated license and provide access to all Data Detect functionality.
+
+Where: This change applies to Lightning Experience (not available in all orgs) in Enterprise, Unlimited,
+and Developer editions with the Salesforce Shield or Data Detect Licenses.
+
+Why: If you need the flexibility for Data Detect to understand your Personally Identifiable Information
+(PII) exposure. Or, you want to run a scan before investing in full-scale remediation.
+
+
+Access and Run Data Detect Scans and Results with REST APIs
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use programmatic access with Salesforce Data Detect with two new REST APIs that can run and view
+scan results. Retrieve (GET) returns the list of existing Data Detect policies with their details. Scan posts
+the DataDetect policy scan for execution.
+
+Where: This change applies to Lightning Experience (not available in all orgs) in Enterprise, Unlimited,
+and Developer editions with the Salesforce Shield or Data Detect Licenses.
+
+Why: Now, you can view Data Detect policies and run scans via APIs.
+
+
+Field Audit Trail
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+
+
+
+                                                     852
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+available products and features.
+
+Field History Explorer enables users to download metadata and revert changes to tracked fields. The
+increased limit of 200 tracked fields per object further supports broader auditing needs and stricter
+compliance standards.
+
+  Enhancements to Field History Tracking
+  Users can now download metadata and revert changes to tracked fields with the Field History Explorer
+  feature of Field Audit Trail.
+  Increasing the Field Audit Trail Limit Beyond 60
+  Track more fields and meet compliance needs more efficiently with a significantly increased Field
+  Audit Trail limit of 200 tracked fields.
+
+
+Enhancements to Field History Tracking
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Users can now download metadata and revert changes to tracked fields with the Field History Explorer
+feature of Field Audit Trail.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+Who: This change is available to users with the Salesforce Shield or Field Audit Trail license.
+
+Why: This change adds much requested audit features to Field Audit Trail.
+
+
+Increasing the Field Audit Trail Limit Beyond 60
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Track more fields and meet compliance needs more efficiently with a significantly increased Field Audit
+Trail limit of 200 tracked fields.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+
+
+                                                     853
+Salesforce Release Notes                                                         Security, Identity, and Privacy
+
+
+Developer editions.
+
+Who: This change is available to users with the Salesforce Shield or Field Audit Trail license.
+
+Why: This increase allows users to cover a broader scope of field history tracking on critical objects.
+
+
+Shield Platform Encryption
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Reduce friction in the encryption process with Database Encryption, now generally available in all
+regions. Bring Your Own Key for Data 360 opens more root key management options.
+
+  Encrypt Your Entire Database (GA Release)
+  Database Encryption is generally available worldwide. It began its deployment in Winter '26. Due to
+  the pace of the controlled release, some regions lagged in enabling the new feature. Database
+  Encryption allows you to sort, filter and reference encrypted data without functional or performance
+  tradeoffs. You can still apply Field Level Encryption to individual fields if required.
+  Bring Your Own Key to Data 360
+  Platform Encryption for Data 360 customers can now make use of the Bring Your Own Key (BYOK)
+  feature of Shield Platform Encryption. When you supply your own root key, you get the benefits built
+  into Salesforce Shield Platform Encryption, plus the extra assurance that comes from exclusively
+  managing your own key material. For Data 360, BYOK supports root keys only. Data 360 then manages
+  all DEK creation and wrapping using the root key. To be compatible with Salesforce BYOK, use a
+  PKCS#8 encrypted, Base64 encoded 4096 RSA key pair with appropriate headers and footers.
+
+
+Encrypt Your Entire Database (GA Release)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Database Encryption is generally available worldwide. It began its deployment in Winter '26. Due to the
+pace of the controlled release, some regions lagged in enabling the new feature. Database Encryption
+allows you to sort, filter and reference encrypted data without functional or performance tradeoffs. You
+can still apply Field Level Encryption to individual fields if required.
+
+
+                                                     854
+

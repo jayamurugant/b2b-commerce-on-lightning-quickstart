@@ -1,0 +1,1903 @@
+Salesforce Release Notes                                                                        Customization
+
+
+currencies, addresses, names, numeric values, and the start day of the week. ICU sets the international
+standard for these formats. The ICU locale formats provide a consistent experience across the platform
+and improve integration with ICU-compliant applications across the globe. This update was first made
+available in Winter ’20. Orgs that haven’t already switched to ICU locale formats are encouraged to
+manually update.
+
+Where: This change applies to Lightning Experience, Salesforce Classic, and all versions of the Salesforce
+mobile app in all editions, except Database.com.
+
+When: To get the major release upgrade date for your instance, go to Trust Status, search for your
+instance, and then click the maintenance tab.
+
+Who: You can enable this update for all orgs. To use the ICU locale formats in your customizations, all
+Apex classes, Apex triggers, and Visualforce pages must use API version 45.0 or later.
+
+How: To manually enable this update, from Setup, in the Quick Find box, enter Release Updates, and
+then select Release Updates. To Enable ICU Locale Formats, follow the testing and activation steps.
+
+The English (Canada) locale (en_CA) requires separate activation. From Setup, in the Quick Find box,
+enter User Interface, and select User Interface. Then select Enable ICU formats for en_CA, and save
+your changes.
+
+To confirm whether your org is using ICU or JDK locale formats, from Setup, enter Company
+Information in the Quick Find box. On the Company Information page, locate the Locale Formats field.
+
+The enablement of this release update is not enforced in Spring '26. If your org is already using ICU
+locale formats, those locale formats remain enabled. For any org still using JDK, we recommend that they
+use the release update to manually enable ICU locale formats.
+
+See Also
+  Salesforce Help: Enable the ICU Locale Formats (can be outdated or unavailable during release
+  preview)
+
+
+List Views
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+When you sort a list view, blank fields are sorted as the highest value in the list instead of the lowest
+value. In list views rendered with Lightning Web Components (LWC), you receive an error notification
+earlier in the edit process if you try to edit more than 200 records at a time.
+
+
+
+
+                                                     150
+Salesforce Release Notes                                                                       Customization
+
+
+  List View Edit Limits Are Communicated More Clearly
+  List views rendered with Lightning Web Components (LWC) now prevent you from selecting or
+  attempting to edit more than the supported maximum of 200 records at one time. Previously, if you
+  selected more than 200 records, the edit icon still appeared and Salesforce didn’t restrict you from
+  changing a field. However, when you attempted to apply your changes, an error notified you that your
+  changes were unsaveable. To save you time and prevent the input of changes that can’t be saved, list
+  views now enforce the 200-record limit earlier in the edit process.
+  Use Updated Empty Value Placement in List View Sorting
+  When you sort a list view, blank fields, or null values, now are treated as the highest value in the
+  dataset. For example, let’s say you have a column with the data 5, 9, null, and 2. If you sort this column
+  in ascending order, you see 2, 5, 9, null. Previously, Salesforce treated blank fields as the lowest value,
+  so that in the example given, you saw the data as null, 2, 5, 9.
+
+
+List View Edit Limits Are Communicated More Clearly
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+List views rendered with Lightning Web Components (LWC) now prevent you from selecting or
+attempting to edit more than the supported maximum of 200 records at one time. Previously, if you
+selected more than 200 records, the edit icon still appeared and Salesforce didn’t restrict you from
+changing a field. However, when you attempted to apply your changes, an error notified you that your
+changes were unsaveable. To save you time and prevent the input of changes that can’t be saved, list
+views now enforce the 200-record limit earlier in the edit process.
+
+Where: This change applies to Lightning Experience in all editions.
+
+See Also
+  Knowledge Article: List Views Rendered with Lightning Web Components (LWC)
+
+
+Use Updated Empty Value Placement in List View Sorting
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+
+                                                    151
+Salesforce Release Notes                                                                        Customization
+
+
+When you sort a list view, blank fields, or null values, now are treated as the highest value in the dataset.
+For example, let’s say you have a column with the data 5, 9, null, and 2. If you sort this column in
+ascending order, you see 2, 5, 9, null. Previously, Salesforce treated blank fields as the lowest value, so
+that in the example given, you saw the data as null, 2, 5, 9.
+
+Where: This change applies to Lightning Experience in all editions.
+
+
+AppExchange
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Configure new Trialforce Source Org (TSO) branded login pages before Summer ’26.
+
+  Configure New Trialforce Login Pages Before Summer ’26
+  If you plan to configure a new branded login page for your AppExchange solution’s Trialforce Source
+  Org (TSO), complete the configuration before Summer ’26. With that release, existing branded login
+  pages continue to work but you can’t configure new branded login pages.
+
+
+Configure New Trialforce Login Pages Before Summer ’26
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you plan to configure a new branded login page for your AppExchange solution’s Trialforce Source Org
+(TSO), complete the configuration before Summer ’26. With that release, existing branded login pages
+continue to work but you can’t configure new branded login pages.
+
+Where: This change applies to Salesforce Classic in Developer Edition.
+
+When: Salesforce starts deploying the Summer ’26 release to Developer Edition orgs on May 15, 2026.
+To get the major-release upgrade date for your org, go to Trust Status, search for your My Domain name
+or instance, and then click the Maintenance tab.
+
+Why: Salesforce plans to retire the .cloudforce.com host name that serves Trialforce branded login
+pages. Check future release notes for updates about branded login pages for Trialforce Source Orgs.
+
+
+
+                                                     152
+Salesforce Release Notes                                                                    Customization
+
+
+See Also
+  Salesforce Help: Branded Login Pages for Trialforce (can be outdated or unavailable during release
+  preview)
+
+
+General Setup
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Add the Request Approval component to record pages so users can submit records for approval without
+the need for a custom button. Install a release update to address new sharing recalculation behavior.
+
+  Submit Records for Approval by Using the Request Approval Component
+  Add the Request Approval component to record pages to integrate autolaunched flow approval
+  processes into your record pages. Configure the component in Lightning App Builder to require
+  submitters to select the first approver and add comments about their approval request. The
+  component works only with Flow Approval Processes, not with Classic Approval Processes.
+  Update Apex Code and Flows for Changed Sharing Recalculation Behavior (Release Update)
+  To optimize performance after large-scale updates to groups or roles, Salesforce now performs some
+  sharing recalculations asynchronously. If Apex code and flows require that share records be updated
+  immediately, the code and flows can break when this release update is enforced. Update Apex classes,
+  tests, and flows that update group membership or roles if they rely on synchronous sharing
+  recalculation. This update is available starting in Spring ’26.
+
+
+Submit Records for Approval by Using the Request Approval Component
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Add the Request Approval component to record pages to integrate autolaunched flow approval
+processes into your record pages. Configure the component in Lightning App Builder to require
+submitters to select the first approver and add comments about their approval request. The component
+works only with Flow Approval Processes, not with Classic Approval Processes.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+
+
+
+                                                   153
+Salesforce Release Notes                                                                     Development
+
+
+Developer editions.
+
+See Also
+  Release Notes: Add Approval Submissions to Record Pages Without Custom Buttons
+
+
+Update Apex Code and Flows for Changed Sharing Recalculation Behavior
+(Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To optimize performance after large-scale updates to groups or roles, Salesforce now performs some
+sharing recalculations asynchronously. If Apex code and flows require that share records be updated
+immediately, the code and flows can break when this release update is enforced. Update Apex classes,
+tests, and flows that update group membership or roles if they rely on synchronous sharing recalculation.
+This update is available starting in Spring ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Performance, Unlimited, and Developer editions.
+
+When: Salesforce enforces this update in Spring ’27. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the maintenance tab.
+
+How: Review the release update in Setup for information on identifying and fixing your Apex code and
+flows. To identify required updates, enable Test asynchronous sharing recalculation in Apex tests on
+the Sharing Settings page. To test your changes, enable this release update in a sandbox before enabling
+it in production.
+
+See Also
+  Knowledge Article: Asynchronous Sharing Recalculation After Group Membership or Role Changes
+
+
+
+Development
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+                                                   154
+Salesforce Release Notes                                                                      Development
+
+
+Whether you’re using Lightning components, Visualforce, Apex, or Salesforce APIs with your favorite
+programming language, these enhancements help you develop amazing applications, integrations, and
+packages for resale to other organizations.
+
+  Lightning Components
+  Use complex expressions in your LWC templates. Lightning base components for empty states and
+  illustrations are in beta. The TypeScript rollout for all Lightning base components is complete. Screen
+  flows now support Lightning Web Component local actions. The LWC TypeScript Converter MCP Tool
+  is in beta. Use the Error Console to keep non-fatal errors from interrupting you. Learn about the latest
+  improvements to Lightning Out 2.0.
+  Lightning Design System
+  The Salesforce Lightning Design System (SLDS) includes the resources to create user interfaces
+  consistent with Salesforce Lightning principles, design language, and best practices.
+  Visualforce
+  Visualforce contains a release update in Spring ’26, a continuation of an earlier release update.
+  Apex
+  Run only Apex tests that are relevant to a deployment by using the RunRelevantTests (beta) test
+  level. Apex cursors and pagination cursors are enhanced and generally available. Extract picklist fields
+  by using the ConnectApi.RecordUi.getPicklistValuesByRecordType() method. Exposing
+  Apex REST and AuraEnabled controller methods as agent actions is generally available. The
+  Blob.toPdf() method uses the same PDF rendering service as Visualforce. Prepare your Apex code
+  for changes to sharing recalculation behavior. Filter Test Discovery API results by using the category
+  query parameter. Specify the number of oldest, completed async jobs to delete by using the method
+  overload for purgeOldAsyncJobs() .
+  API
+  Learn about improvements, new capabilities, and important announcements in API version 66.0.
+  Packaging
+  Packaging facilitates the development and distribution of business apps. Use second-generation
+  managed packages to create apps to sell and distribute on AppExchange. Use unlocked packages to
+  develop internal business apps.
+  Development Environments
+  Development environments are full-featured Salesforce environments that you use to develop and test
+  existing or new features and custom applications. They include Developer Edition orgs, sandboxes,
+  and scratch orgs.
+  Monitor Sandbox Copy Progress in Greater Detail with an Updated UI
+  The updated UI for sandbox copies and refreshes now provides a detailed visual progress bar and real-
+  time status updates for each stage. Users gain greater insight and transparency into the process,
+  enabling better tracking of sandbox progress and completion.
+  Platform Development Tools
+  Build applications collaboratively and deliver continuously with Salesforce Developer Experience (DX),
+  the open and integrated experience for custom app development on Salesforce.
+  Salesforce Functions
+  Salesforce Functions is no longer available for purchase or renewal. Learn about the retirement plan
+
+
+                                                   155
+Salesforce Release Notes                                                                     Development
+
+
+  for Salesforce Functions.
+  Change Data Capture
+  Rollback of custom formula fields
+  Platform Events
+  Check out outbound message enhancements.
+  New and Changed Items for Developers
+  Here is where you can find new and changed objects, calls, classes, components, commands, and
+  more that help you customize Salesforce features.
+
+
+Lightning Components
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use complex expressions in your LWC templates. Lightning base components for empty states and
+illustrations are in beta. The TypeScript rollout for all Lightning base components is complete. Screen
+flows now support Lightning Web Component local actions. The LWC TypeScript Converter MCP Tool is
+in beta. Use the Error Console to keep non-fatal errors from interrupting you. Learn about the latest
+improvements to Lightning Out 2.0.
+
+
+     Note Looking for new and changed Lightning web components, Aura components, and Aura
+     component interfaces? See the lists of new and changed items at the end of the Development
+     section.
+
+
+  LWC API Version 66.0
+  Update the API version for your components to use new features and improvements. Versioning your
+  Lightning web components ensures that your existing components aren’t affected when Salesforce
+  ships new features, bug fixes, and performance improvements that change existing behavior.
+  Versioning also helps Salesforce deprecate legacy features.
+  Display Consistent Empty State Illustrations With Theme Support (Beta)
+  Use the new lightning-empty-state component to add meaningful visuals and content to your
+  components that show empty states. This component displays the latest Salesforce Lightning Design
+  System (SLDS) empty state illustration and correctly sizes it for the container, simplifying your UI
+  development. The SVG illustrations automatically adjust to the user's selected theme, and can adapt
+  to dark mode in SLDS 2 themes, for a consistent look and feel across your app. The new lightning-
+  illustration component displays the same set of illustrations without text.
+  Get Complete Type Definitions for Lightning Base Components
+  Build your apps with confidence with the completion of the TypeScript rollout for all Lightning base
+
+
+
+                                                   156
+Salesforce Release Notes                                                                     Development
+
+
+  components.
+  Improve Type Safety with the LWC TypeScript Converter MCP Tool (Beta)
+  Use natural language prompts to automate the conversion of JavaScript files to TypeScript for LWC
+  development.
+  Update Your Custom Components for Use in Setup with Agentforce (Beta)
+  Make your custom Aura and Lightning web components accessible to Agentforce in Setup by adding
+  AI-related component and property descriptions to their js-meta.xml and .design files. AI component
+  and property descriptions are used only in orgs that have Setup with Agentforce (beta) enabled.
+  Check For Errors From the Disconnected DOM Node Rehydration Fix
+  To improve framework consistency, Lightning web components now rehydrate only when they're
+  actively connected to the DOM. For example, rehydration skips detached nodes to prevent lifecycle
+  methods like renderedCallback from firing multiple times. Previously, certain edge cases allowed
+  disconnected DOM nodes to be rehydrated, which could trigger reactive state updates or function
+  invocations on detached components.
+  Manage Page Errors with Error Console
+  Enable the Error Console to capture and display component and page errors without interrupting your
+  work in Salesforce. The console collects non-fatal errors so you can see them when it’s convenient for
+  you, and they don’t require interaction. Fatal errors still show in modal error panels that you must
+  dismiss before continuing. Fatal errors are also collected in the Error Console for later inspection.
+  Do More with Lightning Out 2.0 Improvements
+  Learn about improvements to Lightning Out 2.0 and the Lightning Out 2.0 App Manager.
+
+See Also
+  Lightning Web Components Developer Guide
+  Lightning Aura Components Developer Guide
+
+
+LWC API Version 66.0
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Update the API version for your components to use new features and improvements. Versioning your
+Lightning web components ensures that your existing components aren’t affected when Salesforce ships
+new features, bug fixes, and performance improvements that change existing behavior. Versioning also
+helps Salesforce deprecate legacy features.
+
+Where: This change applies to custom Lightning web components in Lightning Experience, Experience
+Builder sites, and all versions of the Salesforce mobile app.
+
+How: You can change a component’s API version in its .js-meta.xml file.
+
+
+                                                   157
+Salesforce Release Notes                                                                     Development
+
+
+
+ <?xml version="1.0" encoding="UTF-8"?>
+       <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadat
+ a">
+       <apiVersion>66.0</apiVersion>
+       </LightningComponentBundle>
+
+
+     Important We recommend that you upgrade your component API version one version at a time. For
+     example, from 58.0, upgrade from 58.0 to 59.0, fix any errors or warnings you encounter, and then
+     repeat until you get to the latest API version.
+
+
+When a component’s LWC API version is set to 59.0 or later, it uses that value for its LWC framework
+version. Components that specify LWC API version 58.0 and earlier continue to work based on LWC
+framework behavior in Summer ’23 (API 58.0). When you set a component to use an earlier API version,
+you don’t get new features, bug fixes, and enhancements that are available only with later LWC API
+versions.
+
+  Use Complex Template Expressions in Your Lightning Web Components (Beta)
+  Add sophisticated presentation logic to your Lightning web component template files, and remove
+  extra code from your component implementation. A component that renders a user interface can now
+  use complex JavaScript expressions directly in its HTML template file. Use complex template
+  expressions anywhere you use basic properties.
+
+
+Use Complex Template Expressions in Your Lightning Web Components (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Add sophisticated presentation logic to your Lightning web component template files, and remove extra
+code from your component implementation. A component that renders a user interface can now use
+complex JavaScript expressions directly in its HTML template file. Use complex template expressions
+anywhere you use basic properties.
+
+
+     Note Complex template expressions is a pilot or beta service that is subject to the Beta Services
+     Terms at Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer,
+     and applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the
+     Customer's sole discretion.
+
+
+Where: This change applies to Lightning web components in Lightning Experience, Experience Builder
+sites, and all versions of the mobile app in all editions.
+
+
+
+                                                   158
+Salesforce Release Notes                                                                         Development
+
+
+Why: One superpower of Lightning Web Components is the templating system, which uses the virtual
+DOM to render components intelligently and efficiently. Complex template expressions extends this
+capability to include a comprehensive subset of JavaScript expressions, enabling more dynamic and
+expressive templates while maintaining your components' performance characteristics and security
+model.
+
+How: Complex template expressions can be used anywhere basic properties could previously be used.
+You must set the apiVersion of your component to 66.0 or later to enable complex template
+expressions for that component.
+
+For documentation and examples, see the Lightning Web Components Developer Guide.
+
+
+Display Consistent Empty State Illustrations With Theme Support (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use the new lightning-empty-state component to add meaningful visuals and content to your
+components that show empty states. This component displays the latest Salesforce Lightning Design
+System (SLDS) empty state illustration and correctly sizes it for the container, simplifying your UI
+development. The SVG illustrations automatically adjust to the user's selected theme, and can adapt to
+dark mode in SLDS 2 themes, for a consistent look and feel across your app. The new lightning-
+illustration component displays the same set of illustrations without text.
+
+Where: This feature applies to Lightning Experience. The component must run in a Salesforce org to
+display the illustrations.
+
+
+     Note The lightning-empty-state and lightning-illustration components are a pilot or
+     beta service that is subject to the Beta Services Terms at Agreements - Salesforce.com or a written
+     Unified Pilot Agreement if executed by Customer, and applicable terms in the Product Terms
+     Directory. Use of this pilot or beta service is at the Customer's sole discretion.
+
+
+Why: Use the lightning-empty-state component wherever you expect a container to display data,
+such as records or tasks, but there’s no data to populate it. There can be several reasons why there’s no
+data, and now you can find just the right illustration to provide context and lighten the mood. The
+ lightning-empty-state component also provides a title, description, and call-to-action buttons so
+you can provide more clarity or lead users to the next step of their journey. You can also depict an empty
+state without an illustration, title, or call-to-action button. Only the description is required.
+
+How: Include the <lightning-empty-state> tag in your Lightning web component and pass the
+illustration name and title by using attributes. Pass the description and cta (call-to-action) by using slots.
+
+
+                                                     159
+Salesforce Release Notes                                                                   Development
+
+
+See the illustration names and usage information in the Lightning Component Reference (can be
+outdated or unavailable during release preview). See the SLDS 2 (can be outdated or unavailable during
+release preview) site for images of the illustrations and extensive information about the Empty State
+design.
+
+This example shows an empty cart illustration along with a Browse Products call-to-action button with
+the brand variant.
+
+
+ <!-- myEmptyState.html -->
+ <!-- With illustration and action -->
+ <lightning-empty-state
+   illustration-name="cart:noitems"
+   title="It's looking a little empty in here">
+   <p slot="description">Head to the product catalog to add something to your c
+ art.</p>
+   <lightning-button
+    variant="brand"
+    label="Browse Products"
+    slot="cta"
+    onclick={handleCtaClick}>
+   </lightning-button>
+ </lightning-empty-state>
+
+
+The button handler in the component's JavaScript file carries out the action.
+
+
+ import { LightningElement } from "lwc";
+
+
+ export default class MyEmptyState extends LightningElement {
+   handleCtaClick(event) {
+     // go to the Products tab
+   }
+ }
+
+
+The same myEmptyState example component can run in both SLDS 1 and SLDS 2 themes. The
+lightning-empty-state component automatically detects the SLDS version of the theme and
+presents the correct version of the illustration.
+
+In SLDS 2 themes, this component code produces this empty state depiction with an empty cart
+illustration.
+
+
+
+
+                                                    160
+Salesforce Release Notes                                                                Development
+
+
+
+
+For SLDS 1 themes, the same component produces this empty state depiction with a “gone fishing”
+illustration.
+
+
+
+
+                                                161
+Salesforce Release Notes                                                                       Development
+
+
+The lightning-illustration component can display the same empty state illustrations without
+descriptive text or buttons. We’re working on more illustrations to use with this component.
+
+This example component shows only the empty cart illustration in SLDS 2 themes and the gone fishing
+illustration in SLDS 1 themes.
+
+
+ <!-- myIllustration.html -->
+ <lightning-illustration
+   illustration-name="cart:noitems"
+   alternative-text="Shopping cart is empty">
+ </lightning-illustration>
+
+
+See Also
+  Lightning Component Reference (can be outdated or unavailable during release preview)
+  Salesforce Lightning Design System 2: Empty State component design (can be outdated or unavailable
+  during release preview)
+
+
+Get Complete Type Definitions for Lightning Base Components
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Build your apps with confidence with the completion of the TypeScript rollout for all Lightning base
+components.
+
+Where: This change applies to Lightning Experience, Experience Builder sites, and all versions of the
+mobile app in all editions.
+
+How: When using a base component, import its type definition in your component. Type definitions for
+base components are available in the @salesforce/lightning-types Node Package Manager (npm)
+package.
+
+If you have defined your own type definitions for base components, we recommend using the npm
+package in your LWC project instead.
+
+See Also
+  Lightning Web Components Developer Guide: TypeScript Type Definitions for LWC (Developer
+  Preview)
+
+
+
+
+                                                   162
+Salesforce Release Notes                                                                     Development
+
+
+
+Improve Type Safety with the LWC TypeScript Converter MCP Tool (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use natural language prompts to automate the conversion of JavaScript files to TypeScript for LWC
+development.
+
+Where: This change applies to Lightning Experience, Experience Builder sites, and all versions of the
+mobile app in all editions.
+
+
+     Note MCP Tools for LWC Development is a pilot or beta service that is subject to the Beta Services
+     Terms at Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer,
+     and applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the
+     Customer's sole discretion.
+
+
+How: The recommended way to use the LWC MCP tools is via Agentforce Vibes Extension. Agentforce
+Vibes is preconfigured with the Salesforce DX MCP Server (Beta). To enable the LWC MCP tools using
+other clients, such as Cursor or VS Code with Copilot, install the Salesforce DX MCP Server (Beta). The
+LWC TypeScript Converter MCP Tool is available as part of the lwc-experts toolset.
+
+See Also
+  Lightning Web Components Developer Guide: Use MCP Tools for LWC Development (Beta)
+  Salesforce DX Developer Guide: Install and Configure the Salesforce DX MCP Server (Beta)
+
+
+Update Your Custom Components for Use in Setup with Agentforce (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Make your custom Aura and Lightning web components accessible to Agentforce in Setup by adding AI-
+related component and property descriptions to their js-meta.xml and .design files. AI component and
+property descriptions are used only in orgs that have Setup with Agentforce (beta) enabled.
+
+Where: This feature is available in Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions with Foundations or Agentforce 1 editions.
+
+
+                                                   163
+Salesforce Release Notes                                                                       Development
+
+
+
+     Note Setup with Agentforce is a pilot or beta service that is subject to the Beta Services Terms at
+     Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer, and
+     applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the Customer's
+     sole discretion.
+
+
+When: This feature is available starting in early January 2026.
+
+Why: When Setup with Agentforce is enabled, the Setup agent can recommend custom components
+when creating a Lightning record page from a user utterance. For the Setup agent to successfully analyze
+whether your custom component fits the requirements for it to be included on the suggested record
+page, the component must contain an AI-related description of what it does and descriptions of its
+properties.
+
+How: For detailed instructions, see the Lightning Web Components Developer Guide or the Lightning
+Aura Components Developer Guide.
+
+See Also
+  Streamline Administrative Tasks with Setup with Agentforce (Beta)
+  Salesforce Help: Setup with Agentforce (Beta) (can be outdated or unavailable during release preview)
+
+
+Check For Errors From the Disconnected DOM Node Rehydration Fix
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To improve framework consistency, Lightning web components now rehydrate only when they're actively
+connected to the DOM. For example, rehydration skips detached nodes to prevent lifecycle methods like
+ renderedCallback from firing multiple times. Previously, certain edge cases allowed disconnected
+DOM nodes to be rehydrated, which could trigger reactive state updates or function invocations on
+detached components.
+
+Where: This change applies to Lightning Experience, Experience Builder sites, and all versions of the
+mobile app in all editions. This change also applies to Lightning web components in Open Source.
+
+How: This change is enabled automatically. If your implementation created a dependency on the
+previous rehydration behavior, review your logic for breakages.
+
+
+Manage Page Errors with Error Console
+
+This release is in preview
+
+
+
+                                                    164
+Salesforce Release Notes                                                                       Development
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Enable the Error Console to capture and display component and page errors without interrupting your
+work in Salesforce. The console collects non-fatal errors so you can see them when it’s convenient for
+you, and they don’t require interaction. Fatal errors still show in modal error panels that you must dismiss
+before continuing. Fatal errors are also collected in the Error Console for later inspection.
+
+Where: This change applies to Lightning Experience.
+
+Why: The Error Console keeps non-fatal errors from interrupting your work, while making it easier to
+share error details with your Salesforce admin or developer.
+
+
+
+
+How: From Setup, in the Quick Find box, enter User Interface, and then select User Interface. Enable
+the Use Error Console for error reporting in Lightning Experience option in the Advanced Settings
+section.
+
+
+Do More with Lightning Out 2.0 Improvements
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Learn about improvements to Lightning Out 2.0 and the Lightning Out 2.0 App Manager.
+
+Where: This feature is available in Lightning Experience in Professional, Enterprise, Performance,
+Unlimited, and Developer editions.
+
+
+
+                                                    165
+Salesforce Release Notes                                                                      Development
+
+
+Why: Lightning Out 2.0 includes these enhancements.
+
+• In the Lightning Out 2.0 App Manager, you can now add the domain names of the external apps that
+    host your Lightning Out 2.0 app. In Setup, also add the domain names to the Trusted Domains
+    allowlist on the Session Settings page.
+•   In the Lightning Out 2.0 App Manager, you can now add Lightning web components (LWC) with
+    complex namespaces, such as those with mixed casing. For example, complexNs/lwcComponent is
+    an LWC component with a valid complex namespace.
+•   In the Lightning Out 2.0 App Manager, to separate the namespace from the component name, you
+    can now use a forward slash (/) or a hyphen (-). If you use a hyphen, separate the segments of a
+    complex namespace with an underscore (_). For example, complexNs/lwcComponent and
+    complex_ns-lwc-component use equivalent, valid syntax.
+• The Lightning Out 2.0 app component now supports the app-id attribute, which is the ID of the
+    Lightning Out 2.0 app. The Lightning Out 2.0 app code block in the Lightning Out 2.0 App Manager
+    automatically includes this attribute. Existing Lightning Out 2.0 apps don’t require this attribute.
+
+How:
+
+To add the domain name of an external app, open the Host Page Domain Names tab and enter the
+name. This example shows the https://example.com domain name added to a Lightning Out 2.0 app.
+
+
+
+
+To add an LWC component to a Lightning Out 2.0 app, open the App Components tab and enter the
+name. This example shows the complexNs/lwcComponent component added to a Lightning Out 2.0
+app.
+
+
+
+
+                                                    166
+Salesforce Release Notes                                                               Development
+
+
+
+
+Here’s an example of a generated Lightning Out 2.0 code block that includes the complexNs/
+lwcComponent component. In the code block, Salesforce converts all components to the standard
+syntax for custom HTML elements. The generated code block doesn’t include the frontdoor_url
+attribute on the lightning-out-application component because this attribute is set at run time.
+
+
+ <!-- Generated Lightning Out 2.0 App Code Block -->
+ <script
+     type="text/javascript"
+     async=""
+     src="https://MyDomainName.my.salesforce.com/lightning/lightning.out.lates
+ t/index.iife.prod.js">
+ </script>
+ <lightning-out-application
+     app-id="18-DigitSalesforceID"
+     components="complex_ns-lwc-component">
+ </lightning-out-application>
+ <complex_ns-lwc-component></complex_ns-lwc-componenent>
+
+
+See Also
+  Salesforce Help: Extend Salesforce to External Apps with Lightning Out 2.0 (can be outdated or
+  unavailable during release preview)
+  Lightning Web Components Developer Guide: Use Components Outside Salesforce with Lightning Out
+  2.0
+
+
+
+
+                                                167
+Salesforce Release Notes                                                                     Development
+
+
+
+Lightning Design System
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The Salesforce Lightning Design System (SLDS) includes the resources to create user interfaces consistent
+with Salesforce Lightning principles, design language, and best practices.
+
+  Salesforce Lightning Design System Component Blueprints Updates
+  Get more out of SLDS component blueprints and utilities with these enhancements and bug fixes.
+  Use Dark Mode in More Editions (Beta)
+  You can now enable dark mode for Salesforce Lightning Design System 2 (SLDS 2) themes in Free
+  Suite, Pro Suite, Professional, Enterprise, and Developer edition orgs. Previously, dark mode was
+  available only for Salesforce Starter Suite orgs. Dark mode shows light-colored text and visual elements
+  on a dark background, which lays the foundation for richer theming opportunities and more
+  customization of Lightning base components. With dark mode enabled, your users can select an
+  appearance that reduces eye strain in low-light conditions and enhances readability.
+
+
+Salesforce Lightning Design System Component Blueprints Updates
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get more out of SLDS component blueprints and utilities with these enhancements and bug fixes.
+
+Where: These changes apply to Salesforce Lightning Design System (SLDS) and Lightning Experience.
+
+How: Improve your user interface (UI) with these recent updates to SLDS component designs.
+
+• To improve accessibility, we made a small color adjustment to the SLDS 1 theme Lightning Blue.
+• We added two new component designs for empty state and illustration. Both are implemented as
+  Lightning base components, lightning-empty-state and lightning-illustration , and
+  they’re available as beta features.
+   - The empty state component is designed to show visuals that adapt to your brand, helpful messages,
+     and guidance when there’s no content to display.
+   - The illustration component is designed to add visuals that adapt to your brand, and enhance
+
+                                                   168
+Salesforce Release Notes                                                                        Development
+
+
+     communication and engagement.
+   - The lightning-illustration component currently can display the same illustrations as
+     lightning-empty-state without descriptive text or buttons. We’re working on more illustrations
+     to use with lightning-illustration .
+   - Depending on the SLDS version in your org, both the illustration and empty state components
+     switch between SLDS 1 and SLDS 2 automatically. Additionally, SLDS 2 illustration and empty state
+     colors are optimized for dark mode.
+
+          Note Empty state component, illustration component, and dark mode are a pilot or beta
+          service that is subject to the Beta Services Terms at Agreements - Salesforce.com or a written
+          Unified Pilot Agreement if executed by Customer, and applicable terms in the Product Terms
+          Directory. Use of these pilot or beta services is at the Customer's sole discretion.
+
+• To meet the Web Content Accessibility Guidelines (WCAG) 1.4.11 standard for non-text accessibility,
+  we modified the root ::selection pseudo-selector by removing the background , text-
+  shadow , and color properties and values. These changes allow the user agent, or web browser, to
+  control the styling of highlighted and selected content.
+
+See Also
+  Salesforce Release Notes: Display Consistent Empty State Illustrations With Theme Support (Beta)
+  Salesforce Release Notes: Styling Change to Highlighted and Selected Content
+
+
+Use Dark Mode in More Editions (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now enable dark mode for Salesforce Lightning Design System 2 (SLDS 2) themes in Free Suite,
+Pro Suite, Professional, Enterprise, and Developer edition orgs. Previously, dark mode was available only
+for Salesforce Starter Suite orgs. Dark mode shows light-colored text and visual elements on a dark
+background, which lays the foundation for richer theming opportunities and more customization of
+Lightning base components. With dark mode enabled, your users can select an appearance that reduces
+eye strain in low-light conditions and enhances readability.
+
+Where: This change applies to Salesforce Lightning Design System 2 and Lightning Experience in Free
+Suite, Pro Suite, Professional, Enterprise, and Developer editions.
+
+
+     Note Dark mode is a pilot or beta service that is subject to the Beta Services Terms at Agreements -
+     Salesforce.com or a written Unified Pilot Agreement if executed by Customer, and applicable terms
+     in the Product Terms Directory. Use of this pilot or beta service is at the Customer's sole discretion.
+
+
+
+
+                                                    169
+Salesforce Release Notes                                                                      Development
+
+
+How: To enable dark mode, from Setup, in the Quick Find box, enter Themes and Branding and select
+it. Click New Theme, or click    next to an existing SLDS 2 theme and then select Edit. In the Dark Mode
+section, select Let users enable dark mode.
+
+
+
+
+Save your changes and then activate the theme.
+
+After you enable dark mode, a user can click their profile image and select how they want Salesforce to
+appear.
+
+Not all Salesforce apps are fully optimized for dark mode yet.
+
+To share feedback about dark mode, see the Trailblazer Community Design Trailblazers.
+
+See Also
+  Salesforce Help: Personalize Your Org with Themes and Branding (can be outdated or unavailable
+  during release preview)
+  Salesforce Help: Personalize Lightning Experience Display (can be outdated or unavailable during
+  release preview)
+
+
+Visualforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Visualforce contains a release update in Spring ’26, a continuation of an earlier release update.
+
+For more information on features affected by these changes, refer to the Visualforce Developer Guide.
+
+  Escape the Label Attribute of <apex:inputField> Elements to Prevent Cross-Site Scripting in
+  Visualforce Pages (Release Update)
+  To prevent malicious code from executing in cross-site scripting (XSS) attacks on your Visualforce
+
+
+
+                                                    170
+Salesforce Release Notes                                                                     Development
+
+
+  pages, this release update escapes the label attribute of your <apex:inputField> tags. This update
+  was first available in Winter ’23.
+
+
+Escape the Label Attribute of <apex:inputField> Elements to Prevent Cross-
+Site Scripting in Visualforce Pages (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To prevent malicious code from executing in cross-site scripting (XSS) attacks on your Visualforce pages,
+this release update escapes the label attribute of your <apex:inputField> tags. This update was first
+available in Winter ’23.
+
+Where: This change applies to Salesforce Classic and Lightning Experience in Professional, Enterprise,
+Performance, Unlimited, and Developer editions. Lightning console apps are available for an extra cost to
+users with Salesforce Platform user licenses for certain products. Some restrictions apply. For pricing
+details, contact your Salesforce account executive.
+
+When: Salesforce enforced this update for most orgs in Spring ’23. Salesforce enforces this update for all
+remaining orgs in Spring ’26. To get the major release upgrade date for your instance, go to Trust Status,
+search for your instance, and then click the maintenance tab.
+
+Why: This update improves the security of your Visualforce pages by automatically escaping the label
+attribute of all your existing <apex:inputField> elements. It also escapes the label attribute for
+<apex:inputField> elements that you create after enabling the update.
+
+How: To review this release update, from Setup, in the Quick Find box, enter Release Updates, and
+then select Release Updates. For Escape the Label Attribute of <apex:inputField> Elements to Prevent
+Cross-Site Scripting in Visualforce Pages, follow the testing and activation steps.
+
+After this update is enforced, label attributes that you already escaped are double-escaped. Double-
+escaped attributes don’t render correctly on Visualforce pages. For instructions on how to locate and fix
+double-escaped attributes, see the testing steps for this release update.
+
+
+Apex
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+
+
+
+                                                   171
+Salesforce Release Notes                                                                       Development
+
+
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Run only Apex tests that are relevant to a deployment by using the RunRelevantTests (beta) test
+level. Apex cursors and pagination cursors are enhanced and generally available. Extract picklist fields by
+using the ConnectApi.RecordUi.getPicklistValuesByRecordType() method. Exposing Apex
+REST and AuraEnabled controller methods as agent actions is generally available. The Blob.toPdf()
+method uses the same PDF rendering service as Visualforce. Prepare your Apex code for changes to
+sharing recalculation behavior. Filter Test Discovery API results by using the category query parameter.
+Specify the number of oldest, completed async jobs to delete by using the method overload for
+purgeOldAsyncJobs() .
+
+For more information on these enhancements, see the Apex Developer Guide and the Apex Reference
+Guide.
+
+  Deploy Apex Components Faster by Running Only Relevant Tests (Beta)
+  To reduce Apex component deployment time, use the new RunRelevantTests test level to run only
+  the tests relevant to your code changes. This feature automatically determines which tests to run
+  based on an analysis of the deployment payload and the payload dependencies. For fine-grained
+  control, you can annotate test classes so that they either run regardless of the deployment payload, or
+  run when specified components are new or modified. This targeted approach boosts the speed and
+  reliability of your deployment while maintaining code quality and coverage requirements.
+  Use Apex Cursors for Expanded SOQL Query Result Support (Generally Available)
+  Use Apex cursors and pagination cursors to work with large SOQL query result sets in manageable
+  parts. This feature, now generally available, includes enhancements since the beta release. Standard
+  cursors, when combined with queueable Apex, address the limitations of batch Apex. Pagination
+  cursors are designed for UI elements, such as multipage record lists. Both Apex cursor types can
+  traverse forwards and backwards through result sets and can handle high-volume, high-resource
+  processing.
+  Extract Picklist Values Based on Record Type
+  Get the values for all picklist fields for a particular record type by using the new
+   ConnectApi.RecordUi.getPicklistValuesByRecordType(objectApiName, recordTypeId)
+  method. We delivered this feature due to your idea on IdeaExchange.
+  Expose Apex REST and AuraEnabled Controller Methods as Agent Actions (Generally Available)
+  Create agent actions based on Apex classes by annotating methods in those classes, generating an
+  OpenAPI spec document, and deploying that document to your org. Manage the exposed methods as
+  APIs in API Catalog. This feature is now generally available.
+  Use Visualforce PDF Rendering Service with Apex Blob.toPdf() (Release Update)
+  With this update enabled, the Apex Blob.toPdf() method for PDF rendering uses the same
+  rendering service as Visualforce. The Visualforce PDF rendering service offers improvements such as
+  additional fonts and multibyte character support. This change makes PDF rendering more consistent
+  on the Salesforce Platform.
+  Review Apex Code for Changed Sharing Recalculation Behavior
+
+
+
+                                                    172
+Salesforce Release Notes                                                                           Development
+
+
+  To help you prepare your Apex code for changes to sharing recalculation behavior, Salesforce created a
+  release update that walks you through identifying and fixing affected code. For more information,
+  review the related release note and the Update Apex Code and Flows for Changed Sharing
+  Recalculation Behavior release update in Setup.
+  Filter Test Discovery API Results by Test Category
+  To retrieve only flow tests or only Apex tests, use the new category query parameter in calls to the
+  Test Discovery API endpoint. Previously, you could filter tests only by namespace prefix and test
+  method visibility. Filtering by test category is helpful in orgs with large test suites across different
+  namespaces.
+  Specify the Number of Async Jobs to Delete
+  Use the new method overload for purgeOldAsyncJobs() to specify the number of oldest,
+  completed async jobs in your org to purge. Providing an upper bound for the number of records to
+  delete enables incremental progress when large volumes of records are to be deleted.
+
+See Also
+  Apex: New and Changed Items
+
+
+Deploy Apex Components Faster by Running Only Relevant Tests (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To reduce Apex component deployment time, use the new RunRelevantTests test level to run only
+the tests relevant to your code changes. This feature automatically determines which tests to run based
+on an analysis of the deployment payload and the payload dependencies. For fine-grained control, you
+can annotate test classes so that they either run regardless of the deployment payload, or run when
+specified components are new or modified. This targeted approach boosts the speed and reliability of
+your deployment while maintaining code quality and coverage requirements.
+
+Where: The RunRelevantTests test level is available in all API versions. The
+@IsTest(critical=true) and @IsTest(testFor='...') annotations are available in API version
+66.0 and later. The feature is available in Lightning Experience and Salesforce Classic in Enterprise,
+Performance, Unlimited, and Developer editions.
+
+
+     Note The RunRelevantTests test level and the associated @IsTest() annotations are pilot or
+     beta services that are subject to the Beta Services Terms at Agreements — Salesforce.com or a
+     written Unified Pilot Agreement if executed by Customer, and applicable terms in the Product Terms
+     Directory. Use of these pilot or beta services are at the Customer’s sole discretion.
+
+
+Why: The new RunRelevantTests test level addresses the limitations of the existing
+
+
+                                                      173
+Salesforce Release Notes                                                                      Development
+
+
+ RunLocalTests and RunSpecifiedTests test levels. RunLocalTests , the default test level for
+Apex production deployments, runs all Apex tests in the org except the ones that originate from installed
+managed and unlocked packages. In orgs with extensive test suites, RunLocalTests can result in long
+deployment times even for small changes. In contrast, RunRelevantTests runs only Apex tests
+relevant to modified components in the deployment payload, so the number of tests that run scales
+proportionally to the deployment size. RunRelevantTests also addresses a drawback of the
+ RunSpecifiedTests test level. With RunSpecifiedTests , you must manually determine which
+tests are applicable to the changes, which often requires custom DevOps tooling. In contrast, the
+ RunRelevantTests test level engine analyzes the deployment payload and automatically runs a
+subset of tests based on that analysis.
+
+How: To specify the RunRelevantTests test level when you deploy Apex components, use one of
+these methods.
+
+• To deploy by using a file-based call, set the testLevel field on the DeployOptions object to
+   RunRelevantTests . Then pass DeployOptions as an argument to the deploy() method.
+• To deploy by using the deployRequest REST resource, define a deployOptions object in the
+  POST request body and set its testLevel field to RunRelevantTests .
+• To deploy by using the Salesforce CLI, use the sf project deploy start command and set the
+   --test-level flag to RunRelevantTests .
+
+If a test class must always run regardless of the classes or triggers in the deployment payload, annotate
+the test class with @IsTest(critical=true) .
+
+If a test class must always run whenever specified classes or triggers are new or changed in the
+deployment payload, annotate the test class with @IsTest(testFor='ApexClass:ClassName,
+ApexTrigger:TriggerName') .
+
+See Also
+  Metadata API Developer Guide: Run Relevant Apex Tests in a Deployment (Beta)
+  Metadata API Developer Guide: deploy()
+  Apex Developer Guide: IsTest Annotation
+  Salesforce CLI Command Reference: project Commands
+
+
+Use Apex Cursors for Expanded SOQL Query Result Support (Generally
+Available)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+
+                                                   174
+Salesforce Release Notes                                                                        Development
+
+
+Use Apex cursors and pagination cursors to work with large SOQL query result sets in manageable parts.
+This feature, now generally available, includes enhancements since the beta release. Standard cursors,
+when combined with queueable Apex, address the limitations of batch Apex. Pagination cursors are
+designed for UI elements, such as multipage record lists. Both Apex cursor types can traverse forwards
+and backwards through result sets and can handle high-volume, high-resource processing.
+
+Where: This feature is available in API version 66.0 and later. The feature is available in Lightning
+Experience and Salesforce Classic in Enterprise, Performance, Unlimited, and Developer editions.
+
+Why: Apex standard cursors offer an efficient alternative to batch Apex for processing large result sets. If
+you use an Apex batch job, you must set the batch size to the smallest value that stays within platform
+limits. The batch size is the same across the entire result set, so processing that result set can require an
+increased number of transactions. In contrast, using an Apex cursor with a chain of queueable jobs gives
+you flexibility in how many records are processed with each transaction. This approach provides better
+utilization of the asynchronous Apex limit. Calling Cursor.fetch() still counts against the SOQL query
+limit, and the rows fetched count against the SOQL query row limit.
+
+How: This feature, now generally available, includes these enhancements.
+
+• A PaginationCursor class to implement pagination in a UI. Calling the
+    PaginationCursor.fetchPage() and PaginationCursor.fetchDeleted() methods count
+    against the SOQL query limit, and the rows fetched count against the SOQL query row limit.
+•   Debug log events to track cursor operations.
+•   Updated cursor governance limits. The maximum cumulative number of new cursor rows per 24-hour
+    period is 100 million.
+•   These new methods to track usage against new governor limits.
+     - Limits.getApexCursors() and its upper bound Limits.getLimitApexCursors() method
+    - Limits.getApexPaginationCursors() and its upper bound
+       Limits.getLimitApexPaginationCursors() method
+    - Limits.getApexPaginationCursorRows() and its upper bound
+       Limits.getLimitApexPaginationCursorRows() method
+• Cursor and pagination cursor support in AuraEnabled serialization and deserialization. You can
+    serialize a cursor in an @AuraEnabled response and deserialize a cursor as an input parameter in an
+    @AuraEnabled method.
+
+See Also
+  Apex Developer Guide: Apex Cursors
+  Apex Reference Guide: Cursor Class
+  Apex Reference Guide: PaginationCursor Class
+  Salesforce Developer Limits and Allocations Quick Reference: Apex Governor Limits
+
+
+Extract Picklist Values Based on Record Type
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+                                                    175
+Salesforce Release Notes                                                                        Development
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get the values for all picklist fields for a particular record type by using the new
+ConnectApi.RecordUi.getPicklistValuesByRecordType(objectApiName, recordTypeId)
+method. We delivered this feature due to your idea on IdeaExchange.
+
+Where: The feature is available in Lightning Experience and Salesforce Classic in Enterprise, Performance,
+Unlimited, and Developer editions.
+
+Why: Previously, in Apex, you couldn't directly get picklist values that were specific to a record type
+without making callouts.
+
+How: This method is especially useful for getting dependent picklist values. For example, if an object has
+a tree of dependent picklists, such as Continents__c , Countries__c , Cities__c , use this
+method to get all the values for each picklist in one request via the
+ConnectApi.PicklistValuesCollection .
+
+See Also
+  Idea Exchange: Getting Picklist values based on Record Type
+  New Connect in Apex Classes
+  Apex Reference Guide: getPicklistValuesByRecordType()
+
+
+Expose Apex REST and AuraEnabled Controller Methods as Agent Actions
+(Generally Available)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Create agent actions based on Apex classes by annotating methods in those classes, generating an
+OpenAPI spec document, and deploying that document to your org. Manage the exposed methods as
+APIs in API Catalog. This feature is now generally available.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+See Also
+  Agentforce Developer Guide: Build and Enhance Agentforce Actions
+  Salesforce Help: Bring Apex APIs into API Catalog (can be outdated or unavailable during release
+
+
+
+                                                     176
+Salesforce Release Notes                                                                         Development
+
+
+  preview)
+
+
+Use Visualforce PDF Rendering Service with Apex Blob.toPdf() (Release
+Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+With this update enabled, the Apex Blob.toPdf() method for PDF rendering uses the same rendering
+service as Visualforce. The Visualforce PDF rendering service offers improvements such as additional
+fonts and multibyte character support. This change makes PDF rendering more consistent on the
+Salesforce Platform.
+
+Where: This feature is available in Lightning Experience and Salesforce Classic in Enterprise,
+Performance, Unlimited, and Developer editions.
+
+When: Salesforce enforces this update in Summer ’26. To get the major release upgrade date for your
+instance, go to Trust Status, search for your instance, and click the Maintenance tab.
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Use Visualforce PDF Rendering Service with Apex Blob.toPdf(), follow the
+testing and activation steps.
+
+With this update enabled, calls to Blob.toPdf() automatically use the Visualforce PDF rendering
+service. Blob.toPdf() still accepts any string as an argument, and still returns a Blob result. Other
+than using a different PDF rendering engine, the shape of Blob.toPdf() is unchanged.
+
+
+     Important The Visualforce PDF rendering service offers an expanded range of fonts, and the default
+     font is changed from serif to sans-serif . If your PDF string doesn’t include explicit font
+     styling, this change might result in different line lengths, and different line and page breaks for PDFs
+     rendered compared to the old service. See Fonts Available When Using Visualforce PDF Rendering
+     for additional details.
+
+
+For more details on the features and limitations of the Visualforce PDF rendering service, see Render a
+Visualforce Page as a PDF File in the Visualforce Developer Guide.
+
+
+Review Apex Code for Changed Sharing Recalculation Behavior
+
+This release is in preview
+
+
+
+
+                                                    177
+Salesforce Release Notes                                                                            Development
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To help you prepare your Apex code for changes to sharing recalculation behavior, Salesforce created a
+release update that walks you through identifying and fixing affected code. For more information, review
+the related release note and the Update Apex Code and Flows for Changed Sharing Recalculation
+Behavior release update in Setup.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Performance, Unlimited, and Developer editions.
+
+See Also
+  Update Apex Code and Flows for Changed Sharing Recalculation Behavior (Release Update)
+
+
+Filter Test Discovery API Results by Test Category
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To retrieve only flow tests or only Apex tests, use the new category query parameter in calls to the Test
+Discovery API endpoint. Previously, you could filter tests only by namespace prefix and test method
+visibility. Filtering by test category is helpful in orgs with large test suites across different namespaces.
+
+Where: This feature is available in API version 66.0 and later. This feature is available in Lightning
+Experience and Salesforce Classic in Enterprise, Performance, Unlimited, and Developer editions.
+
+How: To retrieve tests in a specific test category, make a GET request to the Test Discovery API endpoint,
+which is a Tooling API resource. Set the category query parameter to either flow or apex . For
+example, this call returns only Apex tests.
+
+
+ https://MyDomain.my.salesforce.com/services/data/v66.0/tooling/tests?categor
+ y=apex
+
+
+You can’t specify multiple categories in the same call. However, you can combine the category query
+parameter with other query parameters. For example, this call returns only automated flow tests from
+the ourManagedPackage namespace.
+
+
+
+
+                                                      178
+Salesforce Release Notes                                                                         Development
+
+
+
+ https://MyDomain.my.salesforce.com/services/data/v66.0/tooling/tests?categor
+ y=flow&namespacePrefix=ourManagedPackage
+
+
+See Also
+  Tooling API: Retrieve Unit Tests
+  Apex Developer Guide: Testing Apex
+  Salesforce Help: Automatically Test Record-Triggered and Data Cloud-Triggered Flows (can be
+  outdated or unavailable during release preview)
+
+
+Specify the Number of Async Jobs to Delete
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use the new method overload for purgeOldAsyncJobs() to specify the number of oldest, completed
+async jobs in your org to purge. Providing an upper bound for the number of records to delete enables
+incremental progress when large volumes of records are to be deleted.
+
+Where: This feature is available in API version 66.0 and later. This feature is available in Lightning
+Experience and Salesforce Classic in Enterprise, Performance, Unlimited, and Developer editions.
+
+How: Specify the number of completed async jobs to delete, starting from the oldest jobs that finished
+before the specified date. This example shows how to delete up to 1000 job records for jobs that
+finished before today’s date.
+
+
+ Integer maximumNumberOfJobsToDelete = 1000;
+ Integer count = System.purgeOldAsyncJobs(
+     Date.today(),
+     maximumNumberOfJobsToDelete
+ );
+ System.debug('Deleted ' + count + ' old jobs.');
+
+
+See Also
+  Apex Reference Guide: purgeOldAsyncJobs(dt, numOfJobs)
+
+
+API
+
+This release is in preview
+
+
+
+
+                                                     179
+Salesforce Release Notes                                                                       Development
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Learn about improvements, new capabilities, and important announcements in API version 66.0.
+
+  Expose Custom SOQL in REST API Calls Using Named Query API (General Availability)
+  Use Named Query API to define and expose custom SOQL queries, or Named Query APIs, as scalable
+  actions for REST API clients. Named Query APIs can retrieve data quickly and more efficiently than
+  existing Flow or Apex processes.
+  Update Instanced URLs in API Traffic (Release Update)
+  To prevent disruption when Salesforce ends support for API traffic that uses an incorrect instanced
+  URL, make sure that API traffic to your org uses the org’s My Domain login URL. First available in
+  Summer ’25, this release update was scheduled to be enforced in Spring ’26, but we postponed the
+  enforcement to Summer ’26.
+  EventBusSubscriber Object’s Position and Tip Fields Are Being Deprecated
+  The EventBusSubscriber object’s Position and Tip fields are being deprecated. They are being replaced
+  with the new fields LastProcessed and LastPublished. The field type is changing from int to string in
+  order to handle large replay IDs. We recommend updating your code to use LastProcessed and
+  LastPublished to avoid issues when the replay ID exceeds the maximum integer size.
+  Sending Session IDs in Outbound Messages Is Being Removed
+  To align with modern security best practices, you can no longer send session IDs in outbound
+  messages starting February 16, 2026. Instead, use OAuth to authenticate. When this change goes into
+  effect, the new outbound message form will not include the option to send a session ID, the
+  IncludeSessionId flag in the API will be ignored and set to FALSE, and the <sessionID></sessionID>
+  element of an outbound message payload won't include a session ID.
+  Metadata Deployments and Retrievals Have New Limits
+  To maintain predictable performance, we're now applying limits to the volume of metadata deployed
+  and retrieved for four specific metadata types: AIAuthoringBundle, AnalyticsDashboard,
+  AnalyticsWorkspace, and AnalyticsVisualization. These limits restrict the number of metadata
+  components allowed within a single package zip file, and the total number of deployments or
+  retrievals permitted within a 24-hour period.
+  Data 360 SOQL Query Results Are Limited to 12-MB at a Time
+  To prevent large queries from crashing the app server, Data 360 limits Salesforce Object Query
+  Language (SOQL) results to 12-MB. SOQL returns the results up to the size limit with a query more link
+  to paginate through the rest of the results. If a single query result exceeds the size limit, SOQL rejects
+  the query and you can’t retrieve the results.
+  SOAP API login() Call in SOAP API Versions 31.0 Through 64.0 Is Being Retired (Release Update)
+  In Summer ‘27, the SOAP API login() call in SOAP API versions 31.0 through 64.0 will no longer be
+  supported and no longer be available.
+
+
+
+
+                                                    180
+Salesforce Release Notes                                                                       Development
+
+
+
+Expose Custom SOQL in REST API Calls Using Named Query API (General
+Availability)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use Named Query API to define and expose custom SOQL queries, or Named Query APIs, as scalable
+actions for REST API clients. Named Query APIs can retrieve data quickly and more efficiently than
+existing Flow or Apex processes.
+
+
+     Note Using Named Query APIs as agent actions remains a beta feature that must be enabled in
+     Setup Use of this beta feature is available for an additional cost. Required add-on licenses vary by
+     agent type. Setup for AI agents is available on the desktop site.
+
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions.
+
+See Also
+  REST API Developer Guide: Named Query API
+  Agentforce Developer Guide: Create Actions from Named Query API (Beta)
+
+
+Update Instanced URLs in API Traffic (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To prevent disruption when Salesforce ends support for API traffic that uses an incorrect instanced URL,
+make sure that API traffic to your org uses the org’s My Domain login URL. First available in Summer ’25,
+this release update was scheduled to be enforced in Spring ’26, but we postponed the enforcement to
+Summer ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in all editions except
+Database.com.
+
+When: Salesforce enforces this update on a rolling basis shortly after Summer ’26 deployment.
+
+
+
+                                                    181
+Salesforce Release Notes                                                                       Development
+
+
+If you enable this change before the related known issue is resolved, SOAP login URLs via Visualforce
+pages can return a 400 Bad Request error. We expect to resolve that issue in January 2026, so we
+recommend testing this change starting in early February 2026.
+
+To get notified when that issue is resolved and when the specific rollout dates are available, join the My
+Domain and Enhanced Domains Trailblazer Community Group.
+
+Why: Salesforce is decommissioning the service that supports hard-coded references to an incorrect
+instance name in API application traffic routing. This approach helps make sure that integrations
+continue to function smoothly while improving security, because My Domain URLs are unique to each
+org.
+
+How: To test this change, from Setup, in the Quick Find box, enter My Domain, and then select My
+Domain. Under Redirections, enable Block API traffic that uses an incorrect instanced URL.
+
+To review this update, from Setup, in the Quick Find box, enter Release Updates, and then select
+Release Updates. For Update Instanced URLs in API Traffic, follow the testing and activation steps.
+
+
+     Note The release update states that API traffic that uses an incorrect instanced URL is blocked
+     automatically in sandboxes. That information is no longer accurate. We recommend that you test
+     this change via the My Domain setting.
+
+See Also
+  Known Issue: Winter26 - SOAP login URL through visualforce pages throws 400
+  Release Updates
+
+
+EventBusSubscriber Object’s Position and Tip Fields Are Being Deprecated
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The EventBusSubscriber object’s Position and Tip fields are being deprecated. They are being replaced
+with the new fields LastProcessed and LastPublished. The field type is changing from int to string in order
+to handle large replay IDs. We recommend updating your code to use LastProcessed and LastPublished
+to avoid issues when the replay ID exceeds the maximum integer size.
+
+Where: This change is available in Developer, Enterprise, Performance, and Unlimited editions.
+
+
+Sending Session IDs in Outbound Messages Is Being Removed
+
+This release is in preview
+
+
+
+                                                    182
+Salesforce Release Notes                                                                     Development
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To align with modern security best practices, you can no longer send session IDs in outbound messages
+starting February 16, 2026. Instead, use OAuth to authenticate. When this change goes into effect, the
+new outbound message form will not include the option to send a session ID, the IncludeSessionId flag
+in the API will be ignored and set to FALSE, and the <sessionID></sessionID> element of an outbound
+message payload won't include a session ID.
+
+Where: This change applies to Developer, Enterprise, Performance, and Unlimited editions.
+
+When: The week of February 16, 2026.
+
+How: Follow the guidance in Authorize Apps with OAuth instead of using a session ID.
+
+
+Metadata Deployments and Retrievals Have New Limits
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To maintain predictable performance, we're now applying limits to the volume of metadata deployed
+and retrieved for four specific metadata types: AIAuthoringBundle, AnalyticsDashboard,
+AnalyticsWorkspace, and AnalyticsVisualization. These limits restrict the number of metadata
+components allowed within a single package zip file, and the total number of deployments or retrievals
+permitted within a 24-hour period.
+
+Where: This change applies to all Salesforce editions.
+
+See Also
+  Metadata API Developer Guide: Metadata Limits
+
+
+Data 360 SOQL Query Results Are Limited to 12-MB at a Time
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                   183
+Salesforce Release Notes                                                                         Development
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+To prevent large queries from crashing the app server, Data 360 limits Salesforce Object Query Language
+(SOQL) results to 12-MB. SOQL returns the results up to the size limit with a query more link to paginate
+through the rest of the results. If a single query result exceeds the size limit, SOQL rejects the query and
+you can’t retrieve the results.
+
+Where: This change applies to Developer, Enterprise, Performance, and Unlimited editions.
+
+
+SOAP API login() Call in SOAP API Versions 31.0 Through 64.0 Is Being
+Retired (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+In Summer ‘27, the SOAP API login() call in SOAP API versions 31.0 through 64.0 will no longer be
+supported and no longer be available.
+
+Where: This change affects these SOAP API versions:
+
+31.0, 32.0, 33.0, 34.0, 35.0, 36.0, 37.0, 38.0, 39.0, 40.0, 41.0, 42.0, 43.0, 44.0, 45.0, 46.0, 47.0, 48.0,
+49.0, 50.0, 51.0, 52.0, 53.0, 54.0, 55.0, 56.0, 57.0, 58.0, 59.0, 60.0, 61.0, 62.0, 63.0, 64.0
+
+This change applies to Salesforce Classic and Lightning Experience in all API-enabled Professional,
+Enterprise, Performance, Unlimited, and Developer editions.
+
+When: You can continue to use login() in SOAP API versions 31.0 through 64.0 until Summer ’27 is
+released. At that time, login() in these SOAP API versions will be retired and unavailable. When login() in
+these SOAP API versions is retired, applications using login() in these SOAP API versions will experience
+disruption. The requests will fail with an error message indicating that the login() endpoint has been
+deactivated.
+
+How: Before Summer ’27 is released, customers and partners must modify or upgrade their applications
+to use external client apps for authentication. See SOAP API login() Retirement.
+
+Test the retirement’s impact on your org by enabling the test run in release updates. The test run disables
+the SOAP API login() call in your org.
+
+
+
+
+                                                     184
+Salesforce Release Notes                                                                     Development
+
+
+
+Packaging
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Packaging facilitates the development and distribution of business apps. Use second-generation
+managed packages to create apps to sell and distribute on AppExchange. Use unlocked packages to
+develop internal business apps.
+
+  Recommend a Package Version to Your Subscribers
+  You can now encourage your subscribers to upgrade to a specific version of a package by setting a
+  recommended version. When you set a package version as the recommended version, your
+  subscribers see an Upgrade to Recommended Version option on the Installed Packages page in their
+  org. Only released package versions can be the recommended version.
+  Troubleshoot Subscriber Issues Faster by Enabling Debug Logs
+  You can now self-serve enabling your access to a subscriber’s Apex debug logs by using the License
+  Management App (LMA). Use debug logs to troubleshoot issues that are specific to the subscriber.
+  Previously, access to a subscriber’s debug logs could only be granted by a subscriber’s system admin or
+  Salesforce Partner Support.
+
+
+Recommend a Package Version to Your Subscribers
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now encourage your subscribers to upgrade to a specific version of a package by setting a
+recommended version. When you set a package version as the recommended version, your subscribers
+see an Upgrade to Recommended Version option on the Installed Packages page in their org. Only
+released package versions can be the recommended version.
+
+Where: This change applies to second-generation managed packaging.
+
+How: Promote a package version to the released state. Run the sf package update CLI command
+and specify the version in the --recommended-version-id flag. If a subscriber has a package version
+installed in their org that’s lower than the version you set for the --recommended-version-id flag,
+
+
+
+                                                   185
+Salesforce Release Notes                                                                     Development
+
+
+the subscriber sees the Upgrade to Recommended Version option on the Installed Packages page.
+
+
+
+
+See Also
+  Second-Generation Managed Packaging Developer Guide: Recommend a Specific Package Version to
+  Your Subscribers
+
+
+Troubleshoot Subscriber Issues Faster by Enabling Debug Logs
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now self-serve enabling your access to a subscriber’s Apex debug logs by using the License
+Management App (LMA). Use debug logs to troubleshoot issues that are specific to the subscriber.
+Previously, access to a subscriber’s debug logs could only be granted by a subscriber’s system admin or
+Salesforce Partner Support.
+
+Where: This change applies to first- and second-generation (2GP) managed packages.
+
+How: In the LMA, find the subscriber’s org, then enable debug logs for the package namespace.
+
+
+     Important You enable debug logs for all managed packages in the namespace, rather than for
+     individual managed packages. When you enable debug logs for a namespace, the Apex code across
+     managed packages in the namespace becomes visible to the subscriber org.Because multiple
+     packages can share a namespace in 2GP, enabling debug logs for 2GP means enabling logs for all
+     managed packages in the namespace.
+
+See Also
+  Second-Generation Managed Packaging Developer Guide: Debug Subscriber Orgs
+  First-Generation Managed Packaging Developer Guide: Debug Subscriber Orgs
+
+
+Development Environments
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+                                                   186
+

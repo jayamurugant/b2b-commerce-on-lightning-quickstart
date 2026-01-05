@@ -1,0 +1,3191 @@
+Salesforce Release Notes                                                             Revenue Management
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The PDF document previewer provides secure in-browser previewing when you configure Salesforce file
+upload and download security settings. The PDF previewer now works with the hybrid file handling
+setting instead of relying only on the execute-in-browser option. The hybrid file handling setting improves
+preview consistency across browsers and Experience Cloud sites.
+
+Where: This change applies to Aura accessed through Lightning Experience in Enterprise, Performance,
+Unlimited, and Developer editions of Agentforce Revenue Management, formerly Revenue Cloud, with
+the Revenue Events Starter Pack license, and the Revenue Cloud Advanced or Revenue Cloud Billing
+license. You must have active community license per user in your org to use this feature.
+
+
+Manage Preview Document Storage in Omniscripts
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Document reviews often involve regenerating the preview several times, resulting in multiple stored files
+and increased storage consumption. You can now easily discard intermediate previews by clicking the
+delete icon in Omniscripts to keep only the final version, reducing costs and achieving storage
+organization.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions of Agentforce Revenue Managament, formerly Revenue Cloud, with the Revenue
+Events Starter Pack license, and the Revenue Cloud Advanced or Revenue Cloud Billing license.
+
+How: Use the delete icon to remove intermediate previews.
+
+Use the delete icon to remove intermediate previews.
+
+
+Agentforce for Revenue Management
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                   707
+Salesforce Release Notes                                                              Revenue Management
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Support partner quoting with rule-based product recommendations and expand billing data access for
+internal teams. Improve invoice charge explanations for community users. Identify token over-
+consumption with automated generation of targeted token pack quotes.
+
+  Get Product Recommendations While Adding Products
+  Help sales reps discover and add relevant or complementary products more efficiently when building
+  a quote. Use predefined configuration rules to guide them with recommendations that lead to more
+  complete and accurate quotes.
+  Explain Invoice Charges Faster with Conversational AI
+  Clarify invoice charges and answer basic questions related to billing through the Billing Service
+  Assistant. Help your customers receive detailed charge breakdowns for ambiguous invoice line items,
+  without needing to contact support.
+  Resolve Common Billing Inquiries Quickly with Billing Employee Assistant
+  Access critical billing information through conversational AI. Help billing teams retrieve payment plan
+  details, latest bill details, account summaries and outstanding balances quickly. Billing teams can
+  identify upcoming payment due dates and amounts within the assistant, without checking individual
+  Billing records. Make it easier to respond to billing queries that require reviewing multiple invoice and
+  payment records. Accelerate response time and reduce manual navigation across billing records.
+  View Your Consumption Overages in Tokens
+  Eliminate the manual effort involved in identifying token overages. Agentforce identifies token overage
+  at the account level and help in creating quotes with appropriate token packs, which enables sales
+  teams to upsell token packs easily.
+  Streamline Quoting for Partners by Using Agentforce
+  Help your partner users accelerate their sales cycle with the Revenue Quote Management agent
+  template. By connecting the Agentforce Employee agent to their site by using Embedded Messaging,
+  partners gain access to powerful, advanced quoting agent actions.
+
+
+Get Product Recommendations While Adding Products
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Help sales reps discover and add relevant or complementary products more efficiently when building a
+quote. Use predefined configuration rules to guide them with recommendations that lead to more
+complete and accurate quotes.
+
+Where: This change applies to Lightning Experience in Enterprise, Unlimited, and Developer editions of
+
+
+
+                                                    708
+Salesforce Release Notes                                                               Revenue Management
+
+
+Agentforce Revenue Management with the Agentforce Employee Agent add-on.
+
+How: After adding products to a quote in the Revenue Quote Management agent, ask the agent for
+product recommendations on the quote in the product selection flow.
+
+
+Explain Invoice Charges Faster with Conversational AI
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Clarify invoice charges and answer basic questions related to billing through the Billing Service Assistant.
+Help your customers receive detailed charge breakdowns for ambiguous invoice line items, without
+needing to contact support.
+
+Where: This change applies to Lightning Experience and Experience Cloud in Enterprise, Unlimited, and
+Developer editions of Agentforce Revenue Management, formerly Revenue Cloud. It requires the
+Revenue Cloud Billing license, Einstein GPT, the Agentforce Service Agent add-on, the Flex Credits
+Metering add-on, and the Usage Management add-on.
+
+Who: This feature is available to community users with access to the Billing Service Assistant template
+and these permission sets:
+
+• Access Agentforce Default Agent
+• Billing Experience Cloud User
+• Billing Einstein Experience Cloud User
+• Prompt Template User
+How: From Setup, turn on Einstein and Agentforce. Create an agent by using the Billing Service Assistant
+template and activate it. Configure the assistant for your Experience Cloud site and expose it through
+Embedded Messaging. Assign the required permission sets to community users. Users can then interact
+with the assistant to request explanations of invoice charges directly from the chat interface.
+
+
+Resolve Common Billing Inquiries Quickly with Billing Employee Assistant
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+                                                    709
+Salesforce Release Notes                                                              Revenue Management
+
+
+Access critical billing information through conversational AI. Help billing teams retrieve payment plan
+details, latest bill details, account summaries and outstanding balances quickly. Billing teams can identify
+upcoming payment due dates and amounts within the assistant, without checking individual Billing
+records. Make it easier to respond to billing queries that require reviewing multiple invoice and payment
+records. Accelerate response time and reduce manual navigation across billing records.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, and
+Developer editions of Agentforce Revenue Management, formerly Revenue Cloud. It requires the
+Revenue Cloud Billing license, Flex Credits Metering add-on, and the Agentforce Employee Rep add-on.
+
+Who: This feature is available to billing admins and billing operations users who have access to the Billing
+Employee Assistant template and the Agentforce and Billing permission sets.
+
+How: From Setup, turn on Einstein and Agentforce. Create an agent by using the Billing Employee
+Assistant template and activate it.
+
+
+View Your Consumption Overages in Tokens
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Eliminate the manual effort involved in identifying token overages. Agentforce identifies token overage at
+the account level and help in creating quotes with appropriate token packs, which enables sales teams to
+upsell token packs easily.
+
+Where: This change applies to Lightning Experience in Enterprise, Unlimited, and Developer editions of
+Agentforce Revenue Management, formerly Revenue Cloud, with the Revenue Cloud Advanced license,
+the Revenue Cloud Billing license, and the Agentforce Employee Agent add-on license.
+
+How: From Setup, turn on Einstein generative AI and then turn on Agentforce.
+
+To enable this feature, add the Consumption Management topic to your agent, and then turn on Rate
+Management and Usage Management.
+
+To retrieve consumption details for a token resource, go to Agentforce Revenue Management and open
+an account. Click the Agentforce icon and enter your request in the chat. If needed, Agentforce asks for
+clarification and then provides token details. You can then use the consumption details to generate a
+quote for review and revision.
+
+
+
+
+                                                    710
+Salesforce Release Notes                                                                             Sales
+
+
+
+Streamline Quoting for Partners by Using Agentforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Help your partner users accelerate their sales cycle with the Revenue Quote Management agent
+template. By connecting the Agentforce Employee agent to their site by using Embedded Messaging,
+partners gain access to powerful, advanced quoting agent actions.
+
+Where: This change applies to Lightning Experience in Enterprise, Unlimited, and Developer editions of
+Agentforce Revenue Management, formerly Revenue Cloud, with the Agentforce Employee Agent and
+the Partner Community add-on licenses.
+
+How: Set up Embedded Messaging in your Experience Cloud partner site. Route chats to the Revenue
+Quote Management agent by using an Omni-Channel flow, and add the embedded messaging
+component to the partner site so that partners can chat with the agent directly from the portal.
+
+
+
+Sales
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Learn about the latest features and updates to grow your pipeline and increase the efficiency of your
+sales teams. Sales Cloud is now Agentforce Sales. You may see references to Sales Cloud in our
+application and documentation.
+
+  AI Agents for Sales
+  Scale your sales team by using sales agents.
+  Sales Fundamentals
+  Simplify the setup of basic features and AI-agents for your sales teams with just a few clicks.
+  Einstein Conversation Insights
+  Get your generative AI features bundled together with Generative ECI, which combines the call
+  summary and generative conversation insight capabilities under a single feature. We’re also making
+  speedy call processing more widely available with Vendor Transcript Processing. If you have Salesforce
+
+
+
+                                                    711
+Salesforce Release Notes                                                                              Sales
+
+
+  1 Sales Edition, access deal closing recaps. More ECI data is available on the Salesforce Platform. Your
+  sales teams can use call transcripts from Gong with ECI. And we’ve improved participant matching for
+  Microsoft Teams video calls.
+  Sales Programs and Partner Tracks with Enablement
+  Drive revenue growth for sales territories, and manage users for your Enablement programs efficiently.
+  Sales Performance Management
+  Refine territory design in complex markets by assigning shared boundaries to multiple sales areas.
+  Distribute financial targets directly to accounts while accounting for existing bottom-up goals. Plus,
+  streamline the sales planning process by generating quota plans based on territory alignments to keep
+  data synchronized.
+  Email, Calendar, and Integrations
+  Adopt authorized email domains. Accurately monitor event and email syncing with detailed insights
+  and reports. Capture and report on email as an activity with the Sync Email as Salesforce Activity
+  feature. Prepare for the retirement of Exchange Web Services and its impact on email-related features
+  and products. Salesforce for Outlook retires in December 2027.
+  Other Changes in Sales
+  Review and anticipate other changes that can impact your sales team.
+
+
+AI Agents for Sales
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Scale your sales team by using sales agents.
+
+  Agentforce Inbound Lead Generation
+  Create and deploy an agent to automate your lead generation process.
+  Agentforce Qualification
+  Qualify the ideal propsects for your business within the guided setup of both Agentforce Inbound
+  Lead Generation and Agentforce Lead Nuturing.
+  Agentforce Lead Nurturing
+  Set up and test Agentforce Lead Nurturing all in one place with fewer clicks. See agent performance
+  with the SDR Agent Analytics Dashboard and assign more prospects to an agent at once.
+  Agentforce Sales Management
+  Create and deploy agents to help your reps throughout the sales process. Now, Agentforce helps you
+  with account research, meeting prep, and account briefs. And, streamline follow-up tasks with post-
+  meeting suggestions. Save time and effort on configuration with Pipeline Management setup in
+  Salesforce Go. Use Agentforce in Slack to manage both deals and accounts from the familiar Slack
+  interface.
+
+
+                                                   712
+Salesforce Release Notes                                                                             Sales
+
+
+  Agentforce Sales App in ChatGPT (Beta)
+  Give your sales team a single view to strategize and manage deals with the Agentforce Sales App in
+  ChatGPT.
+
+
+Agentforce Inbound Lead Generation
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Create and deploy an agent to automate your lead generation process.
+
+  Capture Leads and Schedule Meetings Autonomously
+  Effortlessly capture inbound web and messaging leads, answer inquiries, and schedule meetings with
+  your prospects by setting up Inbound Lead Generation.
+  Continue Lead Engagement with Agent Handoff
+  Guarantee continued engagement with prospects by automating lead handoffs between the Inbound
+  Lead Generation and Lead Nurturing sales agents. Prospects created by the Inbound Lead Generation
+  agent who don’t schedule a meeting can automatically get assigned to the Lead Nurturing agent for a
+  faster follow-up and to maximize conversion rates.
+
+
+Capture Leads and Schedule Meetings Autonomously
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Effortlessly capture inbound web and messaging leads, answer inquiries, and schedule meetings with
+your prospects by setting up Inbound Lead Generation.
+
+Where: This feature is available in Lightning Experience in Enterprise, Performance, and Unlimited
+editions with the Agentforce for Sales add-on. Setup for agents is available on the desktop site.
+
+When: Inbound Lead Generation became available in early October 2025.
+
+Why: To enhance sales efficiency by streamlining your customer intake process, reduce data entry,
+engage with customers, and drive more closed deals.
+
+
+
+
+                                                   713
+Salesforce Release Notes                                                                              Sales
+
+
+How: From Salesforce Go, navigate to the Agentforce for Sales setup page and select Inbound Lead
+Generation. Follow the guided setup to enable the required features, assign permissions, and get your
+agent generating leads.
+
+See Also
+  Salesforce Help: Agentforce Inbound Lead Generation (can be outdated or unavailable during release
+  preview)
+
+
+Continue Lead Engagement with Agent Handoff
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Guarantee continued engagement with prospects by automating lead handoffs between the Inbound
+Lead Generation and Lead Nurturing sales agents. Prospects created by the Inbound Lead Generation
+agent who don’t schedule a meeting can automatically get assigned to the Lead Nurturing agent for a
+faster follow-up and to maximize conversion rates.
+
+Where: This feature is available in Lightning Experience in Enterprise, Performance, and Unlimited
+editions.
+
+When: This feature is available starting mid December.
+
+How: From Salesforce Go, go to the agent configuration for Inbound Lead Generation. In the Capture
+Prospect Info step, turn on Handoff to Lead Generation Agent. Select the Lead Nurture agent to handoff
+to and the amount of time to wait before handing off.
+
+
+Agentforce Qualification
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Qualify the ideal propsects for your business within the guided setup of both Agentforce Inbound Lead
+Generation and Agentforce Lead Nuturing.
+
+  Automate Qualification with Agentforce
+  Seamlessly qualify leads and build a stronger pipeline with Agentforce for Sales. This enhancement
+
+
+                                                   714
+Salesforce Release Notes                                                                             Sales
+
+
+  allows your Agent to determine how strong of a fit a prospect is based on their conversation and how
+  well they meet your Ideal Customer Profile (ICP). Qualification helps sales reps focus on high-potential
+  deals, improving overall efficiency and conversion rates.
+
+
+Automate Qualification with Agentforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Seamlessly qualify leads and build a stronger pipeline with Agentforce for Sales. This enhancement
+allows your Agent to determine how strong of a fit a prospect is based on their conversation and how
+well they meet your Ideal Customer Profile (ICP). Qualification helps sales reps focus on high-potential
+deals, improving overall efficiency and conversion rates.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with the Sales Cloud and Einstein for Sales. Setup for agents is available on the desktop site.
+
+When: This functionality is available on a rolling basis starting on January 6, 2025.
+
+Why: Sellers currently spend most of their time on prospecting activities like lead qualification, which
+can consume 6–8 hours each week. This agentic qualification frees up time for your sales team to focus
+on direct selling activities.
+
+How: From your Lead Gen or Lead Nurture agent’s guided config, turn on Qualification. Review the
+default configuration, provide your company’s Ideal Customer Profile, and start your qualifying journey
+
+Following a web or email conversation, the Qualification Agent automatically generates and updates a
+Lead record with a rating. If the Lead is considered Hot, the record owner will be assigned a Task to
+review the qualification summary and take an action.
+
+
+Agentforce Lead Nurturing
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Set up and test Agentforce Lead Nurturing all in one place with fewer clicks. See agent performance with
+the SDR Agent Analytics Dashboard and assign more prospects to an agent at once.
+
+
+                                                    715
+Salesforce Release Notes                                                                             Sales
+
+
+  Set Up Agentforce Lead Nurturing Faster with Guided Configuration
+  When you’re ready to create a Lead Nurturing agent, the new guided setup experience in Salesforce
+  Go saves you time and simplifies the process by automating several steps.
+  Scale Up Lead Nurturing Activity with Automatic Limit Management
+  Agentforce now manages the Lead Nurturing prospect outreach queue automatically so that agents
+  can nurture large numbers of prospects simultaneously while respecting email send and LLM request
+  limits.
+  Build Pipeline Faster by Assigning Prospects to Agentforce Lead Nurturing in Bulk
+  Users can now assign up to 200 prospects at once to a Lead Nurturing agent from list views.
+  Agentforce adds assignments that exceed email send or LLM limits to a managed queue that’s visible
+  in the Agent Command Center. Previously, you could only assign records one at a time or by using
+  assignment rules in the agent configuration. Adding more than 30 prospects at a time sometimes
+  caused an error. The managed queue eliminates these errors.
+  Control and Customize Agent Behavior Faster with Modular Topics and Actions
+  You can now directly view and modify each step of the Lead Nurturing agent workflow, eliminating the
+  need for complex prompt engineering. In Agentforce Builder, the agent's logic appears as discrete,
+  configurable topics and actions that are easy to navigate and edit.
+
+
+Set Up Agentforce Lead Nurturing Faster with Guided Configuration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+When you’re ready to create a Lead Nurturing agent, the new guided setup experience in Salesforce Go
+saves you time and simplifies the process by automating several steps.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with the Agentforce SDR add-on. Setup for agents is available on the desktop site.
+
+Why: The guided setup process reduces the number of steps and lets you configure and test your agent
+all in one place. Setup takes care of tasks like creating a user record for the agent, assigning it
+permissions, and configuring Einstein Activity Capture.
+
+How: From Salesforce Go, click Agentforce for Sales and follow the instructions.
+
+
+
+
+Scale Up Lead Nurturing Activity with Automatic Limit Management
+
+This release is in preview
+
+
+
+                                                   716
+Salesforce Release Notes                                                                             Sales
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Agentforce now manages the Lead Nurturing prospect outreach queue automatically so that agents can
+nurture large numbers of prospects simultaneously while respecting email send and LLM request limits.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with Sales Cloud and the Agentforce Lead Nurturing add-on. Setup for agents is available on the desktop
+site.
+
+Why: Previously there was a maximum number of prospects assignments per day. Now, users can keep
+adding prospects while Agentforce manages the queue automatically. The queue gives highest priority to
+reply emails, then intro emails and nudges.
+
+
+Build Pipeline Faster by Assigning Prospects to Agentforce Lead Nurturing in Bulk
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Users can now assign up to 200 prospects at once to a Lead Nurturing agent from list views. Agentforce
+adds assignments that exceed email send or LLM limits to a managed queue that’s visible in the Agent
+Command Center. Previously, you could only assign records one at a time or by using assignment rules in
+the agent configuration. Adding more than 30 prospects at a time sometimes caused an error. The
+managed queue eliminates these errors.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with Sales Cloud and the Agentforce Lead Nurturing add-on. Setup for agents is available on the desktop
+site.
+
+Why: Users can assign up to 200 prospects at once from list views. Agents that use a Gmail account can
+have a maximum of 25200 prospects assigned. Agents that use an Outlook account can have a
+maximum of 137200 prospects assigned.
+
+
+Control and Customize Agent Behavior Faster with Modular Topics and Actions
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+
+                                                   717
+Salesforce Release Notes                                                                              Sales
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now directly view and modify each step of the Lead Nurturing agent workflow, eliminating the
+need for complex prompt engineering. In Agentforce Builder, the agent's logic appears as discrete,
+configurable topics and actions that are easy to navigate and edit.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with Sales Cloud and the Agentforce Lead Nurturing add-on. Setup for agents is available on the desktop
+site.
+
+Why: For example, you could easily update the Return Calendar Link action to use a custom link for
+booking meetings.
+
+
+
+
+How: In Agent Builder, find the Return Calendar Link action and insert your custom link. The agent will
+immediately begin using it for all meeting requests.
+
+
+Agentforce Sales Management
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Create and deploy agents to help your reps throughout the sales process. Now, Agentforce helps you
+with account research, meeting prep, and account briefs. And, streamline follow-up tasks with post-
+meeting suggestions. Save time and effort on configuration with Pipeline Management setup in
+Salesforce Go. Use Agentforce in Slack to manage both deals and accounts from the familiar Slack
+interface.
+
+  Move Deals Forward with Post-Meeting Suggestions from Agentforce
+  Agentforce Pipeline Management now offers sellers post-meeting suggestions to streamline follow-up
+  tasks. By analyzing conversation transcripts from video and voice calls, the Sales Management agent
+  can recommend sending follow-up emails or meeting requests, and help draft those communications.
+  Sellers can review and approve the suggestions to ensure prompt and personalized communication
+  with prospective customers.
+  Experience a Faster Agentforce Pipeline Management Setup
+  Guided setup consolidates your pipeline management settings into a single location and automates
+  several configuration steps, saving you time and effort. Setup in Salesforce Go replaces the setup
+
+
+
+                                                   718
+Salesforce Release Notes                                                                             Sales
+
+
+  experience for Agentforce Pipeline Management.
+  Streamline Account Research and Strategy with Agentforce Account Management
+  Use Agentforce Account Management to conduct deep research on accounts, build strategic
+  positioning statements, and prepare for sales team meetings. Create comprehensive briefings with
+  company demographics, business priorities, key performance indicators (KPIs), industry trends, and
+  more to anchor your entire sales strategy. When you save time with Agentforce Account Management,
+  you can focus more on what really matters: building strong relationships with customers.
+  Accelerate Sales Workflows with Agentforce Pipeline Management and Agentforce Account
+  Management in Slack
+  Agentforce Pipeline Management and Agentforce Account Management now operate within Slack to
+  proactively assist sellers throughout the entire deal cycle, from account research and meeting
+  preparation to choosing next actions and keeping opportunities updated. Build pipeline, close deals,
+  and grow your accounts, all from within Slack.
+
+
+Move Deals Forward with Post-Meeting Suggestions from Agentforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Agentforce Pipeline Management now offers sellers post-meeting suggestions to streamline follow-up
+tasks. By analyzing conversation transcripts from video and voice calls, the Sales Management agent can
+recommend sending follow-up emails or meeting requests, and help draft those communications.
+Sellers can review and approve the suggestions to ensure prompt and personalized communication with
+prospective customers.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with Foundations and the Agentforce for Sales or Agentforce for an Industry add-on license, or included
+in Agentforce 1 Sales or an Industry Edition. Requires each user to have the Agentforce for Sales or
+Agentforce for an Industry add-on to access the actions.
+
+When: Post-meeting suggestions in Agentforce Pipeline Management became available in late
+November 2025.
+
+How: If you’re turning on Agentforce Pipeline Management for the first time, from the gear icon, select
+Salesforce Go. On the Salesforce Go Home page, search for Agentforce for Sales. Turn on Pipeline
+Management and complete the steps.
+
+If Agentforce Pipeline Management is already on and you’ve configured a Sales Management agent, add
+the Communicate with Customers topic and its actions to your agent. Make sure that Einstein
+Conversation Insights and Inbox are turned on and configured. After completing these steps, we
+recommend using the Sales Management User permission set group to assign users access to the
+
+
+                                                   719
+Salesforce Release Notes                                                                              Sales
+
+
+feature, instead of the Use Agentforce Pipeline Management permission set. Using the permission set
+group makes it easier to grant access in case future updates require additional permissions or permission
+sets.
+
+See Also
+  Salesforce Help: Agentforce Pipeline Management (can be outdated or unavailable during release
+  preview)
+
+
+Experience a Faster Agentforce Pipeline Management Setup
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Guided setup consolidates your pipeline management settings into a single location and automates
+several configuration steps, saving you time and effort. Setup in Salesforce Go replaces the setup
+experience for Agentforce Pipeline Management.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with Foundations and the Agentforce for Sales or Agentforce for an Industry add-on license, or included
+in Agentforce 1 Sales or an Industry Edition. Requires each user to have the Agentforce for Sales or
+Agentforce for an Industry add-on to access the actions.
+
+When: Agentforce Pipeline Management became available in Salesforce Go in late November 2025.
+
+How: From the gear icon, select Salesforce Go, and search for Agentforce for Sales. Turn on Agentforce.
+Then, turn on Pipeline Management and follow the steps in the Pipeline Management section.
+
+See Also
+  Salesforce Help: Discover and Set Up Features with Salesforce Go (can be outdated or unavailable
+  during release preview)
+
+
+Streamline Account Research and Strategy with Agentforce Account Management
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use Agentforce Account Management to conduct deep research on accounts, build strategic positioning
+
+
+                                                   720
+Salesforce Release Notes                                                                             Sales
+
+
+statements, and prepare for sales team meetings. Create comprehensive briefings with company
+demographics, business priorities, key performance indicators (KPIs), industry trends, and more to
+anchor your entire sales strategy. When you save time with Agentforce Account Management, you can
+focus more on what really matters: building strong relationships with customers.
+
+Where: This feature is available in Lightning Experience in Enterprise, Performance, and Unlimited
+editions with Foundations and the Agentforce for Sales or Agentforce for an Industry add-on license, or
+included in Agentforce 1 Sales or an Industry Edition. Requires each user to have the Agentforce for Sales
+or Agentforce for an Industry add-on to access the actions.
+
+When: Agentforce Account Management became available on a rolling basis starting January 5, 2025.
+
+How: From the gear icon, select Salesforce Go. On the Salesforce Go Home page, search for Agentforce
+for Sales. Turn on Account Management and complete the steps.
+
+See Also
+  Salesforce Help: Agentforce Sales Management (can be outdated or unavailable during release
+  preview)
+  Salesforce Help: Agentforce Account Management (can be outdated or unavailable during release
+  preview)
+  Salesforce Video: Agentforce Account Management
+
+
+Accelerate Sales Workflows with Agentforce Pipeline Management and Agentforce
+Account Management in Slack
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Agentforce Pipeline Management and Agentforce Account Management now operate within Slack to
+proactively assist sellers throughout the entire deal cycle, from account research and meeting
+preparation to choosing next actions and keeping opportunities updated. Build pipeline, close deals, and
+grow your accounts, all from within Slack.
+
+Where: This feature is available in Lightning Experience in Enterprise, Performance, and Unlimited
+editions with Foundations and the Agentforce for Sales or Agentforce for an Industry add-on license, or
+included in Agentforce 1 Sales or an Industry Edition. Requires each user to have the Agentforce for Sales
+or Agentforce for an Industry add-on to access the actions.
+
+When: Agentforce Pipeline Management in Slack and Agentforce Account Management in Slack became
+available on a rolling basis starting January 5, 2025.
+
+Why: Sellers save time by managing the majority of their sales and administrative tasks without leaving
+
+
+                                                   721
+Salesforce Release Notes                                                                               Sales
+
+
+the Slack interface.
+
+
+
+
+How: If you’re turning on Agentforce Sales Management for the first time, from the gear icon, select
+Salesforce Go. On the Salesforce Go Home page, search for Agentforce for Sales. Turn on Pipeline
+Management or Account Management. Then, complete the steps to access Agentforce in Slack.
+
+If Agentforce Sales Management is already on, we create the Slack connection for you. Go to Slack to
+finish the configuration.
+
+See Also
+  Slack Help: Set up and manage Agentforce in Slack
+  Salesforce Help: Agentforce Sales Management (can be outdated or unavailable during release
+  preview)
+
+
+Agentforce Sales App in ChatGPT (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+
+
+
+                                                   722
+Salesforce Release Notes                                                                             Sales
+
+
+available products and features.
+
+Give your sales team a single view to strategize and manage deals with the Agentforce Sales App in
+ChatGPT.
+
+  Manage Deals Directly from the Agentforce Sales App in ChatGPT (Beta)
+  Sellers can research leads and accounts, plan sales strategies, and update Salesforce records—all
+  powered by secure, accurate, and real-time CRM data, while using the Agentforce Sales App in
+  ChatGPT. This seamless connection helps sales teams close deals faster and maintain data accuracy,
+  directly within their flow of work.
+
+
+Manage Deals Directly from the Agentforce Sales App in ChatGPT (Beta)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Sellers can research leads and accounts, plan sales strategies, and update Salesforce records—all powered
+by secure, accurate, and real-time CRM data, while using the Agentforce Sales App in ChatGPT. This
+seamless connection helps sales teams close deals faster and maintain data accuracy, directly within
+their flow of work.
+
+Where: This feature is available in Enterprise, Performance, and Unlimited editions with the Agentforce
+for Sales add-on, and in Agentforce 1 Sales Edition.
+
+
+     Note Agentforce Sales ChatGPT App is a pilot or beta service that is subject to the Beta Services
+     Terms at Agreements - Salesforce.com or a written Unified Pilot Agreement if executed by Customer,
+     and applicable terms in the Product Terms Directory. Use of this pilot or beta service is at the
+     Customer's sole discretion.
+
+
+When: This feature is available starting December 17, 2025, in English only.
+
+How: From the gear icon, select Salesforce Go, and search for Agentforce Sales ChatGPT App
+(Beta). Go to the Agentforce Sales ChatGPT app (Beta) page and turn on the feature. Next, go to
+ChatGPT to publish the app. After these steps are complete, your users must connect the Agentforce
+Sales ChatGPT App to their Salesforce accounts.
+
+
+Sales Fundamentals
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+                                                   723
+Salesforce Release Notes                                                                              Sales
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Simplify the setup of basic features and AI-agents for your sales teams with just a few clicks.
+
+  Get Your Agentic Sales Org Ready in a Few Clicks
+  AI-Powered Selling Initial Setup simplifies configuration for new and existing orgs. It automatically
+  turns on base Sales features and agents and assigns your sellers the correct permissions. Your sales
+  teams get a consistent, ready-to-use sales environment immediately.
+  Guide Your Daily Activities with an AI-Driven Workspace
+  Give sellers clarity on their goals and help them take the right actions faster with a consolidated
+  workspace that surfaces key metrics, AI-driven recommendations, and actionable insights in one
+  place. When you turn on Sales Workspace, it replaces the traditional Seller Home to provide a smarter,
+  more proactive daily selling experience.
+
+
+Get Your Agentic Sales Org Ready in a Few Clicks
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+AI-Powered Selling Initial Setup simplifies configuration for new and existing orgs. It automatically turns
+on base Sales features and agents and assigns your sellers the correct permissions. Your sales teams get a
+consistent, ready-to-use sales environment immediately.
+
+Where: This change applies to Lightning Experience in Enterprise, Unlimited, and Agentforce 1 Sales
+editions with the Salesforce Foundation add-on.
+
+When: AI-Powered Selling Initial Setup is available starting in December 2025.
+
+How: From the gear menu, select Salesforce Go, and then search for AI-Powered Selling Initial Setup.
+Turn on AI-Powered Selling Initial Setup and complete the steps.
+
+
+Guide Your Daily Activities with an AI-Driven Workspace
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                    724
+Salesforce Release Notes                                                                               Sales
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Give sellers clarity on their goals and help them take the right actions faster with a consolidated
+workspace that surfaces key metrics, AI-driven recommendations, and actionable insights in one place.
+When you turn on Sales Workspace, it replaces the traditional Seller Home to provide a smarter, more
+proactive daily selling experience.
+
+Where: This change applies to Lightning Experience in Enterprise, Unlimited, and Agentforce 1 Sales
+editions with the Salesforce Foundation add-on.
+
+When: Sales Workspace is available in Sales Cloud starting December 2025.
+
+How: From the gear menu, select Salesforce Go, and then search for Sales Workspace. Turn on Sales
+Workspace and complete the steps.
+
+
+Einstein Conversation Insights
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get your generative AI features bundled together with Generative ECI, which combines the call summary
+and generative conversation insight capabilities under a single feature. We’re also making speedy call
+processing more widely available with Vendor Transcript Processing. If you have Salesforce 1 Sales
+Edition, access deal closing recaps. More ECI data is available on the Salesforce Platform. Your sales
+teams can use call transcripts from Gong with ECI. And we’ve improved participant matching for
+Microsoft Teams video calls.
+
+  Use Call Summaries and Generative Insights Across All Calls with Generative ECI
+  We’re combining the call summary and generative conversation insight features together with
+  Generative ECI. The feature works across both voice and video calls, is available to all users without
+  additional licenses, and is automatically enabled for orgs using generative AI features.
+  Accelerate Transcription and Insights with Vendor Transcripts
+  With Vendor Transcript Processing, your sales teams can quickly access call summaries and critical call
+  insights. Sales managers can quickly deliver coaching tips to their reps and see how they’re doing.
+  Existing ECI customers can toggle the feature on. New customers have it auto-enabled and can’t turn
+  it off.
+  Understand Why You Win or Lose with Opportunity Closing Recaps
+  Replace unstructured manual notes with generative AI-powered deal recaps. Unlock scalable sales
+  intelligence and trend analysis by automatically generating a detailed closing recap that captures the
+  specific drivers behind deal outcomes, such as pricing, competitors, or product gaps.
+
+
+                                                   725
+Salesforce Release Notes                                                                              Sales
+
+
+  Einstein Conversation Insights Data Is Now Native to the Salesforce Platform
+  Einstein Conversation Insights (ECI) data for new customers is now stored natively on the Salesforce
+  Platform. For existing ECI customers, data migration to the Salesforce Platform is scheduled to begin
+  in Summer ’26.
+  Take Advantage of Improved Participant Matching
+  We’ve improved participant matching for Microsoft Teams video calls. You no longer need your email
+  matched to your data source. We’re more effectively using calendar and meeting data to get email
+  participant info, so matching for these calls works better automatically.
+  Use Call Transcripts from Gong
+  You can now use call transcripts from Gong with Einstein Conversation Insights. Connect with Gong to
+  get call summaries, insights, and other ECI features. You can also import transcripts created before
+  Gong was connected.
+
+
+Use Call Summaries and Generative Insights Across All Calls with Generative
+ECI
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+We’re combining the call summary and generative conversation insight features together with Generative
+ECI. The feature works across both voice and video calls, is available to all users without additional
+licenses, and is automatically enabled for orgs using generative AI features.
+
+Where: This feature requires Einstein Conversation Insights and is available in Lightning Experience in
+Enterprise, Performance, Unlimited, and Agentforce 1 Sales editions. Einstein generative AI is available in
+Lightning Experience.
+
+Who: This feature is available to users with access to Einstein Conversation Insights.
+
+Why: Get call summaries automatically for all ECI calls. A standard call summary includes the summary
+itself, the customer impression, and any next steps.
+
+
+
+
+                                                    726
+Salesforce Release Notes                                                                              Sales
+
+
+
+
+Admins can also create custom insights for their video calls. Using generative AI, get answers to things
+such as customer sentiment or deal terms surfaced for sales conversations automatically. We’ve
+increased the limit of available generative insights to eight.
+
+
+
+
+                                                   727
+Salesforce Release Notes                                                                              Sales
+
+
+How: Generative ECI is automatically enabled for orgs already using Call Summaries or Generative
+Conversation Insights.
+
+From Salesforce Go, enter Einstein Conversation Insights under Features. Then enable
+Generative ECI.
+
+No new permission sets are required. References to Call Summary and Generative Insights are no longer
+available in Setup.
+
+See Also
+  Salesforce Help: Call Summaries Powered by Einstein Generative AI
+  Salesforce Help: Generative Conversation Insights Powered by Einstein Generative AI
+
+
+Accelerate Transcription and Insights with Vendor Transcripts
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+With Vendor Transcript Processing, your sales teams can quickly access call summaries and critical call
+insights. Sales managers can quickly deliver coaching tips to their reps and see how they’re doing.
+Existing ECI customers can toggle the feature on. New customers have it auto-enabled and can’t turn it
+off.
+
+Where: This change applies to Einstein Conversation Insights in Lightning Experience. Einstein
+Conversation Insights is available in Enterprise, Performance, Unlimited, and Agentforce 1 Sales editions.
+
+Why: Use vendor transcripts for video call processing instead of our native transcription service to speed
+up processing time.
+
+How: Vendor Transcript Processing is on by default for orgs newly enabling Einstein Conversation
+Insights. The feature can’t be turned off after it’s enabled.
+
+
+
+
+To enable Vendor Transcript Processing, from Salesforce Go, enter Einstein Conversation
+Insights under Features. Then enable Vendor Transcript Processing.
+
+
+
+
+                                                   728
+Salesforce Release Notes                                                                                 Sales
+
+
+
+Understand Why You Win or Lose with Opportunity Closing Recaps
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Replace unstructured manual notes with generative AI-powered deal recaps. Unlock scalable sales
+intelligence and trend analysis by automatically generating a detailed closing recap that captures the
+specific drivers behind deal outcomes, such as pricing, competitors, or product gaps.
+
+Where: This change applies to Einstein Conversation Insights only in Agentforce 1 Sales Edition. To
+purchase Agentforce 1 Sales Edition, contact your Salesforce account executive.
+
+Who: This feature applies to all opportunities. Data is viewable to users with the Deal Recap Standard
+User permission set and access to the specific opportunity.
+
+Why: Deal recap provides a deeper understanding of your pipeline health by transforming unstructured
+opportunity data, conversation insights, and so on, into actionable data. By automatically compiling
+conversation and activity details into structured deal recaps, sales reps save time while capturing specific
+drivers behind deal outcomes. With this structured approach, managers gain instant clarity on individual
+deals, and sales leaders can identify and act on trends across the entire organization.
+
+How: From Setup, select Salesforce Go. Then search for the Einstein Conversation Insights feature. Scroll
+down to find Unlock Advanced Functionality with Generative AI and turn on Unified Sales Intelligence.
+
+
+Einstein Conversation Insights Data Is Now Native to the Salesforce Platform
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Einstein Conversation Insights (ECI) data for new customers is now stored natively on the Salesforce
+Platform. For existing ECI customers, data migration to the Salesforce Platform is scheduled to begin in
+Summer ’26.
+
+Where: This change applies to Einstein Conversation Insights in Lightning Experience. Einstein
+Conversation Insights is available in Enterprise, Performance, and Unlimited editions and as an add-on in
+Enterprise Edition for more than 10 users.
+
+
+
+                                                    729
+Salesforce Release Notes                                                                                 Sales
+
+
+When: Starting in January 2026, standard Salesforce objects for ECI are turned on by default for all new
+customers. Data stored in these records count toward your organization’s data storage capacity.
+
+
+      Note Analytics for Conversation Insights is scheduled for retirement in Summer ’26. See Analytics
+      Dashboard for Einstein Conversation Insights Upcoming Retirement (Summer ’26).
+
+
+Who: This change applies immediately to new customers who turn on Einstein Conversation Insights for
+the first time.
+
+Why: With ECI data stored in Salesforce objects, you can now:
+
+• Reference conversation data directly in your CRM automations with tools like Flow, Apex, and Prompt
+    Builder to create alerts, update records, and trigger actions based on specific conversation insights.
+•   Query and report on conversation data by using standard Salesforce tools. Run models, draw new
+    inferences, and extract valuable intelligence to guide your sales organization.
+
+
+Take Advantage of Improved Participant Matching
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+We’ve improved participant matching for Microsoft Teams video calls. You no longer need your email
+matched to your data source. We’re more effectively using calendar and meeting data to get email
+participant info, so matching for these calls works better automatically.
+
+Where: This change applies to Einstein Conversation Insights in Lightning Experience. Einstein
+Conversation Insights is available in Enterprise, Performance, Unlimited, and Agentforce 1 Sales editions.
+
+How: Improved participant matching and related record matching is automatically available to Einstein
+Conversation Insights users that use Microsoft Teams for calls.
+
+See Also
+  Salesforce Help: Einstein Conversation Insights Related Record Matching
+
+
+Use Call Transcripts from Gong
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                     730
+Salesforce Release Notes                                                                                Sales
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+You can now use call transcripts from Gong with Einstein Conversation Insights. Connect with Gong to
+get call summaries, insights, and other ECI features. You can also import transcripts created before Gong
+was connected.
+
+Where: This change applies to Einstein Conversation Insights in Lightning Experience. Einstein
+Conversation Insights is available in Enterprise, Performance, Unlimited, and Agentforce 1 Sales editions.
+
+How: To integrate with Gong, from Salesforce Go, enter Einstein Conversation Insights under
+Features. In the Connect with Gong section, click Set Up and follow the steps provided to install the
+managed package.
+
+
+Sales Programs and Partner Tracks with Enablement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Drive revenue growth for sales territories, and manage users for your Enablement programs efficiently.
+
+  Enablement
+  Optimize your sales territory performance and easily remove multiple users from your Enablement
+  program.
+
+
+Enablement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Optimize your sales territory performance and easily remove multiple users from your Enablement
+program.
+
+  Scale Enablement to More Users with Streamlined Setup Experience
+  Discover and set up Enablement for your sales teams in a unified experience with Salesforce Go.
+  Assign permissions directly in Salesforce Go, and monitor usage to ensure users are getting the most
+
+
+
+                                                   731
+Salesforce Release Notes                                                                              Sales
+
+
+  out of Enablement.
+  Boost Sales Performance in Your Territories with Enablement Programs
+  Provide sales teams in your territories targeted training and relevant resources through Enablement
+  programs. Bulk assign users to a program based on the users’ roles. When you assign territory roles to
+  a program, users with those roles are automatically assigned to the program. Previously, you manually
+  assigned individual territory users to an Enablement program.
+  Remove Multiple Users from Enablement Programs Efficiently
+  Save time and effort while removing users from your Enablement programs. With the automated bulk
+  user removal flow, you can filter and remove a large number of users from your programs with less
+  manual work. Previously, you could remove only one user at a time from a program.
+  Prebuilt ECI Measures Aren’t Available with the New ECI Setup for Enablement
+  If you set up ECI for Enablement in Spring ’26, the prebuilt ECI measures aren't available to your sales
+  teams. Teams that have ECI configured in earlier releases can continue to access ECI measures.
+
+
+Scale Enablement to More Users with Streamlined Setup Experience
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Discover and set up Enablement for your sales teams in a unified experience with Salesforce Go. Assign
+permissions directly in Salesforce Go, and monitor usage to ensure users are getting the most out of
+Enablement.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, Einstein 1
+Sales, and Developer editions with Sales Cloud, Service Cloud, or Salesforce Platform. An Enablement
+add-on license is required.
+
+How: Select Salesforce Go from the gear menu or from the main Setup menu. To find and set up
+Enablement, go to the Features tab or search for Enablement.
+
+
+
+
+                                                   732
+Salesforce Release Notes                                                                              Sales
+
+
+
+
+See Also
+  Salesforce Help: Discover and Set Up Features with Salesforce Go (can be outdated or unavailable
+  during release preview)
+
+
+Boost Sales Performance in Your Territories with Enablement Programs
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Provide sales teams in your territories targeted training and relevant resources through Enablement
+programs. Bulk assign users to a program based on the users’ roles. When you assign territory roles to a
+program, users with those roles are automatically assigned to the program. Previously, you manually
+assigned individual territory users to an Enablement program.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, Einstein 1
+Sales, and Developer editions with Sales Cloud, Service Cloud, or Salesforce Platform. An Enablement
+add-on license is required.
+
+How: On the assignment window, select Territories. Select a territory model and add the roles that you
+want to assign to the program.
+
+
+
+
+                                                   733
+Salesforce Release Notes                                                                             Sales
+
+
+
+
+See Also
+  Salesforce Help: Assign Users to Enablement Programs Manually (can be outdated or unavailable
+  during release preview)
+
+
+Remove Multiple Users from Enablement Programs Efficiently
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Save time and effort while removing users from your Enablement programs. With the automated bulk
+user removal flow, you can filter and remove a large number of users from your programs with less
+manual work. Previously, you could remove only one user at a time from a program.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, Einstein 1
+Sales, and Developer editions with Sales Cloud, Service Cloud, or Salesforce Platform. An Enablement
+add-on license is required.
+
+How: On the user removal window, filter the assigned and enrolled users by their profile, role, and public
+group. Select all the matching users and remove them from the program.
+
+
+
+
+                                                   734
+Salesforce Release Notes                                                                              Sales
+
+
+
+
+See Also
+  Salesforce Help: Remove Users from an Enablement Program (can be outdated or unavailable during
+  release preview)
+
+
+Prebuilt ECI Measures Aren’t Available with the New ECI Setup for Enablement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you set up ECI for Enablement in Spring ’26, the prebuilt ECI measures aren't available to your sales
+teams. Teams that have ECI configured in earlier releases can continue to access ECI measures.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, Unlimited, Einstein 1
+Sales, and Developer editions with Sales Cloud, Service Cloud, or Salesforce Platform. An Enablement
+add-on license is required.
+
+See Also
+  Salesforce Help: Set Up Einstein Conversation Insights for Enablement (can be outdated or unavailable
+  during release preview)
+  Salesforce Help: Prebuilt Enablement Measures (can be outdated or unavailable during release
+  preview)
+
+
+
+
+                                                   735
+Salesforce Release Notes                                                                               Sales
+
+
+
+Sales Performance Management
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Refine territory design in complex markets by assigning shared boundaries to multiple sales areas.
+Distribute financial targets directly to accounts while accounting for existing bottom-up goals. Plus,
+streamline the sales planning process by generating quota plans based on territory alignments to keep
+data synchronized.
+
+  Salesforce Maps and Salesforce Maps Advanced
+  Map crucial proprietary and third-party data when you integrate it with your Salesforce data. Reveal
+  sales opportunities on partner sites. And visualize planned field visits compared with past visit metrics.
+  Sales Planning
+  Create quota plans from territory hierarchy, owner, and attribute data within sales plan segments.
+  Design territories with current Salesforce data. And distribute work fairly among sales teams that don't
+  rely on geographic boundaries.
+
+
+Salesforce Maps and Salesforce Maps Advanced
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Map crucial proprietary and third-party data when you integrate it with your Salesforce data. Reveal sales
+opportunities on partner sites. And visualize planned field visits compared with past visit metrics.
+
+
+Sales Planning
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+                                                    736
+Salesforce Release Notes                                                                                Sales
+
+
+Create quota plans from territory hierarchy, owner, and attribute data within sales plan segments. Design
+territories with current Salesforce data. And distribute work fairly among sales teams that don't rely on
+geographic boundaries.
+
+  Design Territories with Shared Boundaries
+  Refine your territory design in densely populated areas by allowing a single boundary, such as a postal
+  code, to be assigned to multiple sales areas. This new capability is supported only for live data
+  alignments and gives you more customization when modeling complex geographic territories like New
+  York City or London. Units, however, can still only be assigned to a single area. Utilize area-level
+  assignment rules to ensure units are correctly mapped when areas overlap.
+  Allocate Financial Targets to Accounts in Territory Planning
+  Distribute top-down financial targets directly to accounts within Territory Planning. You can split
+  targets evenly, weight them based on criteria like annual revenue, or distribute by defined segments.
+  To ensure realistic planning, the allocation logic respects existing bottom-up targets set by the field.
+  This alignment simplifies the transition from territory design to quota planning.
+  Enjoy Improved Performance in Territory Planning
+  Create territories for your sales teams with confidence, efficiency, and trust. Territory Planning provides
+  enhanced security, reliable scalability, and better performance for some resource-intensive
+  functionality.
+  Create Alignment-Based Quota Plans
+  Streamline the planning process by creating quota plans directly from existing territory alignments.
+  Planners can now view account-level details and metadata within the quota planning interface to
+  inform target setting. Because the plans share data, updates to territory models flow into the quota
+  plan, ensuring assignments and targets remain synchronized.
+  Sales Planning Version 1 is Scheduled for Retirement
+  Sales Planning version 1 is scheduled for retirement in Summer ’26.
+
+
+Design Territories with Shared Boundaries
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Refine your territory design in densely populated areas by allowing a single boundary, such as a postal
+code, to be assigned to multiple sales areas. This new capability is supported only for live data
+alignments and gives you more customization when modeling complex geographic territories like New
+York City or London. Units, however, can still only be assigned to a single area. Utilize area-level
+assignment rules to ensure units are correctly mapped when areas overlap.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Web Services API enabled.
+
+
+                                                    737
+Salesforce Release Notes                                                                               Sales
+
+
+How: Admins and users can enable overlapping boundaries through several methods in the boundary
+legend. To use the new Assign to Multiple Areas action, select boundaries, choose the action, select
+multiple areas from the picklist, then select Preview and Confirm your changes. Alternatively, you can
+inline edit the assignment field in the boundary legend by selecting multiple areas from the list of area
+names.
+
+
+
+
+To modify overlapping areas independently or to enable optimization (which is disabled when
+overlapping boundaries are in focus), use the Set Focus action to temporarily remove overlapping areas
+from the map. Boundaries that overlap are denoted by a hexagonal "honeycomb" pattern on the map
+and in the boundary legend.
+
+
+
+
+                                                    738
+Salesforce Release Notes                                                                                Sales
+
+
+
+
+Allocate Financial Targets to Accounts in Territory Planning
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Distribute top-down financial targets directly to accounts within Territory Planning. You can split targets
+evenly, weight them based on criteria like annual revenue, or distribute by defined segments. To ensure
+realistic planning, the allocation logic respects existing bottom-up targets set by the field. This alignment
+simplifies the transition from territory design to quota planning.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Web Services API enabled.
+
+How: Configure a goal within an alignment connected to a segment data source to enable allocation
+options. Use an allocation formula to distribute targets using even, weighted, or bucketed methods,
+while automatically subtracting any existing bottom-up targets from the total. You can also import
+overrides or publish targets to use them in downstream quota planning.
+
+
+Enjoy Improved Performance in Territory Planning
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+
+                                                    739
+Salesforce Release Notes                                                                               Sales
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Create territories for your sales teams with confidence, efficiency, and trust. Territory Planning provides
+enhanced security, reliable scalability, and better performance for some resource-intensive functionality.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Web Services API enabled.
+
+How: When you optimize a territory plan, the job now runs on Hyperforce, the Salesforce public cloud
+infrastructure with integrated standards for compliance, security, agility, and scalability.
+
+And, when you publish territories to Salesforce Field Service, the job that generates KML files runs more
+efficiently. However, in some limited geographies, viewing these published territories in Field Service can
+cause a slight degradation of shapes.
+
+See Also
+  Knowledge Article: Introducing Hyperforce - General Information & FAQ
+  Publish Alignments to Field Service
+
+
+Create Alignment-Based Quota Plans
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Streamline the planning process by creating quota plans directly from existing territory alignments.
+Planners can now view account-level details and metadata within the quota planning interface to inform
+target setting. Because the plans share data, updates to territory models flow into the quota plan,
+ensuring assignments and targets remain synchronized.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Unlimited, and Developer editions with Sales Planning in English only and with Web Services API
+enabled.
+
+Why: Planning traditionally relies on assumptions that shift rapidly as deals close or account rosters
+change, which can force teams back into planning cycles. By linking quota plans to territory alignments,
+Sales Operations can maintain control over data updates while validating plans against the latest
+hierarchy and assignment structures. This integration provides visibility into account-specific metadata,
+such as historical revenue, helping to balance quotas fairly even when territory structures are complex or
+shifting.
+
+
+
+                                                    740
+Salesforce Release Notes                                                                             Sales
+
+
+How: Select a territory alignment when creating a new quota plan to import the area hierarchy and
+account data. The hierarchy remains read-only within the quota plan to preserve the territory structure,
+but you can view account details and allocate targets based on the imported areas. If the source territory
+changes, such as a deleted area, the system flags the mismatch and prompts you to accept changes to
+keep the plans aligned.
+
+
+Sales Planning Version 1 is Scheduled for Retirement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Sales Planning version 1 is scheduled for retirement in Summer ’26.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Professional, Enterprise,
+Unlimited, and Developer editions with Sales Planning in English only and with Web Services API
+enabled.
+
+See Also
+  Knowledge Article: Sales Planning version 1 Retirement
+
+
+Email, Calendar, and Integrations
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Adopt authorized email domains. Accurately monitor event and email syncing with detailed insights and
+reports. Capture and report on email as an activity with the Sync Email as Salesforce Activity feature.
+Prepare for the retirement of Exchange Web Services and its impact on email-related features and
+products. Salesforce for Outlook retires in December 2027.
+
+  Email Configuration
+  If you previously worked with Salesforce Customer Support to disable email change verifications, set
+  up authorized email domains instead.
+  Einstein Activity Capture
+  Accurately monitor event and email syncing with detailed insights and reports on failure. Extend the
+  scope of your Account, Contact, Opportunity, and Lead reports by integrating detailed email insights in
+
+
+                                                   741
+Salesforce Release Notes                                                                              Sales
+
+
+  your reports.
+  Lightning Sync for Microsoft® Exchange
+  Microsoft announced the retirement of Exchange Web Services (EWS) starting October 1, 2026.
+  Lightning Sync configurations that use EWS won’t capture or sync data from Microsoft after EWS is
+  retired.
+  Salesforce for Outlook (Retiring)
+  Full product retirement for Salesforce for Outlook is scheduled for December 2027. If you’re sticking
+  with Salesforce for Outlook for now, you can access past release notes about the current version from
+  the Trailblazer Community.
+  Outlook Integration
+  Outlook Integration replaces Salesforce for Outlook and gives users new capabilities, like the use of
+  Agentforce for emails.
+  Gmail Integration
+  Get immediate access to relevant CRM data alongside your email communication by accessing the
+  Gmail integration directly within Sales Cloud Everywhere.
+  Salesforce Inbox
+  Check out the latest improvements to Salesforce Inbox.
+
+
+Email Configuration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you previously worked with Salesforce Customer Support to disable email change verifications, set up
+authorized email domains instead.
+
+  Adopt Authorized Email Domains (Release Update)
+  If you previously worked with Salesforce Customer Support to disable email change verifications, set
+  up authorized email domains instead. Salesforce is retiring the existing exemption process for
+  disabling this feature, and authorized email domains provide the same benefit. This update is available
+  starting in Spring ’26.
+
+
+Adopt Authorized Email Domains (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                   742
+Salesforce Release Notes                                                                              Sales
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If you previously worked with Salesforce Customer Support to disable email change verifications, set up
+authorized email domains instead. Salesforce is retiring the existing exemption process for disabling this
+feature, and authorized email domains provide the same benefit. This update is available starting in
+Spring ’26.
+
+Where: This change applies to Lightning Experience, Salesforce Classic, and the Salesforce mobile app in
+all editions.
+
+When: Salesforce enforces this update in Winter ’27. To get the major release upgrade date for your
+instance, go to Trust Status, search for your My Domain name or instance, and click the maintenance tab.
+
+Why: The process to disable email change verification relied on a manual change by Salesforce Customer
+Support, which created operational inefficiencies and potential risks. With authorized email domains,
+you simplify the onboarding process for new users by using domain-level email verification. Email
+verification is bypassed for users with email addresses on a domain that you trust.
+
+
+     Note These changes relate to the verification of email addresses stored in Salesforce and the ability
+     to send email from Salesforce. There’s no change to the requirements for account verification for
+     access to Salesforce.
+
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. For Adopt Authorized Email Domains, follow the testing and activation steps.
+
+See Also
+  Salesforce Help: Authorize a Domain for Return Email Verification
+  Knowledge Article: Disable 'Email Change Verification'
+
+
+Einstein Activity Capture
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Accurately monitor event and email syncing with detailed insights and reports on failure. Extend the
+scope of your Account, Contact, Opportunity, and Lead reports by integrating detailed email insights in
+your reports.
+
+  Migrate Microsoft 365 Authentication in Einstein Activity Capture to Microsoft Graph
+  Transition your Einstein Activity Capture’s Microsoft 365 authentication from Exchange Web Services
+
+
+
+                                                   743
+Salesforce Release Notes                                                                                Sales
+
+
+  (EWS) to Microsoft Graph, which is more modern, secure, and scalable. Microsoft is retiring EWS in
+  October 2026, so switch to Microsoft Graph to avoid service disruption. Proactive notifications and a
+  single-click tool make the migration process smooth.
+  Include Email Insights in Custom Report Types
+  Extend the scope of your Account, Contact, Opportunity, and Lead reports by integrating detailed
+  email insights such as message type and content in your reports. Insights like these provide a more
+  holistic view of your sales activities and help you stay on top of important customer communications.
+  Monitor Accurate Event and Email Sync with Detailed Metrics and Failure Reports
+  Get clear insights into event and email sync status with accurate metrics. For example, identify and
+  resolve setup issues more effectively and improve user trust with sync failure reports.
+  Make Captured Emails Available as Activity Data by Updating Einstein Activity Capture
+  Use an option in Setup to update Einstein Activity Capture and migrate previously captured email to
+  Salesforce activity data. With this update and migration, all new email data and previously captured
+  email data are synced, stored, and available as activity data. This update and migration makes email
+  data available to platform tools and operations. After you start the update and migration process, it
+  runs and is completed automatically.
+  Synced Calendar Overlay Is Retiring
+  If Show Synced and Captured Events is turned on, Einstein Activity Capture users access a view-only
+  copy of events from Microsoft or Google on their Calendar. Some customers mistook the view-only
+  events as duplicate calendar entries, so we’re retiring this feature.
+  Prepare for Activity 360 Reporting, Activity Metrics, and Activities Analytics Dashboard Retirement
+  Before these tools retire, we recommend turning on Sync Email as Salesforce Activity for Einstein
+  Activity Capture and configuring reports to explore data captured from email.
+
+
+Migrate Microsoft 365 Authentication in Einstein Activity Capture to Microsoft Graph
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Transition your Einstein Activity Capture’s Microsoft 365 authentication from Exchange Web Services
+(EWS) to Microsoft Graph, which is more modern, secure, and scalable. Microsoft is retiring EWS in
+October 2026, so switch to Microsoft Graph to avoid service disruption. Proactive notifications and a
+single-click tool make the migration process smooth.
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+Einstein 1 Sales, and Agentforce 1 Sales editions. It’s also available with the Einstein for Sales, Sales
+Engagement, and Revenue Intelligence add-ons.
+
+When: This feature is available starting in February 2026.
+
+
+
+                                                    744
+Salesforce Release Notes                                                                                    Sales
+
+
+Who: The update is available if Einstein Activity Capture is configured to use Microsoft 365. If you’re
+setting up Einstein Activity Capture with Microsoft 365 starting in Spring ’26, you’re automatically
+authenticated by using Microsoft Graph.
+
+Why: This migration is essential to align with Microsoft’s evolving security standards and to avoid
+potential disruptions as EWS reaches its end of life in October 2026. By transitioning to Microsoft Graph,
+Salesforce makes sure that your organization remains compliant and competitive, with improved support
+for modern features and enhanced user-level authentication.
+
+How: Before and during migration, make sure that your Azure admin has granted Microsoft Graph
+consent. Then, use the single-click migration tool to complete the migration and select the correct
+authentication method.
+
+
+
+
+If Einstein Activity Capture is configured to use User-Level OAuth, users must reconnect to their Microsoft
+365 accounts to complete the connection migration.
+
+See Also
+  Migrate Microsoft 365 Authentication in Inbox to Microsoft Graph
+  Salesforce Help: Migrate Einstein Activity Capture to Microsoft Graph (can be outdated or unavailable
+  during release preview)
+
+
+Include Email Insights in Custom Report Types
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Extend the scope of your Account, Contact, Opportunity, and Lead reports by integrating detailed email
+insights such as message type and content in your reports. Insights like these provide a more holistic
+view of your sales activities and help you stay on top of important customer communications.
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+Einstein 1 Sales, and Agentforce 1 Sales editions. It’s also available with the Einstein for Sales, Sales
+Engagement, and Revenue Intelligence add-ons.
+
+
+
+
+                                                     745
+Salesforce Release Notes                                                                                Sales
+
+
+Who: Sync Email as Salesforce Activity must be enabled in Einstein Activity Capture to include email
+insights in reports.
+
+
+Monitor Accurate Event and Email Sync with Detailed Metrics and Failure Reports
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get clear insights into event and email sync status with accurate metrics. For example, identify and
+resolve setup issues more effectively and improve user trust with sync failure reports.
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+Einstein 1 Sales, and Agentforce 1 Sales editions. It’s also available with the Einstein for Sales, Sales
+Engagement, and Revenue Intelligence add-ons.
+
+How: On the Reports tab, you can find reports on event sync time between Salesforce and the email
+account connected to Einstein Activity Capture, email sync status, and sync failures.
+
+
+
+
+                                                    746
+Salesforce Release Notes                                                                              Sales
+
+
+
+
+See Also
+  Salesforce Help: Monitor Einstein Activity Capture Operations (can be outdated or unavailable during
+  release preview)
+
+
+Make Captured Emails Available as Activity Data by Updating Einstein Activity Capture
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Use an option in Setup to update Einstein Activity Capture and migrate previously captured email to
+
+
+
+                                                   747
+Salesforce Release Notes                                                                                  Sales
+
+
+Salesforce activity data. With this update and migration, all new email data and previously captured
+email data are synced, stored, and available as activity data. This update and migration makes email data
+available to platform tools and operations. After you start the update and migration process, it runs and
+is completed automatically.
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+Einstein 1 Sales, and Agentforce 1 Sales editions. It’s also available with the Einstein for Sales, Sales
+Engagement, and Revenue Intelligence add-ons.
+
+When: This tool rolls out as a staggered release beginning late December 2025 in sandboxes and early
+2026 in production.
+
+Who: This is available if Einstein Activity Capture is set up without Sync Email as Salesforce Activity. If
+you’ve set up Sync Email as Salesforce Activity, you don’t need to update or migrate.
+
+Why: Updating Einstein Activity Capture turns on Sync Email as Salesforce Activity for all newly captured
+email and migrates previously captured email to activity data. Email synced as activity data is stored in
+EmailMessage and Task object records, making it available to platform reports, automation, and APIs. It
+also offers more granular privacy and sharing settings for captured email data. Previously, captured email
+data wasn’t stored in standard objects or available to platform tools and required unique reports to
+access and analyze the data. Sync Email as Salesforce Activity was introduced as a default setting for
+Einstein Activity Capture in Summer ’25.
+
+
+
+
+See Also
+  Salesforce Help: Start the Update and Migrate to Sync Email as Salesforce Activity(can be outdated or
+  unavailable during release preview)
+  Salesforce Help: Considerations for Sync Email as Salesforce Activity(can be outdated or unavailable
+  during release preview)
+
+
+Synced Calendar Overlay Is Retiring
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+                                                      748
+Salesforce Release Notes                                                                                   Sales
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+If Show Synced and Captured Events is turned on, Einstein Activity Capture users access a view-only copy
+of events from Microsoft or Google on their Calendar. Some customers mistook the view-only events as
+duplicate calendar entries, so we’re retiring this feature.
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+Einstein 1 Sales, and Agentforce 1 Sales editions. It’s also available with the Einstein for Sales, Sales
+Engagement, and Revenue Intelligence add-ons.
+
+When: The view-only calendar overlay and the Synced and Captured Events setting in Einstein Activity
+Capture is retiring. They’re no longer available unless previously turned on. If you turn it off, you can’t re-
+enable it.
+
+
+
+
+Prepare for Activity 360 Reporting, Activity Metrics, and Activities Analytics Dashboard
+Retirement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Before these tools retire, we recommend turning on Sync Email as Salesforce Activity for Einstein Activity
+Capture and configuring reports to explore data captured from email.
+
+
+                                                      749
+Salesforce Release Notes                                                                               Sales
+
+
+Where: Activity 360 Reporting, Activity Metrics, and Activities Analytics Dashboard are available in
+Lightning Experience in Starter, Professional, Enterprise, Unlimited, Einstein 1 Sales, and Agentforce 1
+Sales editions. They’re also available with the Einstein for Sales, Sales Engagement, and Revenue
+Intelligence add-ons.
+
+Why: Starting in Summer ’25, Einstein Activity Capture can sync and store email data as Task and
+EmailMessage object records. With this new data structure you can explore and use email activity data
+with standard reports, SOQL, automation workflows, and APIs. Activity 360 Reporting, Activity Metrics,
+and Activities Analytics Dashboard aren’t available unless previously turned on. Additionally, data from
+these reporting tools that appears in other features, including Prospecting Center, Pipeline Inspection,
+and Einstein Conversation Insights, aren’t available unless previously configured. This change affects
+other features that use Einstein Activity Capture data, including Prospecting Center, Pipeline Inspection,
+and Einstein Conversation Insights. Objects related to Activity 360 Reporting data are also scheduled to
+retire: UnifiedEmail, UnifiedEmailParticipant, UnifiedMeeting, UnifiedMeetingParticipant, UnifiedTask,
+and UnifiedTaskParticipant.
+
+How: To turn on Sync Email as Salesforce Activity, update Einstein Activity Capture and migrate
+previously captured email. Use the Update & Migrate option available in Setup. Sync Email as Salesforce
+Activity is enabled by default if you turned on Einstein Activity Capture in Summer ’25 or later.
+
+See Also
+  Salesforce Help: Considerations for Sync Email as Salesforce Activity (can be outdated or unavailable
+  during release preview)
+  Salesforce Help: Considerations for Activity 360 Reporting (can be outdated or unavailable during
+  release preview)
+  Salesforce Help: Considerations for Using Activity Metrics (can be outdated or unavailable during
+  release preview)
+  Salesforce Help: Guidelines for Using Analytics Activities Dashboard (can be outdated or unavailable
+  during release preview)
+
+
+Lightning Sync for Microsoft® Exchange
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Microsoft announced the retirement of Exchange Web Services (EWS) starting October 1, 2026.
+Lightning Sync configurations that use EWS won’t capture or sync data from Microsoft after EWS is
+retired.
+
+  Prepare Lightning Sync for Microsoft Exchange Web Services (EWS) Retirement
+  Microsoft announced the retirement of Exchange Web Services (EWS) starting October 1, 2026.
+
+
+
+                                                    750
+Salesforce Release Notes                                                                                Sales
+
+
+  Lightning Sync configurations that use EWS won’t capture or sync data from Microsoft after EWS is
+  retired. To prepare, review the Microsoft guidelines on migrating to Microsoft Graph, the
+  recommended API for accessing Microsoft services. Or, plan to move from Lightning Sync to Einstein
+  Activity Capture. Contact Salesforce Customer Support to evaluate your options for more information
+  on the Salesforce connection to Microsoft Graph API (beta).
+
+
+Prepare Lightning Sync for Microsoft Exchange Web Services (EWS) Retirement
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Microsoft announced the retirement of Exchange Web Services (EWS) starting October 1, 2026.
+Lightning Sync configurations that use EWS won’t capture or sync data from Microsoft after EWS is
+retired. To prepare, review the Microsoft guidelines on migrating to Microsoft Graph, the recommended
+API for accessing Microsoft services. Or, plan to move from Lightning Sync to Einstein Activity Capture.
+Contact Salesforce Customer Support to evaluate your options for more information on the Salesforce
+connection to Microsoft Graph API (beta).
+
+Where: This feature is available in Lightning Experience in Starter, Professional, Enterprise, Unlimited,
+and Einstein 1 Sales editions. It’s also available with the Einstein for Sales, Sales Engagement, and
+Revenue Intelligence add-ons.
+
+Who: This change affects Lightning Sync configurations that use organization-wide OAuth 2.0 with EWS
+to connect to Microsoft Office 365 or Microsoft Exchange Service Account.
+
+
+Salesforce for Outlook (Retiring)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Full product retirement for Salesforce for Outlook is scheduled for December 2027. If you’re sticking with
+Salesforce for Outlook for now, you can access past release notes about the current version from the
+Trailblazer Community.
+
+  Salesforce for Outlook Is Being Retired in December 2027
+  For the latest integration with Microsoft Outlook, we recommend moving to our next-generation
+
+
+
+                                                    751
+Salesforce Release Notes                                                                                Sales
+
+
+  products, the Outlook integration and Einstein Activity Capture. These products replace Salesforce for
+  Outlook features and give users new capabilities. We continue to introduce enhancements for these
+  products every release.
+
+
+Salesforce for Outlook Is Being Retired in December 2027
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+For the latest integration with Microsoft Outlook, we recommend moving to our next-generation
+products, the Outlook integration and Einstein Activity Capture. These products replace Salesforce for
+Outlook features and give users new capabilities. We continue to introduce enhancements for these
+products every release.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Contact Manager, Group,
+Essentials, Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+How: When Salesforce for Outlook is retired, it will no longer sync contacts, events, or tasks. Admins and
+users also lose access to Salesforce for Outlook features, such as the side panel.
+
+See Also
+  Knowledge Article: Salesforce for Outlook Retirement
+  Salesforce Help: Move from Salesforce for Outlook to the Next-Generation Products (can be outdated
+  or unavailable during release preview)
+  Trailblazer Community: Salesforce for Outlook Release Notes
+
+
+Outlook Integration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Outlook Integration replaces Salesforce for Outlook and gives users new capabilities, like the use of
+Agentforce for emails.
+
+  Access Agentforce from Your Outlook Integration
+  Leverage the power of Agentforce directly from your Outlook integration to prepare for meetings,
+
+
+
+                                                   752
+Salesforce Release Notes                                                                             Sales
+
+
+  summarize records, and trigger custom actions.
+
+
+Access Agentforce from Your Outlook Integration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Leverage the power of Agentforce directly from your Outlook integration to prepare for meetings,
+summarize records, and trigger custom actions.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Essentials, Group,
+Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+When: This change was available on a rolling basis starting December 2025.
+
+How: If Agentforce is enabled, it automatically appears in your Outlook integration. Click Agentforce to
+start using it.
+
+
+
+
+                                                   753
+Salesforce Release Notes                                                                              Sales
+
+
+
+
+Gmail Integration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get immediate access to relevant CRM data alongside your email communication by accessing the Gmail
+integration directly within Sales Cloud Everywhere.
+
+  Access the Gmail Integration Directly in Sales Cloud Everywhere
+  Get immediate access to relevant CRM data alongside your email communication by accessing the
+  Gmai Integration directly within Sales Cloud Everywhere.
+
+
+Access the Gmail Integration Directly in Sales Cloud Everywhere
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Get immediate access to relevant CRM data alongside your email communication by accessing the Gmai
+
+
+
+                                                   754
+Salesforce Release Notes                                                                             Sales
+
+
+Integration directly within Sales Cloud Everywhere.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Essentials, Professional,
+Enterprise, Unlimited, and Developer editions.
+
+When: Gmail Integration became available in Sales Cloud Everywhere in late June 2025.
+
+How: Open the existing Gmail Integration panel and follow the prompts on the screen to move to the
+Sales Cloud Everywhere side panel. No changes have been made to how you use Gmail Integration in
+Sales Cloud Everywhere.
+
+
+
+
+                                                   755
+Salesforce Release Notes                                                                              Sales
+
+
+
+Salesforce Inbox
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Check out the latest improvements to Salesforce Inbox.
+
+  Migrate Microsoft 365 Authentication in Inbox to Microsoft Graph
+  Transition your Inbox’s Microsoft 365 authentication method from Exchange Web Services (EWS) to
+  Microsoft Graph, which is more modern, secure, and scalable. Microsoft is retiring EWS in October
+  2026, so switch to Microsoft Graph to avoid service disruption.
+  Simplify Meeting Scheduling with a Redesigned Interface
+  Give prospects a simpler and quicker way to schedule meetings with your sales team. When a user
+  receives a scheduling link generated from Insert Availability in the Lightning Experience Email
+  Composer, Gmail extension, or Outlook add-in, they’re taken to the new interface.
+
+
+Migrate Microsoft 365 Authentication in Inbox to Microsoft Graph
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Transition your Inbox’s Microsoft 365 authentication method from Exchange Web Services (EWS) to
+Microsoft Graph, which is more modern, secure, and scalable. Microsoft is retiring EWS in October 2026,
+so switch to Microsoft Graph to avoid service disruption.
+
+Where: This change applies to Lightning Experience in all editions.
+
+When: This feature is available starting in February 2026.
+
+Who: The update and migration is available if Inbox and Einstein Activity is set up to use Microsoft 365.
+If you’re setting up Inbox with Microsoft 365 starting in Spring ’26, you’re automatically authenticated by
+using Microsoft Graph.
+
+Why: This migration is essential to align with Microsoft’s evolving security standards and to avoid
+potential disruptions as EWS reaches its end of life in October 2026. By transitioning to Microsoft Graph,
+Salesforce makes sure that your organization remains compliant and competitive, with improved support
+
+
+
+                                                   756
+Salesforce Release Notes                                                                              Sales
+
+
+for modern features and enhanced user-level authentication.
+
+How: Before and during migration, make sure that your Azure admin has granted Microsoft Graph
+consent. Then, use the single-click migration tool to complete the migration and select the correct
+authentication method. Users are required to reconnect to their Microsoft 365 accounts to complete the
+connection transition.
+
+
+
+
+See Also
+  Migrate Microsoft 365 Authentication in Einstein Activity Capture to Microsoft Graph
+  Salesforce Help: Migrate Inbox to Microsoft Graph (can be outdated or unavailable during release
+  preview)
+
+
+Simplify Meeting Scheduling with a Redesigned Interface
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Give prospects a simpler and quicker way to schedule meetings with your sales team. When a user
+receives a scheduling link generated from Insert Availability in the Lightning Experience Email Composer,
+Gmail extension, or Outlook add-in, they’re taken to the new interface.
+
+Where: This change applies to Lightning Experience in all editions.
+
+When: This change became available in December 2025.
+
+How: In Inbox, insert a scheduling link.
+
+
+
+
+                                                   757
+Salesforce Release Notes                                                                             Sales
+
+
+
+
+Other Changes in Sales
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Review and anticipate other changes that can impact your sales team.
+
+  Salesforce to Salesforce Is Being Retired (Release Update)
+  Salesforce to Salesforce is being retired in Spring ’27. Salesforce has more powerful and integrated
+  solutions that align with modern business needs. To prevent disruption when Salesforce ends support
+  for the Salesforce to Salesforce product, make sure that you migrate your integrations to one of these
+  recommended solutions: Partner Cloud, Data Cloud One, MuleSoft Anypoint, or MuleSoft for Flow.
+  New Sales Dialer Licenses Are No Longer Available
+  New Sales Dialer licenses aren’t available for customers to purchase. We are planning to retire features
+  and functionality for the product in the future.
+  Include Records from any Account on Account Plan Objectives
+
+
+                                                   758
+Salesforce Release Notes                                                                               Sales
+
+
+    Support sales account plans across account hierarchies by associating records from different accounts
+    to an Account Plan Objective. Previously, you were limited to associating records linked directly to the
+    account plan's primary account. Now, to build more comprehensive account plans, search for and add
+    relevant records from any account. We delivered this feature due to your idea on IdeaExchange.
+
+
+Salesforce to Salesforce Is Being Retired (Release Update)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Salesforce to Salesforce is being retired in Spring ’27. Salesforce has more powerful and integrated
+solutions that align with modern business needs. To prevent disruption when Salesforce ends support for
+the Salesforce to Salesforce product, make sure that you migrate your integrations to one of these
+recommended solutions: Partner Cloud, Data Cloud One, MuleSoft Anypoint, or MuleSoft for Flow.
+
+Where: This change applies to Salesforce Classic (not available in all orgs) in Contact Manager, Group,
+Professional, Enterprise, Performance, Unlimited, and Developer editions.
+
+When: The Salesforce to Salesforce retirement is enforced in phases.
+
+• Spring ’26: You can no longer turn on Salesforce to Salesforce in an org. The feature continues to
+    function if it was enabled before Spring ’26.
+•   Summer ’26: Support for Salesforce to Salesforce is discontinued.
+•   Spring ’27: Salesforce to Salesforce is fully retired in all orgs and no longer functions.
+
+To get the major-release upgrade date for your instance, go to Trust Status, search for your My Domain
+name or instance, and then click the maintenance tab.
+
+How: To review this update, from Setup, in the Quick Find box, enter Release Updates, and then
+select Release Updates. To avoid disruption, migrate any integrations to one of the alternatives.
+
+See Also
+  Knowledge Article: Salesforce to Salesforce Retirement
+
+
+New Sales Dialer Licenses Are No Longer Available
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+
+
+
+                                                       759
+Salesforce Release Notes                                                                    Salesforce CMS
+
+
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+New Sales Dialer licenses aren’t available for customers to purchase. We are planning to retire features
+and functionality for the product in the future.
+
+Where: This applies to the Sales Dialer product in Essentials, Professional, Enterprise, Performance, and
+Unlimited editions.
+
+When: New licenses for Sales Dialer are no longer available. This includes the Dialer Inbound and Dialer
+Outbound permission sets. You can continue to renew your current licenses for the time being.
+
+To use telephony features directly in Salesforce, we recommend that you modernize your experience by
+moving to Service Cloud Voice. Service Cloud Voice offers many of the telephony features that you love
+and more. See Get to Know Service Cloud Voice.
+
+
+Include Records from any Account on Account Plan Objectives
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Support sales account plans across account hierarchies by associating records from different accounts to
+an Account Plan Objective. Previously, you were limited to associating records linked directly to the
+account plan's primary account. Now, to build more comprehensive account plans, search for and add
+relevant records from any account. We delivered this feature due to your idea on IdeaExchange.
+
+Where: This change applies to Enterprise, Performance, Unlimited, and Einstein 1 Sales Edition Editions
+with Sales Cloud.
+
+See Also
+  IdeaExchange: Enhanced Account Plan Objectives Calculation to Include Account Hierarchy
+  Salesforce Help: Sales Account Plans (can be outdated or unavailable during release preview)
+  Salesforce Help: Sales Account Plan Objectives, Measures, and Calculation Definitions (can be
+  outdated or unavailable during release preview)
+
+
+
+Salesforce CMS
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+
+                                                   760
+Salesforce Release Notes                                                                     Salesforce CMS
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Previously known as Sidebar Extensions, Extensions in CMS have an improved development workflow.
+Build extensions to add more productivity tools to your CMS content workflow, such as third-party
+generative AI tools or tone and grammar editors. When you work with external content providers, you
+can now choose which providers are available to your workspace and where to save files from these
+systems.
+
+  Create Content More Efficiently by Using Improved Extensions in Salesforce CMS
+  Add more productivity features to your content workflow, such as third-party generative AI tools, tone
+  and grammar editors, and translators with Extensions in CMS. Formerly known as Sidebar Extensions,
+  Extensions now appear in a floating panel in the content editor. Use the new development workflow to
+  build more complex extensions for specific content types, and customize the size and behavior of the
+  floating panel.
+  Take Control of Assets from External Content Providers
+  Several new settings make it easier to manage external assets in an enhanced CMS workspace. Choose
+  which providers are available to your workspace for greater administrative control, and specify where
+  to save the files. Previously, you could only save external assets directly in the workspace, but now you
+  can choose your preferred folder.
+
+
+Create Content More Efficiently by Using Improved Extensions in
+Salesforce CMS
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Add more productivity features to your content workflow, such as third-party generative AI tools, tone
+and grammar editors, and translators with Extensions in CMS. Formerly known as Sidebar Extensions,
+Extensions now appear in a floating panel in the content editor. Use the new development workflow to
+build more complex extensions for specific content types, and customize the size and behavior of the
+floating panel.
+
+Where: This change applies to enhanced CMS workspaces in Lightning Experience in Enterprise,
+Performance, Unlimited, and Developer editions.
+
+How: To build new extensions for specific content types, use the new development workflow. Any
+extension built with the existing workflow still works as expected. To test the appearance of existing
+
+
+
+                                                    761
+Salesforce Release Notes                                                                     Salesforce CMS
+
+
+extensions in the new floating panel, open them in the content editor.
+
+
+
+
+To use an extension while editing CMS content, select one from the extensions menu (1). Work with the
+extension in the floating panel (2) and apply your changes. Position the floating panel anywhere on the
+content editor page for easy editing.
+
+See Also
+  Salesforce Help: Work with Extensions in Salesforce CMS (can be outdated or unavailable during
+  release preview)
+
+
+Take Control of Assets from External Content Providers
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Several new settings make it easier to manage external assets in an enhanced CMS workspace. Choose
+which providers are available to your workspace for greater administrative control, and specify where to
+save the files. Previously, you could only save external assets directly in the workspace, but now you can
+choose your preferred folder.
+
+
+                                                    762
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+Where: This change applies to enhanced CMS workspaces in Lightning Experience in Enterprise,
+Performance, Unlimited, and Developer editions.
+
+How: To manage external assets in an enhanced workspace, click       | External Assets. Select which
+folder to use for saved assets. And choose one or more available providers to make them accessible from
+the workspace.
+
+If you previously installed external providers in Winter ’26, you must reselect the providers to make them
+available again in the workspace.
+
+
+
+See Also
+  Salesforce Help: Use Content from External Providers (can be outdated or unavailable during release
+  preview)
+
+
+
+Salesforce Flow
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Compose intelligent workflows with Flow Builder and Flow Orchestration. Integrate across any system
+with Flow Integration.
+
+  Flow Builder
+  Modify record-triggered and scheduled-triggered flows with Agentforce. Navigate through Flow Builder
+  with collapsible paths and new mouse controls. Sort and edit records in the Data Table screen
+  component. Customize screen flows with component-level style overrides. Send messages to large
+  audiences and use Wait elements in asynchronous broadcast flows. Use decisions, exit rules, reentry
+  conditions, and more in activation-triggered flows. Send Marketing Cloud Engagement emails in
+  segment-triggered, event-triggered, activation-triggered, and broadcast flows. Trigger automation
+  event-triggered flows when records related to an individual are changed.
+  Flow Approval Processes
+  Complete approval step screen flows in Flow Builder while debugging flow approval processes without
+  leaving Flow Builder. Start an autolaunched flow approval process from the new Request Approval
+  component and let the submitter select the first approver.
+  Flow Orchestration
+  Create orchestrations and view orchestration dependencies with other automations in the Automation
+  Lightning app. Complete orchestration work items in Flow Builder while debugging orchestrations
+  without leaving Flow Builder.
+
+
+
+                                                   763
+Salesforce Release Notes                                                                   Salesforce Flow
+
+
+  Automation Lightning App Updates
+  Find which Agentforce agents and prompt templates reference standard and custom invocable actions
+  by using the Action Hub tab in the Automation Lightning app. Gain visibility into flow performance
+  with the new Flow Logs tab in the Automation Lightning app.
+  Simplify Integration with MuleSoft for Flow: Integration
+  MuleSoft for Flow: Integration is a no-code solution that connects your flows to external systems that
+  use third-party connectors. Use these connectors as triggers or actions, creating seamless data and
+  information exchange between systems.
+  Extract Data from Digital and Scanned Documents by Using MuleSoft for Flow: IDP (Generally
+  Available)
+  Use MuleSoft for Flow: IDP to transform unstructured and semistructured data into structured,
+  actionable output, enabling automation of document-based workflows. Organizations get lots of
+  unstructured and semistructured documents that have important business data. But getting and
+  processing this information by hand is time-consuming and can introduce mistakes. With MuleSoft for
+  Flow: IDP you define what data to extract through custom configurations. You set confidence
+  thresholds for automatic processing, and route low-confidence results for human review to verify
+  accuracy. Manage your document processing configurations on the Document Processing tab in the
+  Automation app.
+
+
+Flow Builder
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Modify record-triggered and scheduled-triggered flows with Agentforce. Navigate through Flow Builder
+with collapsible paths and new mouse controls. Sort and edit records in the Data Table screen
+component. Customize screen flows with component-level style overrides. Send messages to large
+audiences and use Wait elements in asynchronous broadcast flows. Use decisions, exit rules, reentry
+conditions, and more in activation-triggered flows. Send Marketing Cloud Engagement emails in
+segment-triggered, event-triggered, activation-triggered, and broadcast flows. Trigger automation event-
+triggered flows when records related to an individual are changed.
+
+  Flow Builder Updates
+  Make changes to record-triggered and scheduled-triggered flows using natural language. Make
+  navigating the Flow Builder canvas easier with collapsible branching paths and more intuitive mouse
+  scrolling controls. Access the Agentforce panel without admin setup.
+  Screen Flow Updates
+  Sort and edit records in the Data Table component at runtime. Customize screen flows with
+  component-level style overrides. Add colorful, a11y-compliant text to your screens with the new
+  Message component. Streamline document-based screen flows with the File Preview component.
+
+
+                                                   764
+Salesforce Release Notes                                                                      Salesforce Flow
+
+
+  Visualize and track progress with the Kanban Board component (beta).
+  Flow Marketing Cloud Updates
+  Send Marketing Cloud Engagement emails in segment-triggered, event-triggered, activation-triggered,
+  and broadcast flows. Trigger automation event-triggered flows when records related to an individual
+  are changed. Get more control over schedule-triggered flows with more granular scheduling options.
+  Use contact point selection rules to make sure your messages get to the right person. Send email
+  messages using activation data.
+  Flow Data 360 Updates
+  Send messages to large audiences and use Wait elements with asynchronous broadcast flows. Use
+  decisions, exit rules, reentry conditions, and more in activation-triggered flows. Access segment-
+  triggered, automation event-triggered, and on-demand flows with a Data 360 license.
+  Flow Testing and Debugging
+  Save debug configurations when you save changes to a flow. Reuse tests from old flow versions.
+  Flow Runtime
+  Versioned updates are available for flows that are configured to run on API version 66.0.
+  Flow Management
+  Get insights into your flow’s health with version-level analytics. Compare different versions of a screen
+  flow. View flow dependencies in the Automation Lightning app. Visualize flow performance directly in
+  Flow Builder.
+  Flow Extensions
+  Navigate to screen flows or autolaunched flows in Lightning Experience from custom Aura and
+  Lightning web components.
+  Flow and Process Release Updates
+  Salesforce Flow has several release updates that are scheduled to be enforced in future releases.
+
+
+Flow Builder Updates
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Make changes to record-triggered and scheduled-triggered flows using natural language. Make
+navigating the Flow Builder canvas easier with collapsible branching paths and more intuitive mouse
+scrolling controls. Access the Agentforce panel without admin setup.
+
+  Get More Accurate Draft Flows with AI (Generally Available)
+  Agentforce breaks down your business requirements into specific tasks and gives generative AI-specific
+  instructions on how to complete those tasks, making your record-triggered or schedule-triggered flows
+  more accurate. Enter your instructions and let AI do the work. You can also use and modify the sample
+  instructions and then generate the draft flow.
+
+
+                                                   765
+Salesforce Release Notes                                                                   Salesforce Flow
+
+
+  Evolve Flows Iteratively with Agentforce
+  Improve and modify existing record-triggered and schedule-triggered flows by using natural language
+  without starting from scratch. Use conversational prompts in the Agentforce panel to add, modify, and
+  delete elements in a flow. This feature doesn’t consume generative AI credits.
+  Simplify Your Flow Builder Layout by Collapsing Branching Elements
+  Manage complex flows more efficiently by hiding unnecessary detail on the canvas. Now you can
+  collapse and expand branching elements with Flow Builder, including Wait, Decision, Loop, Path
+  Experiment, and Async Actions, helping you focus on the key parts of your flow. To ensure a consistent
+  workflow, Flow Builder remembers your specific expand and collapse preferences. This layout is saved
+  automatically and locally in your browser, making it easier to return to your work without changing the
+  view for other users.
+  Set Up the Agentforce Panel Without Admin Configuration
+  Users can now quickly transition to the Agentforce panel and access new features such as creating,
+  summarizing, or evolving a flow. This feature doesn’t consume generative AI credits.
+  View Subflow Input and Output Variable Descriptions More Easily
+  The infobubbles for subflow output variables now show the custom description set by the admin or
+  developer. If no custom description is defined, improved default text guides you to assign a resource.
+  Additionally, view descriptions for a subflow’s input resources in an infobubble even if the resource
+  isn’t included. Previously, you had to enable the input resource to know whether you needed it.
+  View Action Input Descriptions More Easily
+  Save time configuring flow actions. You can now hover over the infobubble next to an action input
+  variable to view its description without including it. Upfront informational text helps you quickly
+  understand why to use an input before deciding to assign it a value.
+  Navigate Flow Builder Faster with Mouse Scrolling
+  Navigating the Flow Builder canvas is now quicker and more intuitive. Previously, moving around the
+  Flow Builder canvas required you to click and hold (grab and move) to pan across the elements.
+  Decision Logic Labels Were Updated for Clarity
+  The labels for the Decision Logic section of the Decision element were changed to Define Manually
+  (Default) and Define with AI (Advanced). The new labels clarify that defining conditions manually is
+  the first choice when working with structured data. When you can't define conditions because you're
+  working with complex or unstructured data, use AI.
+
+
+Get More Accurate Draft Flows with AI (Generally Available)
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Agentforce breaks down your business requirements into specific tasks and gives generative AI-specific
+instructions on how to complete those tasks, making your record-triggered or schedule-triggered flows
+
+
+                                                   766
+Salesforce Release Notes                                                                     Salesforce Flow
+
+
+more accurate. Enter your instructions and let AI do the work. You can also use and modify the sample
+instructions and then generate the draft flow.
+
+Where: This change applies to Lightning Experience in Essentials, Pro Suite, Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Foundations or Agentforce 1 editions. Verify
+Agentforce 1 editions feature availability with your account executive.
+
+This feature doesn’t consume generative AI credits. To learn more, see Agentforce and Generative AI
+Usage and Billing.
+
+How: Provision and enable Data 360 in your org. Then, turn on Einstein generative AI in Setup.
+
+Create a flow in Flow Builder, and in the Let AI Help You Build section, click Get Started. Enter your
+instructions and then click Draft with AI.
+
+
+Evolve Flows Iteratively with Agentforce
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Improve and modify existing record-triggered and schedule-triggered flows by using natural language
+without starting from scratch. Use conversational prompts in the Agentforce panel to add, modify, and
+delete elements in a flow. This feature doesn’t consume generative AI credits.
+
+Where: This change applies to Lightning Experience in Essentials, Pro Suite, Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Foundations or Agentforce 1 editions. Verify
+Agentforce 1 editions feature availability with your account executive.
+
+Who: Users with the Manage Flow permission or equivalent flow designer permissions who can create
+and edit flows.
+
+How: Provision and enable Data 360 in your org. Turn on Einstein generative AI in Setup. Then, open any
+existing record-triggered or schedule-triggered flow in Flow Builder. Opt in to migrate to Agentforce, then
+use the Agentforce panel to describe the modifications you want to make. For example:
+
+• “Add a decision element to check if the opportunity stage is Closed Won”.
+• “Remove the loop element that processes inactive accounts”.
+• “Add a fault path to handle errors in the Create Records element”.
+Agentforce processes your request and applies the changes to your flow, highlighting modifications on
+the canvas so you can quickly identify what changed.
+
+
+
+
+                                                    767
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+
+
+See Also
+  Salesforce Help: Evolve a Flow with Agentforce (can be outdated or unavailable during release
+  preview)
+
+
+Simplify Your Flow Builder Layout by Collapsing Branching Elements
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Manage complex flows more efficiently by hiding unnecessary detail on the canvas. Now you can
+collapse and expand branching elements with Flow Builder, including Wait, Decision, Loop, Path
+Experiment, and Async Actions, helping you focus on the key parts of your flow. To ensure a consistent
+workflow, Flow Builder remembers your specific expand and collapse preferences. This layout is saved
+automatically and locally in your browser, making it easier to return to your work without changing the
+view for other users.
+
+Where: This change applies to Lightning Experience, Salesforce Classic in Essentials, Professional,
+Enterprise, Performance, Unlimited, and Developer editions.
+
+How: Collapse and expand branching elements in the Flow builder canvas by clicking         or    next to
+an element’s name.
+
+
+
+
+                                                   768
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+
+
+Set Up the Agentforce Panel Without Admin Configuration
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Users can now quickly transition to the Agentforce panel and access new features such as creating,
+summarizing, or evolving a flow. This feature doesn’t consume generative AI credits.
+
+Where: This change applies to Lightning Experience in Essentials, Pro Suite, Professional, Enterprise,
+Performance, Unlimited, and Developer editions with Foundations or Agentforce 1 editions. Verify
+Agentforce 1 editions feature availability with your account executive. Agentforce must be enabled for
+the org and either the AgentforceEmployeeAgent or AIEmployeeAgents org permission must be
+enabled.
+
+How: In the Einstein panel, click Migrate to Agentforce when modifying a flow. Or, when creating a new
+flow, select Draft with AI and Agentforce activates automatically if all requirements are met.
+
+
+
+
+                                                   769
+Salesforce Release Notes                                                                      Salesforce Flow
+
+
+
+
+View Subflow Input and Output Variable Descriptions More Easily
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The infobubbles for subflow output variables now show the custom description set by the admin or
+developer. If no custom description is defined, improved default text guides you to assign a resource.
+Additionally, view descriptions for a subflow’s input resources in an infobubble even if the resource isn’t
+included. Previously, you had to enable the input resource to know whether you needed it.
+
+Where: This change applies to Lightning Experience, Salesforce Classic in Essentials, Professional,
+Enterprise, Performance, Unlimited, and Developer editions.
+
+How: In Flow Builder, hover over the infobubble next to a subflow input resource to view its description
+without enabling it.
+
+
+
+
+                                                    770
+Salesforce Release Notes                                                                   Salesforce Flow
+
+
+
+
+For subflow outputs, hover over the infobubble in the View Output Resources list to see the variable’s
+name, label, type, and description.
+
+
+
+
+                                                   771
+Salesforce Release Notes                                                               Salesforce Flow
+
+
+
+
+When you select Manually assign variables (advanced), the infobubble next to each output value shows
+the custom description, replacing the previous generic message.
+
+
+
+
+View Action Input Descriptions More Easily
+
+This release is in preview
+
+
+                                                 772
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Save time configuring flow actions. You can now hover over the infobubble next to an action input
+variable to view its description without including it. Upfront informational text helps you quickly
+understand why to use an input before deciding to assign it a value.
+
+Where: This change applies to Lightning Experience, Salesforce Classic in Essentials, Professional,
+Enterprise, Performance, Unlimited, and Developer editions.
+
+How: In Flow Builder, add an action element. Locate an input parameter and hover over or click the
+infobubble next to it to view the description.
+
+
+
+
+Navigate Flow Builder Faster with Mouse Scrolling
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+
+
+                                                   773
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Navigating the Flow Builder canvas is now quicker and more intuitive. Previously, moving around the
+Flow Builder canvas required you to click and hold (grab and move) to pan across the elements.
+
+Where: This change applies to Lightning Experience, Salesforce Classic in Essentials, Professional,
+Enterprise, Performance, Unlimited, and Developer editions.
+
+How: Use your mouse scroll wheel, trackpad, or keyboard arrows keys to pan the canvas to view different
+areas of the flow.
+
+
+Decision Logic Labels Were Updated for Clarity
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+The labels for the Decision Logic section of the Decision element were changed to Define Manually
+(Default) and Define with AI (Advanced). The new labels clarify that defining conditions manually is the
+first choice when working with structured data. When you can't define conditions because you're
+working with complex or unstructured data, use AI.
+
+Where: This change applies to Lightning Experience in Enterprise, Performance, and Unlimited editions
+with the Einstein for Sales, Einstein for Service, or Einstein Platform add-on. Einstein generative AI is
+available in Lightning Experience. To purchase the Einstein for Sales, Einstein for Service, or Einstein
+Platform add-on, contact your Salesforce account executive.
+
+See Also
+  Salesforce Help: Decision Flow Element (can be outdated or unavailable during release preview)
+
+
+Screen Flow Updates
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+
+
+                                                   774
+Salesforce Release Notes                                                                    Salesforce Flow
+
+
+Sort and edit records in the Data Table component at runtime. Customize screen flows with component-
+level style overrides. Add colorful, a11y-compliant text to your screens with the new Message
+component. Streamline document-based screen flows with the File Preview component. Visualize and
+track progress with the Kanban Board component (beta).
+
+  Tailor Screen Flows to Your Audience with Component-Level Styling Overrides
+  Deliver a personalized screen flow experience to your customers. Customize a variety of style
+  properties for your screen flows, like background color, border color, border weight, border radius, text
+  color, buttons, and more. Any styling changes you set override your org or Experience Cloud site’s
+  default theme.
+  Add Visually Distinct and Accessible Messages to Screen Flows
+  With the new Message screen component, you can add an eye-catching a11y-compliant message to a
+  screen to show information, a success, an error, or a warning.
+  Visualize and Track Record Progress with Kanban Boards in Screen Flows (Beta)
+  Use the new Kanban Board component to show records as cards in columns that represent workflow
+  stages, without custom Lightning implementations. Your users gain instant visibility into record
+  progress and record details without leaving the flow. The Kanban Board is read-only, so users can’t drag
+  cards between stages at run time.
+  Preview Files Natively in Screen Flows
+  Eliminate friction in document-based processes by enabling your users to review file content directly
+  within a screen flow. The new File Preview screen component removes the requirement to download
+  files externally, ensuring more streamlined document review and approval workflows.
+  Find and Select Flow Resources More Easily in Screen Flows
+  Flow Builder extends the enhanced resource selection experience to screen elements. For example,
+  improved grouping makes it easier for you to find the resources that you need, user-friendly labels are
+  shown instead of API names, tooltips with descriptions are available so you know more about what
+  resource you’re selecting, and the search experience allows for nested searches with breadcrumbs to
+  keep track of where you are.
+  Open Screen Flows in Lightning Experience with a URL (Generally Available)
+  Launch screen flows in Lightning Experience and Lightning console apps with a new standardized URL
+  format. Opening flows in Lightning has several benefits, such as faster performance, keeping your
+  users in Lightning console apps, and providing a more consistent browser experience. You can also
+  pass information into your flow through its URL. The new URL format also supports the Salesforce
+  Cosmos theme, and flow local actions.
+
+See Also
+  Release Notes: Compare Screen Flow Versions to Track Changes More Efficiently
+
+
+Tailor Screen Flows to Your Audience with Component-Level Styling Overrides
+
+This release is in preview
+
+Note: This release is in preview. Features described in this document don't become generally available
+until the latest general availability date that Salesforce announces for this release. Before then, and
+
+
+
+                                                   775
+Salesforce Release Notes                                                                      Salesforce Flow
+
+
+where features are noted as beta, pilot, or developer preview, we can't guarantee general availability
+within any particular time frame or at all. Make your purchase decisions only on the basis of generally
+available products and features.
+
+Deliver a personalized screen flow experience to your customers. Customize a variety of style properties
+for your screen flows, like background color, border color, border weight, border radius, text color,
+buttons, and more. Any styling changes you set override your org or Experience Cloud site’s default
+theme.
+
+Where: This change applies to Lightning Experience and Salesforce Classic in Essentials, Professional,
+Enterprise, Unlimited, and Developer editions.
+
+This change also applies to Aura, LWR, and Visualforce sites accessed through Lightning Experience and
+Salesforce Classic in Enterprise, Performance, Unlimited, and Developer editions. You must have at least
+one active community license in your org to use this feature.
+
+How: To customize the look for your screen, edit a screen. On the Screen Properties panel, select the
+Style tab. On the Style tab, you can set the styles for the header, container, and footer of your screen.
+
+You can customize the styling for these components: Checkbox, Checkbox Group, Currency, Date, Date/
+Time, Display Text, Number, Long Text Area, Multi-Select Picklist, Password, Picklist, Radio Button,
+Repeater, Section, and Text.
+
+
+
+
+                                                    776
+
