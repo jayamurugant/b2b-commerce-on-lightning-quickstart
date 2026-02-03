@@ -24,6 +24,23 @@ Proposed Architecture
 - AWS Secrets Manager for credentials
 - CloudWatch Logs for monitoring
 
+Flow Diagram (Text-Based)
+-------------------------
+```mermaid
+flowchart LR
+  EB[EventBridge schedule] --> L[AWS Lambda orchestrator]
+  SM[AWS Secrets Manager] --> L
+  L -->|Bulk API v2 query| SF[Salesforce]
+  SF -->|CSV results| L
+  L -->|gzip upload| S3[Amazon S3 raw files]
+  S3 -->|External stage| SN[Snowflake]
+  L -->|COPY INTO + MERGE| SN
+  SN --> WM[Watermark table]
+  L --> CW[CloudWatch Logs]
+```
+Note: This is a text diagram. If you want official icons, I can
+add an image-based diagram once logo assets are provided.
+
 Data Flow (Daily Batch)
 -----------------------
 1) EventBridge triggers the Lambda job each day.
