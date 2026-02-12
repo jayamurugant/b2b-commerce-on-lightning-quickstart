@@ -271,6 +271,24 @@ def detect_increases(
     return increases
 
 
+def count_in_stock_products(stock_map: Dict[str, int]) -> int:
+    return sum(1 for qty in stock_map.values() if qty > 0)
+
+
+def detect_in_stock_count_increase(
+    previous_count: Optional[int], current_count: int
+) -> Optional[Dict[str, int]]:
+    if previous_count is None:
+        return None
+    if current_count > previous_count:
+        return {
+            "previous_count": previous_count,
+            "current_count": current_count,
+            "delta": current_count - previous_count,
+        }
+    return None
+
+
 def fetch_watched_products(
     args: argparse.Namespace, watch_product_ids: List[str]
 ) -> Tuple[Dict[str, Dict[str, object]], int]:
@@ -381,16 +399,19 @@ def send_email_alert(
     args: argparse.Namespace,
     increases: List[Dict[str, object]],
     watched_in_stock_events: List[Dict[str, object]],
+    in_stock_count_increase: Optional[Dict[str, int]],
     run_no: int,
     total_products: int,
     total_count: Optional[int],
 ) -> None:
     recipients = parse_recipients(args.email_to)
-    total_alerts = len(increases) + len(watched_in_stock_events)
+    in_stock_count_alerts = 1 if in_stock_count_increase else 0
+    total_alerts = len(increases) + len(watched_in_stock_events) + in_stock_count_alerts
     subject = (
         f"{args.email_subject_prefix} "
         f"{total_alerts} alert(s): {len(increases)} increase(s), "
-        f"{len(watched_in_stock_events)} watched in-stock"
+        f"{len(watched_in_stock_events)} watched in-stock, "
+        f"{in_stock_count_alerts} in-stock-count increase"
     )
 
     lines = [
@@ -416,6 +437,16 @@ def send_email_alert(
                     **row
                 )
             )
+    if in_stock_count_increase:
+        lines.extend(
+            [
+                "",
+                "Overall in-stock product count increased:",
+                "- {previous_count} -> {current_count} (+{delta})".format(
+                    **in_stock_count_increase
+                ),
+            ]
+        )
 
     message = EmailMessage()
     message["From"] = args.email_from
@@ -460,6 +491,8 @@ def print_run_summary(
     products: List[Dict[str, object]],
     total_count: Optional[int],
     pages_fetched: int,
+    current_in_stock_count: int,
+    in_stock_count_increase: Optional[Dict[str, int]],
     increases: List[Dict[str, object]],
     watched_rows: List[Dict[str, object]],
     watched_lookup_pages: int,
@@ -470,6 +503,7 @@ def print_run_summary(
         f"Products fetched: {len(products)} | Reported total count: "
         f"{total_count if total_count is not None else 'NA'}"
     )
+    print(f"In-stock products in fetched set: {current_in_stock_count}")
 
     preview = products[:5]
     if preview:
@@ -508,6 +542,16 @@ def print_run_summary(
     else:
         print("Stock increase check: no increases since last run.")
 
+    if in_stock_count_increase:
+        print(
+            "In-stock count check: "
+            "{previous_count} -> {current_count} (+{delta})".format(
+                **in_stock_count_increase
+            )
+        )
+    else:
+        print("In-stock count check: no increase since last run.")
+
     if args.watch_product_ids:
         if watched_in_stock_events:
             print(
@@ -527,6 +571,7 @@ def print_run_summary(
 def main() -> None:
     args = parse_args()
     previous_stock: Dict[str, int] = {}
+    previous_in_stock_count: Optional[int] = None
     previous_watch_stock: Dict[str, int] = {}
     run_no = 0
 
@@ -537,6 +582,10 @@ def main() -> None:
         try:
             products, total_count, pages_fetched = fetch_all_products(args)
             current_stock = build_stock_map(products)
+            current_in_stock_count = count_in_stock_products(current_stock)
+            in_stock_count_increase = detect_in_stock_count_increase(
+                previous_in_stock_count, current_in_stock_count
+            )
             increases = detect_increases(previous_stock, current_stock, products)
 
             watched_rows: List[Dict[str, object]] = []
@@ -563,18 +612,21 @@ def main() -> None:
                 products,
                 total_count,
                 pages_fetched,
+                current_in_stock_count,
+                in_stock_count_increase,
                 increases,
                 watched_rows,
                 watched_lookup_pages,
                 watched_in_stock_events,
             )
 
-            if increases or watched_in_stock_events:
+            if increases or watched_in_stock_events or in_stock_count_increase:
                 if can_send_email(args):
                     send_email_alert(
                         args=args,
                         increases=increases,
                         watched_in_stock_events=watched_in_stock_events,
+                        in_stock_count_increase=in_stock_count_increase,
                         run_no=run_no,
                         total_products=len(products),
                         total_count=total_count,
@@ -586,6 +638,7 @@ def main() -> None:
                     )
 
             previous_stock = current_stock
+            previous_in_stock_count = current_in_stock_count
             if args.watch_product_ids:
                 previous_watch_stock = current_watch_stock
 
