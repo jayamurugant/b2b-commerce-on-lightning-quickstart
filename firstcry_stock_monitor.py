@@ -11,8 +11,10 @@ Features:
 
 import argparse
 import datetime as dt
+import html
 import json
 import random
+import re
 import smtplib
 import time
 import urllib.parse
@@ -149,6 +151,29 @@ def parse_count(raw_count: object) -> Optional[int]:
     return to_int(raw_count, default=0)
 
 
+def slugify_for_url(value: str) -> str:
+    token = value.strip().lower()
+    token = token.replace("&", " and ")
+    token = re.sub(r"[^a-z0-9]+", "-", token)
+    token = re.sub(r"-+", "-", token).strip("-")
+    return token or "product"
+
+
+def build_product_search_url(product_id: str) -> str:
+    return f"https://www.firstcry.com/search?query={urllib.parse.quote(product_id)}"
+
+
+def build_product_detail_url(product_id: str, name: str, brand_name: str) -> str:
+    # Best-effort URL shape used by FirstCry product detail pages.
+    # If route format changes, search URL remains a reliable fallback.
+    brand_slug = slugify_for_url(brand_name or "product")
+    name_slug = slugify_for_url(name or product_id)
+    return (
+        f"https://www.firstcry.com/{brand_slug}/{name_slug}/"
+        f"{urllib.parse.quote(product_id)}/product-detail"
+    )
+
+
 def build_params(
     args: argparse.Namespace, page_no: int, override_exclude: Optional[bool] = None
 ) -> Dict[str, str]:
@@ -258,14 +283,19 @@ def detect_increases(
         prev_stock = previous[pid]
         if current_stock > prev_stock:
             item = by_id.get(pid, {})
+            name = str(item.get("PNm", ""))
+            brand_name = str(item.get("BNm", ""))
+            detail_url = build_product_detail_url(pid, name, brand_name)
+            search_url = build_product_search_url(pid)
             increases.append(
                 {
                     "product_id": pid,
-                    "name": str(item.get("PNm", "")),
+                    "name": name,
                     "previous_stock": prev_stock,
                     "current_stock": current_stock,
                     "delta": current_stock - prev_stock,
-                    "url": item.get("Purl", ""),
+                    "detail_url": detail_url,
+                    "search_url": search_url,
                 }
             )
     return increases
@@ -374,13 +404,19 @@ def detect_watched_in_stock(
         current_value = current_watch_stock.get(pid, 0)
         if previous_value <= 0 and current_value > 0:
             item = watched_products.get(pid, {})
+            name = str(item.get("PNm", ""))
+            brand_name = str(item.get("BNm", ""))
+            detail_url = build_product_detail_url(pid, name, brand_name)
+            search_url = build_product_search_url(pid)
             events.append(
                 {
                     "product_id": pid,
-                    "name": str(item.get("PNm", "")),
+                    "name": name,
                     "previous_stock": previous_value,
                     "current_stock": current_value,
                     "delta": current_value - previous_value,
+                    "detail_url": detail_url,
+                    "search_url": search_url,
                 }
             )
     return events
@@ -429,6 +465,9 @@ def send_email_alert(
                     **row
                 )
             )
+            lines.append(
+                "  Detail: {detail_url} | Search: {search_url}".format(**row)
+            )
     if watched_in_stock_events:
         lines.extend(["", "Watched products now in stock:"])
         for row in watched_in_stock_events:
@@ -436,6 +475,9 @@ def send_email_alert(
                 "- {name} (PId {product_id}): {previous_stock} -> {current_stock} (+{delta})".format(
                     **row
                 )
+            )
+            lines.append(
+                "  Detail: {detail_url} | Search: {search_url}".format(**row)
             )
     if in_stock_count_increase:
         lines.extend(
@@ -453,6 +495,59 @@ def send_email_alert(
     message["To"] = ", ".join(recipients)
     message["Subject"] = subject
     message.set_content("\n".join(lines))
+
+    html_parts = [
+        "<html><body>",
+        "<h3>FirstCry stock monitor alert</h3>",
+        f"<p><b>Run:</b> {run_no}<br>",
+        f"<b>Products fetched:</b> {total_products}<br>",
+        f"<b>Catalog count:</b> {total_count if total_count is not None else 'NA'}</p>",
+    ]
+
+    if increases:
+        html_parts.append("<h4>Products with stock increase</h4><ul>")
+        for row in increases:
+            name = html.escape(str(row["name"]))
+            detail_url = html.escape(str(row["detail_url"]))
+            search_url = html.escape(str(row["search_url"]))
+            html_parts.append(
+                "<li>"
+                f"{name} (PId {row['product_id']}): "
+                f"{row['previous_stock']} &rarr; {row['current_stock']} (+{row['delta']})"
+                f" | <a href=\"{detail_url}\">Open product</a>"
+                f" | <a href=\"{search_url}\">Search by product ID</a>"
+                "</li>"
+            )
+        html_parts.append("</ul>")
+
+    if watched_in_stock_events:
+        html_parts.append("<h4>Watched products now in stock</h4><ul>")
+        for row in watched_in_stock_events:
+            name = html.escape(str(row["name"]))
+            detail_url = html.escape(str(row["detail_url"]))
+            search_url = html.escape(str(row["search_url"]))
+            html_parts.append(
+                "<li>"
+                f"{name} (PId {row['product_id']}): "
+                f"{row['previous_stock']} &rarr; {row['current_stock']} (+{row['delta']})"
+                f" | <a href=\"{detail_url}\">Open product</a>"
+                f" | <a href=\"{search_url}\">Search by product ID</a>"
+                "</li>"
+            )
+        html_parts.append("</ul>")
+
+    if in_stock_count_increase:
+        html_parts.append("<h4>Overall in-stock product count increased</h4>")
+        html_parts.append(
+            "<p>"
+            "{previous_count} &rarr; {current_count} (+{delta})".format(
+                **in_stock_count_increase
+            )
+            + "</p>"
+        )
+
+    html_parts.append("</body></html>")
+    message.add_alternative("\n".join(html_parts), subtype="html")
 
     if args.smtp_ssl:
         with smtplib.SMTP_SSL(args.smtp_host, args.smtp_port, timeout=30) as server:
