@@ -39,6 +39,194 @@ def parse_product_ids(value: str) -> List[str]:
     return items
 
 
+def parse_csv_values(value: str) -> List[str]:
+    return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def load_proxy_file(path: str) -> List[str]:
+    proxies: List[str] = []
+    with open(path, "r", encoding="utf-8") as handle:
+        for raw in handle:
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            proxies.append(line)
+    return proxies
+
+
+class ProxyRotator:
+    """Rotates proxy URLs per request with optional provider refresh."""
+
+    def __init__(
+        self,
+        static_proxies: List[str],
+        provider_url: str,
+        provider_token: str,
+        refresh_seconds: int,
+        strategy: str,
+        request_timeout: int,
+        print_proxy: bool,
+    ) -> None:
+        self.provider_url = provider_url.strip()
+        self.provider_token = provider_token.strip()
+        self.refresh_seconds = max(10, refresh_seconds)
+        self.strategy = strategy
+        self.request_timeout = max(5, request_timeout)
+        self.print_proxy = print_proxy
+        self._pool: List[str] = self._dedupe(static_proxies)
+        self._index = 0
+        self._last_proxy = ""
+        self._last_refresh = 0.0
+
+    @staticmethod
+    def _normalize_proxy(value: str) -> str:
+        proxy = value.strip()
+        if not proxy:
+            return ""
+        parsed = urllib.parse.urlparse(proxy)
+        if not parsed.scheme:
+            # Assume HTTP proxy if no scheme provided.
+            proxy = "http://" + proxy
+            parsed = urllib.parse.urlparse(proxy)
+        if not parsed.netloc:
+            return ""
+        return proxy
+
+    def _dedupe(self, values: List[str]) -> List[str]:
+        seen: Dict[str, bool] = {}
+        items: List[str] = []
+        for raw in values:
+            proxy = self._normalize_proxy(raw)
+            if not proxy or proxy in seen:
+                continue
+            seen[proxy] = True
+            items.append(proxy)
+        return items
+
+    @property
+    def enabled(self) -> bool:
+        return bool(self._pool or self.provider_url)
+
+    @property
+    def pool_size(self) -> int:
+        return len(self._pool)
+
+    def _parse_provider_payload(self, payload: str) -> List[str]:
+        payload = payload.strip()
+        if not payload:
+            return []
+
+        try:
+            data = json.loads(payload)
+        except Exception:
+            data = None
+
+        if isinstance(data, list):
+            return [str(item).strip() for item in data if str(item).strip()]
+        if isinstance(data, dict):
+            if isinstance(data.get("proxies"), list):
+                return [str(item).strip() for item in data["proxies"] if str(item).strip()]
+            if isinstance(data.get("data"), list):
+                return [str(item).strip() for item in data["data"] if str(item).strip()]
+            if isinstance(data.get("proxy"), str) and data["proxy"].strip():
+                return [data["proxy"].strip()]
+
+        # Plain-text fallback: comma/newline separated.
+        values: List[str] = []
+        for chunk in re.split(r"[\n,]+", payload):
+            item = chunk.strip()
+            if item:
+                values.append(item)
+        return values
+
+    def _fetch_provider_proxies(self) -> List[str]:
+        if not self.provider_url:
+            return []
+        headers = {"User-Agent": "firstcry-stock-monitor/1.0"}
+        if self.provider_token:
+            headers["Authorization"] = f"Bearer {self.provider_token}"
+        request = urllib.request.Request(self.provider_url, headers=headers)
+        with urllib.request.urlopen(request, timeout=self.request_timeout) as response:
+            body = response.read().decode("utf-8", errors="replace")
+        return self._parse_provider_payload(body)
+
+    def _refresh_provider_if_needed(self, force: bool = False) -> None:
+        if not self.provider_url:
+            return
+        now = time.time()
+        should_refresh = force or not self._pool or (now - self._last_refresh >= self.refresh_seconds)
+        if not should_refresh:
+            return
+        provider_proxies = self._fetch_provider_proxies()
+        merged = self._dedupe(self._pool + provider_proxies)
+        self._pool = merged
+        self._last_refresh = now
+        if self._index >= len(self._pool):
+            self._index = 0
+
+    def prime(self) -> None:
+        self._refresh_provider_if_needed(force=True)
+
+    def describe(self) -> str:
+        provider_mode = "enabled" if self.provider_url else "disabled"
+        return (
+            f"Proxy rotation ON | pool={self.pool_size} | strategy={self.strategy} | "
+            f"provider={provider_mode}"
+        )
+
+    def _pick_round_robin(self) -> str:
+        candidate = self._pool[self._index % len(self._pool)]
+        self._index = (self._index + 1) % len(self._pool)
+        if len(self._pool) > 1 and candidate == self._last_proxy:
+            candidate = self._pool[self._index % len(self._pool)]
+            self._index = (self._index + 1) % len(self._pool)
+        return candidate
+
+    def _pick_random(self) -> str:
+        candidate = random.choice(self._pool)
+        if len(self._pool) > 1 and candidate == self._last_proxy:
+            alternatives = [item for item in self._pool if item != self._last_proxy]
+            candidate = random.choice(alternatives)
+        return candidate
+
+    def next_proxy(self) -> Optional[str]:
+        self._refresh_provider_if_needed(force=False)
+        if not self._pool:
+            return None
+        if self.strategy == "random":
+            proxy = self._pick_random()
+        else:
+            proxy = self._pick_round_robin()
+        self._last_proxy = proxy
+        return proxy
+
+
+def attach_proxy_rotator(args: argparse.Namespace) -> None:
+    static_proxies: List[str] = []
+    if args.proxy_urls:
+        static_proxies.extend(parse_csv_values(args.proxy_urls))
+    if args.proxy_file:
+        static_proxies.extend(load_proxy_file(args.proxy_file))
+
+    rotator = ProxyRotator(
+        static_proxies=static_proxies,
+        provider_url=args.proxy_provider_url,
+        provider_token=args.proxy_provider_token,
+        refresh_seconds=args.proxy_refresh_seconds,
+        strategy=args.proxy_strategy,
+        request_timeout=args.proxy_timeout,
+        print_proxy=args.print_proxy,
+    )
+    if rotator.enabled:
+        rotator.prime()
+    if args.strict_proxy_rotation and rotator.enabled and rotator.pool_size < 2:
+        raise ValueError(
+            "Strict proxy rotation requires at least 2 working proxies "
+            "(from --proxy-urls, --proxy-file, or --proxy-provider-url)."
+        )
+    args._proxy_rotator = rotator
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Monitor FirstCry stock changes and email on stock increases."
@@ -95,6 +283,56 @@ def parse_args() -> argparse.Namespace:
         help="0 means run forever; otherwise stop after N runs",
     )
 
+    # Proxy / IP rotation
+    parser.add_argument(
+        "--proxy-urls",
+        default="",
+        help="Comma-separated proxy URLs, e.g. http://user:pass@host:port",
+    )
+    parser.add_argument(
+        "--proxy-file",
+        default="",
+        help="Path to proxy list file (one proxy URL per line)",
+    )
+    parser.add_argument(
+        "--proxy-provider-url",
+        default="",
+        help="Endpoint returning proxy list (JSON or plain text)",
+    )
+    parser.add_argument(
+        "--proxy-provider-token",
+        default="",
+        help="Bearer token for proxy provider endpoint",
+    )
+    parser.add_argument(
+        "--proxy-refresh-seconds",
+        type=int,
+        default=300,
+        help="How often to refresh proxies from provider endpoint",
+    )
+    parser.add_argument(
+        "--proxy-strategy",
+        choices=["round_robin", "random"],
+        default="round_robin",
+        help="Rotation strategy across proxies",
+    )
+    parser.add_argument(
+        "--proxy-timeout",
+        type=int,
+        default=20,
+        help="HTTP timeout in seconds for proxy provider request",
+    )
+    parser.add_argument(
+        "--strict-proxy-rotation",
+        action="store_true",
+        help="Fail startup if fewer than 2 proxies are available",
+    )
+    parser.add_argument(
+        "--print-proxy",
+        action="store_true",
+        help="Print proxy used for each API request",
+    )
+
     # Email config
     parser.add_argument("--smtp-host", default="", help="SMTP host")
     parser.add_argument("--smtp-port", type=int, default=587, help="SMTP port")
@@ -126,6 +364,10 @@ def parse_args() -> argparse.Namespace:
     if args.min_interval > args.max_interval:
         parser.error("--min-interval cannot be greater than --max-interval")
     args.watch_product_ids = parse_product_ids(args.product_ids)
+    try:
+        attach_proxy_rotator(args)
+    except Exception as exc:
+        parser.error(str(exc))
     return args
 
 
@@ -215,8 +457,23 @@ def request_listing(
     }
 
     req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        body = resp.read().decode("utf-8", errors="replace")
+    proxy_url: Optional[str] = None
+    rotator: Optional[ProxyRotator] = getattr(args, "_proxy_rotator", None)
+    if rotator and rotator.enabled:
+        proxy_url = rotator.next_proxy()
+        if proxy_url and rotator.print_proxy:
+            print(f"Using proxy: {proxy_url}")
+
+    if proxy_url:
+        proxy_handler = urllib.request.ProxyHandler(
+            {"http": proxy_url, "https": proxy_url}
+        )
+        opener = urllib.request.build_opener(proxy_handler)
+        with opener.open(req, timeout=30) as resp:
+            body = resp.read().decode("utf-8", errors="replace")
+    else:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            body = resp.read().decode("utf-8", errors="replace")
 
     outer = json.loads(body)
     raw_inner = outer.get("ProductResponse", "{}")
@@ -579,6 +836,11 @@ def print_run_header(run_no: int, args: argparse.Namespace) -> None:
     )
     if args.watch_product_ids:
         print(f"Watched Product IDs: {', '.join(args.watch_product_ids)}")
+    rotator: Optional[ProxyRotator] = getattr(args, "_proxy_rotator", None)
+    if rotator and rotator.enabled:
+        print(rotator.describe())
+    else:
+        print("Proxy rotation: OFF")
 
 
 def print_run_summary(

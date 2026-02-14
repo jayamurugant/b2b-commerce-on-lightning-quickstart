@@ -83,6 +83,56 @@ def parse_args() -> argparse.Namespace:
         help="0 means run forever; otherwise stop after N runs",
     )
 
+    # Proxy / IP rotation
+    parser.add_argument(
+        "--proxy-urls",
+        default="",
+        help="Comma-separated proxy URLs, e.g. http://user:pass@host:port",
+    )
+    parser.add_argument(
+        "--proxy-file",
+        default="",
+        help="Path to proxy list file (one proxy URL per line)",
+    )
+    parser.add_argument(
+        "--proxy-provider-url",
+        default="",
+        help="Endpoint returning proxy list (JSON or plain text)",
+    )
+    parser.add_argument(
+        "--proxy-provider-token",
+        default="",
+        help="Bearer token for proxy provider endpoint",
+    )
+    parser.add_argument(
+        "--proxy-refresh-seconds",
+        type=int,
+        default=300,
+        help="How often to refresh proxies from provider endpoint",
+    )
+    parser.add_argument(
+        "--proxy-strategy",
+        choices=["round_robin", "random"],
+        default="round_robin",
+        help="Rotation strategy across proxies",
+    )
+    parser.add_argument(
+        "--proxy-timeout",
+        type=int,
+        default=20,
+        help="HTTP timeout in seconds for proxy provider request",
+    )
+    parser.add_argument(
+        "--strict-proxy-rotation",
+        action="store_true",
+        help="Fail startup if fewer than 2 proxies are available",
+    )
+    parser.add_argument(
+        "--print-proxy",
+        action="store_true",
+        help="Print proxy used for each API request",
+    )
+
     # Email config (same as v1)
     parser.add_argument("--smtp-host", default="", help="SMTP host")
     parser.add_argument("--smtp-port", type=int, default=587, help="SMTP port")
@@ -159,6 +209,10 @@ def parse_args() -> argparse.Namespace:
     args.watch_product_ids = v1.parse_product_ids(args.product_ids)
     args.twilio_recipients = parse_whatsapp_recipients(args.twilio_to_whatsapp)
     args.twilio_from_whatsapp = normalize_whatsapp(args.twilio_from_whatsapp)
+    try:
+        v1.attach_proxy_rotator(args)
+    except Exception as exc:
+        parser.error(str(exc))
     return args
 
 
