@@ -44,7 +44,7 @@ global with sharing class AccountS3ExportBatch
         String timestamp = Datetime.now().formatGmt('yyyyMMdd\'T\'HHmmss\'Z\'');
         String randomToken = EncodingUtil.convertToHex(
             Crypto.generateDigest(
-                'MD5',
+                'SHA-256',
                 Blob.valueOf(String.valueOf(Crypto.getRandomLong()) + ':' + String.valueOf(Datetime.now().getTime()))
             )
         ).substring(0, 8).toLowerCase();
