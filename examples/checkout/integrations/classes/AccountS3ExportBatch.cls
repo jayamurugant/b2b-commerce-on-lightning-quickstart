@@ -1,5 +1,5 @@
 global with sharing class AccountS3ExportBatch
-    implements Database.Batchable<Account>, Database.AllowsCallouts, Database.Stateful {
+    implements Database.Batchable<SObject>, Database.AllowsCallouts, Database.Stateful {
 
     private static final String CSV_HEADER =
         'Id,Name,AccountNumber,Type,Industry,Phone,Website,BillingCity,BillingState,BillingCountry,LastModifiedDateUtc';
@@ -70,14 +70,19 @@ global with sharing class AccountS3ExportBatch
         ]);
     }
 
-    global void execute(Database.BatchableContext batchContext, List<Account> scope) {
+    global void execute(Database.BatchableContext batchContext, List<SObject> scope) {
         if (scope == null || scope.isEmpty()) {
             return;
         }
 
+        List<Account> accountScope = new List<Account>();
+        for (SObject recordItem : scope) {
+            accountScope.add((Account) recordItem);
+        }
+
         this.partCounter++;
         String objectKey = buildCsvObjectKey(this.partCounter);
-        String csvPayload = buildCsvPayload(scope);
+        String csvPayload = buildCsvPayload(accountScope);
 
         new AwsS3Client(this.config).putObject(
             objectKey,
@@ -85,7 +90,7 @@ global with sharing class AccountS3ExportBatch
             'text/csv; charset=utf-8'
         );
 
-        this.exportedRecordCount += scope.size();
+        this.exportedRecordCount += accountScope.size();
     }
 
     global void finish(Database.BatchableContext batchContext) {
