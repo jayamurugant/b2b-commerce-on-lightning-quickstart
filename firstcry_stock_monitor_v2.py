@@ -371,6 +371,17 @@ def send_test_notifiers(args: argparse.Namespace) -> None:
         }
     ]
     fake_count = {"previous_count": 10, "current_count": 12, "delta": 2}
+    fake_count_products = [
+        {
+            "product_id": "12345678",
+            "name": "Test Product",
+            "previous_stock": 0,
+            "current_stock": 3,
+            "delta": 3,
+            "detail_url": "https://www.firstcry.com/search?query=12345678",
+            "search_url": "https://www.firstcry.com/search?query=12345678",
+        }
+    ]
 
     if v1.can_send_email(args):
         v1.send_email_alert(
@@ -378,6 +389,7 @@ def send_test_notifiers(args: argparse.Namespace) -> None:
             increases=fake_increase,
             watched_in_stock_events=[],
             in_stock_count_increase=fake_count,
+            in_stock_count_products=fake_count_products,
             run_no=0,
             total_products=20,
             total_count=100,
@@ -431,6 +443,11 @@ def main() -> None:
             in_stock_count_increase = v1.detect_in_stock_count_increase(
                 previous_in_stock_count, current_in_stock_count
             )
+            in_stock_count_products: List[Dict[str, object]] = []
+            if in_stock_count_increase:
+                in_stock_count_products = v1.detect_in_stock_count_products(
+                    previous_stock, current_stock, products
+                )
             increases = v1.detect_increases(previous_stock, current_stock, products)
 
             watched_rows: List[Dict[str, object]] = []
@@ -459,6 +476,7 @@ def main() -> None:
                 pages_fetched=pages_fetched,
                 current_in_stock_count=current_in_stock_count,
                 in_stock_count_increase=in_stock_count_increase,
+                in_stock_count_products=in_stock_count_products,
                 increases=increases,
                 watched_rows=watched_rows,
                 watched_lookup_pages=watched_lookup_pages,
@@ -475,6 +493,7 @@ def main() -> None:
                         increases=increases,
                         watched_in_stock_events=watched_in_stock_events,
                         in_stock_count_increase=in_stock_count_increase,
+                        in_stock_count_products=in_stock_count_products,
                         run_no=run_no,
                         total_products=len(products),
                         total_count=total_count,

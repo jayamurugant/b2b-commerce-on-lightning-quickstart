@@ -576,6 +576,39 @@ def detect_in_stock_count_increase(
     return None
 
 
+def detect_in_stock_count_products(
+    previous: Dict[str, int], current: Dict[str, int], products: List[Dict[str, object]]
+) -> List[Dict[str, object]]:
+    """Products that moved from out-of-stock/non-present to in-stock."""
+    by_id: Dict[str, Dict[str, object]] = {}
+    for item in products:
+        pid = str(item.get("PId", "")).strip()
+        if pid:
+            by_id[pid] = item
+
+    events: List[Dict[str, object]] = []
+    for pid, current_stock in current.items():
+        previous_stock = previous.get(pid, 0)
+        if previous_stock <= 0 and current_stock > 0:
+            item = by_id.get(pid, {})
+            name = str(item.get("PNm", ""))
+            brand_name = str(item.get("BNm", ""))
+            detail_url = build_product_detail_url(pid, name, brand_name)
+            search_url = build_product_search_url(pid)
+            events.append(
+                {
+                    "product_id": pid,
+                    "name": name,
+                    "previous_stock": previous_stock,
+                    "current_stock": current_stock,
+                    "delta": current_stock - previous_stock,
+                    "detail_url": detail_url,
+                    "search_url": search_url,
+                }
+            )
+    return events
+
+
 def fetch_watched_products(
     args: argparse.Namespace, watch_product_ids: List[str]
 ) -> Tuple[Dict[str, Dict[str, object]], int]:
@@ -693,6 +726,7 @@ def send_email_alert(
     increases: List[Dict[str, object]],
     watched_in_stock_events: List[Dict[str, object]],
     in_stock_count_increase: Optional[Dict[str, int]],
+    in_stock_count_products: List[Dict[str, object]],
     run_no: int,
     total_products: int,
     total_count: Optional[int],
@@ -746,6 +780,19 @@ def send_email_alert(
                 ),
             ]
         )
+        if in_stock_count_products:
+            lines.append("Products that moved into stock:")
+            for row in in_stock_count_products:
+                lines.append(
+                    "- {name} (PId {product_id}): {previous_stock} -> {current_stock} (+{delta})".format(
+                        **row
+                    )
+                )
+                lines.append(
+                    "  Detail: {detail_url} | Search: {search_url}".format(**row)
+                )
+        else:
+            lines.append("Products that moved into stock: unable to resolve in this poll.")
 
     message = EmailMessage()
     message["From"] = args.email_from
@@ -802,6 +849,23 @@ def send_email_alert(
             )
             + "</p>"
         )
+        if in_stock_count_products:
+            html_parts.append("<p><b>Products that moved into stock:</b></p><ul>")
+            for row in in_stock_count_products:
+                name = html.escape(str(row["name"]))
+                detail_url = html.escape(str(row["detail_url"]))
+                search_url = html.escape(str(row["search_url"]))
+                html_parts.append(
+                    "<li>"
+                    f"{name} (PId {row['product_id']}): "
+                    f"{row['previous_stock']} &rarr; {row['current_stock']} (+{row['delta']})"
+                    f" | <a href=\"{detail_url}\">Open product</a>"
+                    f" | <a href=\"{search_url}\">Search by product ID</a>"
+                    "</li>"
+                )
+            html_parts.append("</ul>")
+        else:
+            html_parts.append("<p>Products that moved into stock: unable to resolve in this poll.</p>")
 
     html_parts.append("</body></html>")
     message.add_alternative("\n".join(html_parts), subtype="html")
@@ -850,6 +914,7 @@ def print_run_summary(
     pages_fetched: int,
     current_in_stock_count: int,
     in_stock_count_increase: Optional[Dict[str, int]],
+    in_stock_count_products: List[Dict[str, object]],
     increases: List[Dict[str, object]],
     watched_rows: List[Dict[str, object]],
     watched_lookup_pages: int,
@@ -906,6 +971,16 @@ def print_run_summary(
                 **in_stock_count_increase
             )
         )
+        if in_stock_count_products:
+            print("Products that moved into stock:")
+            for row in in_stock_count_products:
+                print(
+                    "- {name} (PId {product_id}) {previous_stock} -> {current_stock} (+{delta})".format(
+                        **row
+                    )
+                )
+                print("  Detail: {detail_url}".format(**row))
+                print("  Search: {search_url}".format(**row))
     else:
         print("In-stock count check: no increase since last run.")
 
@@ -943,6 +1018,11 @@ def main() -> None:
             in_stock_count_increase = detect_in_stock_count_increase(
                 previous_in_stock_count, current_in_stock_count
             )
+            in_stock_count_products: List[Dict[str, object]] = []
+            if in_stock_count_increase:
+                in_stock_count_products = detect_in_stock_count_products(
+                    previous_stock, current_stock, products
+                )
             increases = detect_increases(previous_stock, current_stock, products)
 
             watched_rows: List[Dict[str, object]] = []
@@ -971,6 +1051,7 @@ def main() -> None:
                 pages_fetched,
                 current_in_stock_count,
                 in_stock_count_increase,
+                in_stock_count_products,
                 increases,
                 watched_rows,
                 watched_lookup_pages,
@@ -984,6 +1065,7 @@ def main() -> None:
                         increases=increases,
                         watched_in_stock_events=watched_in_stock_events,
                         in_stock_count_increase=in_stock_count_increase,
+                        in_stock_count_products=in_stock_count_products,
                         run_no=run_no,
                         total_products=len(products),
                         total_count=total_count,
