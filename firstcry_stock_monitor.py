@@ -799,6 +799,7 @@ def can_send_email(args: argparse.Namespace) -> bool:
 def send_email_alert(
     args: argparse.Namespace,
     increases: List[Dict[str, object]],
+    new_listed_products: List[Dict[str, object]],
     watched_in_stock_events: List[Dict[str, object]],
     in_stock_count_increase: Optional[Dict[str, int]],
     in_stock_count_products: List[Dict[str, object]],
@@ -808,10 +809,16 @@ def send_email_alert(
 ) -> None:
     recipients = parse_recipients(args.email_to)
     in_stock_count_alerts = 1 if in_stock_count_increase else 0
-    total_alerts = len(increases) + len(watched_in_stock_events) + in_stock_count_alerts
+    total_alerts = (
+        len(increases)
+        + len(new_listed_products)
+        + len(watched_in_stock_events)
+        + in_stock_count_alerts
+    )
     subject = (
         f"{args.email_subject_prefix} "
         f"{total_alerts} alert(s): {len(increases)} increase(s), "
+        f"{len(new_listed_products)} new listed, "
         f"{len(watched_in_stock_events)} watched in-stock, "
         f"{in_stock_count_alerts} in-stock-count increase"
     )
@@ -830,6 +837,15 @@ def send_email_alert(
                 "- {name} (PId {product_id}): {previous_stock} -> {current_stock} (+{delta})".format(
                     **row
                 )
+            )
+            lines.append(
+                "  Detail: {detail_url} | Search: {search_url}".format(**row)
+            )
+    if new_listed_products:
+        lines.extend(["", "Newly listed products detected:"])
+        for row in new_listed_products:
+            lines.append(
+                "- {name} (PId {product_id}) stock={current_stock}".format(**row)
             )
             lines.append(
                 "  Detail: {detail_url} | Search: {search_url}".format(**row)
@@ -893,6 +909,22 @@ def send_email_alert(
                 "<li>"
                 f"{name} (PId {row['product_id']}): "
                 f"{row['previous_stock']} &rarr; {row['current_stock']} (+{row['delta']})"
+                f" | <a href=\"{detail_url}\">Open product</a>"
+                f" | <a href=\"{search_url}\">Search by product ID</a>"
+                "</li>"
+            )
+        html_parts.append("</ul>")
+
+    if new_listed_products:
+        html_parts.append("<h4>Newly listed products detected</h4><ul>")
+        for row in new_listed_products:
+            name = html.escape(str(row["name"]))
+            detail_url = html.escape(str(row["detail_url"]))
+            search_url = html.escape(str(row["search_url"]))
+            html_parts.append(
+                "<li>"
+                f"{name} (PId {row['product_id']}): "
+                f"stock={row['current_stock']}"
                 f" | <a href=\"{detail_url}\">Open product</a>"
                 f" | <a href=\"{search_url}\">Search by product ID</a>"
                 "</li>"
@@ -1175,11 +1207,17 @@ def main() -> None:
                 watched_in_stock_events,
             )
 
-            if increases or watched_in_stock_events or in_stock_count_increase:
+            if (
+                increases
+                or new_listed_products
+                or watched_in_stock_events
+                or in_stock_count_increase
+            ):
                 if can_send_email(args):
                     send_email_alert(
                         args=args,
                         increases=increases,
+                        new_listed_products=new_listed_products,
                         watched_in_stock_events=watched_in_stock_events,
                         in_stock_count_increase=in_stock_count_increase,
                         in_stock_count_products=in_stock_count_products,

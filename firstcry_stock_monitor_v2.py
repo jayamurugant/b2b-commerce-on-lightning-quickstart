@@ -275,6 +275,7 @@ def build_compact_alert_text(
     total_products: int,
     total_count: Optional[int],
     increases: List[Dict[str, object]],
+    new_listed_products: List[Dict[str, object]],
     watched_in_stock_events: List[Dict[str, object]],
     in_stock_count_increase: Optional[Dict[str, int]],
 ) -> str:
@@ -304,6 +305,13 @@ def build_compact_alert_text(
             )
         if len(increases) > 8:
             lines.append(f"... and {len(increases) - 8} more")
+
+    if new_listed_products:
+        lines.append(f"New listed: {len(new_listed_products)}")
+        for row in new_listed_products[:8]:
+            lines.append("- PId {product_id}: stock={current_stock}".format(**row))
+        if len(new_listed_products) > 8:
+            lines.append(f"... and {len(new_listed_products) - 8} more")
 
     if watched_in_stock_events:
         lines.append(f"Watched now in stock: {len(watched_in_stock_events)}")
@@ -393,6 +401,7 @@ def send_test_notifiers(args: argparse.Namespace) -> None:
         v1.send_email_alert(
             args=args,
             increases=fake_increase,
+            new_listed_products=[],
             watched_in_stock_events=[],
             in_stock_count_increase=fake_count,
             in_stock_count_products=fake_count_products,
@@ -496,13 +505,17 @@ def main() -> None:
             )
 
             has_alert = bool(
-                increases or watched_in_stock_events or in_stock_count_increase
+                increases
+                or new_listed_products
+                or watched_in_stock_events
+                or in_stock_count_increase
             )
             if has_alert:
                 if v1.can_send_email(args):
                     v1.send_email_alert(
                         args=args,
                         increases=increases,
+                        new_listed_products=new_listed_products,
                         watched_in_stock_events=watched_in_stock_events,
                         in_stock_count_increase=in_stock_count_increase,
                         in_stock_count_products=in_stock_count_products,
@@ -525,6 +538,7 @@ def main() -> None:
                         total_products=len(products),
                         total_count=total_count,
                         increases=increases,
+                        new_listed_products=new_listed_products,
                         watched_in_stock_events=watched_in_stock_events,
                         in_stock_count_increase=in_stock_count_increase,
                     )
