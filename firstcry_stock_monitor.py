@@ -57,18 +57,32 @@ def now_ist() -> dt.datetime:
     return dt.datetime.now(tz=IST_TZ)
 
 
+def quiet_window_label_ist() -> str:
+    return f"{QUIET_START_HOUR_IST:02d}:00-{QUIET_END_HOUR_IST:02d}:00"
+
+
 def is_quiet_hours_ist(current_ist: Optional[dt.datetime] = None) -> bool:
     timestamp = current_ist or now_ist()
-    return QUIET_START_HOUR_IST <= timestamp.hour < QUIET_END_HOUR_IST
+    start = QUIET_START_HOUR_IST
+    end = QUIET_END_HOUR_IST
+    hour = timestamp.hour
+    if start == end:
+        return False
+    if start < end:
+        return start <= hour < end
+    # Cross-midnight window, e.g. 23 -> 07
+    return hour >= start or hour < end
 
 
 def seconds_until_quiet_end_ist(current_ist: Optional[dt.datetime] = None) -> int:
     timestamp = current_ist or now_ist()
+    if not is_quiet_hours_ist(timestamp):
+        return 0
     resume_at = timestamp.replace(
         hour=QUIET_END_HOUR_IST, minute=0, second=0, microsecond=0
     )
-    if timestamp >= resume_at:
-        return 0
+    if QUIET_START_HOUR_IST > QUIET_END_HOUR_IST and timestamp.hour >= QUIET_START_HOUR_IST:
+        resume_at += dt.timedelta(days=1)
     return max(1, int((resume_at - timestamp).total_seconds()))
 
 
@@ -79,7 +93,7 @@ def wait_if_quiet_hours_ist() -> None:
     wait_seconds = seconds_until_quiet_end_ist(current)
     resume_at = current + dt.timedelta(seconds=wait_seconds)
     print(
-        "Quiet hours active (IST 00:00-07:00). "
+        f"Quiet hours active (IST {quiet_window_label_ist()}). "
         f"Sleeping {wait_seconds}s until {resume_at.strftime('%Y-%m-%d %H:%M:%S %Z')}."
     )
     time.sleep(wait_seconds)
