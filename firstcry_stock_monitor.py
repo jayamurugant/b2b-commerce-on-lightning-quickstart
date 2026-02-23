@@ -26,6 +26,9 @@ from typing import Dict, List, Optional, Tuple
 
 
 BASE_API = "https://www.firstcry.com/svcs/SearchResult.svc"
+IST_TZ = dt.timezone(dt.timedelta(hours=5, minutes=30), name="IST")
+QUIET_START_HOUR_IST = 0
+QUIET_END_HOUR_IST = 7
 
 ANSI_RESET = "\033[0m"
 ANSI_GREEN = "\033[92m"
@@ -48,6 +51,38 @@ def parse_product_ids(value: str) -> List[str]:
 
 def parse_csv_values(value: str) -> List[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def now_ist() -> dt.datetime:
+    return dt.datetime.now(tz=IST_TZ)
+
+
+def is_quiet_hours_ist(current_ist: Optional[dt.datetime] = None) -> bool:
+    timestamp = current_ist or now_ist()
+    return QUIET_START_HOUR_IST <= timestamp.hour < QUIET_END_HOUR_IST
+
+
+def seconds_until_quiet_end_ist(current_ist: Optional[dt.datetime] = None) -> int:
+    timestamp = current_ist or now_ist()
+    resume_at = timestamp.replace(
+        hour=QUIET_END_HOUR_IST, minute=0, second=0, microsecond=0
+    )
+    if timestamp >= resume_at:
+        return 0
+    return max(1, int((resume_at - timestamp).total_seconds()))
+
+
+def wait_if_quiet_hours_ist() -> None:
+    current = now_ist()
+    if not is_quiet_hours_ist(current):
+        return
+    wait_seconds = seconds_until_quiet_end_ist(current)
+    resume_at = current + dt.timedelta(seconds=wait_seconds)
+    print(
+        "Quiet hours active (IST 00:00-07:00). "
+        f"Sleeping {wait_seconds}s until {resume_at.strftime('%Y-%m-%d %H:%M:%S %Z')}."
+    )
+    time.sleep(wait_seconds)
 
 
 def parse_int_csv_values(value: str, option_name: str) -> List[int]:
@@ -1242,9 +1277,11 @@ def main() -> None:
     run_no = 0
 
     while args.max_runs == 0 or run_no < args.max_runs:
+        wait_if_quiet_hours_ist()
         run_no += 1
         print_run_header(run_no, args)
         for onsale_value in args.onsale_list:
+            wait_if_quiet_hours_ist()
             print(f"--- OnSale context: {onsale_value} ---")
             args.onsale = onsale_value
             previous_stock = previous_stock_by_onsale[onsale_value]

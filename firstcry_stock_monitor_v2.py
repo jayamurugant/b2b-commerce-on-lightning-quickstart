@@ -487,9 +487,11 @@ def main() -> None:
     run_no = 0
 
     while args.max_runs == 0 or run_no < args.max_runs:
+        v1.wait_if_quiet_hours_ist()
         run_no += 1
         v1.print_run_header(run_no, args)
         for onsale_value in args.onsale_list:
+            v1.wait_if_quiet_hours_ist()
             print(f"--- OnSale context: {onsale_value} ---")
             args.onsale = onsale_value
             previous_stock = previous_stock_by_onsale[onsale_value]
