@@ -734,7 +734,12 @@ def detect_in_stock_count_products(
 def fetch_watched_products(
     args: argparse.Namespace, watch_product_ids: List[str]
 ) -> Tuple[Dict[str, Dict[str, object]], int]:
-    """Fetch watched products by scanning listing pages without stock exclusion."""
+    """Fetch watched products with filter-aware lookup and fallback mode.
+
+    Primary pass uses the current run filter context (including OutOfStock mode).
+    If unresolved IDs remain, fallback pass uses the opposite OutOfStock mode to
+    handle backend inconsistencies where a product appears only in one variant.
+    """
     watch_set = set(watch_product_ids)
     found: Dict[str, Dict[str, object]] = {}
     pages_fetched = 0
@@ -742,26 +747,36 @@ def fetch_watched_products(
     if not watch_set:
         return found, pages_fetched
 
-    for page_no in range(1, args.max_pages + 1):
-        # Watched product status should not depend on filtered main listing.
-        inner = request_listing(args, page_no, override_exclude=False)
-        pages_fetched += 1
-        products = inner.get("Products", [])
-        if not isinstance(products, list):
-            raise ValueError("Unexpected Products type in watched product lookup")
+    # None means "use current args.exclude_out_of_stock" behavior.
+    mode_sequence: List[Optional[bool]] = [None]
+    opposite_mode = not args.exclude_out_of_stock
+    mode_sequence.append(opposite_mode)
 
-        if not products:
+    for override_mode in mode_sequence:
+        unresolved = watch_set.difference(found.keys())
+        if not unresolved:
             break
 
-        for item in products:
-            pid = str(item.get("PId", "")).strip()
-            if pid in watch_set and pid not in found:
-                found[pid] = item
+        for page_no in range(1, args.max_pages + 1):
+            inner = request_listing(args, page_no, override_exclude=override_mode)
+            pages_fetched += 1
+            products = inner.get("Products", [])
+            if not isinstance(products, list):
+                raise ValueError("Unexpected Products type in watched product lookup")
 
-        if len(found) >= len(watch_set):
-            break
-        if len(products) < args.page_size:
-            break
+            if not products:
+                break
+
+            for item in products:
+                pid = str(item.get("PId", "")).strip()
+                if pid in unresolved and pid not in found:
+                    found[pid] = item
+
+            unresolved = watch_set.difference(found.keys())
+            if not unresolved:
+                break
+            if len(products) < args.page_size:
+                break
 
     return found, pages_fetched
 
@@ -1101,7 +1116,7 @@ def print_run_summary(
 
     if watched_rows:
         print(
-            "Watched product checks (queried without OutOfStock filter): "
+            "Watched product checks (filter-aware with fallback): "
             f"pages={watched_lookup_pages}"
         )
         for row in watched_rows:
