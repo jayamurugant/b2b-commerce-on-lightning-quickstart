@@ -132,6 +132,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Print proxy used for each API request",
     )
+    parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="Disable colored console output",
+    )
 
     # Email config (same as v1)
     parser.add_argument("--smtp-host", default="", help="SMTP host")
@@ -213,6 +218,7 @@ def parse_args() -> argparse.Namespace:
         v1.attach_proxy_rotator(args)
     except Exception as exc:
         parser.error(str(exc))
+    v1.init_console_color_support(args)
     return args
 
 
@@ -449,6 +455,11 @@ def main() -> None:
                     previous_stock, current_stock, products
                 )
             increases = v1.detect_increases(previous_stock, current_stock, products)
+            new_listed_products: List[Dict[str, object]] = []
+            if previous_stock:
+                new_listed_products = v1.detect_new_listed_products(
+                    previous_stock, current_stock, products
+                )
 
             watched_rows: List[Dict[str, object]] = []
             watched_lookup_pages = 0
@@ -478,6 +489,7 @@ def main() -> None:
                 in_stock_count_increase=in_stock_count_increase,
                 in_stock_count_products=in_stock_count_products,
                 increases=increases,
+                new_listed_products=new_listed_products,
                 watched_rows=watched_rows,
                 watched_lookup_pages=watched_lookup_pages,
                 watched_in_stock_events=watched_in_stock_events,

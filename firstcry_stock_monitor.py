@@ -13,9 +13,11 @@ import argparse
 import datetime as dt
 import html
 import json
+import os
 import random
 import re
 import smtplib
+import sys
 import time
 import urllib.parse
 import urllib.request
@@ -24,6 +26,11 @@ from typing import Dict, List, Optional, Tuple
 
 
 BASE_API = "https://www.firstcry.com/svcs/SearchResult.svc"
+
+ANSI_RESET = "\033[0m"
+ANSI_GREEN = "\033[92m"
+ANSI_CYAN = "\033[96m"
+ANSI_YELLOW = "\033[93m"
 
 
 def parse_product_ids(value: str) -> List[str]:
@@ -41,6 +48,37 @@ def parse_product_ids(value: str) -> List[str]:
 
 def parse_csv_values(value: str) -> List[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
+
+
+def _enable_windows_ansi() -> None:
+    # Enable ANSI color support on modern Windows terminals.
+    if os.name != "nt":
+        return
+    try:
+        import ctypes
+
+        kernel32 = ctypes.windll.kernel32
+        handle = kernel32.GetStdHandle(-11)  # STD_OUTPUT_HANDLE
+        mode = ctypes.c_uint32()
+        if kernel32.GetConsoleMode(handle, ctypes.byref(mode)):
+            kernel32.SetConsoleMode(handle, mode.value | 0x0004)
+    except Exception:
+        # Fall back to plain text if ANSI setup fails.
+        pass
+
+
+def init_console_color_support(args: argparse.Namespace) -> None:
+    if getattr(args, "no_color", False):
+        args._color_enabled = False
+        return
+    _enable_windows_ansi()
+    args._color_enabled = bool(getattr(sys.stdout, "isatty", lambda: False)())
+
+
+def colorize(args: argparse.Namespace, text: str, color_code: str) -> str:
+    if getattr(args, "_color_enabled", False):
+        return f"{color_code}{text}{ANSI_RESET}"
+    return text
 
 
 def load_proxy_file(path: str) -> List[str]:
@@ -332,6 +370,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Print proxy used for each API request",
     )
+    parser.add_argument(
+        "--no-color",
+        action="store_true",
+        help="Disable colored console output",
+    )
 
     # Email config
     parser.add_argument("--smtp-host", default="", help="SMTP host")
@@ -368,6 +411,7 @@ def parse_args() -> argparse.Namespace:
         attach_proxy_rotator(args)
     except Exception as exc:
         parser.error(str(exc))
+    init_console_color_support(args)
     return args
 
 
@@ -556,6 +600,37 @@ def detect_increases(
                 }
             )
     return increases
+
+
+def detect_new_listed_products(
+    previous: Dict[str, int], current: Dict[str, int], products: List[Dict[str, object]]
+) -> List[Dict[str, object]]:
+    """Detect products that appeared in the listing for the first time."""
+    by_id: Dict[str, Dict[str, object]] = {}
+    for item in products:
+        pid = str(item.get("PId", "")).strip()
+        if pid:
+            by_id[pid] = item
+
+    events: List[Dict[str, object]] = []
+    for pid, current_stock in current.items():
+        if pid in previous:
+            continue
+        item = by_id.get(pid, {})
+        name = str(item.get("PNm", ""))
+        brand_name = str(item.get("BNm", ""))
+        detail_url = build_product_detail_url(pid, name, brand_name)
+        search_url = build_product_search_url(pid)
+        events.append(
+            {
+                "product_id": pid,
+                "name": name,
+                "current_stock": current_stock,
+                "detail_url": detail_url,
+                "search_url": search_url,
+            }
+        )
+    return events
 
 
 def count_in_stock_products(stock_map: Dict[str, int]) -> int:
@@ -916,6 +991,7 @@ def print_run_summary(
     in_stock_count_increase: Optional[Dict[str, int]],
     in_stock_count_products: List[Dict[str, object]],
     increases: List[Dict[str, object]],
+    new_listed_products: List[Dict[str, object]],
     watched_rows: List[Dict[str, object]],
     watched_lookup_pages: int,
     watched_in_stock_events: List[Dict[str, object]],
@@ -954,21 +1030,56 @@ def print_run_summary(
                 print(f"- PId {pid}: NOT FOUND in current listing response")
 
     if increases:
-        print(f"Stock increase check: {len(increases)} product(s) increased.")
+        print(
+            colorize(
+                args,
+                f"Stock increase check: {len(increases)} product(s) increased.",
+                ANSI_GREEN,
+            )
+        )
         for row in increases:
             print(
-                "- {name} (PId {product_id}) {previous_stock} -> {current_stock} (+{delta})".format(
-                    **row
+                colorize(
+                    args,
+                    "- {name} (PId {product_id}) {previous_stock} -> {current_stock} (+{delta})".format(
+                        **row
+                    ),
+                    ANSI_GREEN,
                 )
             )
     else:
         print("Stock increase check: no increases since last run.")
 
+    if new_listed_products:
+        print(
+            colorize(
+                args,
+                f"New listing check: {len(new_listed_products)} new product(s) detected.",
+                ANSI_CYAN,
+            )
+        )
+        for row in new_listed_products:
+            print(
+                colorize(
+                    args,
+                    "- {name} (PId {product_id}) stock={current_stock}".format(**row),
+                    ANSI_CYAN,
+                )
+            )
+            print(colorize(args, "  Detail: {detail_url}".format(**row), ANSI_CYAN))
+            print(colorize(args, "  Search: {search_url}".format(**row), ANSI_CYAN))
+    else:
+        print("New listing check: no new products since last run.")
+
     if in_stock_count_increase:
         print(
-            "In-stock count check: "
-            "{previous_count} -> {current_count} (+{delta})".format(
-                **in_stock_count_increase
+            colorize(
+                args,
+                "In-stock count check: "
+                "{previous_count} -> {current_count} (+{delta})".format(
+                    **in_stock_count_increase
+                ),
+                ANSI_YELLOW,
             )
         )
         if in_stock_count_products:
@@ -1024,6 +1135,11 @@ def main() -> None:
                     previous_stock, current_stock, products
                 )
             increases = detect_increases(previous_stock, current_stock, products)
+            new_listed_products: List[Dict[str, object]] = []
+            if previous_stock:
+                new_listed_products = detect_new_listed_products(
+                    previous_stock, current_stock, products
+                )
 
             watched_rows: List[Dict[str, object]] = []
             watched_lookup_pages = 0
@@ -1053,6 +1169,7 @@ def main() -> None:
                 in_stock_count_increase,
                 in_stock_count_products,
                 increases,
+                new_listed_products,
                 watched_rows,
                 watched_lookup_pages,
                 watched_in_stock_events,
