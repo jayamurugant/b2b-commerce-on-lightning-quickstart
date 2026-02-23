@@ -47,6 +47,12 @@ def parse_args() -> argparse.Namespace:
         help="Comma-separated Product IDs to explicitly track",
     )
     parser.add_argument(
+        "--new-product-min-stock",
+        type=int,
+        default=1,
+        help="Minimum stock required to trigger new-product alerts",
+    )
+    parser.add_argument(
         "--exclude-out-of-stock",
         action="store_true",
         help="Send OutOfStock=0 in API request",
@@ -210,6 +216,8 @@ def parse_args() -> argparse.Namespace:
         parser.error("--min-interval cannot be greater than --max-interval")
     if args.sound_repeat < 1:
         parser.error("--sound-repeat must be >= 1")
+    if args.new_product_min_stock < 0:
+        parser.error("--new-product-min-stock cannot be negative")
 
     args.watch_product_ids = v1.parse_product_ids(args.product_ids)
     args.twilio_recipients = parse_whatsapp_recipients(args.twilio_to_whatsapp)
@@ -467,7 +475,10 @@ def main() -> None:
             new_listed_products: List[Dict[str, object]] = []
             if previous_stock:
                 new_listed_products = v1.detect_new_listed_products(
-                    previous_stock, current_stock, products
+                    previous_stock,
+                    current_stock,
+                    products,
+                    min_stock=args.new_product_min_stock,
                 )
 
             watched_rows: List[Dict[str, object]] = []

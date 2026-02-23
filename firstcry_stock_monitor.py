@@ -285,6 +285,12 @@ def parse_args() -> argparse.Namespace:
         help="Comma-separated Product IDs to explicitly track availability",
     )
     parser.add_argument(
+        "--new-product-min-stock",
+        type=int,
+        default=1,
+        help="Minimum stock required to trigger new-product alerts",
+    )
+    parser.add_argument(
         "--exclude-out-of-stock",
         action="store_true",
         help="Send OutOfStock=0 in API request",
@@ -406,6 +412,8 @@ def parse_args() -> argparse.Namespace:
     args = parser.parse_args()
     if args.min_interval > args.max_interval:
         parser.error("--min-interval cannot be greater than --max-interval")
+    if args.new_product_min_stock < 0:
+        parser.error("--new-product-min-stock cannot be negative")
     args.watch_product_ids = parse_product_ids(args.product_ids)
     try:
         attach_proxy_rotator(args)
@@ -603,7 +611,10 @@ def detect_increases(
 
 
 def detect_new_listed_products(
-    previous: Dict[str, int], current: Dict[str, int], products: List[Dict[str, object]]
+    previous: Dict[str, int],
+    current: Dict[str, int],
+    products: List[Dict[str, object]],
+    min_stock: int = 1,
 ) -> List[Dict[str, object]]:
     """Detect products that appeared in the listing for the first time."""
     by_id: Dict[str, Dict[str, object]] = {}
@@ -615,6 +626,8 @@ def detect_new_listed_products(
     events: List[Dict[str, object]] = []
     for pid, current_stock in current.items():
         if pid in previous:
+            continue
+        if current_stock < min_stock:
             continue
         item = by_id.get(pid, {})
         name = str(item.get("PNm", ""))
@@ -828,6 +841,7 @@ def send_email_alert(
         f"Run: {run_no}",
         f"Products fetched: {total_products}",
         f"Catalog count: {total_count if total_count is not None else 'NA'}",
+        f"Pincode context: {args.pincode}",
     ]
 
     if increases:
@@ -896,7 +910,8 @@ def send_email_alert(
         "<h3>FirstCry stock monitor alert</h3>",
         f"<p><b>Run:</b> {run_no}<br>",
         f"<b>Products fetched:</b> {total_products}<br>",
-        f"<b>Catalog count:</b> {total_count if total_count is not None else 'NA'}</p>",
+        f"<b>Catalog count:</b> {total_count if total_count is not None else 'NA'}<br>",
+        f"<b>Pincode context:</b> {html.escape(str(args.pincode))}</p>",
     ]
 
     if increases:
@@ -1170,7 +1185,10 @@ def main() -> None:
             new_listed_products: List[Dict[str, object]] = []
             if previous_stock:
                 new_listed_products = detect_new_listed_products(
-                    previous_stock, current_stock, products
+                    previous_stock,
+                    current_stock,
+                    products,
+                    min_stock=args.new_product_min_stock,
                 )
 
             watched_rows: List[Dict[str, object]] = []
