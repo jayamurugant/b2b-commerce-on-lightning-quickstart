@@ -324,6 +324,16 @@ def parse_args() -> argparse.Namespace:
         help="Referer header",
     )
     parser.add_argument(
+        "--browser-cookie-string",
+        default="",
+        help="Raw browser Cookie header value to mimic website session context",
+    )
+    parser.add_argument(
+        "--browser-user-agent",
+        default="Mozilla/5.0",
+        help="User-Agent header used for API requests",
+    )
+    parser.add_argument(
         "--max-pages",
         type=int,
         default=100,
@@ -537,10 +547,13 @@ def request_listing(
     url = f"{BASE_API}/{endpoint}?{urllib.parse.urlencode(params)}"
 
     headers = {
-        "User-Agent": "Mozilla/5.0",
+        "User-Agent": getattr(args, "browser_user_agent", "Mozilla/5.0"),
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Referer": args.referer,
     }
+    cookie_value = getattr(args, "browser_cookie_string", "").strip()
+    if cookie_value:
+        headers["Cookie"] = cookie_value
 
     req = urllib.request.Request(url, headers=headers)
     proxy_url: Optional[str] = None
@@ -1077,6 +1090,8 @@ def print_run_header(run_no: int, args: argparse.Namespace) -> None:
     )
     if args.watch_product_ids:
         print(f"Watched Product IDs: {', '.join(args.watch_product_ids)}")
+    if getattr(args, "browser_cookie_string", "").strip():
+        print("Browser mimic cookie: ON")
     rotator: Optional[ProxyRotator] = getattr(args, "_proxy_rotator", None)
     if rotator and rotator.enabled:
         print(rotator.describe())

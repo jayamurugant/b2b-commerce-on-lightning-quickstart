@@ -210,6 +210,16 @@ def parse_args() -> argparse.Namespace:
         help="Referer header",
     )
     parser.add_argument(
+        "--browser-cookie-string",
+        default="",
+        help="Raw browser Cookie header value to mimic website session context",
+    )
+    parser.add_argument(
+        "--browser-user-agent",
+        default="Mozilla/5.0",
+        help="User-Agent header used for API requests",
+    )
+    parser.add_argument(
         "--max-pages",
         type=int,
         default=100,
