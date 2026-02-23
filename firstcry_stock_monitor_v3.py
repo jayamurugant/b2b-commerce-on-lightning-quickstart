@@ -179,6 +179,11 @@ def parse_args() -> argparse.Namespace:
     # Core listing params
     parser.add_argument("--brand-id", type=int, default=113, help="MasterBrand value")
     parser.add_argument("--onsale", type=int, default=0, help="OnSale value")
+    parser.add_argument(
+        "--onsale-values",
+        default="",
+        help="Comma-separated OnSale values (e.g. 0,5) to monitor in one run",
+    )
     parser.add_argument("--search-string", default="brand", help="SearchString value")
     parser.add_argument("--sort", default="Popularity", help="SortExpression")
     parser.add_argument("--page-size", type=int, default=20, help="PageSize")
@@ -390,6 +395,16 @@ def parse_args() -> argparse.Namespace:
         parser.error("--sound-repeat must be >= 1")
     if args.new_product_min_stock < 0:
         parser.error("--new-product-min-stock cannot be negative")
+    if args.onsale_values.strip():
+        try:
+            args.onsale_list = v1.parse_int_csv_values(args.onsale_values, "--onsale-values")
+        except ValueError as exc:
+            parser.error(str(exc))
+    else:
+        args.onsale_list = [args.onsale]
+    if not args.onsale_list:
+        parser.error("No valid OnSale values provided")
+    args.onsale = args.onsale_list[0]
 
     args.watch_product_ids = v1.parse_product_ids(args.product_ids)
     args.twilio_recipients = parse_whatsapp_recipients(args.twilio_to_whatsapp)
@@ -557,102 +572,118 @@ def main() -> None:
         send_test_notifiers(args)
         return
 
-    previous_stock: Dict[str, int] = {}
-    previous_in_stock_count: Optional[int] = None
-    previous_watch_stock: Dict[str, int] = {}
+    previous_stock_by_onsale: Dict[int, Dict[str, int]] = {
+        onsale: {} for onsale in args.onsale_list
+    }
+    previous_in_stock_count_by_onsale: Dict[int, Optional[int]] = {
+        onsale: None for onsale in args.onsale_list
+    }
+    previous_watch_stock_by_onsale: Dict[int, Dict[str, int]] = {
+        onsale: {} for onsale in args.onsale_list
+    }
     run_no = 0
 
     while args.max_runs == 0 or run_no < args.max_runs:
         run_no += 1
         v1.print_run_header(run_no, args)
+        for onsale_value in args.onsale_list:
+            print(f"--- OnSale context: {onsale_value} ---")
+            args.onsale = onsale_value
+            previous_stock = previous_stock_by_onsale[onsale_value]
+            previous_in_stock_count = previous_in_stock_count_by_onsale[onsale_value]
+            previous_watch_stock = previous_watch_stock_by_onsale[onsale_value]
 
-        try:
-            primary = collect_snapshot(
-                args, previous_stock, previous_in_stock_count, previous_watch_stock
-            )
-
-            v1.print_run_summary(
-                args=args,
-                products=primary["products"],
-                total_count=primary["total_count"],
-                pages_fetched=primary["pages_fetched"],
-                current_in_stock_count=primary["current_in_stock_count"],
-                in_stock_count_increase=primary["in_stock_count_increase"],
-                in_stock_count_products=primary["in_stock_count_products"],
-                increases=primary["increases"],
-                new_listed_products=primary["new_listed_products"],
-                watched_rows=primary["watched_rows"],
-                watched_lookup_pages=primary["watched_lookup_pages"],
-                watched_in_stock_events=primary["watched_in_stock_events"],
-            )
-
-            final_snapshot = primary
-            if has_alert(primary) and args.verify_before_alert:
-                verify_delay = random.randint(args.verify_delay_min, args.verify_delay_max)
-                print(
-                    f"Verification recheck scheduled in {verify_delay}s "
-                    "(before sending notifications)..."
-                )
-                time.sleep(verify_delay)
-                verified = collect_snapshot(
+            try:
+                primary = collect_snapshot(
                     args, previous_stock, previous_in_stock_count, previous_watch_stock
                 )
-                if has_alert(verified):
-                    print("Verification result: alert conditions still present. Sending.")
-                    final_snapshot = verified
-                else:
-                    print("Verification result: transient alert cleared. Notification skipped.")
-                    final_snapshot = verified
 
-            if has_alert(final_snapshot):
-                if v1.can_send_email(args):
-                    v1.send_email_alert(
-                        args=args,
-                        increases=final_snapshot["increases"],
-                        new_listed_products=final_snapshot["new_listed_products"],
-                        watched_in_stock_events=final_snapshot["watched_in_stock_events"],
-                        in_stock_count_increase=final_snapshot["in_stock_count_increase"],
-                        in_stock_count_products=final_snapshot["in_stock_count_products"],
-                        run_no=run_no,
-                        total_products=len(final_snapshot["products"]),
-                        total_count=final_snapshot["total_count"],
-                    )
-                    print("Email alert: sent.")
-                else:
+                v1.print_run_summary(
+                    args=args,
+                    products=primary["products"],
+                    total_count=primary["total_count"],
+                    pages_fetched=primary["pages_fetched"],
+                    current_in_stock_count=primary["current_in_stock_count"],
+                    in_stock_count_increase=primary["in_stock_count_increase"],
+                    in_stock_count_products=primary["in_stock_count_products"],
+                    increases=primary["increases"],
+                    new_listed_products=primary["new_listed_products"],
+                    watched_rows=primary["watched_rows"],
+                    watched_lookup_pages=primary["watched_lookup_pages"],
+                    watched_in_stock_events=primary["watched_in_stock_events"],
+                )
+
+                final_snapshot = primary
+                if has_alert(primary) and args.verify_before_alert:
+                    verify_delay = random.randint(args.verify_delay_min, args.verify_delay_max)
                     print(
-                        "Email alert: skipped (set --smtp-host --email-from --email-to)."
+                        f"Verification recheck scheduled in {verify_delay}s "
+                        "(before sending notifications)..."
                     )
-
-                play_alert_sound(args)
-
-                if can_send_whatsapp(args):
-                    body = build_compact_alert_text(
-                        args=args,
-                        run_no=run_no,
-                        total_products=len(final_snapshot["products"]),
-                        total_count=final_snapshot["total_count"],
-                        increases=final_snapshot["increases"],
-                        new_listed_products=final_snapshot["new_listed_products"],
-                        watched_in_stock_events=final_snapshot["watched_in_stock_events"],
-                        in_stock_count_increase=final_snapshot["in_stock_count_increase"],
+                    time.sleep(verify_delay)
+                    verified = collect_snapshot(
+                        args, previous_stock, previous_in_stock_count, previous_watch_stock
                     )
-                    sent, failed = send_twilio_whatsapp(args, body)
-                    print(f"WhatsApp alert: sent={len(sent)} failed={len(failed)}")
-                    for to, err in failed.items():
-                        print(f"- WhatsApp failed: {to} | {err}")
-                else:
-                    print(
-                        "WhatsApp alert: skipped "
-                        "(set Twilio SID/token/from/to params)."
-                    )
+                    if has_alert(verified):
+                        print("Verification result: alert conditions still present. Sending.")
+                        final_snapshot = verified
+                    else:
+                        print("Verification result: transient alert cleared. Notification skipped.")
+                        final_snapshot = verified
 
-            previous_stock = final_snapshot["current_stock"]
-            previous_in_stock_count = final_snapshot["current_in_stock_count"]
-            if args.watch_product_ids:
-                previous_watch_stock = final_snapshot["current_watch_stock"]
+                if has_alert(final_snapshot):
+                    if v1.can_send_email(args):
+                        v1.send_email_alert(
+                            args=args,
+                            increases=final_snapshot["increases"],
+                            new_listed_products=final_snapshot["new_listed_products"],
+                            watched_in_stock_events=final_snapshot["watched_in_stock_events"],
+                            in_stock_count_increase=final_snapshot["in_stock_count_increase"],
+                            in_stock_count_products=final_snapshot["in_stock_count_products"],
+                            run_no=run_no,
+                            total_products=len(final_snapshot["products"]),
+                            total_count=final_snapshot["total_count"],
+                        )
+                        print("Email alert: sent.")
+                    else:
+                        print(
+                            "Email alert: skipped (set --smtp-host --email-from --email-to)."
+                        )
 
-        except Exception as exc:  # pylint: disable=broad-except
-            print(f"Run error: {exc}")
+                    play_alert_sound(args)
+
+                    if can_send_whatsapp(args):
+                        body = build_compact_alert_text(
+                            args=args,
+                            run_no=run_no,
+                            total_products=len(final_snapshot["products"]),
+                            total_count=final_snapshot["total_count"],
+                            increases=final_snapshot["increases"],
+                            new_listed_products=final_snapshot["new_listed_products"],
+                            watched_in_stock_events=final_snapshot["watched_in_stock_events"],
+                            in_stock_count_increase=final_snapshot["in_stock_count_increase"],
+                        )
+                        sent, failed = send_twilio_whatsapp(args, body)
+                        print(f"WhatsApp alert: sent={len(sent)} failed={len(failed)}")
+                        for to, err in failed.items():
+                            print(f"- WhatsApp failed: {to} | {err}")
+                    else:
+                        print(
+                            "WhatsApp alert: skipped "
+                            "(set Twilio SID/token/from/to params)."
+                        )
+
+                previous_stock_by_onsale[onsale_value] = final_snapshot["current_stock"]
+                previous_in_stock_count_by_onsale[onsale_value] = final_snapshot[
+                    "current_in_stock_count"
+                ]
+                if args.watch_product_ids:
+                    previous_watch_stock_by_onsale[onsale_value] = final_snapshot[
+                        "current_watch_stock"
+                    ]
+
+            except Exception as exc:  # pylint: disable=broad-except
+                print(f"Run error (OnSale={onsale_value}): {exc}")
 
         if args.max_runs and run_no >= args.max_runs:
             break

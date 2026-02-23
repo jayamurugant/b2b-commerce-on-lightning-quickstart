@@ -50,6 +50,24 @@ def parse_csv_values(value: str) -> List[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
+def parse_int_csv_values(value: str, option_name: str) -> List[int]:
+    seen: Dict[int, bool] = {}
+    items: List[int] = []
+    for raw in value.split(","):
+        token = raw.strip()
+        if not token:
+            continue
+        try:
+            parsed = int(token)
+        except ValueError as exc:
+            raise ValueError(f"{option_name} contains non-integer value: {token}") from exc
+        if parsed in seen:
+            continue
+        seen[parsed] = True
+        items.append(parsed)
+    return items
+
+
 def _enable_windows_ansi() -> None:
     # Enable ANSI color support on modern Windows terminals.
     if os.name != "nt":
@@ -274,6 +292,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--brand-id", type=int, default=113, help="MasterBrand value")
     parser.add_argument("--onsale", type=int, default=0, help="OnSale value")
     parser.add_argument(
+        "--onsale-values",
+        default="",
+        help="Comma-separated OnSale values (e.g. 0,5) to monitor in one run",
+    )
+    parser.add_argument(
         "--search-string", default="brand", help="SearchString API value"
     )
     parser.add_argument("--sort", default="Popularity", help="SortExpression")
@@ -414,6 +437,17 @@ def parse_args() -> argparse.Namespace:
         parser.error("--min-interval cannot be greater than --max-interval")
     if args.new_product_min_stock < 0:
         parser.error("--new-product-min-stock cannot be negative")
+    if args.onsale_values.strip():
+        try:
+            args.onsale_list = parse_int_csv_values(args.onsale_values, "--onsale-values")
+        except ValueError as exc:
+            parser.error(str(exc))
+    else:
+        args.onsale_list = [args.onsale]
+    if not args.onsale_list:
+        parser.error("No valid OnSale values provided")
+    # Keep existing single-value flow compatibility with current helpers.
+    args.onsale = args.onsale_list[0]
     args.watch_product_ids = parse_product_ids(args.product_ids)
     try:
         attach_proxy_rotator(args)
@@ -821,6 +855,7 @@ def send_email_alert(
     total_count: Optional[int],
 ) -> None:
     recipients = parse_recipients(args.email_to)
+    onsale_context = getattr(args, "onsale", "NA")
     in_stock_count_alerts = 1 if in_stock_count_increase else 0
     total_alerts = (
         len(increases)
@@ -830,6 +865,7 @@ def send_email_alert(
     )
     subject = (
         f"{args.email_subject_prefix} "
+        f"[OnSale={onsale_context}] "
         f"{total_alerts} alert(s): {len(increases)} increase(s), "
         f"{len(new_listed_products)} new listed, "
         f"{len(watched_in_stock_events)} watched in-stock, "
@@ -839,6 +875,7 @@ def send_email_alert(
     lines = [
         "FirstCry stock monitor alert.",
         f"Run: {run_no}",
+        f"OnSale context: {onsale_context}",
         f"Products fetched: {total_products}",
         f"Catalog count: {total_count if total_count is not None else 'NA'}",
         f"Pincode context: {args.pincode}",
@@ -909,6 +946,7 @@ def send_email_alert(
         "<html><body>",
         "<h3>FirstCry stock monitor alert</h3>",
         f"<p><b>Run:</b> {run_no}<br>",
+        f"<b>OnSale context:</b> {html.escape(str(onsale_context))}<br>",
         f"<b>Products fetched:</b> {total_products}<br>",
         f"<b>Catalog count:</b> {total_count if total_count is not None else 'NA'}<br>",
         f"<b>Pincode context:</b> {html.escape(str(args.pincode))}</p>",
@@ -1011,10 +1049,12 @@ def print_run_header(run_no: int, args: argparse.Namespace) -> None:
     ts = dt.datetime.now().isoformat(timespec="seconds")
     print("=" * 80)
     print(f"[{ts}] Poll run #{run_no}")
+    onsale_list = getattr(args, "onsale_list", [getattr(args, "onsale", "NA")])
+    onsale_display = ",".join(str(value) for value in onsale_list)
     print(
         "Config: OnSale={onsale}, Brand={brand}, Pincode={pincode}, "
         "ExcludeOutOfStock={exclude}".format(
-            onsale=args.onsale,
+            onsale=onsale_display,
             brand=args.brand_id,
             pincode=args.pincode,
             exclude="ON" if args.exclude_out_of_stock else "OFF",
@@ -1160,102 +1200,114 @@ def print_run_summary(
 
 def main() -> None:
     args = parse_args()
-    previous_stock: Dict[str, int] = {}
-    previous_in_stock_count: Optional[int] = None
-    previous_watch_stock: Dict[str, int] = {}
+    previous_stock_by_onsale: Dict[int, Dict[str, int]] = {
+        onsale: {} for onsale in args.onsale_list
+    }
+    previous_in_stock_count_by_onsale: Dict[int, Optional[int]] = {
+        onsale: None for onsale in args.onsale_list
+    }
+    previous_watch_stock_by_onsale: Dict[int, Dict[str, int]] = {
+        onsale: {} for onsale in args.onsale_list
+    }
     run_no = 0
 
     while args.max_runs == 0 or run_no < args.max_runs:
         run_no += 1
         print_run_header(run_no, args)
+        for onsale_value in args.onsale_list:
+            print(f"--- OnSale context: {onsale_value} ---")
+            args.onsale = onsale_value
+            previous_stock = previous_stock_by_onsale[onsale_value]
+            previous_in_stock_count = previous_in_stock_count_by_onsale[onsale_value]
+            previous_watch_stock = previous_watch_stock_by_onsale[onsale_value]
 
-        try:
-            products, total_count, pages_fetched = fetch_all_products(args)
-            current_stock = build_stock_map(products)
-            current_in_stock_count = count_in_stock_products(current_stock)
-            in_stock_count_increase = detect_in_stock_count_increase(
-                previous_in_stock_count, current_in_stock_count
-            )
-            in_stock_count_products: List[Dict[str, object]] = []
-            if in_stock_count_increase:
-                in_stock_count_products = detect_in_stock_count_products(
-                    previous_stock, current_stock, products
+            try:
+                products, total_count, pages_fetched = fetch_all_products(args)
+                current_stock = build_stock_map(products)
+                current_in_stock_count = count_in_stock_products(current_stock)
+                in_stock_count_increase = detect_in_stock_count_increase(
+                    previous_in_stock_count, current_in_stock_count
                 )
-            increases = detect_increases(previous_stock, current_stock, products)
-            new_listed_products: List[Dict[str, object]] = []
-            if previous_stock:
-                new_listed_products = detect_new_listed_products(
-                    previous_stock,
-                    current_stock,
+                in_stock_count_products: List[Dict[str, object]] = []
+                if in_stock_count_increase:
+                    in_stock_count_products = detect_in_stock_count_products(
+                        previous_stock, current_stock, products
+                    )
+                increases = detect_increases(previous_stock, current_stock, products)
+                new_listed_products: List[Dict[str, object]] = []
+                if previous_stock:
+                    new_listed_products = detect_new_listed_products(
+                        previous_stock,
+                        current_stock,
+                        products,
+                        min_stock=args.new_product_min_stock,
+                    )
+
+                watched_rows: List[Dict[str, object]] = []
+                watched_lookup_pages = 0
+                watched_in_stock_events: List[Dict[str, object]] = []
+                current_watch_stock: Dict[str, int] = {}
+
+                if args.watch_product_ids:
+                    watched_products, watched_lookup_pages = fetch_watched_products(
+                        args, args.watch_product_ids
+                    )
+                    watched_rows, current_watch_stock = build_watched_rows(
+                        args.watch_product_ids, watched_products
+                    )
+                    watched_in_stock_events = detect_watched_in_stock(
+                        previous_watch_stock,
+                        current_watch_stock,
+                        watched_products,
+                        args.watch_product_ids,
+                    )
+
+                print_run_summary(
+                    args,
                     products,
-                    min_stock=args.new_product_min_stock,
+                    total_count,
+                    pages_fetched,
+                    current_in_stock_count,
+                    in_stock_count_increase,
+                    in_stock_count_products,
+                    increases,
+                    new_listed_products,
+                    watched_rows,
+                    watched_lookup_pages,
+                    watched_in_stock_events,
                 )
 
-            watched_rows: List[Dict[str, object]] = []
-            watched_lookup_pages = 0
-            watched_in_stock_events: List[Dict[str, object]] = []
-            current_watch_stock: Dict[str, int] = {}
+                if (
+                    increases
+                    or new_listed_products
+                    or watched_in_stock_events
+                    or in_stock_count_increase
+                ):
+                    if can_send_email(args):
+                        send_email_alert(
+                            args=args,
+                            increases=increases,
+                            new_listed_products=new_listed_products,
+                            watched_in_stock_events=watched_in_stock_events,
+                            in_stock_count_increase=in_stock_count_increase,
+                            in_stock_count_products=in_stock_count_products,
+                            run_no=run_no,
+                            total_products=len(products),
+                            total_count=total_count,
+                        )
+                        print("Email alert: sent.")
+                    else:
+                        print(
+                            "Email alert: skipped (set --smtp-host --email-from --email-to to enable)."
+                        )
 
-            if args.watch_product_ids:
-                watched_products, watched_lookup_pages = fetch_watched_products(
-                    args, args.watch_product_ids
-                )
-                watched_rows, current_watch_stock = build_watched_rows(
-                    args.watch_product_ids, watched_products
-                )
-                watched_in_stock_events = detect_watched_in_stock(
-                    previous_watch_stock,
-                    current_watch_stock,
-                    watched_products,
-                    args.watch_product_ids,
-                )
+                previous_stock_by_onsale[onsale_value] = current_stock
+                previous_in_stock_count_by_onsale[onsale_value] = current_in_stock_count
+                if args.watch_product_ids:
+                    previous_watch_stock_by_onsale[onsale_value] = current_watch_stock
 
-            print_run_summary(
-                args,
-                products,
-                total_count,
-                pages_fetched,
-                current_in_stock_count,
-                in_stock_count_increase,
-                in_stock_count_products,
-                increases,
-                new_listed_products,
-                watched_rows,
-                watched_lookup_pages,
-                watched_in_stock_events,
-            )
-
-            if (
-                increases
-                or new_listed_products
-                or watched_in_stock_events
-                or in_stock_count_increase
-            ):
-                if can_send_email(args):
-                    send_email_alert(
-                        args=args,
-                        increases=increases,
-                        new_listed_products=new_listed_products,
-                        watched_in_stock_events=watched_in_stock_events,
-                        in_stock_count_increase=in_stock_count_increase,
-                        in_stock_count_products=in_stock_count_products,
-                        run_no=run_no,
-                        total_products=len(products),
-                        total_count=total_count,
-                    )
-                    print("Email alert: sent.")
-                else:
-                    print(
-                        "Email alert: skipped (set --smtp-host --email-from --email-to to enable)."
-                    )
-
-            previous_stock = current_stock
-            previous_in_stock_count = current_in_stock_count
-            if args.watch_product_ids:
-                previous_watch_stock = current_watch_stock
-
-        except Exception as exc:  # pylint: disable=broad-except
-            print(f"Run error: {exc}")
+            except Exception as exc:  # pylint: disable=broad-except
+                print(f"Run error (OnSale={onsale_value}): {exc}")
 
         if args.max_runs and run_no >= args.max_runs:
             break
